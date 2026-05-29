@@ -1,0 +1,445 @@
+{
+  "mode": "standard",
+  "generated_at": "2026-05-29T21:25:27.432571+00:00",
+  "stats": {
+    "mode": "standard",
+    "tag_count": 1,
+    "deep_divecandidates": 5,
+    "deep_cap": 6,
+    "deep_selected": 5,
+    "quick_candidates": 5,
+    "quick_skim_target": 11,
+    "quick_selected": 5
+  },
+  "deep_dive": [
+    {
+      "id": "biorxiv-10-64898-2026-05-21-726831-v1",
+      "source": "biorxiv",
+      "title": "Trait dissimilarity-based tree species loss affects tree diversity effects on herbivory",
+      "abstract": "O_LIBiodiversity loss can alter interactions not only through changes in tree species richness, but also through the loss of particular functional strategies from ecological communities. Working in a subtropical forest diversity experiment we asked whether tree species richness effects on arthropod herbivory and leaf pathogen infestation depend on community functional diversity, and whether trait dissimilarity-based, non-random species loss alters these relationships compared to random loss. To address this, we combined already established planted scenarios with newly constructed extinction pathways.\nC_LIO_LIWe tested the responses of herbivory and leaf pathogen infestation (i) to tree species richness, functional diversity (Raos Q), community structure and resource strategies (i.e. ever-greenness) and community-weighted trait means as well as predation, and (ii) trait dissimilarity-based extinction pathway analyses that contrasted directed loss of functionally similar versus functionally distinct tree species.\nC_LIO_LIHerbivory increased with tree species richness and this increase was significantly stronger in communities with higher tree functional diversity. Under directed species loss scenarios, herbivory differed most strongly from random-loss expectations when similar tree species were lost first. By contrast, losing functionally distinct species first produced richness effects that were much closer to the random-loss scenarios. Trait-based species loss will therefore modify trophic interactions more strongly than random loss. For pathogen infestation tree richness effects depended on evergreenness and among planted extinction scenarios (three-way interaction), with only minor deviations of trait-based extinction path-ways from random-loss expectations. Pathogen infestation also tended to increase with community-weighted mean leaf nitrogen. Predation showed no clear relationship with tree species richness or functional diversity but was positively associated with herbivory. The strength of this association differed among extinction scenarios, providing no evidence for consistent top-down regulation.\nC_LI\n\nSynthesisThe ecological consequences of biodiversity loss for leaf damage depend on which functional strategies are lost, not only on how many tree species remain. By integrating ob-served tree diversity gradients with trait-based extinction pathways, this study shows that functional diversity and host redundancy help explain why herbivores and pathogens are shaped by the same changes in tree diversity through different functional constraints and im-prove predictions of interaction strength under non-random species loss.",
+      "authors": [
+        "Mittag, M. T.",
+        "Albert, G.",
+        "Castro Sanchez-Bermejo, P.",
+        "Davrinche, A.",
+        "Haider, S.",
+        "Li, S.",
+        "Liu, X.",
+        "Wang, M.-Q.",
+        "Schuldt, A.",
+        "Petermann, J. S."
+      ],
+      "primary_category": "ecology",
+      "categories": [
+        "ecology"
+      ],
+      "published": "2026-05-26T00:00:00+00:00",
+      "link": "https://www.biorxiv.org/content/10.64898/2026.05.21.726831v1.full.pdf",
+      "tags": [
+        "keyword:ag-bg-div",
+        "query:ag-bg-div"
+      ],
+      "llm_score": 9.0,
+      "llm_evidence_en": "Examines how trait dissimilarity-based tree species loss alters tree diversity effects on herbivory and pathogen infestation, directly addressing aboveground functional diversity effects on ecosystem function",
+      "llm_evidence_cn": "研究基于性状差异的树种损失如何改变树木多样性对植食和病原菌侵染的影响，直接涉及地上功能多样性对生态系统功能的作用",
+      "llm_evidence": "研究基于性状差异的树种损失如何改变树木多样性对植食和病原菌侵染的影响，直接涉及地上功能多样性对生态系统功能的作用",
+      "canonical_evidence": "研究基于性状差异的树种损失如何改变树木多样性对植食和病原菌侵染的影响，直接涉及地上功能多样性对生态系统功能的作用",
+      "llm_tldr_en": "Using a subtropical forest diversity experiment, this study shows that tree species richness effects on arthropod herbivory and leaf pathogen infestation depend on community functional diversity (Rao's Q), and that non-random trait dissimilarity-based species loss alters these relationships differently from random loss.",
+      "llm_tldr_cn": "本研究在亚热带森林多样性实验中，探究了树种丰富度对节肢动物植食和叶病原菌侵染的影响是否依赖于群落功能多样性（Rao's Q），并比较了基于性状相似性的非随机物种丧失与随机丧失对上述关系的不同影响。结果发现功能多样性是调控树种多样性-生态系统功能关系的关键因素，非随机丧失会改变这种关系，从而揭示了功能多样性在生物多样性-生态系统功能中的核心作用。",
+      "llm_tldr": "本研究在亚热带森林多样性实验中，探究了树种丰富度对节肢动物植食和叶病原菌侵染的影响是否依赖于群落功能多样性（Rao's Q），并比较了基于性状相似性的非随机物种丧失与随机丧失对上述关系的不同影响。结果发现功能多样性是调控树种多样性-生态系统功能关系的关键因素，非随机丧失会改变这种关系，从而揭示了功能多样性在生物多样性-生态系统功能中的核心作用。",
+      "llm_tags": [
+        "query:ag-bg-div"
+      ],
+      "matched_query_tag": "query:ag-bg-div",
+      "matched_query_text": "aboveground functional diversity effects on ecosystem function",
+      "matched_requirement_id": "req-4",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "biorxiv-10-64898-2026-03-04-709422-v3",
+      "source": "biorxiv",
+      "title": "MycorrhizaFinder: an efficient machine learning tool to quantify endomycorrhizal colonisation of real-world roots",
+      "abstract": "AbstractO_ST_ABSBackground and aimsC_ST_ABSRoot colonisation by endomycorrhizal fungi has long been one of the most widely used metrics in mycorrhizal studies. However, due to the significant time required to assess colonisation using traditional microscope techniques, studies of colonisation at large scales are impractical. AI-powered approaches may increase output and facilitate ecosystem assessments.\n\nMethodsWe trained an AI-powered tool (MycorrhizaFinder) on field roots from diverse grasslands and heathlands hosting common Northern European plants with a range of arbuscular (AM) and ericoid mycorrhizal (ErM) fungal structures, and dark septate endophytes (DSE), also common in field-sourced roots. We incorporated a user-customized confidence threshold to encourage the user to engage with inevitable morphological ambiguities, in e.g. ErM and DSE. A Macro F1 statistic was used to assess the tools development.\n\nResultsWe provide a sample workflow from root processing and microscope slide scanning to semi-automated model training and performance evaluation. Without human supervision, our automated baseline Macro F1 is 66% for arbuscular and at 57% for ericoid mycorrhizal colonisation assessment.\n\nConclusionMycorrhizaFinder is user friendly, requires no programming skills and offers flexibility for advanced agronomists or ecologists who wish to train the tool using their own labelled mycorrhizal root datasets, including images acquired from different instruments or staining protocols. This adaptability allows users to customize the model for specific ecosystems or experimental designs. Leveraged with molecular identification and/or functional assessment of fungi, MycorrhizaFinder could support scalable and repeatable monitoring across ecosystems to assess mycorrhizal status and track land-use changes over time.",
+      "authors": [
+        "Kowal, J.",
+        "Upham, R.",
+        "Buckley, S.",
+        "Kiani, A.",
+        "Rickards, M.",
+        "Serpell, E.",
+        "Bidartondo, M. I.",
+        "Evangelisti, E.",
+        "Schornack, S.",
+        "Sibbit, J.",
+        "Treder, K.",
+        "Weidinger, S.",
+        "Suz, L. M."
+      ],
+      "primary_category": "ecology",
+      "categories": [
+        "ecology"
+      ],
+      "published": "2026-05-25T00:00:00+00:00",
+      "link": "https://www.biorxiv.org/content/10.64898/2026.03.04.709422v3.full.pdf",
+      "tags": [
+        "keyword:ag-bg-div",
+        "query:ag-bg-div"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "machine learning tool to quantify mycorrhizal colonization in roots",
+      "llm_evidence_cn": "用于量化根部菌根定殖的机器学习工具",
+      "llm_evidence": "用于量化根部菌根定殖的机器学习工具",
+      "canonical_evidence": "用于量化根部菌根定殖的机器学习工具",
+      "llm_tldr_en": "MycorrhizaFinder is an AI-based tool trained on field roots from diverse grasslands to quantify endomycorrhizal and ericoid mycorrhizal colonization, enabling large-scale belowground functional diversity assessment.",
+      "llm_tldr_cn": "该研究针对传统显微镜方法耗时、难以大规模评估根部菌根定殖的问题，开发了AI工具MycorrhizaFinder。该工具基于北欧典型草原和石楠灌丛的野外根系训练，能够自动识别丛枝菌根、欧石楠菌根和深色有隔内生真菌结构。实验表明其准确率可靠，可显著提高评估效率。这为大规模研究地下功能多样性及其在生态系统功能中的作用提供了关键技术支持。",
+      "llm_tldr": "该研究针对传统显微镜方法耗时、难以大规模评估根部菌根定殖的问题，开发了AI工具MycorrhizaFinder。该工具基于北欧典型草原和石楠灌丛的野外根系训练，能够自动识别丛枝菌根、欧石楠菌根和深色有隔内生真菌结构。实验表明其准确率可靠，可显著提高评估效率。这为大规模研究地下功能多样性及其在生态系统功能中的作用提供了关键技术支持。",
+      "llm_tags": [
+        "query:ag-bg-div"
+      ],
+      "matched_query_tag": "query:ag-bg-div",
+      "matched_query_text": "belowground functional diversity effects on ecosystem function",
+      "matched_requirement_id": "req-5",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "biorxiv-10-64898-2026-05-13-724760-v2",
+      "source": "biorxiv",
+      "title": "Microbial Diversity and Function Linked to Carbon Cycling in Mangrove Sediments",
+      "abstract": "Microbial communities are central to the biogeochemical cycling of nutrients, critically shaping ecosystem functioning and influencing climate change mitigation. Mangrove ecosystems are among the most important global carbon sinks that enable large amounts of carbon to be sequestered and stored. However, gaps persist in understanding the fundamental aspects of microbial-driven carbon cycling in these environments. This research explores the microbial taxonomic and functional diversity related to carbon cycling in selected tropical mangrove sediments across various locations and depths. Sequencing data analyses based on the 16S rRNA gene revealed distinct microbial community composition but conserved predicted functions across the different mangrove locations. Depth was a strong influence on the functional composition, with carbon-related pathways and metabolic strategies differing between top and bottom sediments. Putative functional gene abundance analyses revealed that carbon fixation processes were among the top carbon-related pathways, suggesting the key role of mangrove microbial communities in sustaining long-term carbon storage. Within these communities, Desulfobacterota appeared as a primary contributor to carbon fixation, while Chloroflexota played a significant role in carbon metabolism and methane cycling. Co-occurrence network analyses also revealed that these microbial groups were among the keystone taxa in mangrove sediments. Our study adds on to the body of knowledge on the mangrove microbiome and their carbon metabolic processes, which helps to improve strategies for managing and leveraging these vital carbon sinks.",
+      "authors": [
+        "Khairi, N.",
+        "Md Zoqratt, M. Z. H.",
+        "Hidayah, N.",
+        "Abdella, B.",
+        "Mohammad Nasir, M. A.",
+        "Tan, G. Y. A.",
+        "Lim, P. E.",
+        "Amir, A. A.",
+        "Aqma, W. S.",
+        "Rozaimi, M.",
+        "Hazrin-Chong, N. H."
+      ],
+      "primary_category": "microbiology",
+      "categories": [
+        "microbiology"
+      ],
+      "published": "2026-05-20T00:00:00+00:00",
+      "link": "https://www.biorxiv.org/content/10.64898/2026.05.13.724760v2.full.pdf",
+      "tags": [
+        "keyword:ag-bg-div",
+        "query:ag-bg-div"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "Studies microbial functional diversity linked to carbon cycling, a belowground ecosystem function",
+      "llm_evidence_cn": "研究微生物功能多样性与碳循环（生态系统功能）的关系",
+      "llm_evidence": "研究微生物功能多样性与碳循环（生态系统功能）的关系",
+      "canonical_evidence": "研究微生物功能多样性与碳循环（生态系统功能）的关系",
+      "llm_tldr_en": "This paper links microbial taxonomic and functional diversity to carbon cycling in mangrove sediments, providing insights into belowground functional diversity effects on ecosystem function.",
+      "llm_tldr_cn": "该研究探讨了红树林沉积物中微生物分类与功能多样性与碳循环的关系。通过16S rRNA基因测序分析不同地点和深度的微生物群落组成及预测功能，发现尽管群落组成差异显著，但碳循环相关功能保守。这一发现强调了微生物功能多样性在调节生态系统碳循环中的关键作用，为理解地下生物多样性与生态系统功能关系提供了实证支持。",
+      "llm_tldr": "该研究探讨了红树林沉积物中微生物分类与功能多样性与碳循环的关系。通过16S rRNA基因测序分析不同地点和深度的微生物群落组成及预测功能，发现尽管群落组成差异显著，但碳循环相关功能保守。这一发现强调了微生物功能多样性在调节生态系统碳循环中的关键作用，为理解地下生物多样性与生态系统功能关系提供了实证支持。",
+      "llm_tags": [
+        "query:ag-bg-div"
+      ],
+      "matched_query_tag": "query:ag-bg-div",
+      "matched_query_text": "belowground functional diversity effects on ecosystem function",
+      "matched_requirement_id": "req-5",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "biorxiv-10-64898-2026-05-18-725971-v1",
+      "source": "biorxiv",
+      "title": "Niche constraints drive differences between mycorrhizal fungal guilds in future range shifts",
+      "abstract": "Mycorrhizal fungi are a diverse and ubiquitous group of critical plant symbionts whose distribution strongly influences ecosystem function across the globe. Yet, until now, we do not have quantitative data on the range sizes of different mycorrhizal fungal taxa, limiting our capacity to forecast future shifts in community composition and function. Here, we use 121,079 DNA sequence-derived observations to map the distribution of 621 common mycorrhizal fungal taxa and forecast future changes to their range sizes. We demonstrate that climate and soil factors, particularly mean annual temperature and soil organic carbon, exert major control over mycorrhizal fungal distributions, and the ecological niches of mycorrhizal fungi consistently differ between arbuscular and ectomycorrhizal functional guilds. Arbuscular mycorrhizal fungal taxa generally occupy a wider niche breadth than ectomycorrhizal fungi, occurring across larger ranges of climate, soil, plant cover, topography, and disturbance conditions. Our models also predict widespread decreases in the range size of mycorrhizal fungal taxa under projected future global climates, with average ranges decreasing by 12.6% or [~]7.5 million km2. This decrease in projected range size will be most pronounced for ectomycorrhizal fungi, strongly linked to constraints from their smaller overall niches. By generating a global atlas of common mycorrhizal fungi and their associated environmental niche, we establish a critical baseline for widely suspected declines in global fungal biodiversity.",
+      "authors": [
+        "Edwards, J.",
+        "van den Hoogen, J.",
+        "Lauber, T.",
+        "Hawkes, C.",
+        "Anthony, M.",
+        "Delavaux, C.",
+        "Stewart, J.",
+        "Treseder, K.",
+        "Feng, X.",
+        "Papes, M.",
+        "Muscarella, R.",
+        "Kohout, P.",
+        "Baldrian, P.",
+        "Kiers, T.",
+        "Crowther, T.",
+        "Averill, C.",
+        "Matheny, B.",
+        "van Nuland, M.",
+        "Qin, C.",
+        "Kivlin, S."
+      ],
+      "primary_category": "ecology",
+      "categories": [
+        "ecology"
+      ],
+      "published": "2026-05-20T00:00:00+00:00",
+      "link": "https://www.biorxiv.org/content/10.64898/2026.05.18.725971v1.full.pdf",
+      "tags": [
+        "keyword:ag-bg-div",
+        "query:ag-bg-div"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "Directly studies belowground mycorrhizal fungal distributions and their ecological niches, linking to ecosystem function",
+      "llm_evidence_cn": "直接研究地下菌根真菌分布及其生态位，与生态系统功能关联",
+      "llm_evidence": "直接研究地下菌根真菌分布及其生态位，与生态系统功能关联",
+      "canonical_evidence": "直接研究地下菌根真菌分布及其生态位，与生态系统功能关联",
+      "llm_tldr_en": "Maps distributions of 621 mycorrhizal fungal taxa using 121,079 DNA sequences, showing climate and soil factors control ranges, with implications for ecosystem function under future change.",
+      "llm_tldr_cn": "该研究利用12万条DNA序列观测数据，系统绘制了621种常见菌根真菌的全球分布图，发现年均温和土壤有机碳是主要控制因子，并预测了未来气候情景下的范围变化，揭示了菌根真菌功能群之间的生态位差异及其对生态系统功能的潜在影响。",
+      "llm_tldr": "该研究利用12万条DNA序列观测数据，系统绘制了621种常见菌根真菌的全球分布图，发现年均温和土壤有机碳是主要控制因子，并预测了未来气候情景下的范围变化，揭示了菌根真菌功能群之间的生态位差异及其对生态系统功能的潜在影响。",
+      "llm_tags": [
+        "query:ag-bg-div"
+      ],
+      "matched_query_tag": "query:ag-bg-div",
+      "matched_query_text": "belowground functional diversity effects on ecosystem function",
+      "matched_requirement_id": "req-5",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "biorxiv-10-64898-2026-05-29-728675-v1",
+      "source": "biorxiv",
+      "title": "Fungal community composition links rhizosphere microbiome organization to plant phenotype in response to moderate warming",
+      "abstract": "Background: Global warming increasingly challenges plant performance and ecosystem function, and plant responses to elevated temperature are shaped not only by intrinsic plasticity, but also by interactions with rhizosphere microbial communities. However, it remains unclear how warming-induced microbiome reorganization relates to plant performance, whether microbiome community composition predicts plant phenotypic responses to elevated temperature better than simple host-microbiome origin matching, and which bacterial or fungal community features contribute most strongly to this prediction. Results: We implemented a full factorial design manipulating plant genotype (P), microbial inoculum (M), and temperature (T) using natural Arabidopsis thaliana ecotypes and their corresponding rhizosphere microbiomes from contrasting climatic regions. By integrating high-throughput plant phenotyping, microbial community profiling, microbiome-phenotype coupling analyses, and predictive modeling, we found that elevated temperature induced a coherent thermomorphogenic shift in plant architecture, while plant phenotypic variation remained determined primarily by genotype over the 14-day vegetative growth period covered in this study. Overall, cold-origin genotypes showed larger temperature-induced trait shifts than warm-origin genotypes. Rhizosphere microbial communities were structured predominantly by inoculum origin, but were also affected by warming. Evidence for a increased thermomorphogenic growth when genotypes were combined with inoculum from their home site was limited. Instead, microbiome-phenotype associations were better captured by community composition than by matching status, with fungal community variation showing stronger and more consistent associations with plant phenotype than bacterial variation and providing more robust predictions of plant phenotypes across models. Conclusions: Warming reorganized plant-rhizosphere systems within persistent host- and inoculum-associated baselines. Plant phenotypic variation during vegetative development under elevated temperature was linked more closely to microbiome composition, especially in fungi, than to simple host-microbiome matching of origins. These findings provide a framework for identifying microbiome features associated with plant performance under climate warming.",
+      "authors": [
+        "Li, X.",
+        "Trenner, J.",
+        "Eschen-Lippold, L.",
+        "Park, J. S.",
+        "Boritzki, A.",
+        "Tarkka, M.",
+        "Kuesel, K.",
+        "Roemermann, C.",
+        "Grosse, I.",
+        "Hacquard, S.",
+        "Agren, J.",
+        "Alonso-Blanco, C.",
+        "Zhou, J.",
+        "Quint, M."
+      ],
+      "primary_category": "plant biology",
+      "categories": [
+        "plant biology"
+      ],
+      "published": "2026-05-29T00:00:00+00:00",
+      "link": "https://www.biorxiv.org/content/10.64898/2026.05.29.728675v1.full.pdf",
+      "tags": [
+        "keyword:ag-bg-div",
+        "query:ag-bg-div"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "fungal community composition links rhizosphere microbiome to plant phenotype under warming, addressing climate gradients",
+      "llm_evidence_cn": "变暖下真菌群落组成连接根际微生物组与植物表型，涉及气候梯度",
+      "llm_evidence": "变暖下真菌群落组成连接根际微生物组与植物表型，涉及气候梯度",
+      "canonical_evidence": "变暖下真菌群落组成连接根际微生物组与植物表型，涉及气候梯度",
+      "llm_tldr_en": "This study uses a full factorial design of plant genotype, microbial inoculum, and temperature to show that fungal community composition predicts plant phenotypic responses to warming, linking rhizosphere microbiome reorganization to plant performance.",
+      "llm_tldr_cn": "通过操纵植物基因型、微生物接种和温度的析因实验，发现真菌群落组成可预测植物对变暖的表型响应，表明根际微生物组重组与植物表现相关。该研究直接涉及地上植物与地下微生物的相互作用，并沿温度梯度考察，紧密关联需求。",
+      "llm_tldr": "通过操纵植物基因型、微生物接种和温度的析因实验，发现真菌群落组成可预测植物对变暖的表型响应，表明根际微生物组重组与植物表现相关。该研究直接涉及地上植物与地下微生物的相互作用，并沿温度梯度考察，紧密关联需求。",
+      "llm_tags": [
+        "query:ag-bg-div"
+      ],
+      "matched_query_tag": "query:ag-bg-div",
+      "matched_query_text": "How do climate gradients modulate the coupling between aboveground and belowground functional diversity and their joint effects on ecosystem function across large spatial scales?",
+      "matched_requirement_id": "req-9",
+      "selection_source": "fresh_fetch"
+    }
+  ],
+  "quick_skim": [
+    {
+      "id": "biorxiv-10-64898-2026-05-20-726512-v1",
+      "source": "biorxiv",
+      "title": "Catching the effects of biotic interactions on community data: partial correlations outperform marginal ones with proper abiotic modelling.",
+      "abstract": "A major goal of community ecology lies in the deciphering of the processes underlying species distribution. A widespread approach to this question is to identify patterns in species community data and relate them to possible processes. Joint Species Distribution Models (JS-DMs) offer one way to do so through the infernece of association networks that describe patterns of statistical correlations and dependencies between species, but it is unclear what processes can explain the presence of such correlations. While it has now been established that there is no equivalence between JSDM-inferred associations and biotic interactions, the later remain one possible explanation, among others, for the former. However, to our knowledge, there is no specific study of the statistical patterns induced by different types of interactions or of the conditions under which they may or may not appear as statistical correlations / dependencies in species communities. To explore these questions, we propose a \"virtual ecologist\" approach that consists in simulating community data based on abiotic and biotic processes with the VirtualCom model that emulates the effects of environmental processes and of competition and facilitation interactions. Then, we study to what extent JSDMs retrieve correlations between species that match the simulated interactions. We show that these interactions are better identified when using JSDMs that model partial correlations between species rather than marginal ones. We further demonstrate how critical it is to correctly model abiotic effects in order to identify biotic ones and that the \"correct modelling\" of these effects depend on the type of interactions at stake.",
+      "authors": [
+        "Tous, J.",
+        "Chiquet, J."
+      ],
+      "primary_category": "ecology",
+      "categories": [
+        "ecology"
+      ],
+      "published": "2026-05-22T00:00:00+00:00",
+      "link": "https://www.biorxiv.org/content/10.64898/2026.05.20.726512v1.full.pdf",
+      "tags": [
+        "keyword:ag-bg-div",
+        "query:ag-bg-div"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "statistical method for inferring biotic interactions from community data",
+      "llm_evidence_cn": "从群落数据推断生物相互作用的统计方法",
+      "llm_evidence": "从群落数据推断生物相互作用的统计方法",
+      "canonical_evidence": "从群落数据推断生物相互作用的统计方法",
+      "llm_tldr_en": "The paper shows that partial correlations outperform marginal correlations for inferring biotic interactions in joint species distribution models when abiotic variables are properly modeled, providing a methodological advance for understanding species associations.",
+      "llm_tldr_cn": "该论文针对从群落数据中推断生物相互作用的方法问题，提出在适当建模环境变量后，偏相关优于边际相关。通过联合物种分布模型，作者展示了如何更准确地推断物种间关联。该方法有助于理解地上与地下群落间的相互作用，为量化功能多样性耦合提供了统计工具。",
+      "llm_tldr": "该论文针对从群落数据中推断生物相互作用的方法问题，提出在适当建模环境变量后，偏相关优于边际相关。通过联合物种分布模型，作者展示了如何更准确地推断物种间关联。该方法有助于理解地上与地下群落间的相互作用，为量化功能多样性耦合提供了统计工具。",
+      "llm_tags": [
+        "query:ag-bg-div"
+      ],
+      "matched_query_tag": "query:ag-bg-div",
+      "matched_query_text": "interactions between aboveground and belowground functional diversity",
+      "matched_requirement_id": "req-6",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    },
+    {
+      "id": "2605.28174v1",
+      "source": "arxiv",
+      "title": "FLORO: A Multimodal Geospatial Foundation Model for Ecological Remote Sensing Across Sensors and Scales",
+      "abstract": "Foundation models offer a promising route to transferable remote sensing representations, but many current approaches depend on very large pretraining datasets and fixed sensor configurations, limiting their suitability for ecological and environmental applications, where observations often vary across platforms, spatial and spectral resolutions, and available modalities. We introduce FLORO, a multimodal geospatial foundation model designed to learn transferable representations from a small but highly diverse remote sensing corpus. FLORO is pretrained using masked autoencoding on a heterogeneous combination of Sentinel-1, Sentinel-2, SkySAT imagery, elevation, and UAV-derived data. To accommodate sensor variability, FLORO incorporates availability-aware inputs that indicate which spectral bands and auxiliary modalities are present in each sample, enabling a unified input space across heterogeneous sensor configurations. We evaluated FLORO on the PANGAEA benchmark under a frozen-encoder protocol across scene classification, segmentation, and regression tasks. Despite being pretrained on a smaller corpus than competing foundation models, FLORO achieved strong and stable transfer across optical, optical-SAR, and optical-elevation benchmarks spanning medium-resolution satellite, airborne, and ultra-high-resolution UAV imagery. FLORO obtained the second-best average segmentation performance across six PANGAEA benchmarks, trailing only a recently introduced foundation model pretrained on over two orders of magnitude more images, remained competitive on scene classification, and was robust in regression tasks, while qualitative results showed improved preservation of spatial structure in flood, urban, biomass, and canopy-height prediction settings. In a separate controlled experiment on EuroSAT-MS, geo-positional encoding further improved classification relative to absolute positional encoding.",
+      "authors": [
+        "Jorge L. Rodriguez",
+        "Victor Angulo Morales",
+        "Areej Alwahas",
+        "Mariana Elias Lara",
+        "Fida Mohammad Thoker",
+        "Kasper Johansen",
+        "Bernard Ghanem",
+        "Fernando T. Maestre",
+        "Matthew F. McCabe"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "cs.AI"
+      ],
+      "published": "2026-05-27T08:55:54+00:00",
+      "link": "https://arxiv.org/pdf/2605.28174v1",
+      "tags": [
+        "keyword:ag-bg-div",
+        "query:ag-bg-div"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "Multimodal geospatial foundation model enabling ecological remote sensing across scales, supporting large-scale analysis of above-belowground coupling along climate gradients",
+      "llm_evidence_cn": "多模态地理空间基础模型支持跨尺度生态遥感，可用于沿气候梯度分析地上-地下耦合",
+      "llm_evidence": "多模态地理空间基础模型支持跨尺度生态遥感，可用于沿气候梯度分析地上-地下耦合",
+      "canonical_evidence": "多模态地理空间基础模型支持跨尺度生态遥感，可用于沿气候梯度分析地上-地下耦合",
+      "llm_tldr_en": "FLORO is a multimodal geospatial foundation model pretrained via masked autoencoding on diverse remote sensing data (Sentinel-1/2, SkySAT, elevation, UAV), designed to produce transferable representations for ecological applications across sensors and scales.",
+      "llm_tldr_cn": "FLORO是一种多模态地理空间基础模型，采用掩码自编码方式在异构遥感数据（包含Sentinel-1/2、SkySAT、高程和无人机影像）上进行预训练，旨在为跨传感器和跨尺度的生态与环境应用生成可迁移的表征。该模型无需大规模预训练数据，通过整合多种数据源实现了对传感器变化的鲁棒性，为获取地上植被结构和土壤环境信息提供了强大工具，从而支持地上和地下功能多样性耦合的大尺度研究。",
+      "llm_tldr": "FLORO是一种多模态地理空间基础模型，采用掩码自编码方式在异构遥感数据（包含Sentinel-1/2、SkySAT、高程和无人机影像）上进行预训练，旨在为跨传感器和跨尺度的生态与环境应用生成可迁移的表征。该模型无需大规模预训练数据，通过整合多种数据源实现了对传感器变化的鲁棒性，为获取地上植被结构和土壤环境信息提供了强大工具，从而支持地上和地下功能多样性耦合的大尺度研究。",
+      "llm_tags": [
+        "query:ag-bg-div"
+      ],
+      "matched_query_tag": "query:ag-bg-div",
+      "matched_query_text": "How do climate gradients modulate the coupling between aboveground and belowground functional diversity and their joint effects on ecosystem function across large spatial scales?",
+      "matched_requirement_id": "req-9",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "biorxiv-10-64898-2026-05-21-726918-v1",
+      "source": "biorxiv",
+      "title": "Community reorganization without collapse in a warming world: Habitat-contingent, trait-mediated biodiversity change within a conserved multi-scale structure",
+      "abstract": "Biodiversity change under sustained environmental pressure is increasingly understood as a process of long-term reorganization across spatial scales rather than uniform loss or gain. Estuarine ecosystems, which experience strong environmental gradients and frequent short-term extreme disturbances, provide an ideal context for evaluating how local (), spatial ({beta}), and regional ({gamma}) diversity reorganize across habitat domains and functional guilds through time. Here, we examined four decades of fish and invertebrate community data from a coastwide, ecological monitoring program, spanning multiple estuarine systems along the Texas coast. We asked three main questions: whether habitat context modifies the direction of trait-mediated biodiversity responses across the full -{beta}-{gamma} structure; whether spatial homogenization is detectable through dominance-weighted {beta}-diversity metrics and how they relate to richness-based metrics; and whether the pace of reorganization has intensified over time. Functional traits related to dispersal capacity and thermal affinity structured the magnitude of biodiversity change within habitat domains, but habitat context determined its direction, the same guilds exhibited opposite diversity trajectories across gear-defined habitat domains despite broadly similar functional composition, demonstrating that trait-based forecasting frameworks will mispredict reorganization direction when habitat context is ignored. Spatial homogenization proceeded undetected by richness-based {beta}-diversity metrics but was revealed through dominance-weighted measures, indicating that dominance-weighted homogenization operates through two distinct habitat-dependent mechanisms: convergence on shared warm-adapted dominant taxa in shallow assemblages, and convergence toward impoverished assemblages as dominant taxa declined in deeper habitats, both processes invisible to richness-based metrics. Despite a measurable intensification in the pace of local and regional diversity change after approximately 2000, spatial turnover among bays remained stable and -{beta}-{gamma} scaling relationships were preserved across all diversity orders, demonstrating that rapid reorganization can proceed without destabilizing fundamental metacommunity structure. Across all findings, biodiversity change was persistent, directional, and strongly habitat dependent, following a chronic rather than episodic trajectory consistent with sustained environmental processes as the primary driver.",
+      "authors": [
+        "Fujiwara, M.",
+        "Martinez-Andrade, F.",
+        "Lerner, J.",
+        "Fisher, M.",
+        "Feagin, R. A."
+      ],
+      "primary_category": "ecology",
+      "categories": [
+        "ecology"
+      ],
+      "published": "2026-05-26T00:00:00+00:00",
+      "link": "https://www.biorxiv.org/content/10.64898/2026.05.21.726918v1.full.pdf",
+      "tags": [
+        "keyword:ag-bg-div",
+        "query:ag-bg-div"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "trait-mediated biodiversity change along environmental gradients",
+      "llm_evidence_cn": "沿环境梯度的性状介导生物多样性变化",
+      "llm_evidence": "沿环境梯度的性状介导生物多样性变化",
+      "canonical_evidence": "沿环境梯度的性状介导生物多样性变化",
+      "llm_tldr_en": "This study examines four decades of fish and invertebrate data from Texas estuaries, revealing that biodiversity reorganizes across spatial scales along strong environmental gradients, with habitat-contingent, trait-mediated changes within a conserved multi-scale structure.",
+      "llm_tldr_cn": "该研究分析了德克萨斯河口四十年的鱼类和无脊椎动物数据，发现沿强环境梯度生物多样性在空间尺度上重组，栖息地依赖、性状介导的变化发生在保守的多尺度结构内。该工作为理解功能多样性沿梯度变化提供了框架，但聚焦于动物而非植物-土壤系统。",
+      "llm_tldr": "该研究分析了德克萨斯河口四十年的鱼类和无脊椎动物数据，发现沿强环境梯度生物多样性在空间尺度上重组，栖息地依赖、性状介导的变化发生在保守的多尺度结构内。该工作为理解功能多样性沿梯度变化提供了框架，但聚焦于动物而非植物-土壤系统。",
+      "llm_tags": [
+        "query:ag-bg-div"
+      ],
+      "matched_query_tag": "query:ag-bg-div",
+      "matched_query_text": "How do climate gradients modulate the coupling between aboveground and belowground functional diversity and their joint effects on ecosystem function across large spatial scales?",
+      "matched_requirement_id": "req-9",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    },
+    {
+      "id": "2605.28976v1",
+      "source": "arxiv",
+      "title": "On a phenotype-structured Shigesada--Kawasaki--Teramoto model: Turing instability and pattern selection under fast phenotype switching",
+      "abstract": "The Shigesada-Kawasaki-Teramoto (SKT) model has become a classical modelling framework for studying spatial segregation and cross-diffusion-driven pattern formation in competing populations. This model assumes phenotypic homogeneity, but phenotypic variability persists within any population and can strongly influence both ecological and evolutionary dynamics. In this paper, we present a generalised phenotype-structured formulation of the SKT model that accounts for phenotypic variability. In this formulation, the competing populations are continuously structured across some phenotype state spaces. Population members move and compete in phenotype-dependent ways, and can also switch between different phenotype states. First we show how a form of the classical SKT model, wherein parameters are written in terms of continuous weighted averages of the phenotype-dependent functions of the generalised structured model, with weights given by the phenotype distributions of the two populations, can be obtained in the quasi-invariant regime of fast phenotype switching. Then, still assuming fast phenotype switching and extending classical Turing-like linear and weakly nonlinear analyses, we explore the conditions for the emergence of spatial patterns, identify a Turing-type bifurcation threshold leading to pattern formation, and investigate the nature of such a bifurcation (super- or sub-critical) as well as the stability of the patterned state. The results obtained make it possible to draw connections between phenotype-dependent model functions and the emergence of population-scale aggregate spatial dynamics, showing in particular how phenotype distributions can act as effective control parameters for Turing instability and pattern selection. These findings are complemented by numerical simulations, which validate the formal asymptotics and confirm the predictions of the pattern formation analyses.",
+      "authors": [
+        "Davide Cusseddu",
+        "Gaetana Gambino",
+        "Tommaso Lorenzi"
+      ],
+      "primary_category": "q-bio.PE",
+      "categories": [
+        "q-bio.PE"
+      ],
+      "published": "2026-05-27T18:28:00+00:00",
+      "link": "https://arxiv.org/pdf/2605.28976v1",
+      "tags": [
+        "keyword:ag-bg-div",
+        "query:ag-bg-div"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "provides a phenotype-structured modeling framework applicable to studying functional diversity interactions",
+      "llm_evidence_cn": "提供表型结构化建模框架，可用于功能多样性相互作用研究",
+      "llm_evidence": "提供表型结构化建模框架，可用于功能多样性相互作用研究",
+      "canonical_evidence": "提供表型结构化建模框架，可用于功能多样性相互作用研究",
+      "llm_tldr_en": "This paper generalizes the SKT model to include continuous phenotype structure, allowing analysis of Turing instability and pattern selection under fast phenotype switching, offering a tool for modeling functional diversity dynamics.",
+      "llm_tldr_cn": "该研究针对经典SKT模型忽视表型变异的问题，提出了一个连续表型结构化的推广模型。模型考虑了表型依赖的移动和竞争以及快速表型切换，通过线性稳定性分析揭示了图灵不稳定性和模式选择机制。该框架为模拟地上地下功能多样性的空间动态和相互作用提供了新的理论工具，有助于理解功能多样性对生态系统功能的影响。",
+      "llm_tldr": "该研究针对经典SKT模型忽视表型变异的问题，提出了一个连续表型结构化的推广模型。模型考虑了表型依赖的移动和竞争以及快速表型切换，通过线性稳定性分析揭示了图灵不稳定性和模式选择机制。该框架为模拟地上地下功能多样性的空间动态和相互作用提供了新的理论工具，有助于理解功能多样性对生态系统功能的影响。",
+      "llm_tags": [
+        "query:ag-bg-div:composite"
+      ],
+      "matched_query_tag": "query:ag-bg-div:composite",
+      "matched_query_text": "Papers central to 请帮我查找有关地上和地下功能多样性及其关系对生态系统功能影响的论文, especially work that connects or combines: n; Tibetan Plateau; e; aboveground functional diversity effects on ecosystem function; belowground functional diversity effects on ecosystem function; interactions between aboveground and belowground functional diversity; What is the relative contribution of aboveground plant functional diversity, belowground soil biota functional diversity, and their cross trophic coupling (or asymmetry) to ecosystem multifunctionality, and how do these contributions shift along environmental gradients?; Are plant functional traits coordinated with soil microbial life history strategies and nematode functional traits across environmental gradients, and does the strength of this cross trophic trait coordination predict ecosystem multifunctionality?; How do climate gradients modulate the coupling between aboveground and belowground functional diversity and their joint effects on ecosystem function across large spatial scales?; How does the relationship between aboveground plant functional diversity and belowground soil microbial and nematode functional diversity drive ecosystem multifunctionality in grassland ecosystems?.",
+      "matched_requirement_id": "req-composite-ag-bg-div",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "biorxiv-10-64898-2026-05-25-727577-v1",
+      "source": "biorxiv",
+      "title": "A general framework explaining variation in plant economics traits with environment and through ontogeny",
+      "abstract": "Plant economics traits, such as leaf mass per unit leaf area and stem specific density, capture diversity among plant species in how common tissues (leaf, wood, root) are constructed. These traits are key descriptors of plant strategy, yet it has proven difficult to explain this variation with theory and process-based models. Here we reveal a general explanation on why these economics traits vary with environment, through ontogeny, and with other plant traits. This explanation relies on three core assumptions: 1) plants seek to maximise growth rate, 2) growth rate can be decomposed into a product, and 3) there is a tradeoff between the efficiency of tissue construction and tissue turnover rate. Formulation of growth as a product is essential, as it causes the optimal value of an economics trait to vary with the plant's biomass production rate, which means economics traits will naturally covary with the abiotic environment, the competitive context, and other strategical features of the plant. Finally, we show how a modification of the trait into plastic and non-plastic components alters the magnitude of intra-specific responses, aligning model responses with empirical trends. Broadly, our results help explain how plant form and function for a wide diversity of species is shaped to suit their environment and, moreover, they reveal insight into a general fast-slow spectrum with coordinated shifts among organs (leaf stem) through tradeoffs between efficient tissue construction and turnover.",
+      "authors": [
+        "Falster, D. S.",
+        "Towers, I.",
+        "Vesk, P.",
+        "Westoby, M."
+      ],
+      "primary_category": "ecology",
+      "categories": [
+        "ecology"
+      ],
+      "published": "2026-05-28T00:00:00+00:00",
+      "link": "https://www.biorxiv.org/content/10.64898/2026.05.25.727577v1.full.pdf",
+      "tags": [
+        "keyword:ag-bg-div",
+        "query:ag-bg-div"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "Provides general framework explaining plant economics trait variation, key to aboveground functional diversity",
+      "llm_evidence_cn": "提出解释植物经济性状变异的通用框架，该性状是地上功能多样性的关键",
+      "llm_evidence": "提出解释植物经济性状变异的通用框架，该性状是地上功能多样性的关键",
+      "canonical_evidence": "提出解释植物经济性状变异的通用框架，该性状是地上功能多样性的关键",
+      "llm_tldr_en": "This paper presents a novel theoretical framework that explains why plant economics traits vary with environment and ontogeny based on growth maximization and a tradeoff between tissue construction efficiency and turnover rate.",
+      "llm_tldr_cn": "该论文提出一个一般性理论框架，基于植物追求生长速率最大化、生长速率可分解为乘积、以及组织构建效率与周转率之间存在权衡这三个核心假设，系统解释了叶片单位面积质量、茎密度等植物经济性状为何随环境和个体发育而变化。该框架将性状变异与植物生态策略相联系，为理解地上植物功能多样性的环境梯度模式奠定了理论基础，但未直接涉及生态系统功能。",
+      "llm_tldr": "该论文提出一个一般性理论框架，基于植物追求生长速率最大化、生长速率可分解为乘积、以及组织构建效率与周转率之间存在权衡这三个核心假设，系统解释了叶片单位面积质量、茎密度等植物经济性状为何随环境和个体发育而变化。该框架将性状变异与植物生态策略相联系，为理解地上植物功能多样性的环境梯度模式奠定了理论基础，但未直接涉及生态系统功能。",
+      "llm_tags": [
+        "query:ag-bg-div"
+      ],
+      "matched_query_tag": "query:ag-bg-div",
+      "matched_query_text": "aboveground functional diversity effects on ecosystem function",
+      "matched_requirement_id": "req-4",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    }
+  ]
+}

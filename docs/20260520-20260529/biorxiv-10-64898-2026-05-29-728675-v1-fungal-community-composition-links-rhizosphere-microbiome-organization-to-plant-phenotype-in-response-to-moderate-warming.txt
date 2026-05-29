@@ -1,0 +1,2376 @@
+Title: Fungal community composition links rhizosphere microbiome organization to plant phenotype in response to moderate warming
+
+URL Source: https://www.biorxiv.org/content/10.64898/2026.05.29.728675v1.full.pdf
+
+Number of Pages: 50
+
+Markdown Content:
+1
+
+# Fungal community composition links rhizosphere microbiome 1
+
+# organization to plant phenotype in response to moderate warming 2
+
+3
+
+Xin Li 1,2,3 , Jana Trenner 1, Lennart Eschen-Lippold 1, John S. Park 4,5 , Alexandra Boritzki 1,4
+
+Mika Tarkka 2,6 , Kirsten Küsel 2,7 , Christine Römermann 2,78 Ivo Grosse 2,9 , Stéphane 5
+
+Hacquard 10,11 , Jon Ågren 12 , Carlos Alonso-Blanco 13 , Jun Zhou 3, *, Marcel Quint 1,2, *6
+
+7
+
+> 1
+
+Institute of Agricultural and Nutritional Sciences, Martin Luther University Halle-Wittenberg, 06120 Halle 8
+
+(Saale), Germany 9
+
+> 2
+
+German Center for Integrative Biodiversity Research (iDiv) Halle-Jena-Leipzig, 04103 Leipzig, Germany 10 
+
+> 3
+
+CNRS, Chrono-environnement (UMR 6249), Université Marie et Louis Pasteur, 25200, Montbéliard, France 11 
+
+> 4
+
+Department of Biology, University of Oxford, Oxford, UK 12 
+
+> 5
+
+CAB International, Wallingford, UK 13 
+
+> 6
+
+Helmholtz Centre for Environmental Research, Theodor-Lieser-Str. 4, 06120, Halle (Saale), Germany 14 
+
+> 7
+
+Aquatic Geomicrobiology, Institute of Biodiversity, Friedrich Schiller University, Jena, 07743 Germany 15 
+
+> 8
+
+Plant Biodiversity, Institute of Ecology and Evolution, Friedrich Schiller University, Jena, 07743 Germany 16 
+
+> 9
+
+Institute of Computer Science, Martin Luther University Halle-Wittenberg, 06120 Halle (Saale), Germany 17 
+
+> 10
+
+Max Planck Institute for Plant Breeding Research, Cologne, Germany 18 
+
+> 11
+
+Cluster of Excellence on Plant Sciences (CEPLAS), Max Planck Institute for Plant Breeding Research, Cologne, 19 
+
+Germany 20 
+
+> 12
+
+Department of Ecology and Genetics, Evolutionary Biology Centre, Uppsala University, Uppsala, Sweden 21 
+
+> 13
+
+Plant Molecular Genetics Department, Centro Nacional de Biotecnología (CNB-CSIC), Madrid, Spain 22 
+
+23 
+
+*Corresponding authors 24 
+
+Marcel Quint: marcel.quint@landw.uni-halle.de; +49 (0)345 5522739 25 
+
+Jun Zhou: jun.zhou@univ-fcomte.fr; +33 (0)381 994672 26 
+
+27 
+
+Running title: Arabidopsis phenotype and rhizosphere microbiome under warming 28 
+
+> .CC-BY-NC 4.0 International license made available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is The copyright holder for this preprint this version posted May 29, 2026. ;https://doi.org/10.64898/2026.05.29.728675 doi: bioRxiv preprint
+
+2
+
+ABSTRACT 29 
+
+Background: Global warming increasingly challenges plant performance and ecosystem 30 
+
+function, and plant responses to elevated temperature are shaped not only by intrinsic plasticity, 31 
+
+but also by interactions with rhizosphere microbial communities. However, it remains unclear 32 
+
+how warming-induced microbiome reorganization relates to plant performance, whether 33 
+
+microbiome community composition predicts plant phenotypic responses to elevated 34 
+
+temperature better than simple host-microbiome origin matching, and which bacterial or fungal 35 
+
+community features contribute most strongly to this prediction. 36 
+
+Results: We implemented a full factorial design manipulating plant genotype (P), microbial 37 
+
+inoculum (M), and temperature (T) using natural Arabidopsis thaliana ecotypes and their 38 
+
+corresponding rhizosphere microbiomes from contrasting climatic regions. By integrating 39 
+
+high-throughput plant phenotyping, microbial community profiling, microbiome-phenotype 40 
+
+coupling analyses, and predictive modeling, we found that elevated temperature induced a 41 
+
+coherent thermomorphogenic shift in plant architecture, while plant phenotypic variation 42 
+
+remained determined primarily by genotype over the 14-day vegetative growth period covered 43 
+
+in this study. Overall, cold-origin genotypes showed larger temperature-induced trait shifts than 44 
+
+warm-origin genotypes. Rhizosphere microbial communities were structured predominantly 45 
+
+by inoculum origin, but were also affected by warming. Evidence for a increased 46 
+
+thermomorphogenic growth when genotypes were combined with inoculum from their home 47 
+
+site was limited. Instead, microbiome-phenotype associations were better captured by 48 
+
+community composition than by matching status, with fungal community variation showing 49 
+
+stronger and more consistent associations with plant phenotype than bacterial variation and 50 
+
+providing more robust predictions of plant phenotypes across models. 51 
+
+Conclusions: Warming reorganized plant-rhizosphere systems within persistent host- and 52 
+
+inoculum-associated baselines. Plant phenotypic variation during vegetative development 53 
+
+> .CC-BY-NC 4.0 International license made available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is The copyright holder for this preprint this version posted May 29, 2026. ;https://doi.org/10.64898/2026.05.29.728675 doi: bioRxiv preprint
+
+3
+
+under elevated temperature was linked more closely to microbiome composition, especially in 54 
+
+fungi, than to simple host-microbiome matching of origins. These findings provide a 55 
+
+framework for identifying microbiome features associated with plant performance under 56 
+
+climate warming. 57 
+
+58 
+
+Keywords: climate warming; Arabidopsis thaliana ; thermomorphogenesis; rhizosphere 59 
+
+microbiome; plant-microbiome interactions 60 
+
+61 
+
+BACKGROUND 62 
+
+Rising global temperatures are reshaping ecological systems from organismal physiology to 63 
+
+community organization [1]. Climate projections indicate that plants will increasingly 64 
+
+experience thermal regimes exceeding historical baselines [2], with consequences for species 65 
+
+distributions, biodiversity patterns, and agricultural productivity. Plant responses to warming, 66 
+
+however, are embedded in ecological networks rather than expressed in isolation. In terrestrial 67 
+
+ecosystems, these networks include plant-associated microbial communities that interact 68 
+
+closely with roots and influence plant nutrition, development, and stress tolerance [3–5]. 69 
+
+Microbial communities are themselves shaped by plant hosts, environmental conditions, and 70 
+
+interactions among microorganisms. Understanding how these biotic and abiotic forces jointly 71 
+
+influence microbiome-mediated plant performance is therefore essential for predicting 72 
+
+ecological responses to climate warming and for maintaining ecosystem functioning under 73 
+
+rising temperatures [3]. 74 
+
+Plants are sessile organisms that must continuously integrate environmental signals into 75 
+
+developmental programs to sustain growth and reproduction. In the model plant Arabidopsis 76 
+
+thaliana , moderately elevated ambient temperatures (approximately 26-28 °C) induce 77 
+
+coordinated morphological changes, including petiole elongation, hyponastic growth (upward 78 
+
+> .CC-BY-NC 4.0 International license made available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is The copyright holder for this preprint this version posted May 29, 2026. ;https://doi.org/10.64898/2026.05.29.728675 doi: bioRxiv preprint
+
+4
+
+bending of leaves), and a more open rosette architecture [6,7]. These responses, collectively 79 
+
+termed thermomorphogenesis, reflect a reallocation of growth that helps maintain 80 
+
+physiological performance under warm conditions [6,8,9]. Although the molecular basis of 81 
+
+thermomorphogenesis has been intensively studied, plant responses to warming are not 82 
+
+determined by plant physiology alone. Root-associated microbial communities can influence 83 
+
+plant growth through nutrient mobilization, hormone modulation, and protection against 84 
+
+environmental stress [10–13]. Temperature-driven changes in rhizosphere microbial 85 
+
+communities may therefore interact with plant thermomorphogenic responses and shape plant 86 
+
+architecture under elevated temperature [3,14]. 87 
+
+The rhizosphere microbiome is structured by multiple interacting drivers, including plant 88 
+
+genotype, microbial source environment, and abiotic conditions such as temperature [15–18]. 89 
+
+In many systems, soil origin explains a substantial proportion of microbial community variation, 90 
+
+establishing a baseline upon which host filtering and environmental perturbations act [17,19]. 91 
+
+Large-scale surveys of A. thaliana across Europe have provided important insight into these 92 
+
+assembly processes. Continental-scale analyses revealed strong geographic structuring of soil 93 
+
+microbial communities, reflecting environmental heterogeneity across sites, whereas root-94 
+
+associated bacterial assemblages showed partial convergence across locations, suggesting that 95 
+
+a limited set of phylogenetically diverse bacteria repeatedly colonizes plant roots despite 96 
+
+differences in surrounding soils [17]. Reciprocal transplant experiments between 97 
+
+geographically distant A. thaliana populations further showed that plant adaptation across 98 
+
+climatic gradients is driven primarily by local environmental conditions, while soil microbial 99 
+
+communities contribute comparatively little to the magnitude of adaptive differentiation [16]. 100 
+
+These studies highlight the joint roles of host genotype, environmental context, and 101 
+
+microbiome assembly in shaping plant-microbiome systems. 102 
+
+> .CC-BY-NC 4.0 International license made available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is The copyright holder for this preprint this version posted May 29, 2026. ;https://doi.org/10.64898/2026.05.29.728675 doi: bioRxiv preprint
+
+5
+
+Temperature is a fundamental regulator of microbial metabolism and growth [16–18]. 103 
+
+Warming experiments across ecosystems have documented shifts in microbial community 104 
+
+composition and associated ecosystem processes under elevated temperature [20–22]. 105 
+
+Microbial taxa often occupy distinct climatic niches, and warming can therefore drive taxon-106 
+
+specific changes in microbial richness and phylogenetic structure [23]. Plant-associated fungal 107 
+
+communities frequently show stronger compositional responses to elevated temperature than 108 
+
+bacterial communities, pointing to potential kingdom-level differences in sensitivity to thermal 109 
+
+perturbation [24,25]. Beyond taxonomic composition, warming may also alter the ecological 110 
+
+organization of microbial communities by changing interaction patterns and overall community 111 
+
+structure. Such changes can influence the balance between cooperative and competitive 112 
+
+associations and may affect microbiome stability. Because plant-associated microbiomes 113 
+
+regulate processes central to plant performance, including nutrient acquisition, hormone 114 
+
+signaling, and stress tolerance, warming-induced reorganization of plant-microbe interactions 115 
+
+has the potential to affect both plant phenotype and ecosystem functioning. 116 
+
+Despite growing recognition that plant-associated microbiomes influence plant 117 
+
+performance, the mechanisms linking warming-induced microbiome reorganization to plant 118 
+
+phenotypic responses remain poorly resolved. It remains unclear whether elevated temperature 119 
+
+overrides host- and soil-origin effects on rhizosphere community composition or instead adds 120 
+
+temperature-dependent shifts while preserving differences associated with plant genotype and 121 
+
+soil inoculum origin. It is also unclear whether plant responses to warming are equally strongly 122 
+
+associated with bacterial and fungal community composition. 123 
+
+To address these questions, we implemented a fully factorial design manipulating plant 124 
+
+genotype (P), microbial inoculum (M), and temperature (T) using natural Arabidopsis thaliana 125 
+
+ecotypes and their corresponding rhizosphere microbiomes from contrasting climatic regions. 126 
+
+We used 16 °C as a cool reference condition and 28 °C as a warm treatment, thereby 127 
+
+> .CC-BY-NC 4.0 International license made available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is The copyright holder for this preprint this version posted May 29, 2026. ;https://doi.org/10.64898/2026.05.29.728675 doi: bioRxiv preprint
+
+6
+
+establishing a defined thermal contrast between a lower baseline temperature and a widely used 128 
+
+thermomorphogenic setpoint. This design allowed us to examine microbiome-associated plant 129 
+
+responses under controlled warming conditions while maintaining comparability with the 130 
+
+Arabidopsis thermomorphogenesis literature. Specifically, we aimed to (i) determine how 131 
+
+elevated temperature reshapes plant morphology and rhizosphere microbial community 132 
+
+structure; (ii) test whether changes in microbiome composition, rather than simple host-133 
+
+microbiome matching by origin, helps explain variation in plant performance under warming; 134 
+
+and (iii) identify which aspects of microbiome composition are the best predictors of plant 135 
+
+phenotypic variation under elevated temperature, and whether correlations with bacterial and 136 
+
+fungal community compositions differ in strength. By integrating plant phenotyping, microbial 137 
+
+community profiling, correlation analyses between microbiome composition and plant 138 
+
+phenotypes, and predictive modeling, this study links thermal perturbation to the compositional 139 
+
+organization of rhizosphere microbiomes and provides a framework for understanding how 140 
+
+plant-microbiome systems reorganize under climate warming. 141 
+
+142 
+
+METHODS 143 
+
+A. thaliana source populations and soil collection 144 
+
+To guide the selection of source populations for the factorial experiment, we first carried out a 145 
+
+two-step pilot screen using European A. thaliana accessions from the 1001 Genomes seed 146 
+
+collection [26]. In the first step, 114 accessions from habitats spanning the warm and cold 147 
+
+margins of the European climatic range of A. thaliana were grown on agar plates for 7 days, 148 
+
+and hypocotyl responses under warm versus cool ambient conditions were quantified. Based 149 
+
+on this screen, 48 accessions showing pronounced differences in temperature-responsive 150 
+
+growth, together with Col-0 (1001g ID: 6909) as a reference genotype, were selected for a 151 
+
+second pilot experiment in soil. This follow-up assay was performed under the same cultivation 152 
+
+> .CC-BY-NC 4.0 International license made available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is The copyright holder for this preprint this version posted May 29, 2026. ;https://doi.org/10.64898/2026.05.29.728675 doi: bioRxiv preprint
+
+7
+
+conditions as the main experiment, and plants were imaged on day 11 of the temperature 153 
+
+treatment to quantify early vegetative traits. The soil-based screen was used to prioritize 154 
+
+sampling regions that combined clear temperature-response contrasts with warm versus cold 155 
+
+climatic origins and broadly comparable site conditions, particularly soil pH, carbon/nitrogen 156 
+
+status, and habitat context. Six field sites were therefore selected: three in central Spain and 157 
+
+three in Sweden, representing warm and cold extremes of the European A. thaliana range while 158 
+
+minimizing major site-level differences where possible ( Table S1 ). 159 
+
+Up to 8 plants were collected in March (Spain) and May (Sweden) for each site at the same 160 
+
+developmental stage (bolting/flowering stage; Table S1 ). To minimize disturbance to the root 161 
+
+system, plants were harvested together with the surrounding bulk soil and then transferred to 162 
+
+pots in the greenhouse. Plants were maintained under controlled greenhouse conditions for seed 163 
+
+production to rule out residual maternal environmental effects that might otherwise interfere 164 
+
+with genotype effects in downstream analyses. Greenhouse-propagated seeds of several mother 165 
+
+plants were bulked and used in the reciprocal planting experiment. 166 
+
+For soil collection at the exact plant sampling sites, the uppermost ca. 5 cm were discarded, 167 
+
+and soil samples were taken from a depth of ca. 5-25 cm. Soils were air-dried at room 168 
+
+temperature for less than 2 weeks and then stored in the dark at 4 °C until use. 169 
+
+170 
+
+Soil microbiome transplants 171 
+
+To minimize differences in soil matrix while preserving source-specific microbial inocula, 172 
+
+sterilized recipient soil (peat soil from PATZER Erden ORANGE VM Tr) was thoroughly 173 
+
+mixed with donor soil collected from each site, which served as the microbial inoculum (M), 174 
+
+at a ratio of 9:1 (recipient soil: donor soil). Sterility of the peat soil was verified by plating soil 175 
+
+suspensions on 50% Tryptic Soy Agar (TSA) and incubating them at 25 °C for up to 7 days. 176 
+
+After inoculation, the soils were incubated at room temperature for 2 weeks to allow microbial 177 
+
+> .CC-BY-NC 4.0 International license made available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is The copyright holder for this preprint this version posted May 29, 2026. ;https://doi.org/10.64898/2026.05.29.728675 doi: bioRxiv preprint
+
+8
+
+acclimation before seedling transplantation [16]. Repopulated soils were then collected for soil 178 
+
+property measurements and amplicon sequencing. 179 
+
+180 
+
+Experimental treatments and growth conditions 181 
+
+To investigate the three-way interaction among plant genotype (P), microbial inoculum (M), 182 
+
+and temperature (T), a full factorial design (P × M × T) was established. Seven A. thaliana 183 
+
+genotypes were used: three from Spain, three from Sweden, and the reference genotype Col-0 184 
+
+(1001g ID: 6909). These were grown in seven soil treatments: three carrying Spanish microbial 185 
+
+inocula, three carrying Swedish microbial inocula, and one sterilized-soil control, under 16 °C 186 
+
+and 28 °C conditions. The experimental design is shown in Fig. 1 . Climatic background data 187 
+
+for the collection sites were obtained from CHELSA-derived environmental layers compiled 188 
+
+in AraCLIM V2.0 within Arabidopsis CLIMtools [27]. We used the CHELSA spring mean 189 
+
+temperature (CHELSA Tmean spring) and spring maximum temperature (CHELSA Tmax 190 
+
+spring) variables to describe long-term temperature conditions at accession origins, because 191 
+
+spring better approximates the main vegetative growth window of A. thaliana in its natural 192 
+
+habitats. Although mean seasonal maximum temperatures at the collection sites remained 193 
+
+below the 28°C setpoint ( Table S1 ), the 16-28 °C temperature regime was chosen to a) 194 
+
+maintain comparability with the Arabidopsis thermomorphogenesis literature, and to b) ensure 195 
+
+a significant extent of thermomorphogenic plant growth behaviour. As such, 28 °C represent 196 
+
+an upper-end warming scenario rather than a simulation of average spring temperatures in the 197 
+
+field. 198 
+
+Throughout the manuscript, plant genotypes and microbial inocula were grouped by 199 
+
+climatic origin as warm (Spain) or cold (Sweden) where appropriate. For the primary home– 200 
+
+away analysis, only the exact pairing between a plant accession and its native soil inoculum 201 
+
+was classified as home. All other non-native combinations, including pairings within the same 202 
+
+> .CC-BY-NC 4.0 International license made available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is The copyright holder for this preprint this version posted May 29, 2026. ;https://doi.org/10.64898/2026.05.29.728675 doi: bioRxiv preprint
+
+9
+
+climatic region but from different sites, were classified as away. Col-0 and the sterilized-soil 203 
+
+control were excluded from home-away analyses. The reference genotype Col-0 and the 204 
+
+sterilized-soil controls were included in the factorial experiment but were excluded from home-205 
+
+away matching analyses because they did not belong to either climatic origin group. 206 
+
+Seeds were surface-sterilized, rinsed thoroughly with sterile distilled water, and stratified 207 
+
+in deionized water at 4 °C for 3 days before sowing. Seedlings were germinated on vertically 208 
+
+oriented sterile agar plates containing solid A. thaliana solution (ATS) [28] supplemented with 209 
+
+Fig. 1. Experimental design of the Arabidopsis -rhizosphere microbiome reciprocal inoculation experiment. Natural A. thaliana genotypes from warm (Spain) and cold (Sweden) climatic regions were grown with microbial inocula derived from rhizosphere soils collected at the corresponding field sites. A full factorial design manipulated plant genotype (P), microbial inoculum (M), and temperature (T), with plants cultivated under 16 °C and 28 °C conditions. Temperature levels were 16 °C (L) and 28 °C (H). Microbial inoculum treatments included sterilized peat soil control (mC), Spanish inocula (mSP1-mSP3), and Swedish inocula (mSW1-mSW3). Plant genotypes included the control genotype (pC), Spanish genotypes (pSP1-pSP3), and Swedish genotypes (pSW1-pSW3). High-throughput phenotyping was conducted using the LemnaTec PhenoAIxpert platform (LemnaTec GmbH, Aachen, Germany). Image acquisition and trait extraction were performed using LemnaTec software (LemnaGrid, LemnaExperiment, Analysis Executor4, and LemnaAIxplorer). Rhizosphere bacterial and fungal communities were profiled by amplicon sequencing of the 16S rRNA gene and fungal ITS region. The reference genotype Col-0 (1001g ID: 6909) and a sterilized-soil 
+
+control were included in the experiment as additional controls. 
+
+> .CC-BY-NC 4.0 International license made available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is The copyright holder for this preprint this version posted May 29, 2026. ;https://doi.org/10.64898/2026.05.29.728675 doi: bioRxiv preprint
+
+10 
+
+1% (w/v) sucrose. Seedlings were grown for 14 days under long-day conditions (16 h light/8 h 210 
+
+dark) at 16 °C with photosynthetically active radiation (PAR) of 90 μmol m⁻² s⁻¹ provided by 211 
+
+white fluorescent lamps (T5, 4000 K) [29]. 212 
+
+Uniformly germinated 14-day-old seedlings were transplanted into soil-filled pots and 213 
+
+acclimated for 5 days in growth chambers set to 16/16 °C (day/night), 90 μmol m⁻² s⁻¹ light 214 
+
+intensity, and a long-day photoperiod. Plants were then either maintained at 16/16 °C or shifted 215 
+
+to 28/28 °C (day/night) for 14 days [30]. Temperature treatments were implemented in two 216 
+
+chambers per setpoint, and environmental parameters (relative humidity, PAR, spectrum, 217 
+
+temperature) were logged to ensure comparability across chambers ( Fig. S1 ). Temperature 218 
+
+treatments were implemented as fixed chamber setpoints. To reduce potential chamber- and 219 
+
+position-related effects, pots were randomly repositioned and exchanged between the two 220 
+
+chambers within each temperature treatment every second day. Each treatment combination 221 
+
+consisted of 10 biological replicates. Differences between 16 °C and 28 °C are therefore 222 
+
+interpreted as temperature-associated responses under controlled chamber conditions. 223 
+
+224 
+
+Plant phenotypic trait recording and data analysis 225 
+
+High-throughput phenotyping was conducted using the LemnaTec PhenoAIxpert platform 226 
+
+(LemnaTec GmbH, Aachen, Germany), a non-invasive RGB imaging system for automated 227 
+
+monitoring of plant growth and morphology [31]. Image acquisition and trait extraction were 228 
+
+performed using LemnaTec software (LemnaGrid, LemnaExperiment, Analysis Executor4, 229 
+
+and LemnaAIxplorer). Plants were imaged from top and side views to quantify phenotypic 230 
+
+traits. Day 0 refers to the onset of the temperature treatment, and the plant trait analyses 231 
+
+reported here were based on endpoint measurements taken after 14 days of temperature 232 
+
+treatment. Petiole length and petiole angle were additionally quantified from endpoint images 233 
+
+using ImageJ. Fresh weight was also recorded at harvest. A total of 11 plant traits characterizing 234 
+
+> .CC-BY-NC 4.0 International license made available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is The copyright holder for this preprint this version posted May 29, 2026. ;https://doi.org/10.64898/2026.05.29.728675 doi: bioRxiv preprint
+
+11 
+
+rosette size and shape were recorded ( Table S2 ). In the main text, we focus on representative 235 
+
+univariate endpoint traits and multivariate phenotype summaries. Here, plant performance 236 
+
+refers to short-term vegetative performance assessed from endpoint traits after 14 days of 237 
+
+temperature treatment, rather than lifetime fitness or growth rate. 238 
+
+To assess the effects of temperature, microbial inoculum, and plant genotype, plant traits 239 
+
+were analyzed using full factorial linear models including all main effects and interactions (T 240 
+
+× M × P). Type III ANOVA with sum-to-zero contrasts was used to accommodate the balanced 241 
+
+design. Partial η² values were calculated to estimate the proportion of variance explained by 242 
+
+each factor after accounting for interactions. 243 
+
+To characterize coordinated morphological changes, subsets of classic 244 
+
+thermomorphogenic traits describing petiole morphology and rosette architecture were 245 
+
+standardized and subjected to principal component analysis (PCA). We used a growth index 246 
+
+defined as the first principal component (PC1) of standardized endpoint growth-related traits. 247 
+
+Temperature-induced plasticity was quantified at the accession level as Δ(H–L), calculated 248 
+
+from mean trait values at 28 °C (H) and 16 °C (L). Differences in plastic responses between 249 
+
+warm- and cold-origin accessions were tested using two-sample t-tests. All plant statistical 250 
+
+analyses were conducted in R (v4.5.1; [32]). 251 
+
+252 
+
+Rhizosphere soil collection and sequencing 253 
+
+At the end of the temperature treatment, rhizosphere soil samples were harvested. Loosely 254 
+
+attached soil was removed by gently shaking the roots. Roots were separated from shoots and 255 
+
+transferred to 50 mL Falcon tubes containing 40 mL sterile deionized water. Tubes were gently 256 
+
+inverted ten times to dislodge rhizosphere-associated soil. Roots were then removed, and the 257 
+
+resulting wash solution was centrifuged at 4,000 × g for 10 min. The supernatant was discarded, 258 
+
+and the pellet was resuspended in sterile water and transferred to 2 mL screw-cap tubes. After 259 
+
+> .CC-BY-NC 4.0 International license made available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is The copyright holder for this preprint this version posted May 29, 2026. ;https://doi.org/10.64898/2026.05.29.728675 doi: bioRxiv preprint
+
+12 
+
+centrifugation at 20,000 rpm for 10 min, the supernatant was removed and the pellet was snap-260 
+
+frozen in liquid nitrogen and stored at −80 °C until analysis [17]. 261 
+
+From the harvested rhizosphere material, three independent composite samples were 262 
+
+generated for each treatment combination by randomly pooling three of the ten biological 263 
+
+replicates. This resulted in 294 composite rhizosphere samples for downstream DNA extraction 264 
+
+and amplicon sequencing. DNA was extracted using the DNeasy PowerLyzer PowerSoil Kit 265 
+
+(QIAGEN, Hilden, Germany). DNA concentration was measured using a Qubit 2.0 fluorometer 266 
+
+with the Qubit dsDNA BR Assay Kit (Thermo Fisher Scientific, MA, USA). Target regions 267 
+
+were amplified using barcoded primers targeting the bacterial 16S rRNA V4 region and the 268 
+
+fungal ITS2 region. Amplicons were sequenced on the Novogene Illumina platform to generate 269 
+
+250 bp paired-end reads. The statistics of sequencing data is shown in Table S3 .270 
+
+271 
+
+Rhizosphere microbiome data processing and community analyses 272 
+
+Raw sequencing reads were processed using QIIME2 (v2025.7; [33]). Demultiplexed paired-273 
+
+end reads were merged using FLASH2 and denoised with DADA2 to generate amplicon 274 
+
+sequence variants (ASVs; [34,35]). Chimeric sequences were removed using the uchime-275 
+
+denovo approach implemented in QIIME2. Taxonomic assignment was performed against 276 
+
+SILVA v138.1 for bacterial 16S rRNA sequences and UNITE v9.0 for fungal ITS2 sequences. 277 
+
+ASVs classified as chloroplast, mitochondria, or unassigned at the kingdom level were 278 
+
+removed. To reduce sparsity, ASVs present in fewer than 10% of samples or with total 279 
+
+abundance <20 reads across all samples were excluded. Unless otherwise stated, downstream 280 
+
+analyses were performed on relative abundance tables normalized to unit total abundance. 281 
+
+Bacterial and fungal communities were profiled with different amplicon markers and analyzed 282 
+
+separately. We therefore limited comparisons between kingdoms to broad patterns such as 283 
+
+> .CC-BY-NC 4.0 International license made available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is The copyright holder for this preprint this version posted May 29, 2026. ;https://doi.org/10.64898/2026.05.29.728675 doi: bioRxiv preprint
+
+13 
+
+community reorganization, microbiome-phenotype associations, and model performance, 284 
+
+rather than direct contrasts in relative or absolute abundance. 285 
+
+Soil property associations with microbial community composition 286 
+
+Associations between soil physicochemical properties and major microbial phyla were 287 
+
+assessed using Mantel tests. Relationships between microbial community composition and soil 288 
+
+physicochemical variables were further examined using constrained ordination, with canonical 289 
+
+correspondence analysis (CCA) applied to bacterial communities and redundancy analysis 290 
+
+(RDA) applied to fungal communities. Mantel tests [36], CCA [37], and RDA [38] followed 291 
+
+the linear constrained ordination framework implemented in the vegan package (v2.7-3) [39] 292 
+
+in R. 293 
+
+Alpha and beta diversity analyses 294 
+
+Alpha diversity was calculated from ASV tables rarefied to 1,000 reads per sample using the 295 
+
+Shannon index, Chao1, and observed richness. Beta diversity was quantified using Bray-Curtis 296 
+
+dissimilarity based on relative abundance data, and principal coordinate analysis (PCoA) was 297 
+
+used for ordination. Community composition was tested by PERMANOVA with 999 298 
+
+permutations, using temperature, microbial inoculum, plant genotype, and their interactions as 299 
+
+explanatory terms. Multivariate dispersion was assessed separately by testing distances to 300 
+
+group centroids with 999 permutations. Analyses were performed on the full dataset and within 301 
+
+each temperature treatment (16 °C and 28 °C) in R using the vegan package (v2.7-3) [39–41]. 302 
+
+Identification of recurrent temperature-responsive lineages 303 
+
+To identify microbial lineages consistently associated with temperature across experimental 304 
+
+locations, ASV tables were aggregated at the family level. Within each sampling site, family-305 
+
+level relative abundances were compared between temperature treatments using linear models, 306 
+
+and P values were adjusted for multiple testing using the Benjamini-Hochberg false discovery 307 
+
+rate (FDR) procedure. Families were classified as recurrent temperature-responsive lineages 308 
+
+> .CC-BY-NC 4.0 International license made available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is The copyright holder for this preprint this version posted May 29, 2026. ;https://doi.org/10.64898/2026.05.29.728675 doi: bioRxiv preprint
+
+14 
+
+when they showed a significant temperature effect (FDR < 0.05) in at least four independent 309 
+
+locations with a consistent direction of response. 310 
+
+Microbial network construction and topological analysis 311 
+
+Microbial co-occurrence network analysis was used to examine whether elevated temperature 312 
+
+was associated with changes in potential microbial association patterns in the rhizosphere. 313 
+
+Microbial co-occurrence networks were constructed separately for the 16°C and 28°C 314 
+
+treatments using the Molecular Ecological Network Analysis Pipeline (MENAP; Institute for 315 
+
+Environmental Genomics, University of Oklahoma) [42]. Prior to network construction, taxa 316 
+
+detected in fewer than 2% of samples were removed to reduce sparsity. Pairwise associations 317 
+
+between relative abundances of different Phyla were calculated using Spearman rank 318 
+
+correlations, and adjacency matrices were defined using the random matrix theory (RMT)-319 
+
+based threshold implemented in MENAP. Only correlations exceeding the RMT-derived cutoff 320 
+
+were retained for network construction. Network topological properties, including node degree, 321 
+
+clustering coefficient, modularity, transitivity, betweenness centrality, and eigenvector 322 
+
+centralization, were calculated within MENAP to assess temperature-associated changes in 323 
+
+network connectivity and compartmentalization. Modules were identified by modularity 324 
+
+optimization. For downstream analyses, module eigengenes were defined as the first principal 325 
+
+component of the standardized relative abundances of taxa within each module. Co-occurrence 326 
+
+networks represent statistical associations; network differences were therefore interpreted as 327 
+
+changes in potential microbial association structure rather than direct ecological interactions. 328 
+
+Quantification of changes in microbiome composition 329 
+
+Microbiome compositional change (Δβ) was quantified as Bray-Curtis dissimilarity relative to 330 
+
+the corresponding home microbiome baseline. For each plant-microbiome combination, Δβ 331 
+
+was calculated relative to the corresponding matched home rhizosphere community from the 332 
+
+same temperature treatment at the end of the experiment, and was then classified by matching 333 
+
+> .CC-BY-NC 4.0 International license made available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is The copyright holder for this preprint this version posted May 29, 2026. ;https://doi.org/10.64898/2026.05.29.728675 doi: bioRxiv preprint
+
+15 
+
+context as home or away. For accession-level analyses, Δβ values were averaged across 334 
+
+biological replicates within each accession and matching context. 335 
+
+336 
+
+Microbiome-phenotype associations and community-level coupling 337 
+
+Associations between accession-level growth index and microbiome compositional change (Δβ) 338 
+
+were evaluated using Spearman rank correlations, conducted separately for home and away 339 
+
+conditions. To assess robustness, leave-one-out sensitivity analyses were performed by 340 
+
+iteratively excluding one accession at a time and recalculating the correlation coefficient, 341 
+
+following a jackknife-type resampling approach [43]. Community-level microbiome-342 
+
+phenotype coupling was assessed using Mantel tests comparing Bray-Curtis dissimilarity 343 
+
+matrices of bacterial or fungal communities with Euclidean distance matrices of multivariate 344 
+
+plant phenotypes. Mantel tests were performed separately for home and away contexts. 345 
+
+346 
+
+Predictive modeling framework 347 
+
+To quantify the association between microbiome composition and plant phenotypic variation, 348 
+
+nested linear models were fitted using aggregated trait values (mean per T × M × P × matching 349 
+
+combination). The baseline model included temperature (T), microbial inoculum (M), and plant 350 
+
+genotype (P): Trait ~ T + M + P 351 
+
+Extended models additionally included microbiome composition-derived predictors, 352 
+
+namely bacterial and fungal compositional change (Δβ) and the first principal coordinate axis 353 
+
+(PCoA1) derived from Bray-Curtis dissimilarities: Trait ~ T + M + P + fungal Δβ + fungal 354 
+
+PCoA1 + bacterial Δβ + bacterial PCoA1 355 
+
+To compare the relative contributions of the two microbial kingdoms, symmetric models 356 
+
+were also fitted with either fungal or bacterial composition-derived predictors only. Model fit 357 
+
+> .CC-BY-NC 4.0 International license made available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is The copyright holder for this preprint this version posted May 29, 2026. ;https://doi.org/10.64898/2026.05.29.728675 doi: bioRxiv preprint
+
+16 
+
+was evaluated using adjusted R² and Akaike’s Information Criterion (AIC), and nested models 358 
+
+were compared using partial F-tests [44]. 359 
+
+Predictive performance was further assessed by ten-fold cross-validation [45]. Cross-360 
+
+validated R² was calculated as: R²_CV = 1 − (Σ( yobs − ypred)² / Σ( yobs − ȳ)²) 361 
+
+Semi-partial R², representing the unique variance explained by each focal predictor, was 362 
+
+calculated from the change in residual sums of squares between full and reduced models [46]. 363 
+
+All analyses were conducted in R (v4.5.1; [32]). 364 
+
+Throughout the manuscript and supplementary materials, sample IDs are given as 365 
+
+Temperature_Microbial inoculum_Plant genotype. Temperature codes are L for 16 °C and H 366 
+
+for 28 °C. Microbial inocula are coded as mSP1, mSP2, and mSP3 for the three Spanish 367 
+
+microbial inocula, mSW1, mSW2, and mSW3 for the three Swedish microbial inocula, and 368 
+
+mC for the sterilized-soil control. Plant genotypes are coded as pSP1, pSP2, and pSP3 for the 369 
+
+three Spanish accessions, pSW1, pSW2, and pSW3 for the three Swedish accessions, and pC 370 
+
+for Col-0 . Official accession names corresponding to these soil collection sites and plant 371 
+
+genotype codes are listed in Table S1 .372 
+
+373 
+
+Soil covariate adjustment 374 
+
+Plant trait soil-covariate analysis 375 
+
+To test whether residual edaphic variation confounded inoculum-associated effects on plant 376 
+
+traits, soil N and C/N ratio were summarized at the inoculum level and linked to the plant trait 377 
+
+dataset by inoculum identity. For each trait, nested linear models were used to test the 378 
+
+additional contribution of inoculum identity after accounting for temperature, plant genotype, 379 
+
+soil N, and soil C/N ratio. The additional explanatory contribution of inoculum identity was 380 
+
+quantified as partial R². In parallel, scaled multivariate plant traits were analyzed by partial 381 
+
+redundancy analysis, with temperature, inoculum identity, and plant genotype as explanatory 382 
+
+> .CC-BY-NC 4.0 International license made available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is The copyright holder for this preprint this version posted May 29, 2026. ;https://doi.org/10.64898/2026.05.29.728675 doi: bioRxiv preprint
+
+17 
+
+variables and soil N and C/N ratio included as conditioning variables. Term significance was 383 
+
+assessed using 999 permutations. 384 
+
+Microbiome soil-covariate analysis 385 
+
+To assess whether residual soil N and C/N variation explained microbiome community 386 
+
+structure, partial distance-based redundancy analysis was performed using Bray-Curtis 387 
+
+dissimilarities for bacterial and fungal communities separately. Temperature, inoculum identity, 388 
+
+and plant genotype were tested as explanatory variables while conditioning on soil N and C/N 389 
+
+ratio. Conversely, the independent contribution of soil N and C/N ratio was tested after 390 
+
+conditioning on temperature, inoculum identity, and plant genotype. Term significance was 391 
+
+assessed using 999 permutations. 392 
+
+393 
+
+RESULTS 394 
+
+Temperature-responsive growth variation guides selection of climatically contrasting 395 
+
+field sites 396 
+
+To guide field site selection for the factorial experiment, we conducted a two-step pilot screen 397 
+
+using European A. thaliana accessions from the 1001 Genomes collection. First, 114 accessions 398 
+
+from habitats spanning the warm and cold extremes of the species’ European climatic range 399 
+
+were grown on medium plates at 16 °C and 28 °C to assess seedling thermoresponsiveness by 400 
+
+analyzing the temperature-induced hypocotyl elongation, which is known to be a good proxy 401 
+
+for various kinds of thermomorphogenic responses, also later in development [47]. This initial 402 
+
+screen revealed substantial accession-level variation in relative hypocotyl elongation under 403 
+
+warm versus cool ambient conditions ( Fig. 2a ). Based on these results, 48 accessions showing 404 
+
+pronounced temperature-responsive growth differences, together with Col-0 as a reference 405 
+
+genotype, were selected for a second soil-based pilot experiment. This follow-up screen used 406 
+
+> .CC-BY-NC 4.0 International license made available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is The copyright holder for this preprint this version posted May 29, 2026. ;https://doi.org/10.64898/2026.05.29.728675 doi: bioRxiv preprint
+
+18 
+
+the same cultivation conditions as the main experiment, with image-based phenotyping on day 407 
+
+11 of the temperature treatment of 28 °C compared to the 16 °C control treatment. 408 
+
+409 
+
+Fig. 2. Two-step pilot screen of thermoresponsive growth used to guide field-site selection. (a) Initial screen of 114 European A. thaliana accessions from the 1001 Genomes collection grown on agar plates for 7 days to assess relative hypocotyl elongation under warm (28 ℃) versus cool ambient (16 ℃) conditions. Accessions in bold were used in ( b): Follow-up soil-based screen of 48 accessions selected from the initial screen based on pronounced temperature-responsive growth differences, with Col-0 (1001g ID: 6909) included as a reference genotype. Plants were grown under the same cultivation conditions as the main experiment and phenotyped by image analysis on day 11 of the temperature treatment to assess early vegetative responses, including relative petiole elongation. Accessions are ordered by their median relative response, and colors indicate country or region of origin. ( c) Representative images of 10 accessions from the soil-based pilot screen, including five Spanish and five Swedish accessions, shown at day 11 of the temperature treatment under both 16 °C and 28 °C conditions. These images illustrate the range of early vegetative phenotypes observed among warm- and cold-origin materials under the two temperature treatments. The complete day-11 side-view images set for the 48 
+
+accessions is provided in Fig. S2 .
+
+> .CC-BY-NC 4.0 International license made available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is The copyright holder for this preprint this version posted May 29, 2026. ;https://doi.org/10.64898/2026.05.29.728675 doi: bioRxiv preprint
+
+19 
+
+It confirmed the broad variation in classic thermomorphogenic responses such as petiole 410 
+
+elongation ( Figs. 2b, c and S2 ), but revealed no clear correlation between temperature 411 
+
+responsiveness and latitude. This is consistent with earlier work on the temperature dependence 412 
+
+of flowering time, in which latitude alone proved a weak predictor of the underlying variation 413 
+
+[48,49]. Accordingly, accession sampling was guided by the northern and southern range 414 
+
+margins of A. thaliana -representing cold and warm climatic origins-while keeping major site 415 
+
+characteristics broadly comparable. 416 
+
+417 
+
+We selected three field sites from central Spain and three from Sweden ( Table S1 ) as sampling 418 
+
+regions. The collected native accessions were then propagated for one generation in controlled 419 
+
+greenhouse conditions to eliminate potential maternal effects caused by the native 420 
+
+environments at the collection sites. Seeds of several individual plants per accession were 421 
+
+bulked and used in the main experiment. 422 
+
+423 
+
+Temperature strongly shapes vegetative plant growth and architecture 424 
+
+The soil-repopulation strategy was designed to reduce chemical differences among donor soils 425 
+
+while retaining their microbial legacy. Before analyzing plant and rhizosphere responses, we 426 
+
+first evaluated residual soil chemical variation in the repopulated substrate. Most 427 
+
+physicochemical differences were substantially reduced after repopulation, although soil N 428 
+
+content and C/N ratio remained distinguishable among inoculum origins ( Fig. S3 ). These two 429 
+
+variables were therefore included as covariates in subsequent sensitivity analyses. 430 
+
+We examined how temperature (T), microbial inoculum (M), and plant genotype (P) 431 
+
+affected A. thaliana vegetative traits using a fully factorial P × M × T design ( Figs. 3 and S4-432 
+
+10 ). To keep the main text focused, we highlight petiole length and plant area as representative 433 
+
+univariate traits capturing architectural and size-related responses, respectively, and use 434 
+
+> .CC-BY-NC 4.0 International license made available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is The copyright holder for this preprint this version posted May 29, 2026. ;https://doi.org/10.64898/2026.05.29.728675 doi: bioRxiv preprint
+
+20 
+
+multivariate phenotype axes to summarize coordinated trait variation. Detailed plots for the 435 
+
+remaining measured traits are provided in the supplementary figures ( Figs. S4, S7-10 ), and the 436 
+
+corresponding Type III ANOVA results are summarized in Table S4 .437 
+
+438 
+
+Across the measured traits, temperature emerged as a major driver of plant morphology 439 
+
+within the 14-day vegetative assay. At 28 °C, plants showed a coherent architectural shift 440 
+
+Fig. 3. Plant growth and morphological traits in response to warming temperature. (a) Representative top-view and side-view images of wild-type A. thaliana accession Col-0 (1001g ID: 6909) grown in control soil at 16°C (L) and 28°C (H). Representative images were taken at the indicated days (day 0, 2, 4, 7, 9, 11 and 14) after the start of the temperature treatment (day 0) to illustrate temperature-dependent differences in plant rosette architecture. ( b) Petiole length and plant area measured at 14 days across the six wild accessions and Col-0 under the two temperature treatments. Plant area was quantified using the LemnaTec phenotyping platform. Asterisks denote significance between temperatures after Benjamini-Hochberg correction (*FDR < 0.05, **FDR < 0.01, ***FDR < 0.001). ( c, d ) Principal component analysis (PCA) of petiole angle, petiole length traits ( c), and rosette shape traits ( d) across the six wild accessions and Col-0 under the two temperature treatments. For host-microbiome matching analyses, home referred only to the original accession-soil pairing from the same field site of origin. Any non-native combination, including pairings within the same climatic region but from different sites, was classified as away. Col-0 and the sterilized-soil control were excluded from home-away analyses. The plant trait analyses reported here were based on endpoint measurements taken after 14 days of temperature treatment. 
+
+> .CC-BY-NC 4.0 International license made available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is The copyright holder for this preprint this version posted May 29, 2026. ;https://doi.org/10.64898/2026.05.29.728675 doi: bioRxiv preprint
+
+21 
+
+characterized by petiole elongation and a more open rosette structure, which has been shown 441 
+
+to enable evaporative cooling [50], relative to 16 °C ( Fig. 3a ). Univariate analyses confirmed 442 
+
+strong temperature effects on both petiole length, plant area and other measured traits ( Fig. 3b 443 
+
+and S4 ). Plant genotype significantly affected plant phenotype, whereas microbial inoculum 444 
+
+had comparatively weak main effects, with substantial overlap in trait distributions across 445 
+
+inoculum treatments ( Figs. S5-S8 ). Interaction analyses further showed that temperature 446 
+
+responses varied among genotypes (T × P; Figs. S5, S6 and S9 ), but were broadly consistent 447 
+
+across microbial inocula (T × M; Figs. S5, S6 and S10 ). 448 
+
+To capture coordinated effects on plant morphology, we performed principal component 449 
+
+analysis (PCA) on petiole-related traits and rosette architecture. In both cases, the first principal 450 
+
+component clearly separated plants grown at 16 °C and 28 °C ( Fig. 3c, d ), defining a dominant 451 
+
+temperature-associated phenotypic axis. PC1 scores differed strongly between temperature 452 
+
+treatments (Fig. S11 ), whereas differences attributable to home-away matching were 453 
+
+comparatively modest at this stage, with substantial overlap in endpoint phenotype 454 
+
+distributions across contexts. Variance partitioning further revealed a hierarchical structure of 455 
+
+phenotypic control ( Fig. S12; Tables S4 and S5 ). Across traits, plant genotype explained the 456 
+
+largest proportion of total variance, followed by temperature and genotype-specific 457 
+
+temperature responses (T × P). By contrast, microbial inoculum contributed relatively small 458 
+
+independent effects. 459 
+
+Given the residual variation in soil N and C/N ratio, we further tested whether these 460 
+
+edaphic covariates contributed to the weak inoculum-associated effects on plant traits. Soil-461 
+
+adjusted partial RDA showed that temperature, plant genotype, and inoculum identity all 462 
+
+remained significant predictors of multivariate trait structure, but inoculum identity explained 463 
+
+only a small fraction of the constrained variation relative to genotype and temperature ( Fig. 464 
+
+S13 ; Table S6 ). Trait-level nested models similarly showed that adding inoculum identity after 465 
+
+> .CC-BY-NC 4.0 International license made available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is The copyright holder for this preprint this version posted May 29, 2026. ;https://doi.org/10.64898/2026.05.29.728675 doi: bioRxiv preprint
+
+22 
+
+temperature, plant genotype, soil N, and soil C/N explained only modest additional variation 466 
+
+across individual traits, with partial R² values mostly below 0.02-0.03 ( Table S7 ). Thus, 467 
+
+residual soil N and C/N did not account for the weak but detectable inoculum-associated effects 468 
+
+on plant traits. 469 
+
+We next asked whether climatic origin predicted stronger vegetative responses under 470 
+
+elevated temperature. Responses were strongly genotype-dependent across all traits ( Fig. S14a, 471 
+
+b). Although most accessions showed increased trait values at 28 °C, the magnitude and 472 
+
+direction of change varied substantially among genotypes. Warm-origin accessions did not 473 
+
+consistently show greater vegetative growth than cold-origin accessions under elevated 474 
+
+temperature. Cold-origin accessions exhibited larger temperature-induced trait shifts [Δ(H–L)] 475 
+
+across traits ( Fig. S14c, d; Table S8 ). One warm-origin accession (pSP2/IP-EVS-0_B) showed 476 
+
+marked growth suppression at 28 °C; however, excluding this genotype did not alter the 477 
+
+qualitative origin-dependent pattern of plastic responses ( Fig. S15; Table S9 ). 478 
+
+479 
+
+Warming reorganizes rhizosphere microbiome structure within soil- and plant-defined 480 
+
+constraints 481 
+
+To determine how elevated temperature restructured rhizosphere microbial communities, we 482 
+
+quantified the relative contributions of microbial inoculum (M), plant genotype (P), 483 
+
+temperature (T), and their interactions to community composition. PERMANOVA revealed a 484 
+
+hierarchical organization of rhizosphere microbiomes ( Fig. 4a, c ). Microbial inoculum 485 
+
+explained the largest proportion of variation in both bacterial and fungal communities (52.25% 486 
+
+and 55.10%, respectively), establishing inoculum origin as the dominant structural scaffold. 487 
+
+Plant genotype contributed additional variation, particularly in fungal communities (2.78% for 488 
+
+bacteria and 17.06% for fungi). Temperature accounted for a smaller but statistically significant 489 
+
+fraction of variation in both kingdoms (1.05% and 1.40%, respectively). 490 
+
+> .CC-BY-NC 4.0 International license made available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is The copyright holder for this preprint this version posted May 29, 2026. ;https://doi.org/10.64898/2026.05.29.728675 doi: bioRxiv preprint
+
+23 
+
+491 
+
+Principal coordinate analysis (PCoA) based on Bray-Curtis dissimilarity further illustrated 492 
+
+these hierarchical patterns. When all samples were analyzed jointly, bacterial and fungal 493 
+
+communities were separated primarily by microbial inoculum ( Fig. 4b, d ), with temperature 494 
+
+not forming the dominant axis of variation. To resolve temperature-associated structure more 495 
+
+explicitly, we performed temperature-stratified ordinations. Across inoculum-defined baseline 496 
+
+Fig. 4. Effects of microbial inoculum, plant genotype, and temperature on rhizosphere microbiome composition. (a, c ) Variance explained by microbial inoculum (M), plant genotype (P), temperature (T), and their interactions for bacterial ( a) and fungal ( c) community composition, estimated by PERMANOVA on Bray-Curtis dissimilarity matrices. Asterisks indicate term significance from permutation tests with 999 permutations (*FDR < 0.05, **FDR < 0.01, ***FDR < 0.001). ( b, d ) Principal coordinate analysis (PCoA) of bacterial ( b)and fungal ( d) rhizosphere communities based on Bray-Curtis dissimilarities. Points represent individual samples, colored by microbial inoculum origin and shaped by temperature treatment. 
+
+> .CC-BY-NC 4.0 International license made available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is The copyright holder for this preprint this version posted May 29, 2026. ;https://doi.org/10.64898/2026.05.29.728675 doi: bioRxiv preprint
+
+24 
+
+configurations, elevated temperature induced reproducible directional shifts while preserving 497 
+
+the dominant clustering by inoculum origin ( Fig. S16 ). Comparable temperature-associated 498 
+
+reorganization was also observed within plant genotype groupings, particularly in fungal 499 
+
+communities ( Fig. S17 ). 500 
+
+Multivariate dispersion analyses further showed that temperature altered within-group 501 
+
+variability in both microbial kingdoms ( Fig. S18; Table S10 ). Alpha diversity was structured 502 
+
+primarily by inoculum origin and showed more limited, context-dependent responses to 503 
+
+temperature and plant genotype ( Fig. S19 ). 504 
+
+We next tested whether the residual variation in soil N and C/N ratio could account for 505 
+
+inoculum-associated microbiome structure. After conditioning on these covariates, inoculum 506 
+
+identity remained the dominant predictor of both bacterial and fungal community composition, 507 
+
+whereas temperature and plant genotype explained smaller but significant components of 508 
+
+variation ( Table S11 ). Conversely, soil C/N explained no additional microbiome variation after 509 
+
+conditioning on temperature, inoculum identity, and plant genotype, while soil N showed only 510 
+
+a minor residual association with bacterial communities. These results indicate that the strong 511 
+
+inoculum-associated structure of the rhizosphere microbiome was not reducible to residual 512 
+
+variation in soil N or C/N. 513 
+
+514 
+
+Recurrent temperature-responsive lineages and interaction reconfiguration under 515 
+
+warming 516 
+
+Having established that warming induced reproducible compositional shifts within inoculum-517 
+
+and host-defined microbial baselines, we next asked whether this restructuring reflected 518 
+
+stochastic turnover or the repeated selection of specific microbial lineages. 519 
+
+Temperature-responsive microbial families recurred across multiple geographic origins 520 
+
+rather than being confined to individual sites ( Fig. S20; Table S12 ). Several bacterial families, 521 
+
+> .CC-BY-NC 4.0 International license made available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is The copyright holder for this preprint this version posted May 29, 2026. ;https://doi.org/10.64898/2026.05.29.728675 doi: bioRxiv preprint
+
+25 
+
+including Pedosphaeracea e, Opitutaceae , Iamiaceae , Haliangiaceae , Vicinamibacteraceae ,522 
+
+Microscillaceae , Gemmataceae , and Dongiaceae , were repeatedly enriched under 28°C across 523 
+
+locations. Fungal responses were more lineage-specific: Nectriaceae was recurrently enriched 524 
+
+under 28°C, whereas Didymellaceae , Cladosporiaceae , Pleosporaceae , Phanerochaetaceae ,525 
+
+and Coniochaetaceae were more frequently enriched under 16°C ( Fig. S20 ). 526 
+
+527 
+
+Fig. 5. Warming reconfigures rhizosphere microbial co-occurrence network structure. (a, b)Temperature-specific co-occurrence networks constructed for rhizosphere microbial communities at 16 °C ( a)and 28 °C ( b) using the Molecular Ecological Network Analysis Pipeline (MENAP). Nodes represent bacterial or fungal taxa, and edges represent significant Spearman correlations retained after application of the random matrix theory threshold. Node colors indicate taxonomic groups. ( c) Summary of selected network properties for the 16 °C and 28 °C networks, including the numbers of nodes and links, average degree, and the proportions of positive versus negative links and intra- versus inter-kingdom links. Additional topological indices are shown in Fig. S21 , and full network statistics are provided in Table S15 .
+
+> .CC-BY-NC 4.0 International license made available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is The copyright holder for this preprint this version posted May 29, 2026. ;https://doi.org/10.64898/2026.05.29.728675 doi: bioRxiv preprint
+
+26 
+
+To determine whether these lineage-level shifts were accompanied by changes in higher-528 
+
+order organization, we constructed molecular ecological networks separately for the 16 °C and 529 
+
+28 °C treatments ( Fig. 5a, b ). Both temperature regimes contained six major modules, but 530 
+
+network topology differed substantially under warming. The 28°C network contained more 531 
+
+nodes and links than the 16°C network and showed a higher average degree, indicating denser 532 
+
+statistical associations among microbial taxa under elevated temperature ( Fig. 5c; Table S13 ). 533 
+
+The proportion of bacteria-fungi links increased under warming, whereas intra-kingdom links 534 
+
+decreased. Topological indices further showed structural reconfiguration at elevated 535 
+
+temperature ( Fig. S21 ). Clustering coefficient, transitivity, and modularity were reduced at 536 
+
+28 °C, whereas overall connectedness increased. The proportion of negative links also 537 
+
+increased under warming, accompanied by a decrease in positive links ( Fig. 5c ). Network 538 
+
+properties under both temperature regimes differed from those of randomized networks, 539 
+
+indicating non-random organization. 540 
+
+Despite these compositional and network-level shifts, predicted functional profiles 541 
+
+remained broadly similar between temperature treatments. PICRUSt2-inferred bacterial 542 
+
+metabolic pathways showed substantial overlap between 16 °C and 28 °C communities ( Fig. 543 
+
+S22a ), and FUNGuild-based trophic assignments revealed comparable guild composition 544 
+
+across temperatures ( Fig. S22b ). 545 
+
+546 
+
+Microbiome structural stability associates with plant performance in a context-547 
+
+dependent manner 548 
+
+To assess whether host-microbiome matching contributes to rhizosphere community stability, 549 
+
+we quantified microbial compositional change (Δβ) under home and away conditions across 550 
+
+temperature treatments. Lower Δβ values indicate greater compositional stability ( Fig. S23 ). 551 
+
+Bacterial communities showed a significant home-away difference at 16°C, with higher 552 
+
+> .CC-BY-NC 4.0 International license made available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is The copyright holder for this preprint this version posted May 29, 2026. ;https://doi.org/10.64898/2026.05.29.728675 doi: bioRxiv preprint
+
+27 
+
+compositional turnover under home than under away conditions. This direction did not support 553 
+
+a simple home-stability pattern. The home-away difference disappeared at 28°C and was not 554 
+
+observed in fungal communities, indicating that matching effects were weak, kingdom-specific, 555 
+
+and temperature-dependent. 556 
+
+557 
+
+Fig. 6. Microbiome-phenotype associations across temperature and matching contexts. (a, b)Relationships between accession-level plant growth index and rhizosphere microbiome compositional change (Δβ) under home ( a) and away ( b) conditions. The growth index was defined as the first principal component (PC1) of plant growth traits. Each point represents one accession mean. Lines indicate fitted linear trends; Spearman’s correlation coefficients and associated P values are shown in the panels. Col-0 and the sterilized-soil control were excluded from home-away analyses. ( c) Mantel correlations between microbiome Bray-Curtis dissimilarity and multivariate plant phenotypic dissimilarity for bacterial and fungal communities under home and away conditions. Points indicate Mantel’s r; colors denote matching context. The dashed vertical line indicates r = 0. ( d, e ) Trait-resolved Mantel heatmaps showing correlations between microbiome dissimilarity and individual plant traits (see also in Table S2 ) at 16 °C ( d) and 28 °C ( e). The plant trait analyses reported here were based on endpoint measurements taken after 14 days of temperature treatment. Tile color represents Mantel’s r. Asterisks indicate significance after Benjamini-Hochberg correction within each dataset × context × temperature stratum (*FDR < 0.05, **FDR < 0.01, ***FDR < 0.001). 
+
+> .CC-BY-NC 4.0 International license made available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is The copyright holder for this preprint this version posted May 29, 2026. ;https://doi.org/10.64898/2026.05.29.728675 doi: bioRxiv preprint
+
+28 
+
+We next examined whether microbiome compositional change (Δβ) covaried with accession-558 
+
+level growth index under warming. At the accession level, Δβ was not significantly associated 559 
+
+with growth index under either home or away conditions ( Fig. 6a, b ). The home subset showed 560 
+
+a directionally consistent positive trend, whereas the away subset showed no clear directional 561 
+
+pattern. Sensitivity analyses excluding individual genotypes indicated that the home trend 562 
+
+remained directionally consistent, although effect sizes varied across iterations ( Table S14 ). 563 
+
+Community-level analyses further revealed kingdom-specific differences in microbiome-564 
+
+phenotype coupling. Mantel tests showed significant associations between fungal community 565 
+
+dissimilarity and multivariate plant phenotypic dissimilarity under both home ( r = 0.358, P =566 
+
+1 × 10⁻⁴) and away ( r = 0.125, P = 1 × 10⁻⁴) conditions ( Fig. 6c ). In contrast, bacterial 567 
+
+community dissimilarity showed weaker associations, which were not significant under home 568 
+
+conditions ( r = 0.0468, P = 0.267) and were modest under away conditions ( r = 0.0840, P =569 
+
+0.0218). Trait-resolved Mantel analyses yielded similar patterns, with stronger and more 570 
+
+consistent fungal coupling across temperature and matching contexts ( Fig. 6d, e ). 571 
+
+To connect interaction architecture with phenotypic variation, we incorporated network 572 
+
+module eigengenes into regression models ( Fig. S24 ; Table S15 ). Among all tested modules, 573 
+
+only L_M8, derived from the 16°C network, was retained as a significant module-level 574 
+
+predictor after controlling for environmental and host variables. L_M8 was significantly 575 
+
+associated with plant area, phenotype PC1, and petiole length, and was also related to the fungal 576 
+
+structural axis PCoA1 ( Fig. S24 ). No module-level predictors were detected at 28°C. 577 
+
+578 
+
+Fungal community composition improves prediction of short-term vegetative 579 
+
+performance under warming 580 
+
+Building on the inoculum- and host-constrained reorganization of rhizosphere microbial 581 
+
+communities and the context-dependent microbiome-phenotype relationships described above, 582 
+
+> .CC-BY-NC 4.0 International license made available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is The copyright holder for this preprint this version posted May 29, 2026. ;https://doi.org/10.64898/2026.05.29.728675 doi: bioRxiv preprint
+
+29 
+
+we next examined whether the composition of the fungal rhizosphere microbiome at the end 583 
+
+of the experiment improved the prediction of plant phenotypic variation. 584 
+
+585 
+
+Linear models revealed significant associations between fungal PCoA1 and plant area, 586 
+
+phenotype PC1, and petiole length ( Fig. 7a-c ). In each case, endpoint trait values varied 587 
+
+systematically along fungal community composition PCoA1. By contrast, equivalent models 588 
+
+using bacterial community composition did not show consistent or significant associations 589 
+
+(Table S16 ). We next quantified model improvement after adding microbiome composition-590 
+
+derived predictors to the baseline environmental model (T + M + P). Inclusion of bacterial and 591 
+
+Fig. 7. Fungal composition-derived predictors more consistently predict endpoint plant phenotypes than bacterial predictors. (a-c ) Relationships between the fungal community composition (PCoA1 derived from Bray-Curtis dissimilarity) and plant area ( a), phenotype PC1 ( b), and petiole length ( c). Each point represents the mean of one treatment combination. Colors indicate temperature treatment. Solid lines show fitted linear relationships across all observations. Statistical annotations report the effect of fungal PCoA1 in full linear models including temperature (T), microbial inoculum (M), plant genotype (P), host-microbiome matching status, and bacterial composition-derived predictors. ( d-f ) Ten-fold cross-validated predictive performance ( R²
+
+𝐶𝑉 ) of nested linear models for plant area ( d), phenotype PC1 ( e), and petiole length ( f). The baseline model included T, M, and P. Extended models additionally included fungal composition-derived predictors (Δβ and fungal PCoA1), bacterial composition-derived predictors (Δβ and bacterial PCoA1), or both. Bars show cross-validated R² values, with exact values indicated above bars. 
+
+> .CC-BY-NC 4.0 International license made available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is The copyright holder for this preprint this version posted May 29, 2026. ;https://doi.org/10.64898/2026.05.29.728675 doi: bioRxiv preprint
+
+30 
+
+fungal composition-derived metrics (Δβ and PCoA1) improved model fit across traits, with the 592 
+
+strongest improvement observed for plant area (ΔAdjusted R² = +0.100; ΔAIC = −18.64; Fig. 593 
+
+S25 ; Table S17 ). Improvements were more modest for phenotype PC1 (ΔAdjusted R² = +0.029; 594 
+
+ΔAIC = −3.37) and petiole length (ΔAdjusted R² = +0.017; ΔAIC = −3.35; Table S17 ). 595 
+
+Inclusion of host–microbiome origin matching did not further improve model performance. To 596 
+
+compare microbial kingdoms, we fitted symmetric models incorporating either fungal or 597 
+
+bacterial composition-derived predictors. These kingdom-specific models showed that fungal 598 
+
+predictors generally provided stronger model improvement than bacterial predictors, 599 
+
+particularly for plant area and phenotype PC1 ( Table S16 ). Across traits, adding fungal 600 
+
+composition-derived predictors (fungal Δβ and fungal PCoA1) to the baseline model 601 
+
+consistently improved model fit, whereas adding bacterial composition-derived predictors 602 
+
+(bacterial Δβ and bacterial PCoA1) produced minimal or inconsistent gains. This contrast was 603 
+
+most pronounced for plant area, for which fungal predictors increased adjusted R² and reduced 604 
+
+AIC, while bacterial predictors did not improve the model ( Table S16 ). 605 
+
+Cross-validation analyses further showed that adding fungal community composition axes 606 
+
+produced reproducible predictive gains across traits ( Fig. 7d-f ), with consistent increases in 607 
+
+cross-validated R² relative to the baseline model and to models adding bacterial community 608 
+
+composition axes. Observed-versus-predicted relationships showed good correspondence 609 
+
+between fitted and measured values (Fig. S26 ), supporting the robustness of fungal 610 
+
+composition-derived predictors. In full models including both fungal and bacterial axes ( Table 611 
+
+S16 ), fungal PCoA1 remained a significant predictor for all three traits, whereas bacterial 612 
+
+PCoA1 was not significant. Semi-partial R² analyses and standardized regression coefficients 613 
+
+(Fig. S27; Table S18 ) likewise indicated larger unique and standardized effects for fungal than 614 
+
+bacterial composition-derived predictors. 615 
+
+616 
+
+> .CC-BY-NC 4.0 International license made available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is The copyright holder for this preprint this version posted May 29, 2026. ;https://doi.org/10.64898/2026.05.29.728675 doi: bioRxiv preprint
+
+31 
+
+DISCUSSION 617 
+
+In reciprocal plant-soil systems, an important unresolved question is whether warming disrupts 618 
+
+historically structured plant-microbiome associations or instead reshapes them within existing 619 
+
+ecological baselines [3,22,51]. In this study, warming did not simply override pre-existing 620 
+
+plant–soil–microbiome relationships, but reshaped them in ways that remained dependent on 621 
+
+the biological structure already present in the system. Temperature effects were clearly 622 
+
+detectable across both plant phenotypes and rhizosphere communities, yet these effects were 623 
+
+expressed through persistent host- and soil-associated baselines rather than as uniform 624 
+
+responses. Our results also provided only limited support for simple origin-based matching of 625 
+
+plant genotypes and inocula as a general explanation for plant performance. Instead, 626 
+
+microbiome composition, particularly fungal community composition, was more closely 627 
+
+associated with endpoint vegetative performance than host-microbiome origin matching alone. 628 
+
+Therefore, plant responses to warming in this system were best understood as emerging from 629 
+
+thermal reorganization acting on pre-existing biological structure, rather than from temperature 630 
+
+effects in isolation. 631 
+
+632 
+
+Temperature strongly reprograms plant phenotype while reorganizing rhizosphere 633 
+
+communities within established ecological scaffolds 634 
+
+Elevated temperature was a major driver of both plant phenotype and rhizosphere community 635 
+
+structure, but in neither case did it erase the pre-existing biological context in which these 636 
+
+responses were expressed. On the plant side, warming induced a coherent shift in architecture, 637 
+
+including petiole elongation and coordinated changes in rosette-related traits, consistent with 638 
+
+well-described thermomorphogenic responses in A. thaliana [6,47]. Plant genotype explained 639 
+
+a larger share of endpoint vegetative trait variation than microbial inoculum. At 28°C, cold-640 
+
+origin accessions tended to produce larger final rosettes than warm-origin accessions, 641 
+
+> .CC-BY-NC 4.0 International license made available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is The copyright holder for this preprint this version posted May 29, 2026. ;https://doi.org/10.64898/2026.05.29.728675 doi: bioRxiv preprint
+
+32 
+
+indicating that warm-origin accessions did not show a general endpoint phenotype advantage 642 
+
+under elevated temperature ( Figs. 3 and S14 ). Under our experimental conditions, these 643 
+
+patterns provide limited support for a simple local climatic adaptation interpretation 644 
+
+[16,17,52,53]. Instead, the results show strong genotype-specific thermal responses, but 645 
+
+provide limited support for an adaptation to local climate [47,54]. One caveat is of course 646 
+
+implemented by the experimental design with an unusually high ambient temperature at both 647 
+
+the northern and southern sites during the monitored developmental stages. However, all 648 
+
+phenotypes reported here were measured within 14 days of the temperature shift, a standard 649 
+
+window for Arabidopsis thermomorphogenesis assays, under conditions broadly applied in the 650 
+
+thermomorphogenesis literature. These inferences are largely limited to vegetative 651 
+
+developmental stages under constant long-day photoperiod and two setpoint temperatures; later 652 
+
+developmental stages when microbial effects may potentially become more pronounced and 653 
+
+fluctuating regimes were not assessed [55,56]. 654 
+
+A comparable pattern was evident in the rhizosphere microbiome. Although temperature 655 
+
+significantly shifted the composition of both bacterial and fungal communities, these shifts 656 
+
+were secondary to the strong structuring effect of the origin of the microbial inoculum ( Figs. 657 
+
+4, S16 and S17 ). In both kingdoms, soil-derived inoculum explained most of the variation in 658 
+
+community composition, whereas temperature imposed reproducible directional changes 659 
+
+within this inoculum-defined framework. This pattern is consistent with previous work 660 
+
+showing that environmental filtering can reshape plant-associated microbiomes without fully 661 
+
+overriding the influence of source community composition, edaphic history, or geographically 662 
+
+structured microbial pools [16,17,57,58]. Warming therefore acted less as a replacement force 663 
+
+than as a modifier of an already structured assembly background. 664 
+
+Plant and microbial responses to warming were parallel in one important respect: both 665 
+
+were strongly influenced by pre-existing variation. Plant phenotypic responses depended on 666 
+
+> .CC-BY-NC 4.0 International license made available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is The copyright holder for this preprint this version posted May 29, 2026. ;https://doi.org/10.64898/2026.05.29.728675 doi: bioRxiv preprint
+
+33 
+
+accession identity, whereas microbial responses primarily depended on inoculum background, 667 
+
+with additional host effects that were particularly evident in fungi ( Figs. 3 and 4 ). Elevated 668 
+
+temperature did not impose a uniform response across plant-soil systems, but instead interacted 669 
+
+with historically and biologically structured baselines to produce context-dependent outcomes. 670 
+
+This view is consistent with broader work showing that responses to climate-related change 671 
+
+are filtered through pre-existing host and community structure rather than determined by 672 
+
+temperature alone [17,58,59]. It also helps frame the downstream links between microbiome 673 
+
+structure and plant performance, which in this system emerged against persistent host and soil 674 
+
+constraints. 675 
+
+676 
+
+Warming selected recurrent microbial lineages and reorganized rhizosphere community 677 
+
+structure 678 
+
+The microbial response to warming was clearly directional rather than random. Across 679 
+
+sampling sites, the abundance of several bacterial and fungal families repeatedly differed 680 
+
+between temperature treatments, often with consistent response directions ( Fig. S20 ). Such 681 
+
+deterministic filtering under elevated temperature, indicate that warming did not simply 682 
+
+increase compositional noise but repeatedly favored or disfavored particular lineages across 683 
+
+distinct plant-inoculum contexts [60–63]. Thermal change may therefore constrain rhizosphere 684 
+
+assembly by selecting a narrower subset of community configurations able to persist under 685 
+
+warmer conditions [42,64]. 686 
+
+This selective restructuring was also evident at the level of community organization. Under 687 
+
+28 °C, the rhizosphere network showed higher connectivity, a greater proportion of bacteria-688 
+
+fungi links, and lower clustering, transitivity, and modularity than at 16 °C ( Figs. 5 and S21 ). 689 
+
+Although co-occurrence networks do not identify the causal ecological interactions, these shifts 690 
+
+indicate that warming was associated with a less compartmentalized and more reconfigured 691 
+
+> .CC-BY-NC 4.0 International license made available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is The copyright holder for this preprint this version posted May 29, 2026. ;https://doi.org/10.64898/2026.05.29.728675 doi: bioRxiv preprint
+
+34 
+
+community structure [42]. Elevated temperature therefore changed not only which taxa were 692 
+
+favored, but also how bacterial and fungal groups were arranged relative to one another within 693 
+
+the rhizosphere. In biological terms, this points to reorganization at the level of community 694 
+
+architecture, with potential consequences for how different microbial groups respond jointly to 695 
+
+the rhizosphere environment under warming. 696 
+
+Notably, these taxonomic and structural changes were not accompanied by strong 697 
+
+divergence in predicted functional profiles ( Fig. S22 ). Warming therefore appeared to reshape 698 
+
+community membership and organization more strongly than broad predicted functional 699 
+
+categories, a pattern consistent with the partial decoupling of taxonomic and functional 700 
+
+responses often observed in microbial communities [63,65,66]. Given the limitations of 701 
+
+PICRUSt2- and FUNGuild-based inference, this result should be interpreted cautiously [67,68]. 702 
+
+Repeated lineage-level turnover, network rewiring, and relatively stable predicted functional 703 
+
+structure point instead to structural reassembly within a constrained functional space rather 704 
+
+than wholesale functional replacement [63,65]. This matters for the interpretation of later 705 
+
+microbiome-phenotype relationships, because plant performance under warming was 706 
+
+associated with a microbiome that had already been selectively filtered and reorganized, rather 707 
+
+than simply displaced. 708 
+
+709 
+
+Host-microbiome matching was limited and temperature-dependent 710 
+
+Previous work has suggested that long-term associations between plants and their local soil 711 
+
+microbiota can generate home-field advantage or contribute to microbe-mediated local 712 
+
+adaptation, potentially improving host performance or microbiome persistence in native 713 
+
+combinations [16,69,70]. Empirical support for such effects, however, has often proved to be 714 
+
+context-dependent rather than universal [19,71,72]. In our system, home-away effects on 715 
+
+rhizosphere turnover were limited, being detectable only in bacterial communities at 16 °C and 716 
+
+> .CC-BY-NC 4.0 International license made available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is The copyright holder for this preprint this version posted May 29, 2026. ;https://doi.org/10.64898/2026.05.29.728675 doi: bioRxiv preprint
+
+35 
+
+disappearing under warming, whereas fungal communities showed no corresponding turnover 717 
+
+signal ( Fig. S23 ). Rather than supporting a general home-associated stabilization of the 718 
+
+microbiome, these results indicate that matching effects on community composition were weak, 719 
+
+temperature-dependent, and kingdom-specific. Consistent with this, host-microbiome origin 720 
+
+matching did not improve the prediction of endpoint plant phenotypes in our models. Under 721 
+
+lower temperature, historically associated host-microbial inoculum combinations may retain 722 
+
+enough ecological continuity for differences in bacterial turnover to emerge, whereas stronger 723 
+
+thermal filtering under warming may reduce the expression of these finer-scale association 724 
+
+[16,17]. 725 
+
+726 
+
+Microbiome-phenotype relationships were better captured by community structure than 727 
+
+by matching status 728 
+
+If identity matching was not a general explanation for rhizosphere stability, it was also unlikely 729 
+
+to be the main route through which the microbiome influenced plant phenotype. Instead, our 730 
+
+results indicate that microbiome-phenotype coupling was captured more effectively by 731 
+
+variation in community structure than by the simple distinction between home and away 732 
+
+combinations. This was already apparent in the Mantel analyses, where fungal community 733 
+
+dissimilarity showed stronger and more consistent associations with plant phenotypic 734 
+
+dissimilarity than bacterial community dissimilarity under both matching contexts ( Fig. 6c-e ). 735 
+
+In this system, the effect of the microbiome on plant phenotype therefore depended less on 736 
+
+whether hosts and microbiota shared a common origin and more on how rhizosphere 737 
+
+communities were compositionally organized [58,73–75]. 738 
+
+Across analyses, fungal communities showed stronger plant-related structuring during 739 
+
+assembly ( Fig. 4a, c ), stronger community-level coupling with plant phenotypic variation in 740 
+
+the Mantel tests ( Fig. 6c-e ), and more consistent predictive gains when fungal composition-741 
+
+> .CC-BY-NC 4.0 International license made available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is The copyright holder for this preprint this version posted May 29, 2026. ;https://doi.org/10.64898/2026.05.29.728675 doi: bioRxiv preprint
+
+36 
+
+derived variables were added to nested linear models and cross-validation analyses ( Figs. 6 742 
+
+and S25-S27 ; Tables S16-S18 ). By comparison, bacterial composition-derived predictors 743 
+
+contributed more weakly and less consistently. This contrast suggests not simply that fungi 744 
+
+were “more important,” but that fungal community organization may have integrated host-745 
+
+responsive and environmentally filtered variation in a way that remained more directly linked 746 
+
+to plant growth outcomes under the conditions tested. As fungi often influence plants through 747 
+
+traits such as nutrient acquisition, carbon exchange, and close physical association with roots, 748 
+
+shifts in fungal community configuration may more readily translate into differences in plant 749 
+
+growth than equivalent compositional shifts in bacteria [25,58,73–75]. 750 
+
+The temperature dependence of this pattern further clarifies the ecological scale at which 751 
+
+microbiome effects were expressed. At 16°C, the only significant module-level predictor, 752 
+
+L_M8, was associated with multiple plant traits and was also linked to the fungal community 753 
+
+composition (Fig. S24 ), suggesting that phenotype-relevant microbiome effects were 754 
+
+expressed through more localized interaction structure under cooler conditions. Under 755 
+
+warming, however, the most robust and repeatable predictive signal came from the broader 756 
+
+fungal community composition rather than from individual network modules ( Figs. 7 and S24 ). 757 
+
+This shift suggests that warming altered not only microbiome composition, but also the 758 
+
+organizational level at which microbiome variation affected plant phenotype and growth. 759 
+
+Rather than uniformly amplifying or suppressing microbiome effects, warming appears to have 760 
+
+shifted the relative importance of local interaction features of the microbiome toward emergent 761 
+
+properties of the fungal community as a whole [42,76]. Therefore, the key result is not simple 762 
+
+origin matching, but rather that plant phenotypes under warming were more closely associated 763 
+
+with the overall organization of the rhizosphere microbiome, especially its fungal component 764 
+
+[77–79]. 765 
+
+766 
+
+> .CC-BY-NC 4.0 International license made available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is The copyright holder for this preprint this version posted May 29, 2026. ;https://doi.org/10.64898/2026.05.29.728675 doi: bioRxiv preprint
+
+37 
+
+Implications for plant-microbiome coupling under warming 767 
+
+These patterns suggest that, under warming, rhizosphere organization may provide a more 768 
+
+useful framework than host-microbiome origin matching for understanding how microbiomes 769 
+
+relate to plant performance. In particular, the consistent signal associated with fungal 770 
+
+community structure points to a level of organization that may be informative for future efforts 771 
+
+to identify microbiome features linked to plant function under changing temperature conditions 772 
+
+[69,78]. Rather than focusing only on whether native host-microbiome combinations are 773 
+
+maintained, an important next step will be to determine which community states remain 774 
+
+associated with plant performance as environments shift. 775 
+
+Future work should test these associations more directly and in ways relevant to 776 
+
+microbiome-based improvement of plant performance. In particular, cross-inoculation 777 
+
+experiments with reduced-complexity or synthetic communities could help determine whether 778 
+
+the fungal composition-derived signal identified here reflects a causal contribution to plant 779 
+
+growth under warming or a broader rhizosphere state associated with improved performance 780 
+
+[80,81]. Direct functional measurements and validation under field conditions or fluctuating 781 
+
+thermal regimes will also be needed to assess how stable and transferable these structure-based 782 
+
+relationships are outside controlled environments. 783 
+
+784 
+
+CONCLUSIONS 785 
+
+Under our controlled growth chamber conditions, elevated temperature was associated with 786 
+
+reproducible shifts in plant architecture and rhizosphere community structure within host- and 787 
+
+inoculum-determined baselines. Home-away matching explained little of the observed 788 
+
+phenotype variation, whereas broader microbiome organization, particularly fungal community 789 
+
+composition, carried more consistent phenotype-related signal under warming. Our results 790 
+
+therefore indicate that plant responses to elevated temperature were linked less to origin-based 791 
+
+> .CC-BY-NC 4.0 International license made available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is The copyright holder for this preprint this version posted May 29, 2026. ;https://doi.org/10.64898/2026.05.29.728675 doi: bioRxiv preprint
+
+38 
+
+matching than to the organization of the rhizosphere microbiome under changing thermal 792 
+
+conditions. These findings underscore the value of considering community organization, rather 793 
+
+than origin alone, in studies of climate-sensitive plant-microbiome relationships. 794 
+
+795 
+
+DECLARATIONS 796 
+
+Availability of data and material 797 
+
+The amplicon sequencing data generated during the current study are available at the 798 
+
+National Center for Biotechnology Information (NCBI) in the Sequence Read Archive under 799 
+
+the BioProject ID: PRJNA1470703. The sequencing data have been uploaded to NCBI and can 800 
+
+be accessed via http://www.ncbi.nlm.nih.gov/bioproject/1470703. 801 
+
+802 
+
+Competing interests 803 
+
+The authors declare that they have no competing interests. 804 
+
+805 
+
+Funding 806 
+
+M.Q. gratefully acknowledges the support of iDiv funded by the German Research Foundation 807 
+
+(DFG-FZT 118, 202548816). C.A.-B. was funded by grant PID2022-136893NB-I00 from the 808 
+
+MCIN / MCIU / AEI / 10.13039/501100011033 and FEDER (EU). 809 
+
+810 
+
+Authors’ contributions 811 
+
+MQ, MT, KK, CR, and IG conceived the project. XL, JT, SH, and MQ designed the 812 
+
+experiments. XL and JT performed the experiments. LEL established the crop score imaging 813 
+
+and image analysis. CAB, JÅ, JSP, and MQ collected plant and soil samples. AB, XL, and JT 814 
+
+analyzed the soil samples. XL, JT and JZ analyzed the data. XL wrote the manuscript. MQ and 815 
+
+JZ supervised and revised the manuscript. All authors read and approved the final manuscript. 816 
+
+> .CC-BY-NC 4.0 International license made available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is The copyright holder for this preprint this version posted May 29, 2026. ;https://doi.org/10.64898/2026.05.29.728675 doi: bioRxiv preprint
+
+39 
+
+817 
+
+ACKNOWLEDGEMENTS 818 
+
+We thank Raphaela Pilz for her diligence in establishing the plant phenotyping system, and 819 
+
+Robert Mikutta and Klaus Kaiser for supervising the soil analysis in their lab. 820 
+
+821 
+
+SUPPLEMENTARY INFORMATION 822 
+
+Supplemental material is available online only. 823 
+
+Additional File 1, PDF: Supplemental Figures S1 to S27. 824 
+
+Additional File 2, Excel file: Supplemental Tables S1 to S18. 825 
+
+826 
+
+REFERENCES 827 
+
+1. Pecl GT, Araújo MB, Bell JD, Blanchard J, Bonebrake TC, Chen I-C, et al. Biodiversity 828 
+
+redistribution under climate change: Impacts on ecosystems and human well-being. Science. 829 
+
+2017;355:eaai9214. https://doi.org/10.1126/science.aai9214 830 
+
+2. Intergovernmental Panel on Climate Change (IPCC). Climate Change 2021 – The Physical 831 
+
+Science Basis: Working Group I Contribution to the Sixth Assessment Report of the 832 
+
+Intergovernmental Panel on Climate Change. 2023. https://doi.org/10.1017/9781009157896 833 
+
+3. Laine A-L, Leino S. Plant microbiomes feel the heat. Science. 2025;388:1150–2. 834 
+
+https://doi.org/10.1126/science.adw3659 835 
+
+4. Pérez-Montaño F, Aparicio N, Arenas F, Arjona JM, Camacho M, Fernández-García N, et 836 
+
+al. Emerging crops and plant growth-promoting bacteria (PGPB): a synergistic approach to 837 
+
+climate-resilient agriculture. Microbiome. 2025;13:228. https://doi.org/10.1186/s40168-025-838 
+
+02225-4 839 
+
+> .CC-BY-NC 4.0 International license made available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is The copyright holder for this preprint this version posted May 29, 2026. ;https://doi.org/10.64898/2026.05.29.728675 doi: bioRxiv preprint
+
+40 
+
+5. Ilyaskina D, Altveş S, Dong L, Bouwmeester H, El Aidy S. Adaptive and metabolic 840 
+
+convergence in rhizosphere and gut microbiomes. Microbiome. 2025;13:173. 841 
+
+https://doi.org/10.1186/s40168-025-02179-7 842 
+
+6. Quint M, Delker C, Franklin KA, Wigge PA, Halliday KJ, van Zanten M. Molecular and 843 
+
+genetic control of plant thermomorphogenesis. Nature Plants. 2016;2:15190. 844 
+
+https://doi.org/10.1038/nplants.2015.190 845 
+
+7. Lippmann R, Babben S, Menger A, Delker C, Quint M. Development of Wild and Cultivated 846 
+
+Plants under Global Warming Conditions. Current Biology. 2019;29:R1326–38. 847 
+
+https://doi.org/10.1016/j.cub.2019.10.016 848 
+
+8. Casal JJ, Balasubramanian S. Thermomorphogenesis. Annual Review of Plant Biology. 849 
+
+2019;70:321–46. https://doi.org/10.1146/annurev-arplant-050718-095919 850 
+
+9. Delker C, Sonntag L, James GV, Janitza P, Ibañez C, Ziermann H, et al. The DET1-COP1-851 
+
+HY5 Pathway Constitutes a Multipurpose Signaling Module Regulating Plant 852 
+
+Photomorphogenesis and Thermomorphogenesis. Cell Reports. 2014;9:1983–9. 853 
+
+https://doi.org/10.1016/j.celrep.2014.11.043 854 
+
+10. Middleton H, Yergeau É, Monard C, Combier J-P, El Amrani A. Rhizospheric Plant– 855 
+
+Microbe Interactions: miRNAs as a Key Mediator. Trends in Plant Science. 2021;26:132–41. 856 
+
+https://doi.org/10.1016/j.tplants.2020.09.005 857 
+
+11. Poupin MJ, Ledger T, Roselló-Móra R, González B. The Arabidopsis holobiont: a 858 
+
+(re)source of insights to understand the amazing world of plant–microbe interactions. 859 
+
+Environmental Microbiome. 2023;18:9. https://doi.org/10.1186/s40793-023-00466-0 860 
+
+> .CC-BY-NC 4.0 International license made available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is The copyright holder for this preprint this version posted May 29, 2026. ;https://doi.org/10.64898/2026.05.29.728675 doi: bioRxiv preprint
+
+41 
+
+12. Trivedi P, Leach JE, Tringe SG, Sa T, Singh BK. Plant–microbiome interactions: from 861 
+
+community assembly to plant health. Nat Rev Microbiol. 2020;18:607–21. 862 
+
+https://doi.org/10.1038/s41579-020-0412-1 863 
+
+13. Delamare J, Brunel-Muguet S, Bressan M, Firmin S, Prigent-Combaret C, Personeni E. 864 
+
+Root traits and root-rhizosphere interactions are overlooked players in the plant acclimation to 865 
+
+heat stress. Rhizosphere. 2025;35:101124. https://doi.org/10.1016/j.rhisph.2025.101124 866 
+
+14. Wipf HM-L, Bùi T-N, Coleman-Derr D. Distinguishing Between the Impacts of Heat and 867 
+
+Drought Stress on the Root Microbiome of Sorghum bicolor. Phytobiomes Journal. 868 
+
+2021;5:166–76. https://doi.org/10.1094/PBIOMES-07-20-0052-R 869 
+
+15. Trivedi P, Batista BD, Bazany KE, Singh BK. Plant–microbiome interactions under a 870 
+
+changing world: responses, consequences and perspectives. New Phytologist. 2022;234:1951– 871 
+
+9. https://doi.org/10.1111/nph.18016 872 
+
+16. Durán P, Ellis TJ, Thiergart T, Ågren J, Hacquard S. Climate drives rhizosphere 873 
+
+microbiome variation and divergent selection between geographically distant Arabidopsis 874 
+
+populations. New Phytologist. 2022;236:608–21. https://doi.org/10.1111/nph.18357 875 
+
+17. Thiergart T, Durán P, Ellis T, Vannier N, Garrido-Oter R, Kemen E, et al. Root microbiota 876 
+
+assembly and adaptive differentiation among European Arabidopsis populations. Nat Ecol 877 
+
+Evol. 2020;4:122–31. https://doi.org/10.1038/s41559-019-1063-3 878 
+
+18. Punt W, Kraege A, Metzger S, Schmitz N, Zhu J, Hacquard S, et al. Differential 879 
+
+contributions of an antimicrobial effector from Verticillium dahliae to virulence and tomato 880 
+
+microbiota assembly across natural soils. Microbiome. 2026. https://doi.org/10.1186/s40168-881 
+
+026-02376-y 882 
+
+> .CC-BY-NC 4.0 International license made available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is The copyright holder for this preprint this version posted May 29, 2026. ;https://doi.org/10.64898/2026.05.29.728675 doi: bioRxiv preprint
+
+42 
+
+19. Ellis TJ, Ågren J. Adaptation to soil type contributes little to local adaptation in an Italian 883 
+
+and a Swedish ecotype of Arabidopsis thaliana on contrasting soils. Biol Lett. 884 
+
+2020;20:20240236. https://doi.org/10.1098/rsbl.2024.0236 885 
+
+20. Zeng Q, Hu H-W, Ge A-H, Xiong C, Zhai C-C, Duan G-L, et al. Plant–microbiome 886 
+
+interactions and their impacts on plant adaptation to climate change. Journal of Integrative 887 
+
+Plant Biology. 2025;67:826–44. https://doi.org/10.1111/jipb.13863 888 
+
+21. Jansson JK, Prosser JI. The life beneath our feet. Nature. 2013;494:40–1. 889 
+
+https://doi.org/10.1038/494040a 890 
+
+22. Jansson JK, Hofmockel KS. Soil microbiomes and climate change. Nat Rev Microbiol. 891 
+
+2020;18:35–46. https://doi.org/10.1038/s41579-019-0265-7 892 
+
+23. Wu X, MacKenzie MD, Yang J, Lan G, Liu Y. Climate Change Drives Changes in the Size 893 
+
+and Composition of Fungal Communities Along the Soil–Seedling Continuum of Schima 894 
+
+superba. Molecular Ecology. 2025;34:e17652. https://doi.org/10.1111/mec.17652 895 
+
+24. Boyle JA, Murphy BK, Ensminger I, Stinchcombe JR, Frederickson ME. Resistance and 896 
+
+resilience of soil microbiomes under climate change. Ecosphere. 2024;15:e70077. 897 
+
+https://doi.org/10.1002/ecs2.70077 898 
+
+25. Hoefle D, Sommer M, Wassermann B, Faticov M, Serra D, Berg G, et al. Oak seedling 899 
+
+microbiome assembly under climate warming and drought. Environmental Microbiome. 900 
+
+2024;19:62. https://doi.org/10.1186/s40793-024-00602-4 901 
+
+26. 1001 Genomes Consortium. 1,135 Genomes Reveal the Global Pattern of Polymorphism 902 
+
+in Arabidopsis thaliana . Cell. 2016; 14;166:481-91. https://www.cell.com/cell/fulltext/S0092-903 
+
+8674(16)30667-5. 904 
+
+> .CC-BY-NC 4.0 International license made available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is The copyright holder for this preprint this version posted May 29, 2026. ;https://doi.org/10.64898/2026.05.29.728675 doi: bioRxiv preprint
+
+43 
+
+27. Ferrero-Serrano Á, Assmann SM. Phenotypic and genome-wide association with the local 905 
+
+environment of Arabidopsis. Nat Ecol Evol. 2019;3:274–85. https://doi.org/10.1038/s41559-906 
+
+018-0754-5 907 
+
+28. Lincoln C, Britton JH, Estelle M. Growth and development of the axr1 mutants of 908 
+
+Arabidopsis. The Plant Cell. 1990;2:1071–80. https://doi.org/10.1105/tpc.2.11.1071 909 
+
+29. Ai H, Bellstaedt J, Bartusch KS, Eschen‐Lippold L, Babben S, Balcke GU, et al. Auxin‐ 910 
+
+dependent regulation of cell division rates governs root thermomorphogenesis. The EMBO 911 
+
+Journal. 2023;42:e111926. https://doi.org/10.15252/embj.2022111926 912 
+
+30. Zhu Z, Esche F, Babben S, Trenner J, Serfling A, Pillen K, et al. An exotic allele of barley 913 
+
+EARLY FLOWERING 3 contributes to developmental plasticity at elevated temperatures. 914 
+
+Journal of Experimental Botany. 2023;74:2912–31. https://doi.org/10.1093/jxb/erac470 915 
+
+31. Arend D, Lange M, Pape J-M, Weigelt-Fischer K, Arana-Ceballos F, Mücke I, et al. 916 
+
+Quantitative monitoring of Arabidopsis thaliana growth and development using high-917 
+
+throughput plant phenotyping. Sci Data. 2016;3:160055. https://doi.org/10.1038/sdata.2016.55 918 
+
+32. R Core Team. R: A Language and Environment for Statistical Computing (Version 4.5.1). 919 
+
+R Foundation for Statistical Computing, Vienna, Austria. 2025. https://www.R-project.org/ 920 
+
+33. Bolyen E, Rideout JR, Dillon MR, Bokulich NA, Abnet CC, Al-Ghalith GA, et al. 921 
+
+Reproducible, interactive, scalable and extensible microbiome data science using QIIME 2. 922 
+
+Nat Biotechnol. 2019;37:852–7. https://doi.org/10.1038/s41587-019-0209-9 923 
+
+34. Magoč T, Salzberg SL. FLASH: fast length adjustment of short reads to improve genome 924 
+
+assemblies. Bioinformatics. 2011;27:2957–63. https://doi.org/10.1093/bioinformatics/btr507 925 
+
+> .CC-BY-NC 4.0 International license made available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is The copyright holder for this preprint this version posted May 29, 2026. ;https://doi.org/10.64898/2026.05.29.728675 doi: bioRxiv preprint
+
+44 
+
+35. Callahan BJ, McMurdie PJ, Rosen MJ, Han AW, Johnson AJA, Holmes SP. DADA2: 926 
+
+High-resolution sample inference from Illumina amplicon data. Nat Methods. 2016;13:581–3. 927 
+
+https://doi.org/10.1038/nmeth.3869 928 
+
+36. Mantel N. The Detection of Disease Clustering and a Generalized Regression Approach. 929 
+
+Cancer Res. 1967;27:209–20. 930 
+
+37. ter Braak CJF. Canonical Correspondence Analysis: A New Eigenvector Technique for 931 
+
+Multivariate Direct Gradient Analysis. Ecology. 1986;67:1167–79. 932 
+
+https://doi.org/10.2307/1938672 933 
+
+38. Legendre P, Legendre L. Numerical Ecology. 3rd ed. Amsterdam: Elsevier; 2012. 934 
+
+39. Oksanen J. vegan: community ecology package. R package version 2.7-3. 2026. 935 
+
+https://doi.org/10.32614/CRAN.package.vegan 936 
+
+40. Bray JR, Curtis JT. An Ordination of the Upland Forest Communities of Southern 937 
+
+Wisconsin. Ecological Monographs. 1957;27:326–49. https://doi.org/10.2307/1942268 938 
+
+41. Anderson MJ. Distance-Based Tests for Homogeneity of Multivariate Dispersions. 939 
+
+Biometrics. 2006;62:245–53. https://doi.org/10.1111/j.1541-0420.2005.00440.x 940 
+
+42. Yuan MM, Guo X, Wu L, Zhang Y, Xiao N, Ning D, et al. Climate warming enhances 941 
+
+microbial network complexity and stability. Nat Clim Chang. 2021;11:343–8. 942 
+
+https://doi.org/10.1038/s41558-021-00989-9 943 
+
+43. Shao J, Tu D. The Jackknife and Bootstrap. Springer Science & Business Media; 2012. 944 
+
+44. Akaike H. Factor analysis and AIC. Psychometrika. 1987;52:317–32. 945 
+
+https://doi.org/10.1007/BF02294359 946 
+
+> .CC-BY-NC 4.0 International license made available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is The copyright holder for this preprint this version posted May 29, 2026. ;https://doi.org/10.64898/2026.05.29.728675 doi: bioRxiv preprint
+
+45 
+
+45. Geisser S. The Predictive Sample Reuse Method with Applications. Journal of the 947 
+
+American Statistical Association. 1975;70:320–8. 948 
+
+https://doi.org/10.1080/01621459.1975.10479865 949 
+
+46. Stoffel MA, Nakagawa S, Schielzeth H. partR 2: partitioning R 2 in generalized linear mixed 950 
+
+models. PeerJ. 2021;9:e11414. https://doi.org/10.7717/peerj.11414 951 
+
+47. Ibañez C, Poeschl Y, Peterson T, Bellstädt J, Denk K, Gogol-Döring A, et al. Ambient 952 
+
+temperature and genotype differentially affect developmental and phenotypic plasticity in 953 
+
+Arabidopsis thaliana . BMC Plant Biol. 2017;17:114. https://doi.org/10.1186/s12870-017-954 
+
+1068-5 955 
+
+48. Méndez-Vigo B, Picó FX, Ramiro M, Martínez-Zapater JM, Alonso-Blanco C. Altitudinal 956 
+
+and Climatic Adaptation Is Mediated by Flowering Traits and FRI, FLC, and PHYC Genes in 957 
+
+Arabidopsis. Plant Physiol. 2011;157:1942–55. https://doi.org/10.1104/pp.111.183426 958 
+
+49. Méndez-Vigo B, Savic M, Ausín I, Ramiro M, Martín B, Picó FX, et al. Environmental 959 
+
+and genetic interactions reveal FLOWERING LOCUS C as a modulator of the natural variation 960 
+
+for the plasticity of flowering in Arabidopsis . Plant, Cell & Environment. 2016;39:282–94. 961 
+
+https://doi.org/10.1111/pce.12608 962 
+
+50. Crawford AJ, McLachlan DH, Hetherington AM, Franklin KA. High temperature exposure 963 
+
+increases plant cooling capacity. Current Biology. 2012;22:R396–7. 964 
+
+https://doi.org/10.1016/j.cub.2012.03.044 965 
+
+51. Allsup CM, George I, Lankau RA. Shifting microbial communities can enhance tree 966 
+
+tolerance to changing climates. Science. 2023;380:835–40. 967 
+
+https://doi.org/10.1126/science.adf2027 968 
+
+> .CC-BY-NC 4.0 International license made available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is The copyright holder for this preprint this version posted May 29, 2026. ;https://doi.org/10.64898/2026.05.29.728675 doi: bioRxiv preprint
+
+46 
+
+52. Exposito-Alonso M, Burbano HA, Bossdorf O, Nielsen R, Weigel D. Natural selection on 969 
+
+the Arabidopsis thaliana genome in present and future climates. Nature. 2019;573:126–9. 970 
+
+https://doi.org/10.1038/s41586-019-1520-9 971 
+
+53. Postma FM, Ågren J. Early life stages contribute strongly to local adaptation in Arabidopsis 972 
+
+thaliana . Proceedings of the National Academy of Sciences. 2016;113:7590–5. 973 
+
+https://doi.org/10.1073/pnas.1606303113 974 
+
+54. Wiszniewski A, Uberegui E, Messer M, Sultanova G, Borghi M, Duarte GT, et al. 975 
+
+Temperature-mediated flower size plasticity in Arabidopsis . iScience. 2022;25. 976 
+
+https://doi.org/10.1016/j.isci.2022.105411 977 
+
+55. Ajilogba CF, Olanrewaju OS, Babalola OO. Plant Growth Stage Drives the Temporal and 978 
+
+Spatial Dynamics of the Bacterial Microbiome in the Rhizosphere of Vigna subterranea . Front 979 
+
+Microbiol. 2022;13. https://doi.org/10.3389/fmicb.2022.825377 980 
+
+56. Wei G, Li M, Zhang G, Chen Z, Wei F, Jiao S, et al. Temporal Dynamics of Rhizosphere 981 
+
+Communities Across the Life Cycle of Panax notoginseng. Front Microbiol. 2022;13. 982 
+
+https://doi.org/10.3389/fmicb.2022.853077 983 
+
+57. Brown SP, Grillo MA, Podowski JC, Heath KD. Soil origin and plant genotype structure 984 
+
+distinct microbiome compartments in the model legume Medicago truncatula . Microbiome. 985 
+
+2020;8:139. https://doi.org/10.1186/s40168-020-00915-9 986 
+
+58. Fitzpatrick CR, Salas-González I, Conway JM, Finkel OM, Gilbert S, Russ D, et al. The 987 
+
+Plant Microbiome: From Ecology to Reductionism and Beyond. Annual Review of 988 
+
+Microbiology. Annual Reviews of Microbiology; 2020;74:81–100. 989 
+
+https://doi.org/10.1146/annurev-micro-022620-014327 990 
+
+> .CC-BY-NC 4.0 International license made available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is The copyright holder for this preprint this version posted May 29, 2026. ;https://doi.org/10.64898/2026.05.29.728675 doi: bioRxiv preprint
+
+47 
+
+59. Bahram M, Hildebrand F, Forslund SK, Anderson JL, Soudzilovskaia NA, Bodegom PM, 991 
+
+et al. Structure and function of the global topsoil microbiome. Nature. 2018;560:233–7. 992 
+
+https://doi.org/10.1038/s41586-018-0386-6 993 
+
+60. Bai Y, Müller DB, Srinivas G, Garrido-Oter R, Potthoff E, Rott M, et al. Functional overlap 994 
+
+of the Arabidopsis leaf and root microbiota. Nature. 2015;528:364–9. 995 
+
+https://doi.org/10.1038/nature16192 996 
+
+61. Van Nuland ME, Ware IM, Bailey JK, Schweitzer JA. Ecosystem feedbacks contribute to 997 
+
+geographic variation in plant–soil eco-evolutionary dynamics across a fertility gradient. 998 
+
+Functional Ecology. 2019;33:95–106. https://doi.org/10.1111/1365-2435.13259 999 
+
+62. Ware IM, Van Nuland ME, Yang ZK, Schadt CW, Schweitzer JA, Bailey JK. Climate-1000 
+
+driven divergence in plant-microbiome interactions generates range-wide variation in bud 1001 
+
+break phenology. Commun Biol. 2021;4:748. https://doi.org/10.1038/s42003-021-02244-5 1002 
+
+63. Knight CG, Nicolitch O, Griffiths RI, Goodall T, Jones B, Weser C, et al. Soil microbiomes 1003 
+
+show consistent and predictable responses to extreme events. Nature. 2024;636:690–6. 1004 
+
+https://doi.org/10.1038/s41586-024-08185-3 1005 
+
+64. Nethmini RT, Zhao H, Pan L, Qin X, Huang J, He Q, et al. Thermal sensitivity and niche 1006 
+
+plasticity of generalist and specialist leaf-endophytic bacteria in Mangrove Kandelia obovata .1007 
+
+Commun Biol. 2025;8:5. https://doi.org/10.1038/s42003-024-07446-1 1008 
+
+65. Louca S, Polz MF, Mazel F, Albright MBN, Huber JA, O’Connor MI, et al. Function and 1009 
+
+functional redundancy in microbial systems. Nat Ecol Evol. 2018;2:936–43. 1010 
+
+https://doi.org/10.1038/s41559-018-0519-1 1011 
+
+> .CC-BY-NC 4.0 International license made available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is The copyright holder for this preprint this version posted May 29, 2026. ;https://doi.org/10.64898/2026.05.29.728675 doi: bioRxiv preprint
+
+48 
+
+66. Bei Q, Reitz T, Schnabel B, Eisenhauer N, Schädler M, Buscot F, Heintz-Buschart A. 1012 
+
+Extreme summers impact cropland and grassland soil microbiomes. The ISME Journal. 1013 
+
+2023;17(10):1589-600. https://doi.org/10.1038/s41396-023-01470-5 1014 
+
+67. Douglas GM, Maffei VJ, Zaneveld JR, Yurgel SN, Brown JR, Taylor CM, et al. PICRUSt2 1015 
+
+for prediction of metagenome functions. Nat Biotechnol. 2020;38:685–8. 1016 
+
+https://doi.org/10.1038/s41587-020-0548-6 1017 
+
+68. Nguyen NH, Song Z, Bates ST, Branco S, Tedersoo L, Menke J, et al. FUNGuild: An open 1018 
+
+annotation tool for parsing fungal community datasets by ecological guild. Fungal Ecology. 1019 
+
+2016;20:241–8. https://doi.org/10.1016/j.funeco.2015.06.006 1020 
+
+69. Petipas RH, Geber MA, Lau JA. Microbe-mediated adaptation in plants. Ecology Letters. 1021 
+
+2021;24:1302–17. https://doi.org/10.1111/ele.13755 1022 
+
+70. Rúa MA, Antoninka A, Antunes PM, Chaudhary VB, Gehring C, Lamit LJ, et al. Home-1023 
+
+field advantage? evidence of local adaptation among plants, soil, and arbuscular mycorrhizal 1024 
+
+fungi through meta-analysis. BMC Evol Biol. 2016;16:122. https://doi.org/10.1186/s12862-1025 
+
+016-0698-9 1026 
+
+71. Petipas RH, Wruck AC, Geber MA. Microbe-mediated local adaptation to limestone 1027 
+
+barrens is context dependent. Ecology. 2020;101:e03092. https://doi.org/10.1002/ecy.3092 1028 
+
+72. Kazarina A, Sarkar S, Thapa S, Heeren L, Kamke A, Ward K, et al. Home-field advantage 1029 
+
+affects the local adaptive interaction between Andropogon gerardii ecotypes and root-1030 
+
+associated bacterial communities. Microbiology Spectrum. 2023;11:e00208-23. 1031 
+
+https://doi.org/10.1128/spectrum.00208-23 1032 
+
+> .CC-BY-NC 4.0 International license made available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is The copyright holder for this preprint this version posted May 29, 2026. ;https://doi.org/10.64898/2026.05.29.728675 doi: bioRxiv preprint
+
+49 
+
+73. Fitzpatrick CR, Copeland J, Wang PW, Guttman DS, Kotanen PM, Johnson MTJ. 1033 
+
+Assembly and ecological function of the root microbiome across angiosperm plant species. 1034 
+
+Proceedings of the National Academy of Sciences. 2018;115:E1157–65. 1035 
+
+https://doi.org/10.1073/pnas.1717617115 1036 
+
+74. Wagner MR, Lundberg DS, del Rio TG, Tringe SG, Dangl JL, Mitchell-Olds T. Host 1037 
+
+genotype and age shape the leaf and root microbiomes of a wild perennial plant. Nat Commun. 1038 
+
+2016;7:12151. https://doi.org/10.1038/ncomms12151 1039 
+
+75. Burrill HM, Wang G, Bever JD. Rapid differentiation of soil and root microbiomes in 1040 
+
+response to plant composition and biodiversity in the field. ISME Commun. 2023;3:31. 1041 
+
+https://doi.org/10.1038/s43705-023-00237-5 1042 
+
+76. Qin S, Zhang D, Wei B, Yang Y. Dual roles of microbes in mediating soil carbon dynamics 1043 
+
+in response to warming. Nat Commun. 2024;15:6439. https://doi.org/10.1038/s41467-024-1044 
+
+50800-4 1045 
+
+77. Li F, Jin Z, Wang Z, Liao Y, Yu L, Li X. Host Plant Selection Imprints Structure and 1046 
+
+Assembly of Fungal Community along the Soil-Root Continuum. mSystems. 2022;7:e00361-1047 
+
+22. https://doi.org/10.1128/msystems.00361-22 1048 
+
+78. Maciá-Vicente JG, Francioli D, Weigelt A, Albracht C, Barry KE, Buscot F, et al. The 1049 
+
+structure of root-associated fungal communities is related to the long-term effects of plant 1050 
+
+diversity on productivity. Molecular Ecology. 2023;32:3763–77. 1051 
+
+https://doi.org/10.1111/mec.16956 1052 
+
+79. Gan H, Li X, Wang Y, Lü P, Ji N, Yao H, et al. Plants Play Stronger Effects on Soil Fungal 1053 
+
+than Bacterial Communities and Co-Occurrence Network Structures in a Subtropical Tree 1054 
+
+> .CC-BY-NC 4.0 International license made available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is The copyright holder for this preprint this version posted May 29, 2026. ;https://doi.org/10.64898/2026.05.29.728675 doi: bioRxiv preprint
+
+50 
+
+Diversity Experiment. Microbiology Spectrum. 2022;10:e00134-22. 1055 
+
+https://doi.org/10.1128/spectrum.00134-22 1056 
+
+80. Song Y, Chen Q, Luo S, Li S, He R, Yang X, et al. Ecology-guided Bacillus SynCom from 1057 
+
+a rice–duckweed core reveals division of labor for concurrent growth promotion and sheath 1058 
+
+blight suppression. Microbiome. 2026;14:80. https://doi.org/10.1186/s40168-026-02360-6 1059 
+
+81. Hao X, Wang X, Wang X, Wang C, Li C, Lu Y, et al. Synthetic community derived from 1060 
+
+the root core microbes of a desert shrub Caragana korshinskii enhances wheat drought 1061 
+
+tolerance. Microbiome. 2026;14:76. https://doi.org/10.1186/s40168-026-02350-8 1062 
+
+1063

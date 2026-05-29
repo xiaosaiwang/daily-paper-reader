@@ -1,0 +1,1532 @@
+Title: Catching the effects of biotic interactions on community data: partial correlations outperform marginal ones with proper abiotic modelling
+
+URL Source: https://www.biorxiv.org/content/10.64898/2026.05.20.726512v1.full.pdf
+
+Number of Pages: 31
+
+Markdown Content:
+# Catching the e ff ects of biotic interactions on community data: 1
+
+# partial correlations outperform marginal ones with proper abiotic 2
+
+# modelling. 3
+
+Jeanne Tous a, Julien Chiquet a
+
+> 4
+> aUMR MIA Paris-Saclay, Universite Paris-Saclay, AgroParisTech, INRAE, Palaiseau, 91120, France
+
+Abstract 5
+
+A major goal of community ecology lies in the deciphering of the processes underlying 6
+
+species distribution. A widespread approach to this question is to identify patterns in species 7
+
+community data and relate them to possible processes. Joint Species Distribution Models (JS-8
+
+DMs) o ff er one way to do so through the infernece of association networks that describe patterns 9
+
+of statistical correlations and dependencies between species, but it is unclear what processes can 10 
+
+explain the presence of such correlations. While it has now been established that there is no 11 
+
+equivalence between JSDM-inferred associations and biotic interactions, the later remain one 12 
+
+possible explanation, among others, for the former. However, to our knowledge, there is no spe-13 
+
+cific study of the statistical patterns induced by di ff erent types of interactions or of the conditions 14 
+
+under which they may or may not appear as statistical correlations / dependencies in species 15 
+
+communities. To explore these questions, we propose a "virtual ecologist" approach that consists 16 
+
+in simulating community data based on abiotic and biotic processes with the VirtualCom model 17 
+
+that emulates the e ff ects of environmental processes and of competition and facilitation interac-18 
+
+tions. Then, we study to what extent JSDMs retrieve correlations between species that match the 19 
+
+simulated interactions. We show that these interactions are better identified when using JSDMs 20 
+
+that model partial correlations between species rather than marginal ones. We further demon-21 
+
+strate how critical it is to correctly model abiotic e ff ects in order to identify biotic ones and that 22 
+
+the "correct modelling" of these e ff ects depend on the type of interactions at stake. 23 
+
+1. Introduction 24 
+
+In ecology, community data describe the distribution of a set of species in a set of sites, 25 
+
+either as presence-absence, count or biomass data. These distributions result from three types 26 
+
+of mechanisms: dispersal, environmental filtering and biotic interactions (D’Amen et al., 2018; 27 
+
+Guisan and Thuiller, 2005; Poggiato et al., 2021). Understanding these processes has been a 28 
+
+long-term goal in ecology (Diamond, 1975; Connor and Simberlo ff , 1979) and can be critical to 29 
+
+predict the responses of species communities to environmental stressors (Heinen et al., 2020). 30 
+
+However, these processes cannot be directly observed in general. To decipher species distri-31 
+
+bution data, a general methodology thus consists in identifying patterns in it (Gotelli and Graves, 32 
+
+1996; Ulrich and Gotelli, 2010), with the idea that these patterns can be linked to underlying pro-33 
+
+cesses or mechanisms. The complex relationship between processes, patterns and mechanisms 34 
+
+> .CC-BY-NC 4.0 International license made available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is The copyright holder for this preprint this version posted May 22, 2026. ;https://doi.org/10.64898/2026.05.20.726512 doi: bioRxiv preprint
+
+has been the subject of a number of analyses (Anand, 1994; McAllister, 1997; Connolly et al., 35 
+
+2017). Anand (1994) proposes the following general definition: "patterns are what we perceive, 36 
+
+processes describe how these patterns come about, and the mechanisms provide explanations as 37 
+
+to why these patterns occur". In this work, we focus on patterns and processes as well as on the 38 
+
+relationship between both concepts. Pattern detection is per se a di ffi cult question, among other 39 
+
+reasons because the definition of a pattern is both investigator and scale dependent (McAllister, 40 
+
+1997). The relationship between patterns and processes is also a complex one since di ff erent 41 
+
+processes can have intermingled influences on species distributions and their e ff ects may also be 42 
+
+scale-dependent (Götzenberger et al., 2012; Viana and Chase, 2019). 43 
+
+Historically, statistical ecology aimed at identifying and describing biodiversity patterns 44 
+
+(Gimenez et al., 2014; Poggiato et al., 2021), using null models for instance (Connor and Sim-45 
+
+berlo ff , 1979; Ulrich and Gotelli, 2010). It has evolved towards more integrated modelling of 46 
+
+ecological processes and the patterns they generate (Gimenez et al., 2014). Species Distribution 47 
+
+Models (SDMS, Elith and Leathwick, 2009; Miller, 2010) and Joint Species Distribution Mod-48 
+
+els (JSDMs, Pollock et al., 2014; Tikhonov et al., 2020; Chiquet et al., 2021)) are two recent 49 
+
+classes of models that fit into this more recent framework. SDMs model each species’ distri-50 
+
+bution data individually, relating it to abiotic covariates. Some of them additionally add other 51 
+
+species as explanatory variable to model biotic interactions (Staniczenko et al., 2017; Poggiato 52 
+
+et al., 2025) or integrate the modelling of dispersal e ff ects (Shipley et al., 2022). JSDMs are a 53 
+
+more recent approach that simultaneously model all the species in the data and consider both the 54 
+
+eff ects of environmental covariates and the residual correlations between species abundances, 55 
+
+after accounting for the environmental covariates. They can be considered together as an associ-56 
+
+ation network: the network’s nodes are the species and two species are linked by an edge if and 57 
+
+only if their abundances are correlated given the e ff ects of the covariates. JSDMs are typically hi-58 
+
+erarchical models with observations following a multivariate random distribution (Bernoulli for 59 
+
+presence-absence data, Poisson log-normal for count data . . . ) conditionally on a latent Gaussian 60 
+
+variable. The residual correlations can then be modelled by the variance-covariance (Pollock 61 
+
+et al., 2014; Ovaskainen and Abrego, 2020) or precision (Chiquet et al., 2021) matrix of the 62 
+
+latent variable. In the latent Gaussian layer, a partial residual correlation equal to 0 is equiv-63 
+
+alent to the independence of the corresponding latent variables (Whittaker, 2009). The initial 64 
+
+interpretation given to these models was that, in both SDMs and JSDMs, the e ff ects of covariates 65 
+
+represented environmental filtering whereas, for JSDMs, residual correlations could be explained 66 
+
+by biotic interactions, but also by missing predictors or model misspecifications (Warton et al., 67 
+
+2015). It is now clear that there is no equivalence between biotic interactions and associations in 68 
+
+a JSDM-inferred network (Blanchet et al., 2020; Poggiato et al., 2021). This does not however 69 
+
+deny that biotic interactions have a possible role as one of the factors that can explain the pres-70 
+
+ence of a residual correlations between two species (Gotelli et al., 2010). Thus, even in SDMs 71 
+
+and JSDMs, a pattern-process-mechanism analysis still seems relevant. Indeed, while the pat-72 
+
+terns are no longer what is directly observed in the species distribution data, they now emerge as 73 
+
+the statistical e ff ects of abiotic covariates and the residual correlations identified by the models. 74 
+
+Relating them to underlying processes still requires a careful analysis, when feasible (Poggiato 75 
+
+et al., 2021). 76 
+
+In this paper, we focus on the specific question of the interpretation of residual correlation 77 
+
+patterns identified by JSDMs, in terms of processes and more precisely in terms of biotic in-78 
+
+teractions. While no equivalence was ever established between biotic interactions and residual 79 
+
+correlations, biotic interactions are often invoked as one of the main processes likely to explain 80 
+
+residual correlations (Pollock et al., 2014; Warton et al., 2015; Tikhonov et al., 2020). Still, it 81 
+
+2
+
+> .CC-BY-NC 4.0 International license made available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is The copyright holder for this preprint this version posted May 22, 2026. ;https://doi.org/10.64898/2026.05.20.726512 doi: bioRxiv preprint
+
+remains unclear what type of interaction could lead to a positive or negative residual correlation 82 
+
+in a JSDM framework and under what conditions this correlation would be detected. 83 
+
+To explore this question, we propose to use a method in the spirit of the "virtual ecologist 84 
+
+approach" (Zurell et al., 2010) that consists in testing methods (JSDMs here) on artificial data 85 
+
+simulated to mimic real processes. More precisely, we explore to what extent JSDMs have 86 
+
+the ability to retrieve the e ff ects of competition and facilitation on community data in terms 87 
+
+of residual correlations. We further study how this ability depends on the simulation param-88 
+
+eters for community data as well as on the JSDM used and whether it resorts to marginal or 89 
+
+partial residual correlations in the latent layer. To this end, we simulate species distribution 90 
+
+data based on abiotic e ff ects and on competition / facilitation interactions using the VirtualCom 91 
+
+model (Münkemüller and Gallien, 2015) under di ff erent configurations. Then we test the ability 92 
+
+of three di ff erent JSDMs, namely the gllvm (Generalized Linear Latent Variable Model, Niku 93 
+
+et al., 2019), Hmsc (Hierarchical Modelling of Species Communnities, Ovaskainen and Abrego, 94 
+
+2020) and PLN-network (Chiquet et al., 2021) models to retrieve these interactions in terms of 95 
+
+correlations depending on their strength and density, the removal of some of the species in the 96 
+
+data and the symmetry of the interactions. Our goal is to test the relationship between the pat-97 
+
+terns of statistical correlations as identified by JSDMs and the processes induced by competition 98 
+
+and facilitation interactions, taking advantage of the fact that these interactions are explicitly 99 
+
+known in the simulations. We specifically tested whether these interactions are better retrieved 100 
+
+in the statistical patterns described by marginal or partial correlations and how the results depend 101 
+
+on the types of interactions considered. 102 
+
+Below, we first introduce the VirtualCom model and the JSDMs we test as well as the simula-103 
+
+tion framework. We present the JSDMs results in the di ff erent simulation configurations. Finally, 104 
+
+we discuss the JSDMs ability to identify interactions as residual correlations depending on the 105 
+
+simulations parameters and how such information can be used to guide JSDM interpretation 106 
+
+when applied to real datasets. 107 
+
+2. Materials and methods 108 
+
+2.1. Generating species community data with the VirtualCom model. 109 
+
+Several simulation models were considered to test the relationships between the processes 110 
+
+induced by biotic interactions and the residual correlation patterns inferred by JSDMs. We con-111 
+
+templated using a generalized Lotka-Volterra model for trophic relationships, inspired by Pog-112 
+
+giato et al. (2025). However, these relationships are purely asymmetric, with opposite e ff ects for 113 
+
+the species involved in an interaction (the prey’s presence favors its predator whereas the preda-114 
+
+tor’s presence impairs its prey) so that it is unclear what pattern one could expect to find in terms 115 
+
+of statistical dependence for a given trophic relationship. The EcoLottery model (Munoz et al., 116 
+
+2018) was also considered but it lacks an explicit modelling of any type of biotic interactions. 117 
+
+We finally decided to work with an adapted version of the VirtualCom model (Münkemüller and 118 
+
+Gallien, 2015) as it directly models symmetric competition and facilitation interactions whose in-119 
+
+terpretation in terms of patterns is more straightforward, with species in competition expected to 120 
+
+be found together less often than others and the opposite patterns for species involved in facilita-121 
+
+tion interactions. We briefly describe the model here but the reader should refer to Münkemüller 122 
+
+and Gallien (2015) for an extensive description. We also detail how we modified the model to 123 
+
+adapt it to the experiment we carried. 124 
+
+3
+
+> .CC-BY-NC 4.0 International license made available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is The copyright holder for this preprint this version posted May 22, 2026. ;https://doi.org/10.64898/2026.05.20.726512 doi: bioRxiv preprint
+
+The model stochastically simulates community assembly over a one-dimensional environ-125 
+
+mental gradient (one "environment" corresponding to a real number along that gradient), con-126 
+
+sidering three filters: environmental, competition and reproductive filters. The species’ envi-127 
+
+ronmental preferences are described by a single real number, representing their niche optimum 128 
+
+and simulated based on a phylogenetic process. The species community in each environment is 129 
+
+simulated separately, using the following process, described in Figure 1: 130 
+
+1. K individuals are drawn from the species pool, K being a carrying capacity that is the same 131 
+
+for all sites. 132 
+
+2. K individuals are successively drawn and replaced with an individual from either the same 133 
+
+species or another species. Each species can be drawn with a probability π that depends 134 
+
+on the species’ niche, its interactions with the species already present, and the presence of 135 
+
+other individuals of its kind in the site (the detailed expression of π is given below). 136 
+
+3. Step 2 is repeated as many times (or as many "years" in the model’s terminology) as the 137 
+
+user requires, our goal here being to reach stable communities so as to limit the influence 138 
+
+of the random initial conditions. 139 
+
+The probability weight for an individual from species j to replace another individual at site 140 
+
+i is designed to include three e ff ects: environmental filtering, reproduction and competition /141 
+
+facilitation interactions. It is given by: 142 
+
+Wi j = exp( βenv log( wenv ,i, j) + βabun log( wabun ,i, j) + βcomp log( wcomp ,i, j)) The weights are then normalized to sum to 1 over all the species, yielding the π probabilities 143 
+
+mentionned in step 2. Coe ffi cients βenv , β abun and βcomp describe the relative importance of each 144 
+
+eff ect (resp. environmental, reproduction and competition / facilitation interactions). 145 
+
+The environmental e ff ect is given by wenv = f (Ei; opt j, sd j)/ f (Ei; Ei, sd j) with f (x; μ, σ ) the 146 
+
+density of a Gaussian distribution N(μ, σ ), Ei the real number characterizing the position of site i147 
+
+along the environmental gradient, opt j the niche optimum of species j (also a real number along 148 
+
+the environmental gradient) and sd j its niche breadth. The reproduction e ff ect is wabun ,i, j = Ni j /K149 
+
+with Ni j the number of individuals from species j at site i.150 
+
+Finally, the competition / facilitation e ff ect corresponds to wcomp = 1 − 1
+
+> K
+
+Pk a jk Nik with a jk 151 
+
+a competition (if positive) or facilitation (if negative) weight for the interaction between species 152 
+
+j and k. When the interactions are symmetric, a jk = ak j whereas if they are not, one could have 153 
+
+a jk , 0 and ak j = 0. In the original model, one always has a jk = F(opt j − opt k; 0 , sd j), with F the 154 
+
+cumulative distribution function of a Gaussian distribution, so that any two species have a com-155 
+
+petition interaction, whose strength is directly related to the proximity of their niches. However, 156 
+
+this means that the interaction network is a full network whereas many JSDMs are designed to 157 
+
+retrieve sparse association networks or at least are easier to assess with sparse networks since 158 
+
+one can then evaluate their ability to distinguish between existing and non-existing interactions. 159 
+
+Therefore, following an idea from an unpublished work by Laura Pollock, we first fixed a dis-160 
+
+tance threshold between niche optima, beyond which two species have no interaction, then drew 161 
+
+ncomp and nfaci pairs of species that are respectively involved in competition and in facilitation 162 
+
+interactions among the species whose niches are closer than the distance threshold. All pairs 163 
+
+( j, k) involved in the same type of interaction had the same interaction strength a jk = acomp or 164 
+
+a jk = afaci . When testing asymmetric interactions, we proceeded similarly but then set a jk = 0165 
+
+for j > k.166 
+
+4
+
+> .CC-BY-NC 4.0 International license made available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is The copyright holder for this preprint this version posted May 22, 2026. ;https://doi.org/10.64898/2026.05.20.726512 doi: bioRxiv preprint
+
+1. EACH SPECIES HAS A NICHE 
+
+ALO NG THE ENVIRO NME NTAL 
+
+GRADIE NT
+
+2. SPECIES WITH CLOSE NICHES CA N BE 
+
+A T T R I B U T E D A N I N T E R A C T I O N O F 
+
+COMPETITIO N (BLUE) OR FACILITATIO N
+
+(PI NK). 
+
+3 . E A C H S I T E I S 
+
+I N I T I A L I Z E D W I T H K
+
+INDIVIDUALS DRAW N AT 
+
+RA NDOM 
+
+4. FOR SITE 1 
+
+INITIAL SITUATION: 
+
+SITE 1 
+
+4. PICK A N INDIVIDUAL A AT 
+
+RA NDOM 
+
+4.2 FOR EACH SPECIES, COMPUTE THE 
+
+PROBABILITY IT HAS TO BE DRAW N TO 
+
+REPLACE I NDIVIDUAL A.     
+
+> ENVIRONMENT ABUNDANCE INTERACTIONS PROBABILITY
+> Close to niche:
+
++ eff ect  
+
+> 3individuals
+> present:
+
++++  eff ect       
+
+> 3:---eff ect
+
+0.2   
+
+> Close to niche:
+
++ eff ect  
+
+> 3individuals
+> present:
+
++++  eff ect           
+
+> 2:++eff ect
+> 3:---eff ect
+
+0.25   
+
+> Close to niche:
+
++ eff ect  
+
+> 2individuals
+> present:
+
+++  eff ect      
+
+> 3:
+> +++eff ect
+
+0.35   
+
+> Away from niche:
+
+- eff ect  
+
+> 2individuals
+> present:
+
+++  eff ect    
+
+> No interaction:
+> 0eff ect
+
+0.15   
+
+> Away from niche:
+
+- eff ect   
+
+> Absent from site:
+
+0 eff ect     
+
+> 2:
+> --eff ect
+
+0.05 
+
+4.3 REPLACE A WITH A N
+
+INDIVIDUAL FROM A SPECIES 
+
+DRAW N ACCORDI NG TO THE 
+
+PROBABILITIES FROM 4.2. 
+
+REPEAT STEPS 4.1 TO 4.3 K TIMES. 
+
+REPEAT STEP 4 TIMES. 
+
+DO THE SAME THING FOR EACH 
+
+SITE ALONG THE GRADIENT. 
+
+NYEAR
+
+FI NAL DISTRIBUTIO N
+
+AFigure 1: Principle of the VirtualCom simulation model. 
+
+5
+
+.CC-BY-NC 4.0 International license made available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is The copyright holder for this preprint this version posted May 22, 2026. ;https://doi.org/10.64898/2026.05.20.726512 doi: bioRxiv preprint A VirtualCom simulation outputs a community of p species described by their niche optima 167 
+
+and niche breadth (the later being the same for all species), a species interaction network with 168 
+
+competition and facilitation interactions and a final distribution of these species over n sites 169 
+
+distributed along a one-dimensional environmental gradient. 170 
+
+2.2. Tested JSDMs 171 
+
+We compared the results obtained with three di ff erent JSDMs: the gllvm (Generalized Lin-172 
+
+ear Latent Variable Model, Niku et al., 2019; Korhonen et al., 2025), Hmsc (Hierarchical Mod-173 
+
+elling of Species Communities, Ovaskainen and Abrego, 2020) and PLN-network (Poisson Log-174 
+
+Normal, Chiquet et al., 2019, 2021) models. All three approaches model a response variable 175 
+
+(the presence / absence or abundance of all the species on each site) as a multivariate random 176 
+
+vector following an appropriate distribution. The PLN-network model only allows the use of a 177 
+
+Poisson log-normal distribution, suitable for count data, whereas the gllvm and Hmsc models 178 
+
+additionally allow the use of other distributions such as Bernoulli for presence-absence data, but 179 
+
+this study focuses on count data. In all three models, the response variable’s distribution param-180 
+
+eters depend on covariates (usually environmental descriptors) and on a Gaussian latent variable 181 
+
+whose variance-covariance matrix (for gllvm and Hmsc) or precision matrix (for PLN-network) 182 
+
+represent inter-species correlations. 183 
+
+The main di ff erence between the Hmsc and gllvm models on the one hand and the PLN-184 
+
+network model on the other is that the first ones consider the association network given by a 185 
+
+low-rank approximation of the latent variable variance-covariance matrix whereas the second 186 
+
+one considers the network given by the precision matrix (inverse variance- covariance matrix). 187 
+
+The variance-covariance matrix contains marginal correlations between the components of 188 
+
+the latent variable whereas the precision matrix contains partial correlations between them. A 189 
+
+partial correlations equal to 0 coincides with a conditional independence between the correspond-190 
+
+ing components of the latent variable since it is Gaussian (Whittaker, 2009). This implies that a 191 
+
+correlation found between two species A and B in the variance-covariance matrix could be ex-192 
+
+plained by the statistical e ff ect of a third species C from the data whereas in the precision matrix, 193 
+
+these e ff ects are corrected for. 194 
+
+In terms of semantics, throughout the paper, residual associations refer to correlations ob-195 
+
+tained after correcting for the e ff ects of covariates (the environmental descriptor and /or a species-196 
+
+specific intercept) be they marginal (from the variance-covariance matrix) or partial (from the 197 
+
+precision matrix) ; marginal associations refer to the residual associations obtained with the 198 
+
+variance-covariance matrix based network, after correcting for the e ff ects of covariates but not 199 
+
+for those of the other species ; whereas partial associations refer to the residual associations 200 
+
+obtained with the precision matrix based network, after correcting for the e ff ects of covariates 201 
+
+and of the other species. 202 
+
+Moreover, the three models resort to di ff erent inference methods. The Hmsc inference is 203 
+
+based on a Bayesian Markov Chain Monte Carlo approach, the gllvm model uses a Laplace 204 
+
+approximation whereas the PLN-network model uses variational inference. 205 
+
+For each model, we tested three approaches to the modelling of the environment, with this 206 
+
+environment being described by a single value along a numerical gradient in the VirtualCom 207 
+
+model. In the first option, we did not include the environmental covariate at all and only used 208 
+
+a species-specific intercept as covariate. In the second one, we directly included the continuous 209 
+
+environmental descriptor as a covariate. Finally, in the third one, we treated it as a categorical 210 
+
+covariate. To this end, we simply divided the environmental gradient into nbin categories and 211 
+
+6
+
+> .CC-BY-NC 4.0 International license made available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is The copyright holder for this preprint this version posted May 22, 2026. ;https://doi.org/10.64898/2026.05.20.726512 doi: bioRxiv preprint
+
+the category each site falls in is given as a covariate to the model. The reason for this is that 212 
+
+treating the covariate as a continuous variable with a linear e ff ect is not consistent with its e ff ect 213 
+
+being modelled in terms of niches by VirtualCom. Indeed, the VirtualCom model assumes that 214 
+
+each species has a niche optimum with its presence being favoured in a small interval around 215 
+
+that optimum, whereas a continuous linear modelling assumes that a given species would favour 216 
+
+one or the other side of the environmental gradient, in general. A more rigorous approach to this 217 
+
+question would have been to use a spline basis but turning the environmental descriptor into a cat-218 
+
+egorical covariate is the most straightforward way to adjust for this modelling of environmental 219 
+
+niches and is the one we use as a "proof of concept" approach. 220 
+
+2.3. Random networks 221 
+
+For reference, we also compared each ground-truth network to a series of random networks 222 
+
+with increasing edge density. For each simulation, we started from an empty network and added 223 
+
+one edge at a time until the network was full. Each edge’s type ("facilitation" or "competition") 224 
+
+was drawn at random, using the probability given by the facilitation / competition ratio used in 225 
+
+the simulation. 226 
+
+2.4. Simulation study 227 
+
+2.4.1. Questions to explore 228 
+
+The main goal of this work was to test the strength of the relationship between the patterns 229 
+
+that emerge as residual (marginal or partial) correlations in JSDMs and competition or facilita-230 
+
+tion interactions. To this end, we tested to what extent interactions that are explicitly defined as 231 
+
+competition / facilitation interactions in VirtualCom simulations (the processes) could be identi-232 
+
+fied in the residual correlations (the patterns) inferred by the di ff erent JSDMs. We further tested 233 
+
+how this ability depends on the intensity and density of the interactions. Real species distribu-234 
+
+tion data are the result of a sampling process and this process may miss a number of species in 235 
+
+a community, owing to sampling errors / limits, or to the low abundance of some species for in-236 
+
+stance (Blasco-Moreno et al., 2019). Therefore, we also wanted to test if the retrieving of species 237 
+
+interactions by JSDMs is robust to the removal of some of the species, either picked as those 238 
+
+with the lowest abundances or at random. Finally, we considered the case of asymmetric inter-239 
+
+actions, either competition / neutral or facilitation / neutral (one species’ presence is negatively 240 
+
+or positively a ff ected by the other, but the converse is not true). 241 
+
+2.4.2. Simulation protocol 242 
+
+The code for the simulations is available in the public github repository jeannetous/Catching_ 243 
+
+the_effects_of_biotic_interactions_on_community_data , also accessible with the DOI 244 
+
+https://doi.org/10.5281/zenodo.20273114 . It is based on the code provided by Münkemüller 245 
+
+and Gallien (2015). 246 
+
+For each simulation, we started by generating a community of p species using the VirtualCom 247 
+
+phylogeny-based process, that output a niche optimum for each species. 248 
+
+Then, we generated an interaction network using a di ff erent process than in the original Vir-249 
+
+tualCom: given a distance threshold Dthreshold , competition and facilitation densities dcomp , dfaci ,250 
+
+competition and facilitation intensities acomp , afaci , we drew a fraction dcomp of the pairs of species 251 
+
+among those whose niches are closer than Dthreshold and a ff ected them a symmetric interaction 252 
+
+with weight acomp , before proceeding identically for the facilitation interactions. When the inter-253 
+
+actions are asymmetric, we only defined a jk = acomp or afaci for j < k and fix a jk = 0 otherwise, 254 
+
+7
+
+> .CC-BY-NC 4.0 International license made available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is The copyright holder for this preprint this version posted May 22, 2026. ;https://doi.org/10.64898/2026.05.20.726512 doi: bioRxiv preprint
+
+as for the non-interacting species. This method allowed us to control for the network densities 255 
+
+and thereby facilitates the results analysis. 256 
+
+We then ran the original VirtualCom code to simulate a distribution data set over n sites, dis-257 
+
+tributed along an "environmental" gradient between 0 and 100. The resulting species distribution 258 
+
+data was given as an input to each JSDM. Each one outputs an association network (based on the 259 
+
+latent variance-covariance matrix for the Hmsc and gllvm models, on the precision matrix for 260 
+
+PLN-network model) that could be compared to the interaction network used in the simulation 261 
+
+(see section 2.4.3 for details). 262 
+
+To test the robustness of the results when some of the species are not available in the species 263 
+
+distribution data, the same process was used, but we defined a "species ratio" ρspecies and only kept 264 
+
+a fraction ρspecies of the species, either by keeping the most abundant ones or by selecting them at 265 
+
+random. The networks inferred by the JSDMs were then compared to the network extracted from 266 
+
+the original one by keeping the sampled species only. This way, the potential influence of the 267 
+
+"missing species" was still present in the distribution data through their e ff ect on the remaining 268 
+
+species, but the JSDMs were not given access to their distributions. 269 
+
+2.4.3. Metrics 270 
+
+Before considering JSDMs, one can first wonder whether the patterns in the simulated data 271 
+
+correspond to what one would intuitively expect given the way VirtualCom was designed: given 272 
+
+two species with close niche optima, they are expected to be found together less (resp. more) 273 
+
+than the other pairs species with similar niche proximity if there is a competition (resp. facili-274 
+
+tation) interaction between them. To test this correspondence Si-moussi et al. (2020) proposed 275 
+
+a Relative Abundance Index (RAI). For two species j, k, when n sites are considered along the 276 
+
+environmental gradient, we define: 277 
+
+RAI jk = avg {δi, j|1 ≤ i ≤ n y i j > 0, yik > 0}
+
+with δi, j = yi j − ¯y j,
+
+with yi j the abundance of species j at site i and ¯ y j its average abundance over all the sites. This 278 
+
+asymmetric index is the empirical transcription of the idea that if j is in competition with k, then 279 
+
+when both species are present j’s abundance should be lower than it is on average . However, 280 
+
+it fails to account for the situation in which the competition is so strong that the two species are 281 
+
+never found together. It is essentially an empirical test to ensure that the simulation "does what 282 
+
+is says" and is correctly parameterized. 283 
+
+The RAIs are measured separately for four categories of species pairs: competing species, 284 
+
+facilitating species, species with no interactions but close niches (below Dthreshold so that they 285 
+
+should still often occur together) and species with no interactions and distant niches. 286 
+
+For the proper JSDM testing, we consider that there is a correspondence between a biotic 287 
+
+interaction in the simulation and a correlation pattern in the JSDM if two competing species are 288 
+
+identified as having a negative residual correlation between their abundances for competition and 289 
+
+a positive one for facilitation. More precisely, in this framework, a "true positive" corresponds 290 
+
+to a pair of species with a competition (resp. facilitation) interaction in the simulation set-up 291 
+
+and a negative (resp. positive) residual (marginal or partial, depending on the model) correlation 292 
+
+inferred by the JSDM. 293 
+
+The tested JSDMs o ff er ways to select networks with di ff erent densities. The PLN-network 294 
+
+model resorts to a sparse regularisation of the precision matrix in the spirit of the graphical-lasso 295 
+
+8
+
+> .CC-BY-NC 4.0 International license made available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is The copyright holder for this preprint this version posted May 22, 2026. ;https://doi.org/10.64898/2026.05.20.726512 doi: bioRxiv preprint
+
+(Friedman et al., 2008), a penalised approach to select edges in the association network. For the 296 
+
+Hmsc model, each value in the network comes with a posterior probability of being non-zero 297 
+
+thereby allowing the user to select di ff erent spartsity levels based on these probabilities. The 298 
+
+gllvm model does not provide a direct way to select di ff erent network densities, but that can be 299 
+
+done using a threshold-based approach (for a given threshold, the edges with an absolute value 300 
+
+below that threshold are removed). All the methods can thus be compared in terms of AUCs 301 
+
+(Area Under the receiver operating characteristics curve): for each level of network density, 302 
+
+the false positive rate and true positive rate are measured with a true positive being a competi-303 
+
+tion (resp. facilitation) interaction matching a negative (resp. positive) association and a false 304 
+
+positive being a competition (resp. facilitation) interaction that either corresponds to a positive 305 
+
+(resp. negative) association or no association at all in the JSDM-inferred network. Therefore, 306 
+
+the higher the AUC is, the stronger the correspondence between the simulation processes (biotic 307 
+
+interactions) and the JSDM patterns (statistical associations). 308 
+
+2.4.4. Simulations parameters 309 
+
+The number of species is set at p = 20, the number of sites at n = 50, the carrying capacity 310 
+
+at K = 100. By default, the competition and facilitation intensities are fixed at 2 and −2 respec-311 
+
+tively, and their densities at 0 .2 and 0 .1 respectively. The sites are distributed over a gradient 312 
+
+from 0 to 100, the species niche breadth is fixed at 2 and the distance threshold below which 313 
+
+interacting pairs of species are drawn is Dthreshold = 10. The relative weights of the di ff erent 314 
+
+eff ects, βenv , β comp and βabun are all fixed at 1. 315 
+
+The number of "years" over which the simulation is run is a compromise between the sim-316 
+
+ulation’s computational time-cost and our need to see the species distributions converge for our 317 
+
+analyses to be based on the e ff ects of the simulated ecological processes and not on the random 318 
+
+initialization. To test the convergence, we measure the mean di ff erence in abundance for each 319 
+
+species over all the sites between two years. We empirically see that running it over 10 "years" 320 
+
+is long enough (see Figure 2), resulting in an average simulation time of 16 seconds with the 321 
+
+default parameters. 322 
+
+To explore the results’ robustness when changing the interactions’ intensity and density, we 323 
+
+test di ff erent intensities (0 .1, 0.5, 2, 5) and di ff erent densities (0 .05 , 0.1, 0.2, 0.5) for facilitation 324 
+
+and competition. The "species ratios" tested to see if the models correctly retrieve the interac-325 
+
+tions between a fraction of the species when given access to the distribution data of these species 326 
+
+only are 0 .75 and 0 .5 (that is we either kept only 75% or 50% of the species, either the most 327 
+
+abundant ones or species drawn randomly). To test the robustness of the results to asymmetric 328 
+
+interactions, we finally re-run the simulations with the default parameters but asymmetric in-329 
+
+teractions, considering di ff erent intensities. To turn the continuous environmental gradient into 330 
+
+categorical covariate, we cut the 0 −100 interval into nbin categories, and test nbin = 5, 10 , and 15. 331 
+
+Each configuration was repeated 20 times. 332 
+
+Finally, the Hmsc model resorts to Bayesian inference, a procedure that requires using op-333 
+
+timization parameters that allows convergence. We first checked the convergence on several 334 
+
+examples and then proceeded to run the model with thin = 10 , samples = 1000 and transient =335 
+
+500 .336 
+
+9
+
+> .CC-BY-NC 4.0 International license made available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is The copyright holder for this preprint this version posted May 22, 2026. ;https://doi.org/10.64898/2026.05.20.726512 doi: bioRxiv preprint
+
+Figure 2: First two rows: heatmaps of the species distribution at di ff erent steps of the simulation - each row is a site, each column is a species. Bottom: each line represents a species, the di ff erences between its abundances over all the sites are averaged for each year (log-scale for the y axis). 
+
+10 
+
+.CC-BY-NC 4.0 International license made available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is The copyright holder for this preprint this version posted May 22, 2026. ;https://doi.org/10.64898/2026.05.20.726512 doi: bioRxiv preprint 3. Results 337 
+
+The RAIs (Figure 3) show that the simulated data is consistent with what can be expected 338 
+
+from the mechanisms at stake: species with competition interactions are found together less often 339 
+
+than species with no interaction, whereas species with facilitation interactions are found together 340 
+
+more often. As could also be expected, the more intense the interactions get, the stronger these 341 
+
+eff ects are. The RAIs also underline a possible source of confusion for the JSDMs: species with 342 
+
+close niches also tend to be found together more often than species with distant niches, even 343 
+
+when they have no interaction. Niche closeness could therefore be misinterpreted as facilitation 344 
+
+if the e ff ects of the environmental covariate (responsible for species with close niches being 345 
+
+found together more often than the others) are not adequately separated from the e ff ects of biotic 346 
+
+interactions in the model. 347 
+
+For competition, the best AUCs, around 0 .75 are obtained with the PLN-network model 348 
+
+when the environmental covariate is treated categorically, with an ideal number of bins of 10 or 349 
+
+15 in general (Figures 4, 5). These results seem slighlty improved when the competition and 350 
+
+facilitation intensities increase (Figure 4). Increasing the density of competition interactions also 351 
+
+appear to increase the AUCs, up to a certain point (beyond a density of 0 .1 it does not change 352 
+
+much). The facilitation intensity has no significant impact on the competition AUCs. In all 353 
+
+the tested configuration, the gllvm and Hmsc AUCs stay around 0.5, that is roughly the values 354 
+
+obtained for the random networks (Figures 4, 5). For the PLN-network model, not accounting 355 
+
+for the covariate e ff ect makes the competition AUC even worse than what is obtained at random 356 
+
+and accounting for it as a continuous covariate or with a division in categories that are not small 357 
+
+enough also significantly alter the AUC. For the gllvm and Hmsc models, conversely, the method 358 
+
+used to include the e ff ects of environmental covariate does not appear to influence the results. 359 
+
+Giving the PLN-network model access to only a subset of the species (Figures 6, 7) appear to 360 
+
+decrease the AUCs but this e ff ect is stronger when the subset is selected at random rather than 361 
+
+based on the species’ abundance. The other models’ results do not appear to be impacted by this 362 
+
+subsampling. 363 
+
+For facilitation, the gllvm and Hmsc AUCs also appear similar to what is obtained at ran-364 
+
+dom (Figures 8, 9). For the PLN-network model, the results appear completely reversed from 365 
+
+the competition ones (Figures 8, 9): the model with no environmental e ff ect obtains the higher 366 
+
+AUCs and the AUCs decrease as the number of categories the environment is divided in in-367 
+
+creases. Increasing the facilitation intensity relatively to the competition one appears to improve 368 
+
+the PLN-network AUC (Figure 8). Symetrically to the competition results, changing the den-369 
+
+sity of facilitation interactions from 0 .05 to 0 .1 significantly improves the AUCs but increasing it 370 
+
+beyond that has a less significant e ff ect, whereas there is no clear e ff ect of an increase in the com-371 
+
+petition density. The subsampling of the species does not appear to a ff ect the facilitation AUCs 372 
+
+obtained with the gllvm and Hmsc models, but all the AUCs obtained with the PLN-network 373 
+
+model decrease significantly, with this e ff ect being similar for the subsampling done at random 374 
+
+or by selecting the most abundant species only (Figures 10, 11). 375 
+
+11 
+
+> .CC-BY-NC 4.0 International license made available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is The copyright holder for this preprint this version posted May 22, 2026. ;https://doi.org/10.64898/2026.05.20.726512 doi: bioRxiv preprint
+
+Figure 3: RAIs boxplots between pairs of species that are in competition or facilitation interaction, or with no interaction and either close or distant niches. Top: RAIs when interactions’ intensities vary with competition density fixed at 0 .2and facilitation at 0 .1. Bottom: RAIs when interactions’ densities vary, with competition and facilitation intensities fixed at 2 and −2 respectively. 
+
+12 
+
+.CC-BY-NC 4.0 International license made available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is The copyright holder for this preprint this version posted May 22, 2026. ;https://doi.org/10.64898/2026.05.20.726512 doi: bioRxiv preprint Figure 4: AUCs boxplots for the competition interactions as the competition and facilitation intensities vary in the simulation. 
+
+13 
+
+.CC-BY-NC 4.0 International license made available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is The copyright holder for this preprint this version posted May 22, 2026. ;https://doi.org/10.64898/2026.05.20.726512 doi: bioRxiv preprint Figure 5: AUCs boxplots for the competition interactions as the competition and facilitation densities vary in the simu-lation. 
+
+14 
+
+.CC-BY-NC 4.0 International license made available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is The copyright holder for this preprint this version posted May 22, 2026. ;https://doi.org/10.64898/2026.05.20.726512 doi: bioRxiv preprint Figure 6: AUCs boxplots for the competition interactions for fixed interaction intensities /densities as the proportion of selected species vary, with the most abundant species being kept in the data. 
+
+15 
+
+.CC-BY-NC 4.0 International license made available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is The copyright holder for this preprint this version posted May 22, 2026. ;https://doi.org/10.64898/2026.05.20.726512 doi: bioRxiv preprint Figure 7: AUCs boxplots for the competition interactions for fixed interaction intensities /densities as the proportion of selected species vary, with the species being selected at random. 
+
+16 
+
+.CC-BY-NC 4.0 International license made available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is The copyright holder for this preprint this version posted May 22, 2026. ;https://doi.org/10.64898/2026.05.20.726512 doi: bioRxiv preprint Figure 8: AUCs boxplots for the facilitation interactions as the competition and facilitation intensities vary in the simu-lation. 
+
+17 
+
+.CC-BY-NC 4.0 International license made available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is The copyright holder for this preprint this version posted May 22, 2026. ;https://doi.org/10.64898/2026.05.20.726512 doi: bioRxiv preprint Figure 9: AUCs boxplots for the facilitation interactions as the competition and facilitation densities vary in the simula-tion. 
+
+18 
+
+.CC-BY-NC 4.0 International license made available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is The copyright holder for this preprint this version posted May 22, 2026. ;https://doi.org/10.64898/2026.05.20.726512 doi: bioRxiv preprint Figure 10: AUCs boxplots for the facilitation interactions for fixed interaction intensities /densities as the proportion of selected species vary, with the most abundant species being kept in the data. 
+
+19 
+
+.CC-BY-NC 4.0 International license made available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is The copyright holder for this preprint this version posted May 22, 2026. ;https://doi.org/10.64898/2026.05.20.726512 doi: bioRxiv preprint Figure 11: AUCs boxplots for the facilitation interactions for fixed interaction intensities /densities as the proportion of selected species vary, with the species being selected at random. 
+
+20 
+
+.CC-BY-NC 4.0 International license made available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is The copyright holder for this preprint this version posted May 22, 2026. ;https://doi.org/10.64898/2026.05.20.726512 doi: bioRxiv preprint 4. Discussion 376 
+
+We have introduced a simulation experiment that falls into the "virtual ecologist" approach 377 
+
+(Zurell et al., 2010) to question the relationship between statistical patterns and the processes 378 
+
+defined by biotic interactions in the context of JSDMs. In this section, we start by analysing the 379 
+
+correspondences between statistical correlations and competitive interactions for the di ff erent 380 
+
+JSDMs, depending on the type of correlations they consider, and the robustness of these results 381 
+
+to a number of changes in the parameters. Then, we question the di ff erence between the results 382 
+
+obtained for facilitation and competition. This leads us to the issue of correctly accounting for 383 
+
+biotic e ff ects and how the simulations results underline this point. Finally, we discuss the limits 384 
+
+of this experiment and the perspectives it opens. 385 
+
+4.1. Competitive interactions can partially be retrieved in partial correlations at a level that is 386 
+
+robust to a range of perturbations in the simulations. 387 
+
+As patterns directly observable in the data (that is, with no refined statistical transforma-388 
+
+tion) the relative abundance indices confirm the consistency between the interactions modeled 389 
+
+by VirtualCom and the species distribution data. The idea that residual (marginal or partial) cor-390 
+
+relations as inferred by JSDMs may relate to biotic interactions is based on the same intuition 391 
+
+as RAIs: species in competition (resp. facilitation) co-occurr less (resp. more) than species with 392 
+
+no interactions (Morales-Castilla et al., 2015; Freilich et al., 2018) (although there is no clear 393 
+
+proof that co-occurrences can inform biotic interaction networks in general, see Freilich et al. 394 
+
+(2018); Poggiato et al. (2021)). Thus, we in the simple, artificial VirtualCom framework, we 395 
+
+expect JSDM-inferred association networks to match, at least partially, the simulated biotic in-396 
+
+teractions, with negative residual correlations observed where competition occurs and positive 397 
+
+ones for facilitation. 398 
+
+The results show a relatively good match between competition and negative associations for 399 
+
+the Poisson log-normal models that consider the "environmental" covariate categorically ("PLN 400 
+
+- categorical" on Figures 4 to 7) with AUCs consistently around 0 .75. This implies that the 401 
+
+competitive interactions are partially but not fully retrieved in the network of partial correlations 402 
+
+obtained after accounting for the environmental e ff ect. Conversely, the gllvm and Hmsc models 403 
+
+fail to retrieve these interactions as negative marginal correlations, with no significant di ff erence 404 
+
+between the results obtained with the di ff erent modelling of the environmental covariate. These 405 
+
+results appear robust to changes in the interactions intensities and densities, and even to the 406 
+
+subsampling of the most abundant species. Subsampling the species however appears to reduce 407 
+
+the AUCs. In the VirtualCom framework, each species’ influence on the simulation process is 408 
+
+proportional to its abundance on each site so that the most abundant species should be the most 409 
+
+influential ones. This is probably why the removal of the less abundant species does not a ff ect 410 
+
+the results as much as removing them at random does. 411 
+
+We also ran the simulations with asymmetric interactions (see Appendix A). Given the sim-412 
+
+ulation framework we could only test two types of asymmetry, "facilitation / neutral" (e.g. com-413 
+
+mensalism) and "competition / neutral" (e.g. ammensalism), but not interactions with opposite 414 
+
+eff ects ("competition / facilitation", like parasitism) since it is not clear whether one would expect 415 
+
+to retrieve a statistical association in this case, and which one it would be. Surprisingly, the PLN-416 
+
+network results with a categorical modelling of the covariate appear robust to the interactions 417 
+
+becoming asymmetric. Indeed, the symmetry constraints of partial-correlations-based JSDMs 418 
+
+is often mentioned as a strong limit to JSDMs’ ability to retrieve biotic interactions (Dormann 419 
+
+et al., 2018). While our results do not contradict this point in general, given the limited type of 420 
+
+21 
+
+> .CC-BY-NC 4.0 International license made available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is The copyright holder for this preprint this version posted May 22, 2026. ;https://doi.org/10.64898/2026.05.20.726512 doi: bioRxiv preprint
+
+asymmetric interactions we consider, we show that in the stereotypical VirtualCom framework, 421 
+
+asymmetric competition interactions are still partially identified as negative partial correlations, 422 
+
+with no striking decrease in the AUCs compared to the symmetric configuration. JSDMs how-423 
+
+ever, do not allow one to know whether a statistical correlation may correspond to a symmetric 424 
+
+or asymmetric interaction and, in the latter case, if both species are negatively impacted but with 425 
+
+di ff erent intensities or if only one of them is impacted by the other’s presence. 426 
+
+These results show that, in this framework, competitive interactions are hard to retrieve 427 
+
+through marginal correlations, probably because the direct and indirect e ff ects of species on 428 
+
+each other cannot be disentangled. Resorting to a network of partial correlations appear more 429 
+
+effi cient provided the environmental e ff ects are correctly accounted for. Yet, even in this rather 430 
+
+simple framework (there are only two types of interactions, a limited number of species and a 431 
+
+one-dimensional environmental gradient) the AUCs hardly reach values beyond 0 .8. This con-432 
+
+firms the di ffi culties inherent to the task of relating (statistical) patterns to biotic mechanisms: 433 
+
+while competition appears as a legitimate hypothesis to explain a negative residual association, 434 
+
+it requires further experimenting to be confirmed. 435 
+
+Overall the results also underline how critical it is to account for abiotic e ff ects here. This can 436 
+
+be explained by the opposite e ff ects that abiotic e ff ects and competition have in this framework: 437 
+
+species can only be in competition if their niches are close enough so that they still have more 438 
+
+chances of being found together than species with distant niches that would not be in competition. 439 
+
+This is probably what explains the low AUCs for the PLN model with no covariate. 440 
+
+For facilitation, however, abiotic and biotic filters have synergestic e ff ects and this could 441 
+
+explain the di ff erence in the results we obtained. 442 
+
+4.2. The appropriate approaches and interpretations depend on the type of interactions consid-443 
+
+ered. 444 
+
+For facilitation, the RAIs still show that the general patterns seem consistent with what one 445 
+
+expect the simulation to do. The AUC results are the same as for competition for the gllvm and 446 
+
+Hmsc model but are strikingly reversed for the PLN-network model. The major di ff erence with 447 
+
+competition is that, this time, the abiotic and biotic filters have synergestic e ff ects, as the RAIs 448 
+
+clearly show: two species involved in facilitation have two reasons to be found together - their 449 
+
+niches are close and they favor each other’s presence. 450 
+
+Therefore, it is likely that when accounting for the environmental e ff ect facilitation is "ab-451 
+
+sorbed", in the abiotic filters through the "mean e ff ects" of the underlying generalized linear 452 
+
+model. However, when the covariate is not included, both the abiotic and biotic filters appear 453 
+
+in the positive residual correlations, with the strongest positive correlations observed for species 454 
+
+with facilitation interactions. As a side e ff ect, it is likely that species with very close niches are 455 
+
+also more likely to be mistakenly identified as being involved in facilitation interaction. 456 
+
+These results underline that a JSDM’s ability to disentangle di ff erent mechanisms (biotic, 457 
+
+abiotic...) through the statistical patterns it unveils strongly depend on the joint dynamics of 458 
+
+these mechanisms and more specifically, whether their e ff ects are synergestic or antagonistic, an 459 
+
+idea that Poggiato et al. (2021) also underlined with a di ff erent approach. 460 
+
+4.3. The importance of correctly accounting for abiotic e ff ects. 461 
+
+These di ff erences between competition and facilitation appear related to the di ff erence be-462 
+
+tween the PLN-network with a continuous and a categorical environmental covariate results 463 
+
+in the sense that it raises questions about the appropriate way to deal with abiotic covariates. 464 
+
+22 
+
+> .CC-BY-NC 4.0 International license made available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is The copyright holder for this preprint this version posted May 22, 2026. ;https://doi.org/10.64898/2026.05.20.726512 doi: bioRxiv preprint
+
+We have discussed why the gllvm and Hmsc networks did not match the simulations’ interac-465 
+
+tions networks and why accounting for covariates when it comes to facilitation appear altogether 466 
+
+counterproductive in this simulation framework and now focus on competition and on the PLN-467 
+
+network model. 468 
+
+When accounting for covariates, several approaches can be used. The most natural one, 469 
+
+used in several JSDMs, including the PLN-network model, is to resort to a generalized linear 470 
+
+model (GLM) and directly plug the covariates in it, with no or little transformation. However, 471 
+
+in this simulation framework, this does not appear as the most relevant approach. Indeed the 472 
+
+(virtual) environmental covariate covers a large gradient and the environmental filter is based 473 
+
+on the distance between a species’ niche and the local environment. A GLM with no covariate 474 
+
+transformation then does not appear appropriate as it cannot model the proximity between an 475 
+
+environment and a niche but only general trends. To get closer to the niche modelling, we 476 
+
+consider a basic idea: discretising the covariate. This cuts the gradient into nbin bins, allowing a 477 
+
+GLM to infer one coe ffi cient per pair ( species , bin ) that can be low when the bin is far from 478 
+
+the species niche and gets higher as the bin gets closer to the niche. 479 
+
+This simple approach proved fruitful: the PLN-network model perform much better with a 480 
+
+categorical covariate than with a continuous one allowing the model to reach mean AUCs around, 481 
+
+or higher than, 0.75 when using a continuous covariate leaves it stuck around 0.6 (Figure 4). It 482 
+
+also appears that the division of the gradient into categorical covariate requires to be optimized 483 
+
+as using too few bin or too many bins reduces the AUCs. This actually questions one of the limits 484 
+
+of this approach: nbin is a hyper-parameter, we have not identified a clear, e ffi cient way of fixing 485 
+
+it. 486 
+
+4.4. Limits and perspectives 487 
+
+Although this experiment shows that some JSDMs can partially retrieve symmetric and asym-488 
+
+metric competitive interactions provided they properly account for abiotic e ff ects, there are limits 489 
+
+to these results. First, although the VirtualCom model is designed to simulate realistic ecological 490 
+
+processes (Münkemüller and Gallien, 2015), it remains a stereotypical framework, with interac-491 
+
+tions modelled in accordance with the same intuition as the one that underpins the relationship 492 
+
+between biotic interactions and JSDM-inferred biotic interactions. 493 
+
+Moreover, it is unclear to what extent the species distribution data that VirtualCom outputs 494 
+
+can be compared to any real species distribution data set. When using a JSDM for a specific 495 
+
+species distribution data analysis, it could be useful to re-use this framework and adapt the sim-496 
+
+ulation parameters to obtain configurations that are closer to the considered dataset. 497 
+
+While our results show a certain ability of JSDMs to disentangle antagonistic e ff ects and 498 
+
+thereby identify competitive interactions, the results are di ff erent when considering facilitation 499 
+
+interactions and synergestic e ff ects of the di ff erent filters. Other interactions could lead to even 500 
+
+more complex e ff ects and statistical patterns, such as parasitism or trophic interactions. 501 
+
+Finally, the approaches we explore here could be further refined when it comes to the han-502 
+
+dling of abiotic e ff ects. While the simple discretisation of the covariate proves to work well, 503 
+
+other more robust approaches could be explored for this issue, especially when wide environ-504 
+
+mental gradients are considered, for instance using splines bases. Integrating splines in one of 505 
+
+the models would however require significant modifications of the inference method. 506 
+
+23 
+
+> .CC-BY-NC 4.0 International license made available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is The copyright holder for this preprint this version posted May 22, 2026. ;https://doi.org/10.64898/2026.05.20.726512 doi: bioRxiv preprint
+
+5. Conclusion 507 
+
+We have introduced an original virtual framework to test the relationship between statistical 508 
+
+patterns identified by JSDMs and the processes induced by two symmetric biotic interactions, 509 
+
+competition and facilitation. 510 
+
+We have shown that competition can be partially retrieved by the PLN-network model but is 511 
+
+not identified by the other models. This is likely explained by the PLN-network model using a 512 
+
+network of partial correlations instead of marginal ones as gllvm and Hmsc do. Still, even in this 513 
+
+stereotypical framework the AUCs do not exceed 0 .8. Competition is not perfectly retrieved in 514 
+
+partial correlations but appears as a legitimate hypothesis to explain the presence of a negative 515 
+
+association in partial association network. This does not identify the PLN-network model as a 516 
+
+"best JSDM" since models that were not tested here, or refinements of the other tested models 517 
+
+may work too, but rather shows as a proof of concept that JSDMs have the ability to (partially) 518 
+
+retrieve such interactions in this stylised context. The very di ff erent results obtained for facili-519 
+
+tation with the highest AUCs obtained with a model that did not account for the environmental 520 
+
+covariates and low AUCs for the PLN-network model with covariates, prove that a model’s abil-521 
+
+ity to identify statistical patterns that can help disentangle multiple processes depend on the joint 522 
+
+eff ects of these processes and, specifically, whether they are synergestic or antagonistic. Overall, 523 
+
+all of these results were only weakly impacted by the changes of parameters (interactions inten-524 
+
+sities and densities) with the exception of the species subsampling (especially if done at random) 525 
+
+that significantly reduces the AUCs for both competition and facilitation. 526 
+
+These results show that there is a partial correspondence between the processes induced by 527 
+
+facilitation and competition as they are understood and modelled ecologically, and the statistical 528 
+
+patterns inferred by JSDMs so that the latter can be used to decipher the first. We have also 529 
+
+underlined that this correspondence changes depending on the models and types of interactions 530 
+
+considered. These relationships should be analysed with care, paying attention to the inclusion 531 
+
+and modelling of abiotic filters as well as to the potential influence of missing species. 532 
+
+Acknowledgements 533 
+
+We thank Wilfried Thuiller for his insight and suggestions regarding the ecological questions 534 
+
+studied in this work. 535 
+
+24 
+
+> .CC-BY-NC 4.0 International license made available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is The copyright holder for this preprint this version posted May 22, 2026. ;https://doi.org/10.64898/2026.05.20.726512 doi: bioRxiv preprint
+
+Appendices 536 
+
+A. Results for asymmetric interactions 537 
+
+Figure A.12: RAIs boxplots for asymmetric interactions, between pairs of species that are in competition or facilitation interaction, or with no interaction andm either close or distant niches. 
+
+25 
+
+.CC-BY-NC 4.0 International license made available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is The copyright holder for this preprint this version posted May 22, 2026. ;https://doi.org/10.64898/2026.05.20.726512 doi: bioRxiv preprint Figure A.13: AUCs boxplots for the competition interactions as the competition and facilitation intensities vary in the simulation for asymmetric interactions. 
+
+26 
+
+.CC-BY-NC 4.0 International license made available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is The copyright holder for this preprint this version posted May 22, 2026. ;https://doi.org/10.64898/2026.05.20.726512 doi: bioRxiv preprint Figure A.14: AUCs boxplots for the facilitation interactions as the competition and facilitation intensities vary in the simulation for asymmetric interactions. 
+
+27 
+
+.CC-BY-NC 4.0 International license made available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is The copyright holder for this preprint this version posted May 22, 2026. ;https://doi.org/10.64898/2026.05.20.726512 doi: bioRxiv preprint B. Run times of the di ff erent models 538 
+
+Figure B.15: Boxplots of the runtimes required by each method. The longer runtime required by the Hmsc model is owing to its time-consuming Bayesian inference procedure. The reader should note that the VirtualCom simulation also requires a significant amount of time. 
+
+28 
+
+.CC-BY-NC 4.0 International license made available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is The copyright holder for this preprint this version posted May 22, 2026. ;https://doi.org/10.64898/2026.05.20.726512 doi: bioRxiv preprint References 539 
+
+Anand, M., 1994. Pattern, process and mechanism-the fundamentals of scientific inquiry applied 540 
+
+to vegetation science. Coenoses , 81–92. 541 
+
+Blanchet, F.G., Cazelles, K., Gravel, D., 2020. Co-occurrence is not evidence of ecological 542 
+
+interactions. Ecology Letters 23, 1050–1063. 543 
+
+Blasco-Moreno, A., Pérez-Casany, M., Puig, P., Morante, M., Castells, E., 2019. What does a 544 
+
+zero mean? understanding false, random and structural zeros in ecology. Methods in Ecology 545 
+
+and Evolution 10, 949–959. 546 
+
+Chiquet, J., Mariadassou, M., Robin, S., 2021. The poisson-lognormal model as a versatile 547 
+
+framework for the joint analysis of species abundances. Frontiers in Ecology and Evolution 9, 548 
+
+588292. 549 
+
+Chiquet, J., Robin, S., Mariadassou, M., 2019. Variational inference for sparse network recon-550 
+
+struction from count data, in: International Conference on Machine Learning, PMLR. pp. 551 
+
+1162–1171. 552 
+
+Connolly, S.R., Keith, S.A., Colwell, R.K., Rahbek, C., 2017. Process, mechanism, and modeling 553 
+
+in macroecology. Trends in Ecology & Evolution 32, 835–844. 554 
+
+Connor, E.F., Simberlo ff , D., 1979. The assembly of species communities: chance or competi-555 
+
+tion? Ecology 60, 1132–1140. 556 
+
+D’Amen, M., Mod, H.K., Gotelli, N.J., Guisan, A., 2018. Disentangling biotic interactions, 557 
+
+environmental filters, and dispersal limitation as drivers of species co-occurrence. Ecography 558 
+
+41, 1233–1244. 559 
+
+Diamond, J.M., 1975. Assembly of species communities. Ecology and evolution of communities 560 
+
+, 342–444. 561 
+
+Dormann, C.F., Bobrowski, M., Dehling, D.M., Harris, D.J., Hartig, F., Lischke, H., Moretti, 562 
+
+M.D., Pagel, J., Pinkert, S., Schleuning, M., et al., 2018. Biotic interactions in species dis-563 
+
+tribution modelling: 10 questions to guide interpretation and avoid false conclusions. Global 564 
+
+ecology and biogeography 27, 1004–1016. 565 
+
+Elith, J., Leathwick, J.R., 2009. Species distribution models: ecological explanation and predic-566 
+
+tion across space and time. Annual review of ecology, evolution, and systematics 40, 677–697. 567 
+
+Freilich, M.A., Wieters, E., Broitman, B.R., Marquet, P.A., Navarrete, S.A., 2018. Species 568 
+
+co-occurrence networks: can they reveal trophic and non-trophic interactions in ecological 569 
+
+communities? Ecology 99, 690–699. 570 
+
+Friedman, J., Alm, E.J., 2012. Inferring correlation networks from genomic survey data . 571 
+
+Friedman, J., Hastie, T., Tibshirani, R., 2008. Sparse inverse covariance estimation with the 572 
+
+graphical lasso. Biostatistics 9, 432–441. 573 
+
+Gimenez, O., Buckland, S.T., Morgan, B.J., Bez, N., Bertrand, S., Choquet, R., Dray, S., Etienne, 574 
+
+M.P., Fewster, R., Gosselin, F., et al., 2014. Statistical ecology comes of age. Biology letters 575 
+
+10. 576 
+
+29 
+
+> .CC-BY-NC 4.0 International license made available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is The copyright holder for this preprint this version posted May 22, 2026. ;https://doi.org/10.64898/2026.05.20.726512 doi: bioRxiv preprint
+
+Gotelli, N.J., Graves, G.R., 1996. Null models in ecology. Smithsonian Institution Press. 577 
+
+Gotelli, N.J., Graves, G.R., Rahbek, C., 2010. Macroecological signals of species interactions in 578 
+
+the danish avifauna. Proceedings of the National Academy of Sciences 107, 5030–5035. 579 
+
+Götzenberger, L., de Bello, F., Bråthen, K.A., Davison, J., Dubuis, A., Guisan, A., Lepš, J., 580 
+
+Lindborg, R., Moora, M., Pärtel, M., et al., 2012. Ecological assembly rules in plant commu-581 
+
+nities—approaches, patterns and prospects. Biological reviews 87, 111–127. 582 
+
+Guisan, A., Thuiller, W., 2005. Predicting species distribution: o ff ering more than simple habitat 583 
+
+models. Ecology letters 8, 993–1009. 584 
+
+Heinen, J.H., Rahbek, C., Borregaard, M.K., 2020. Conservation of species interactions to 585 
+
+achieve self-sustaining ecosystems. Ecography 43, 1603–1611. 586 
+
+Korhonen, P., Hui, F.K., Niku, J., Taskinen, S., van der Veen, B., 2025. gllvm 2.0: fast fitting of 587 
+
+advanced ordination methods and joint species distribution models. PeerJ 13, e20338. 588 
+
+Machamer, P., Darden, L., Craver, C.F., 2000. Thinking about mechanisms. Philosophy of 589 
+
+science 67, 1–25. 590 
+
+McAllister, J.W., 1997. Phenomena and patterns in data sets. Erkenntnis 47, 217–228. 591 
+
+Miller, J., 2010. Species distribution modeling. Geography Compass 4, 490–509. 592 
+
+Morales-Castilla, I., Matias, M.G., Gravel, D., Araújo, M.B., 2015. Inferring biotic interactions 593 
+
+from proxies. Trends in ecology & evolution 30, 347–356. 594 
+
+Münkemüller, T., Gallien, L., 2015. Virtualcom: A simulation model for eco-evolutionary com-595 
+
+munity assembly and invasion. Methods in Ecology and Evolution 6, 735–743. 596 
+
+Munoz, F., Grenié, M., Denelle, P., Taudière, A., Laroche, F., Tucker, C., Violle, C., 2018. 597 
+
+ecolottery: Simulating and assessing community assembly with environmental filtering and 598 
+
+neutral dynamics in r. Methods in Ecology and Evolution 9, 693–703. 599 
+
+Niku, J., Hui, F.K., Taskinen, S., Warton, D.I., 2019. gllvm: Fast analysis of multivariate abun-600 
+
+dance data with generalized linear latent variable models in r. Methods in Ecology and Evo-601 
+
+lution 10, 2173–2182. 602 
+
+Ovaskainen, O., Abrego, N., 2020. Joint species distribution modelling: With applications in R. 603 
+
+Cambridge University Press. 604 
+
+Poggiato, G., Andréoletti, J., Pollock, L.J., Thuiller, W., 2025. Integrating food webs in species 605 
+
+distribution models can improve ecological niche estimation and predictions. Ecography 2025, 606 
+
+e07546. 607 
+
+Poggiato, G., Münkemüller, T., Bystrova, D., Arbel, J., Clark, J.S., Thuiller, W., 2021. On the 608 
+
+interpretations of joint modeling in community ecology. Trends in ecology & evolution 36, 609 
+
+391–401. 610 
+
+Pollock, L.J., Tingley, R., Morris, W.K., Golding, N., O’Hara, R.B., Parris, K.M., Vesk, P.A., 611 
+
+McCarthy, M.A., 2014. Understanding co-occurrence by modelling species simultaneously 612 
+
+with a joint species distribution model (jsdm). Methods in Ecology and Evolution 5, 397–406. 613 
+
+30 
+
+> .CC-BY-NC 4.0 International license made available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is The copyright holder for this preprint this version posted May 22, 2026. ;https://doi.org/10.64898/2026.05.20.726512 doi: bioRxiv preprint
+
+Shipley, B.R., Bach, R., Do, Y., Strathearn, H., McGuire, J.L., Dilkina, B., 2022. megasdm: 614 
+
+integrating dispersal and time-step analyses into species distribution models. Ecography 2022. 615 
+
+Si-moussi, S., Galbrun, E., HEDDE, M., Thuiller, W., 2020. Uncovering bidirectional ecological 616 
+
+associations from co-occurrence and environmental data. Authorea Preprints . 617 
+
+Staniczenko, P.P., Sivasubramaniam, P., Suttle, K.B., Pearson, R.G., 2017. Linking macroecol-618 
+
+ogy and community ecology: refining predictions of species distributions using biotic interac-619 
+
+tion networks. Ecology letters 20, 693–707. 620 
+
+Tikhonov, G., Opedal, Ø.H., Abrego, N., Lehikoinen, A., De Jonge, M.M., Oksanen, J., 621 
+
+Ovaskainen, O., 2020. Joint species distribution modelling with the r-package hmsc. Methods 622 
+
+in ecology and evolution 11, 442–447. 623 
+
+Ulrich, W., Gotelli, N.J., 2010. Null model analysis of species associations using abundance 624 
+
+data. Ecology 91, 3384–3397. 625 
+
+Viana, D.S., Chase, J.M., 2019. Spatial scale modulates the inference of metacommunity assem-626 
+
+bly processes. Ecology 100, e02576. 627 
+
+Warton, D.I., Blanchet, F.G., O’Hara, R.B., Ovaskainen, O., Taskinen, S., Walker, S.C., Hui, 628 
+
+F.K., 2015. So many variables: joint modeling in community ecology. Trends in ecology & 629 
+
+evolution 30, 766–779. 630 
+
+Whittaker, J., 2009. Graphical models in applied multivariate statistics. Wiley Publishing. 631 
+
+Zurell, D., Berger, U., Cabral, J.S., Jeltsch, F., Meynard, C.N., Münkemüller, T., Nehrbass, N., 632 
+
+Pagel, J., Reineking, B., Schröder, B., et al., 2010. The virtual ecologist approach: simulating 633 
+
+data and observers. Oikos 119, 622–635. 634 
+
+31
