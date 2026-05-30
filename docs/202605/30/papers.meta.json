@@ -1,0 +1,69 @@
+{
+  "label": "2026-05-30",
+  "date": "2026-05-30",
+  "generated_at": "2026-05-30T20:44:09",
+  "count": 4,
+  "papers": [
+    {
+      "paper_id": "202605/30/biorxiv-10-64898-2026-05-26-727523-v1-mutualisms-alter-legume-niches-at-a-global-scale",
+      "section": "deep",
+      "title_en": "MUTUALISMS ALTER LEGUME NICHES AT A GLOBAL SCALE",
+      "authors": "McHugh, E., Bontrager, M., Frederickson, M. E.",
+      "date": "2026-05-29",
+      "pdf": "https://www.biorxiv.org/content/10.64898/2026.05.26.727523v1.full.pdf",
+      "score": "8.0",
+      "evidence": "研究豆科-根瘤菌互惠共生，连接地上植物性状与地下微生物互作",
+      "tldr": "互惠共生被认为能拓宽物种生态位，但缺乏全球尺度实证。本研究整合全球2668种豆科植物的互惠性状、地理分布与气候土壤数据，分析防御性蚂蚁互惠（蜜腺）和营养性根瘤菌互惠对温度、降水、土壤氮生态位的影响。发现具互惠特征的豆科植物占据更多生物群系，生态位普遍更宽，但根瘤菌互惠效应依纬度而异：高纬度增加降水与氮生态位，低纬度增温但高纬度降温。揭示了互惠类型与纬度的交互作用对生态位的复杂影响。",
+      "tags": "query:ag-bg-div",
+      "abstract_en": "Although mutualism is widely expected to broaden the realized niche of participating species, there have been no global syntheses examining how mutualism affects species' niches. Here, we combine mutualism trait data on 2,668 legume species with geographic occurrence, climate, and soil nitrogen data. We use these data to investigate the effects of generalized defensive ant-plant mutualisms and more specialized nutritional legume-rhizobium mutualisms on the range of temperature, precipitation, and soil nitrogen values where legumes occur. Legumes engaged in mutualisms with ants or rhizobia occupied significantly more biomes and generally larger niches than non-mutualist species. Legumes with extrafloral nectaries, a trait that attracts a generalized guild of defensive ant partners, had wider niches across all three niche axes, regardless of latitude. Effects of interacting with rhizobia-- a more specialized mutualism-- on niche breadth were also mainly positive, but depended on latitude, with this mutualism increasing precipitation and soil nitrogen niche breadth only at high latitude, and increasing temperature niche breadth at low latitude, but decreasing temperature niche breadth at high latitude. Mutualism therefore affects niche breadth, but in ways that depend on interaction type and biogeographic trends that vary latitudinally.",
+      "source": "biorxiv",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "paper_id": "202605/30/biorxiv-10-64898-2026-02-09-704827-v2-benchmarking-the-quantitative-performance-of-metabarcoding-and-shotgun-sequencing-using-mock-communities-of-marine-nematodes",
+      "section": "quick",
+      "title_en": "Benchmarking the quantitative performance of metabarcoding and shotgun sequencing using mock communities of marine nematodes",
+      "authors": "Izabel-Shen, D., Sandberg, H., Ahmed, M., Broman, E., Holovachov, O., Nascimento, F. J. A.",
+      "date": "2026-05-27",
+      "pdf": "https://www.biorxiv.org/content/10.64898/2026.02.09.704827v2.full.pdf",
+      "score": "6.0",
+      "evidence": "为量化地下线虫多样性提供测序方法基准",
+      "tldr": "高通量测序的定量可靠性尚不明确。本研究构建了基于DNA和个体标本的两种海洋线虫模拟群落，比较18S、28S元条形码与鸟枪测序的定量性能。鸟枪测序在反映个体丰度上更一致，尤其对大个体线虫，但所有方法对低DNA量或小体型物种定量能力有限。结果表明鸟枪测序更适合跨类群定量比较，为线虫生物监测提供方法论指导。",
+      "tags": "query:ag-bg-div",
+      "abstract_en": "High-throughput sequencing has transformed biodiversity assessment and ecological monitoring, yet its quantitative reliability remains unclear. Here, we assembled two experiments of nematode mock communities: one based on extracted DNA and one on individual specimens. Although DNA extraction was required in both experiments to assess the quantitative performance of the sequencing approaches, we essentially evaluated whether this performance was influenced by differences in the start material used to constructed the mock communities. Each community was analyzed using 18S and 28S metabarcoding and shotgun sequencing to evaluate their ability to resolve quantitative information. Across datasets, the number of observed taxa increased with sequencing depth despite controlled input, indicating that higher read numbers primarily revealed intragenomic variation in nematodes than true diversity. Community composition was more accurately recovered by 18S metabarcoding and shotgun sequencing than by 28S. Both sequencing approaches reflected DNA input reasonably well; however, shotgun sequencing provided more consistent abundance estimates relative to individual counts, particularly for nematodes with relatively large-bodied size. In contrast, all methods showed limited ability to accurately quantify taxa with low DNA input or small body size. Comparisons between mock community types showed strong correspondence between read abundance and DNA input, but weaker relationships with individual counts. Overall, both metabarcoding and shotgun sequencing effectively detected community-level patterns and within-taxon abundance, but shotgun sequencing was more reliable for cross-taxon quantitative comparisons. Our findings demonstrate how input material, primer choice, and sequencing approach influence the accuracy of nematode abundance estimates, and provide guidance for improving quantitative applications in nematode-based bioindication and, more broadly environmental DNA biomonitoring.",
+      "source": "biorxiv",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "paper_id": "202605/30/biorxiv-10-64898-2026-05-22-727221-v1-least-component-analysis-reveals-ecological-constraints-in-microbial-communities",
+      "section": "quick",
+      "title_en": "Least Component Analysis reveals ecological constraints in microbial communities",
+      "authors": "Peris-Yague, V., Perez, S., R. Amor, D., Cocco, S., Monasson, R.",
+      "date": "2026-05-26",
+      "pdf": "https://www.biorxiv.org/content/10.64898/2026.05.22.727221v1.full.pdf",
+      "score": "6.0",
+      "evidence": "揭示微生物群落功能约束的方法，可用于研究地下功能多样性",
+      "tldr": "针对微生物群落高多样性下功能稳健性难题，本文提出最小成分分析，通过关注物种丰度数据的最低方差方向，揭示生态约束。这些约束源于资源竞争与交叉喂养，体现生物量守恒，将物种划分为生产者与消费者行会。模拟与实验验证后，发现自然群落中低方差结构普遍存在，指示对群落结构具有关键影响的稀疏物种网络。",
+      "tags": "query:ag-bg-div",
+      "abstract_en": "How microbial communities maintain robust and reproducible ecological functions despite their extraordinary taxonomic diversity remains an open question. Here we show that functional organization in microbial communities can be uncovered by repurposing Principal Component Analysis to focus on directions of lowest variance in taxon abundance data, rather than maximal variance. These least-variance components are statistically significant and correspond to ecological constraints on taxon abundances that are consistently fulfilled across samples. Using consumer-resource models, we show that these constraints arise from resource-mediated interactions and express biomass conservation, effectively grouping taxa into producer and consumer guilds. We validate this interpretation in simulated communities and experimental systems under competition and cross-feeding. Finally, we show that low-variance structure is ubiquitous in natural microbial communities and reveals a sparse network of taxa with disproportionate influence on community structure. Together, our results establish low-variance components as indicators of ecological constraints linking taxonomic diversity to functional organization.",
+      "source": "biorxiv",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "paper_id": "202605/30/biorxiv-10-64898-2026-05-27-728303-v1-multispecies-mixtures-an-individual-centered-quantitative-genetic-framework-for-complex-plant-neighborhoods",
+      "section": "quick",
+      "title_en": "Multispecies Mixtures: An Individual-Centered Quantitative Genetic Framework for Complex Plant Neighborhoods",
+      "authors": "Salas, N., Montazeaud, G., Bourke, P. M., Baranger, A., David, J.",
+      "date": "2026-05-29",
+      "pdf": "https://www.biorxiv.org/content/10.64898/2026.05.27.728303v1.full.pdf",
+      "score": "6.0",
+      "evidence": "提出了基于性状的数量遗传框架用于混合种植中植物相互作用研究",
+      "tldr": "现代农业面临可持续性挑战，混合种植可提高产量但表现不稳定。现有定量遗传模型主要针对种内互作，缺乏多物种邻域框架。作者提出基于个体的多物种遗传框架，推导表型方差、总育种值方差等解析表达式，并通过模拟验证。该框架可准确分离直接与间接遗传效应，为复杂植物群落育种提供统一基础。",
+      "tags": "query:ag-bg-div",
+      "abstract_en": "Modern agriculture faces major sustainability challenges, including stagnating yields, dependence on fossil resources, and severe environmental impacts. Increasing intra- and interspecific diversity within plots through agroecological design is a promising method for enhancing crop productivity and stability. However, mixed-crop performance remains highly variable, and the genetic architecture of interactions within heterogeneous canopies is poorly understood. Two quantitative genetic frameworks have been proposed: trait-based models, which describe how interacting traits shape phenotypes, and variance-based models, which treat neighbor genotype effects as \"black-box\" social effects. However, existing variance-based models have been developed almost exclusively for intraspecific interactions and simple neighborhoods. We propose a general multispecies framework describing how a focal plant's phenotype and total breeding value arise from its own direct effects and from the indirect effects of conspecific and heterospecific neighbors. We derived analytical expressions for phenotypic variance, inter-individual covariance, total breeding value variance, and relative heritable variance, which explicitly account for spatial structure, relatedness, and environmental similarities. Using a two-species alternating-row field layout and extensive simulations based on flexible variance-covariance structures, we evaluated the statistical power and bias of joint mixed-model estimators of direct and indirect genetic and environmental effects under a wide range of parameter combinations. Our results show that accurate separation of direct and indirect effects depends on trait heritability and replication, and that modeling genetic covariances across effects and species substantially improves estimation accuracy. This framework provides a unified, individual-centered basis for analyzing complex multispecies neighborhoods and quantifying the breeding potential of plant communities.",
+      "source": "biorxiv",
+      "selection_source": "fresh_fetch"
+    }
+  ],
+  "errors": []
+}

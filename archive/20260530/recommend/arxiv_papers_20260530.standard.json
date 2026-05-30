@@ -1,0 +1,172 @@
+{
+  "mode": "standard",
+  "generated_at": "2026-05-30T20:42:52.501101+00:00",
+  "stats": {
+    "mode": "standard",
+    "tag_count": 1,
+    "deep_divecandidates": 1,
+    "deep_cap": 6,
+    "deep_selected": 1,
+    "quick_candidates": 3,
+    "quick_skim_target": 11,
+    "quick_selected": 3
+  },
+  "deep_dive": [
+    {
+      "id": "biorxiv-10-64898-2026-05-26-727523-v1",
+      "source": "biorxiv",
+      "title": "MUTUALISMS ALTER LEGUME NICHES AT A GLOBAL SCALE",
+      "abstract": "Although mutualism is widely expected to broaden the realized niche of participating species, there have been no global syntheses examining how mutualism affects species' niches. Here, we combine mutualism trait data on 2,668 legume species with geographic occurrence, climate, and soil nitrogen data. We use these data to investigate the effects of generalized defensive ant-plant mutualisms and more specialized nutritional legume-rhizobium mutualisms on the range of temperature, precipitation, and soil nitrogen values where legumes occur. Legumes engaged in mutualisms with ants or rhizobia occupied significantly more biomes and generally larger niches than non-mutualist species. Legumes with extrafloral nectaries, a trait that attracts a generalized guild of defensive ant partners, had wider niches across all three niche axes, regardless of latitude. Effects of interacting with rhizobia-- a more specialized mutualism-- on niche breadth were also mainly positive, but depended on latitude, with this mutualism increasing precipitation and soil nitrogen niche breadth only at high latitude, and increasing temperature niche breadth at low latitude, but decreasing temperature niche breadth at high latitude. Mutualism therefore affects niche breadth, but in ways that depend on interaction type and biogeographic trends that vary latitudinally.",
+      "authors": [
+        "McHugh, E.",
+        "Bontrager, M.",
+        "Frederickson, M. E."
+      ],
+      "primary_category": "ecology",
+      "categories": [
+        "ecology"
+      ],
+      "published": "2026-05-29T00:00:00+00:00",
+      "link": "https://www.biorxiv.org/content/10.64898/2026.05.26.727523v1.full.pdf",
+      "tags": [
+        "keyword:ag-bg-div",
+        "query:ag-bg-div"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "examines legume-rhizobium mutualism, linking aboveground plant traits with belowground microbial interactions",
+      "llm_evidence_cn": "研究豆科-根瘤菌互惠共生，连接地上植物性状与地下微生物互作",
+      "llm_evidence": "研究豆科-根瘤菌互惠共生，连接地上植物性状与地下微生物互作",
+      "canonical_evidence": "研究豆科-根瘤菌互惠共生，连接地上植物性状与地下微生物互作",
+      "llm_tldr_en": "Global synthesis of legume mutualisms with ants and rhizobia shows mutualism broadens species niches, directly linking aboveground plant functional traits with belowground microbial functional diversity.",
+      "llm_tldr_cn": "该论文在全球尺度上整合了豆科植物的互惠共生（蚁类和根瘤菌）数据，发现互惠关系显著扩大了植物的生态位幅度。研究直接关联了地上植物功能性状（如蜜腺）与地下微生物（根瘤菌）的功能多样性，并探讨了气候和土壤氮梯度的影响，但未涉及线虫或跨营养级性状协调。",
+      "llm_tldr": "该论文在全球尺度上整合了豆科植物的互惠共生（蚁类和根瘤菌）数据，发现互惠关系显著扩大了植物的生态位幅度。研究直接关联了地上植物功能性状（如蜜腺）与地下微生物（根瘤菌）的功能多样性，并探讨了气候和土壤氮梯度的影响，但未涉及线虫或跨营养级性状协调。",
+      "llm_tags": [
+        "query:ag-bg-div"
+      ],
+      "matched_query_tag": "query:ag-bg-div",
+      "matched_query_text": "interactions between aboveground and belowground functional diversity",
+      "matched_requirement_id": "req-6",
+      "selection_source": "fresh_fetch"
+    }
+  ],
+  "quick_skim": [
+    {
+      "id": "biorxiv-10-64898-2026-02-09-704827-v2",
+      "source": "biorxiv",
+      "title": "Benchmarking the quantitative performance of metabarcoding and shotgun sequencing using mock communities of marine nematodes",
+      "abstract": "High-throughput sequencing has transformed biodiversity assessment and ecological monitoring, yet its quantitative reliability remains unclear. Here, we assembled two experiments of nematode mock communities: one based on extracted DNA and one on individual specimens. Although DNA extraction was required in both experiments to assess the quantitative performance of the sequencing approaches, we essentially evaluated whether this performance was influenced by differences in the start material used to constructed the mock communities. Each community was analyzed using 18S and 28S metabarcoding and shotgun sequencing to evaluate their ability to resolve quantitative information. Across datasets, the number of observed taxa increased with sequencing depth despite controlled input, indicating that higher read numbers primarily revealed intragenomic variation in nematodes than true diversity. Community composition was more accurately recovered by 18S metabarcoding and shotgun sequencing than by 28S. Both sequencing approaches reflected DNA input reasonably well; however, shotgun sequencing provided more consistent abundance estimates relative to individual counts, particularly for nematodes with relatively large-bodied size. In contrast, all methods showed limited ability to accurately quantify taxa with low DNA input or small body size. Comparisons between mock community types showed strong correspondence between read abundance and DNA input, but weaker relationships with individual counts. Overall, both metabarcoding and shotgun sequencing effectively detected community-level patterns and within-taxon abundance, but shotgun sequencing was more reliable for cross-taxon quantitative comparisons. Our findings demonstrate how input material, primer choice, and sequencing approach influence the accuracy of nematode abundance estimates, and provide guidance for improving quantitative applications in nematode-based bioindication and, more broadly environmental DNA biomonitoring.",
+      "authors": [
+        "Izabel-Shen, D.",
+        "Sandberg, H.",
+        "Ahmed, M.",
+        "Broman, E.",
+        "Holovachov, O.",
+        "Nascimento, F. J. A."
+      ],
+      "primary_category": "ecology",
+      "categories": [
+        "ecology"
+      ],
+      "published": "2026-05-27T00:00:00+00:00",
+      "link": "https://www.biorxiv.org/content/10.64898/2026.02.09.704827v2.full.pdf",
+      "tags": [
+        "keyword:ag-bg-div",
+        "query:ag-bg-div"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "benchmarks nematode sequencing methods for quantifying belowground diversity",
+      "llm_evidence_cn": "为量化地下线虫多样性提供测序方法基准",
+      "llm_evidence": "为量化地下线虫多样性提供测序方法基准",
+      "canonical_evidence": "为量化地下线虫多样性提供测序方法基准",
+      "llm_tldr_en": "Benchmarks metabarcoding and shotgun sequencing using nematode mock communities, evaluating quantitative performance for belowground biodiversity assessment.",
+      "llm_tldr_cn": "该论文针对地下线虫多样性定量问题，构建了线虫模拟群落，比较了18S和28S宏条形码与鸟枪测序的定量准确性。结果显示不同方法在物种组成和丰度量上的表现存在差异，为地下生物功能多样性的高通量定量提供了方法学支撑。",
+      "llm_tldr": "该论文针对地下线虫多样性定量问题，构建了线虫模拟群落，比较了18S和28S宏条形码与鸟枪测序的定量准确性。结果显示不同方法在物种组成和丰度量上的表现存在差异，为地下生物功能多样性的高通量定量提供了方法学支撑。",
+      "llm_tags": [
+        "query:ag-bg-div"
+      ],
+      "matched_query_tag": "query:ag-bg-div",
+      "matched_query_text": "belowground functional diversity effects on ecosystem function",
+      "matched_requirement_id": "req-5",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "biorxiv-10-64898-2026-05-22-727221-v1",
+      "source": "biorxiv",
+      "title": "Least Component Analysis reveals ecological constraints in microbial communities",
+      "abstract": "How microbial communities maintain robust and reproducible ecological functions despite their extraordinary taxonomic diversity remains an open question. Here we show that functional organization in microbial communities can be uncovered by repurposing Principal Component Analysis to focus on directions of lowest variance in taxon abundance data, rather than maximal variance. These least-variance components are statistically significant and correspond to ecological constraints on taxon abundances that are consistently fulfilled across samples. Using consumer-resource models, we show that these constraints arise from resource-mediated interactions and express biomass conservation, effectively grouping taxa into producer and consumer guilds. We validate this interpretation in simulated communities and experimental systems under competition and cross-feeding. Finally, we show that low-variance structure is ubiquitous in natural microbial communities and reveals a sparse network of taxa with disproportionate influence on community structure. Together, our results establish low-variance components as indicators of ecological constraints linking taxonomic diversity to functional organization.",
+      "authors": [
+        "Peris-Yague, V.",
+        "Perez, S.",
+        "R. Amor, D.",
+        "Cocco, S.",
+        "Monasson, R."
+      ],
+      "primary_category": "ecology",
+      "categories": [
+        "ecology"
+      ],
+      "published": "2026-05-26T00:00:00+00:00",
+      "link": "https://www.biorxiv.org/content/10.64898/2026.05.22.727221v1.full.pdf",
+      "tags": [
+        "keyword:ag-bg-div",
+        "query:ag-bg-div"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "method reveals functional constraints in microbial communities relevant to belowground functional diversity",
+      "llm_evidence_cn": "揭示微生物群落功能约束的方法，可用于研究地下功能多样性",
+      "llm_evidence": "揭示微生物群落功能约束的方法，可用于研究地下功能多样性",
+      "canonical_evidence": "揭示微生物群落功能约束的方法，可用于研究地下功能多样性",
+      "llm_tldr_en": "Least Component Analysis identifies ecological constraints in microbial communities from low-variance directions in abundance data, using consumer-resource models to show biomass conservation, relevant for studying belowground functional diversity constraints.",
+      "llm_tldr_cn": "针对微生物群落功能组织的问题，本文提出最小成分分析（LCA），通过关注丰度数据中方差最小的方向来揭示生态约束。结合消费者-资源模型，证明这些约束源于资源介导的相互作用并表达生物量守恒。该方法为解析地下微生物功能多样性及其对生态系统功能的影响提供了新的分析工具。",
+      "llm_tldr": "针对微生物群落功能组织的问题，本文提出最小成分分析（LCA），通过关注丰度数据中方差最小的方向来揭示生态约束。结合消费者-资源模型，证明这些约束源于资源介导的相互作用并表达生物量守恒。该方法为解析地下微生物功能多样性及其对生态系统功能的影响提供了新的分析工具。",
+      "llm_tags": [
+        "query:ag-bg-div"
+      ],
+      "matched_query_tag": "query:ag-bg-div",
+      "matched_query_text": "belowground functional diversity effects on ecosystem function",
+      "matched_requirement_id": "req-5",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "biorxiv-10-64898-2026-05-27-728303-v1",
+      "source": "biorxiv",
+      "title": "Multispecies Mixtures: An Individual-Centered Quantitative Genetic Framework for Complex Plant Neighborhoods",
+      "abstract": "Modern agriculture faces major sustainability challenges, including stagnating yields, dependence on fossil resources, and severe environmental impacts. Increasing intra- and interspecific diversity within plots through agroecological design is a promising method for enhancing crop productivity and stability. However, mixed-crop performance remains highly variable, and the genetic architecture of interactions within heterogeneous canopies is poorly understood. Two quantitative genetic frameworks have been proposed: trait-based models, which describe how interacting traits shape phenotypes, and variance-based models, which treat neighbor genotype effects as \"black-box\" social effects. However, existing variance-based models have been developed almost exclusively for intraspecific interactions and simple neighborhoods. We propose a general multispecies framework describing how a focal plant's phenotype and total breeding value arise from its own direct effects and from the indirect effects of conspecific and heterospecific neighbors. We derived analytical expressions for phenotypic variance, inter-individual covariance, total breeding value variance, and relative heritable variance, which explicitly account for spatial structure, relatedness, and environmental similarities. Using a two-species alternating-row field layout and extensive simulations based on flexible variance-covariance structures, we evaluated the statistical power and bias of joint mixed-model estimators of direct and indirect genetic and environmental effects under a wide range of parameter combinations. Our results show that accurate separation of direct and indirect effects depends on trait heritability and replication, and that modeling genetic covariances across effects and species substantially improves estimation accuracy. This framework provides a unified, individual-centered basis for analyzing complex multispecies neighborhoods and quantifying the breeding potential of plant communities.",
+      "authors": [
+        "Salas, N.",
+        "Montazeaud, G.",
+        "Bourke, P. M.",
+        "Baranger, A.",
+        "David, J."
+      ],
+      "primary_category": "genetics",
+      "categories": [
+        "genetics"
+      ],
+      "published": "2026-05-29T00:00:00+00:00",
+      "link": "https://www.biorxiv.org/content/10.64898/2026.05.27.728303v1.full.pdf",
+      "tags": [
+        "keyword:ag-bg-div",
+        "query:ag-bg-div"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "proposed trait-based quantitative genetic framework for plant interactions in mixtures",
+      "llm_evidence_cn": "提出了基于性状的数量遗传框架用于混合种植中植物相互作用研究",
+      "llm_evidence": "提出了基于性状的数量遗传框架用于混合种植中植物相互作用研究",
+      "canonical_evidence": "提出了基于性状的数量遗传框架用于混合种植中植物相互作用研究",
+      "llm_tldr_en": "This paper develops an individual-centered quantitative genetic framework integrating trait-based and variance-based models to understand multispecies plant interactions, enabling study of aboveground functional diversity effects on ecosystem function.",
+      "llm_tldr_cn": "研究针对多物种混合作物表现变异大的问题，开发了整合性状模型和方差模型的个体中心数量遗传框架。该框架将邻居基因型效应纳入考量，能解析复杂冠层中多物种的相互作用及其遗传基础。该框架可直接应用于地上植物功能多样性对生态系统功能影响的研究，如预测混合种植的生产力和稳定性，为农业生态设计和功能生态学提供了定量工具。",
+      "llm_tldr": "研究针对多物种混合作物表现变异大的问题，开发了整合性状模型和方差模型的个体中心数量遗传框架。该框架将邻居基因型效应纳入考量，能解析复杂冠层中多物种的相互作用及其遗传基础。该框架可直接应用于地上植物功能多样性对生态系统功能影响的研究，如预测混合种植的生产力和稳定性，为农业生态设计和功能生态学提供了定量工具。",
+      "llm_tags": [
+        "query:ag-bg-div"
+      ],
+      "matched_query_tag": "query:ag-bg-div",
+      "matched_query_text": "aboveground functional diversity effects on ecosystem function",
+      "matched_requirement_id": "req-4",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    }
+  ]
+}

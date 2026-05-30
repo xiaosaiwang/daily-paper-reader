@@ -6,50 +6,34 @@
 </div>
 
 ## 每次日报
-- 最新运行日期：2026-05-20 ~ 2026-05-29
-- 运行时间：2026-05-29 21:28:39 UTC
+- 最新运行日期：2026-05-30
+- 运行时间：2026-05-30 20:44:02 UTC
 - 运行状态：成功
-- 本次总论文数：10
-- 精读区：5
-- 速读区：5
+- 本次总论文数：4
+- 精读区：1
+- 速读区：3
 
 ### 今日简报（AI）
-本期日报精选10篇生态学论文，聚焦植物-动物相互作用与群落动态。值得关注树种性状差异如何影响植食作用，以及机器学习量化菌根定殖的新工具。建议普通读者进一步了解生物相互作用与气候变化下群落重组的机制。
-- 详情：[/20260520-20260529/README](/20260520-20260529/README)
+今日推荐4篇生态与微生物相关论文，精读1篇高价值研究。  
+最值得关注全球尺度下互惠共生改变豆科植物生态位的影响（8分）及海洋线虫群落定量方法基准测试（6分）。  
+建议优先精读互惠共生论文，再速读微生物群落约束与植物遗传框架研究以拓宽视角。
+- 详情：[/202605/30/README](/202605/30/README)
 
 ### 精读区论文标签
-1. [Trait dissimilarity-based tree species loss affects tree diversity effects on herbivory](/20260520-20260529/biorxiv-10-64898-2026-05-21-726831-v1-trait-dissimilarity-based-tree-species-loss-affects-tree-diversity-effects-on-herbivory)  
-   标签：评分：9.0/10、query:ag-bg-div
-   evidence：研究基于性状差异的树种损失如何改变树木多样性对植食和病原菌侵染的影响，直接涉及地上功能多样性对生态系统功能的作用
-2. [MycorrhizaFinder: an efficient machine learning tool to quantify endomycorrhizal colonisation of real-world roots](/20260520-20260529/biorxiv-10-64898-2026-03-04-709422-v3-mycorrhizafinder-an-efficient-machine-learning-tool-to-quantify-endomycorrhizal-colonisation-of-real-world-roots)  
+1. [MUTUALISMS ALTER LEGUME NICHES AT A GLOBAL SCALE](/202605/30/biorxiv-10-64898-2026-05-26-727523-v1-mutualisms-alter-legume-niches-at-a-global-scale)  
    标签：评分：8.0/10、query:ag-bg-div
-   evidence：用于量化根部菌根定殖的机器学习工具
-3. [Microbial Diversity and Function Linked to Carbon Cycling in Mangrove Sediments](/20260520-20260529/biorxiv-10-64898-2026-05-13-724760-v2-microbial-diversity-and-function-linked-to-carbon-cycling-in-mangrove-sediments)  
-   标签：评分：8.0/10、query:ag-bg-div
-   evidence：研究微生物功能多样性与碳循环（生态系统功能）的关系
-4. [Niche constraints drive differences between mycorrhizal fungal guilds in future range shifts](/20260520-20260529/biorxiv-10-64898-2026-05-18-725971-v1-niche-constraints-drive-differences-between-mycorrhizal-fungal-guilds-in-future-range-shifts)  
-   标签：评分：8.0/10、query:ag-bg-div
-   evidence：直接研究地下菌根真菌分布及其生态位，与生态系统功能关联
-5. [Fungal community composition links rhizosphere microbiome organization to plant phenotype in response to moderate warming](/20260520-20260529/biorxiv-10-64898-2026-05-29-728675-v1-fungal-community-composition-links-rhizosphere-microbiome-organization-to-plant-phenotype-in-response-to-moderate-warming)  
-   标签：评分：8.0/10、query:ag-bg-div
-   evidence：变暖下真菌群落组成连接根际微生物组与植物表型，涉及气候梯度
+   evidence：研究豆科-根瘤菌互惠共生，连接地上植物性状与地下微生物互作
 
 ### 速读区论文标签
-1. [Catching the effects of biotic interactions on community data: partial correlations outperform marginal ones with proper abiotic modelling.](/20260520-20260529/biorxiv-10-64898-2026-05-20-726512-v1-catching-the-effects-of-biotic-interactions-on-community-data-partial-correlations-outperform-marginal-ones-with-proper-abiotic-modelling)  
-   标签：评分：7.0/10、query:ag-bg-div
-   evidence：从群落数据推断生物相互作用的统计方法
-2. [Community reorganization without collapse in a warming world: Habitat-contingent, trait-mediated biodiversity change within a conserved multi-scale structure](/20260520-20260529/biorxiv-10-64898-2026-05-21-726918-v1-community-reorganization-without-collapse-in-a-warming-world-habitat-contingent-trait-mediated-biodiversity-change-within-a-conserved-multi-scale-structure)  
-   标签：评分：7.0/10、query:ag-bg-div
-   evidence：沿环境梯度的性状介导生物多样性变化
-3. [A general framework explaining variation in plant economics traits with environment and through ontogeny](/20260520-20260529/biorxiv-10-64898-2026-05-25-727577-v1-a-general-framework-explaining-variation-in-plant-economics-traits-with-environment-and-through-ontogeny)  
-   标签：评分：7.0/10、query:ag-bg-div
-   evidence：提出解释植物经济性状变异的通用框架，该性状是地上功能多样性的关键
-4. [FLORO: A Multimodal Geospatial Foundation Model for Ecological Remote Sensing Across Sensors and Scales](/20260520-20260529/2605.28174v1-floro-a-multimodal-geospatial-foundation-model-for-ecological-remote-sensing-across-sensors-and-scales)  
+1. [Benchmarking the quantitative performance of metabarcoding and shotgun sequencing using mock communities of marine nematodes](/202605/30/biorxiv-10-64898-2026-02-09-704827-v2-benchmarking-the-quantitative-performance-of-metabarcoding-and-shotgun-sequencing-using-mock-communities-of-marine-nematodes)  
    标签：评分：6.0/10、query:ag-bg-div
-   evidence：多模态地理空间基础模型支持跨尺度生态遥感，可用于沿气候梯度分析地上-地下耦合
-5. [On a phenotype-structured Shigesada--Kawasaki--Teramoto model: Turing instability and pattern selection under fast phenotype switching](/20260520-20260529/2605.28976v1-on-a-phenotype-structured-shigesada--kawasaki--teramoto-model-turing-instability-and-pattern-selection-under-fast-phenotype-switching)  
+   evidence：为量化地下线虫多样性提供测序方法基准
+2. [Least Component Analysis reveals ecological constraints in microbial communities](/202605/30/biorxiv-10-64898-2026-05-22-727221-v1-least-component-analysis-reveals-ecological-constraints-in-microbial-communities)  
    标签：评分：6.0/10、query:ag-bg-div
-   evidence：提供表型结构化建模框架，可用于功能多样性相互作用研究
+   evidence：揭示微生物群落功能约束的方法，可用于研究地下功能多样性
+3. [Multispecies Mixtures: An Individual-Centered Quantitative Genetic Framework for Complex Plant Neighborhoods](/202605/30/biorxiv-10-64898-2026-05-27-728303-v1-multispecies-mixtures-an-individual-centered-quantitative-genetic-framework-for-complex-plant-neighborhoods)  
+   标签：评分：6.0/10、query:ag-bg-div
+   evidence：提出了基于性状的数量遗传框架用于混合种植中植物相互作用研究
 
 
 <div class="dpr-home-promo-card">
