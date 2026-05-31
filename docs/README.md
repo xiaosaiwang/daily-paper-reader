@@ -6,34 +6,38 @@
 </div>
 
 ## 每次日报
-- 最新运行日期：2026-05-30
-- 运行时间：2026-05-30 20:44:02 UTC
+- 最新运行日期：2026-05-31
+- 运行时间：2026-05-31 20:20:03 UTC
 - 运行状态：成功
-- 本次总论文数：4
-- 精读区：1
-- 速读区：3
+- 本次总论文数：6
+- 精读区：2
+- 速读区：4
 
 ### 今日简报（AI）
-今日推荐4篇生态与微生物相关论文，精读1篇高价值研究。  
-最值得关注全球尺度下互惠共生改变豆科植物生态位的影响（8分）及海洋线虫群落定量方法基准测试（6分）。  
-建议优先精读互惠共生论文，再速读微生物群落约束与植物遗传框架研究以拓宽视角。
-- 详情：[/202605/30/README](/202605/30/README)
+今日精读2篇高分论文与速读4篇，覆盖全球变化、微生物代谢及森林生态等方向。最值得关注的是全球变化因子重塑成熟橡树林凋落物分解的链接，以及微生物外代谢物对草原植物根系分泌物的响应机制。建议进一步探索全球变化背景下土壤分解过程与微生物互作的具体调控路径。
+- 详情：[/202605/31/README](/202605/31/README)
 
 ### 精读区论文标签
-1. [MUTUALISMS ALTER LEGUME NICHES AT A GLOBAL SCALE](/202605/30/biorxiv-10-64898-2026-05-26-727523-v1-mutualisms-alter-legume-niches-at-a-global-scale)  
+1. [Global change factors reshape the links between litter properties, decomposers, and decomposition in mature oak forests](/202605/31/biorxiv-10-1101-2025-07-18-665400-v4-global-change-factors-reshape-the-links-between-litter-properties-decomposers-and-decomposition-in-mature-oak-forests)  
+   标签：评分：9.0/10、query:ag-bg-div
+   evidence：全球变化下凋落物性质与分解者的联系
+2. [Microbial exometabolite responses to root exudates from tallgrass prairie plants](/202605/31/biorxiv-10-64898-2026-05-29-728892-v1-microbial-exometabolite-responses-to-root-exudates-from-tallgrass-prairie-plants)  
    标签：评分：8.0/10、query:ag-bg-div
-   evidence：研究豆科-根瘤菌互惠共生，连接地上植物性状与地下微生物互作
+   evidence：研究草原植物根系分泌物影响土壤微生物群落，连接地上植物与地下功能多样性
 
 ### 速读区论文标签
-1. [Benchmarking the quantitative performance of metabarcoding and shotgun sequencing using mock communities of marine nematodes](/202605/30/biorxiv-10-64898-2026-02-09-704827-v2-benchmarking-the-quantitative-performance-of-metabarcoding-and-shotgun-sequencing-using-mock-communities-of-marine-nematodes)  
+1. [ForestHG-Trace: Traceable Long-Horizon Ecological Reasoning over Large-Scale Forest Scenes](/202605/31/2605.27590v1-foresthg-trace-traceable-long-horizon-ecological-reasoning-over-large-scale-forest-scenes)  
    标签：评分：6.0/10、query:ag-bg-div
-   evidence：为量化地下线虫多样性提供测序方法基准
-2. [Least Component Analysis reveals ecological constraints in microbial communities](/202605/30/biorxiv-10-64898-2026-05-22-727221-v1-least-component-analysis-reveals-ecological-constraints-in-microbial-communities)  
+   evidence：可追踪的生态推理框架，可应用于功能多样性分析
+2. [misosoup: A metabolic modeling tool for identifying minimal microbial communities provides valuable insights into microbial ecology and biotechnological applications](/202605/31/biorxiv-10-1101-2025-08-07-669121-v2-misosoup-a-metabolic-modeling-tool-for-identifying-minimal-microbial-communities-provides-valuable-insights-into-microbial-ecology-and-biotechnological-applications)  
    标签：评分：6.0/10、query:ag-bg-div
-   evidence：揭示微生物群落功能约束的方法，可用于研究地下功能多样性
-3. [Multispecies Mixtures: An Individual-Centered Quantitative Genetic Framework for Complex Plant Neighborhoods](/202605/30/biorxiv-10-64898-2026-05-27-728303-v1-multispecies-mixtures-an-individual-centered-quantitative-genetic-framework-for-complex-plant-neighborhoods)  
+   evidence：用于识别最小微生物群落的代谢建模工具
+3. [Drought escape as an adaptive strategy across an aridity gradient in wild sunflower](/202605/31/biorxiv-10-64898-2026-05-26-728009-v1-drought-escape-as-an-adaptive-strategy-across-an-aridity-gradient-in-wild-sunflower)  
    标签：评分：6.0/10、query:ag-bg-div
-   evidence：提出了基于性状的数量遗传框架用于混合种植中植物相互作用研究
+   evidence：野生向日葵沿干旱梯度的性状变异
+4. [Agroforestry transition increases insect diversity and reorganizes soil function in a Mediterranean orchard](/202605/31/biorxiv-10-64898-2026-05-28-728425-v1-agroforestry-transition-increases-insect-diversity-and-reorganizes-soil-function-in-a-mediterranean-orchard)  
+   标签：评分：6.0/10、query:ag-bg-div
+   evidence：研究了地上昆虫功能多样性和地下土壤功能
 
 
 <div class="dpr-home-promo-card">

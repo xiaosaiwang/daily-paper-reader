@@ -1,0 +1,264 @@
+{
+  "mode": "standard",
+  "generated_at": "2026-05-31T20:18:43.221929+00:00",
+  "stats": {
+    "mode": "standard",
+    "tag_count": 1,
+    "deep_divecandidates": 2,
+    "deep_cap": 6,
+    "deep_selected": 2,
+    "quick_candidates": 4,
+    "quick_skim_target": 11,
+    "quick_selected": 4
+  },
+  "deep_dive": [
+    {
+      "id": "biorxiv-10-1101-2025-07-18-665400-v4",
+      "source": "biorxiv",
+      "title": "Global change factors reshape the links between litter properties, decomposers, and decomposition in mature oak forests",
+      "abstract": "1.) Increasing atmospheric CO2 concentrations alongside more frequent and severe droughts are key global change factors impacting litter decomposition and global carbon cycles. Yet, we have a poor understanding of how these perturbations impact interactions between initial litter chemical properties and the abiotic and biotic properties of the decomposition environment, especially under field conditions.\n2.) We tested how drought and elevated atmospheric CO2 concentrations modify litter decomposition via litter properties and decomposition environment using two separate, long-term manipulative drought or elevated CO2 field experiments in mature oak woodlands. Litterbags were deployed in a reciprocal transplant design within each experiment, where we measured litter mass loss, carbon-biochemistry, C:N ratios, moisture content, and microbial and mesofaunal properties.\n3.) We found that litter placed in droughted plots decomposed slower than in control plots and experimental litter derived from elevated CO2 plots decomposed slower over the first three harvests compared to control litter. Under drought, litter mass loss rates and C:N ratio was regulated by initial litter properties and the decomposition environment, while elevated CO2 impacted mass loss via changes in initial litter properties.\n4.) Synthesis: We show that drought and elevated atmospheric CO2 can modify the decomposability of litter prior to litterfall and during the subsequent decomposition, highlighting the need to disentangle their individual and interactive effects to better predict how global change factors influence decomposition.",
+      "authors": [
+        "Meehan, M. L.",
+        "Chomel, M.",
+        "Vilkiji, Z.",
+        "Faulkner, K. J.",
+        "Caruso, T.",
+        "MacKenzie, A. R.",
+        "Baldy, V.",
+        "Bardgett, R. D.",
+        "Johnson, D."
+      ],
+      "primary_category": "ecology",
+      "categories": [
+        "ecology"
+      ],
+      "published": "2026-05-28T00:00:00+00:00",
+      "link": "https://www.biorxiv.org/content/10.1101/2025.07.18.665400v4.full.pdf",
+      "tags": [
+        "keyword:ag-bg-div",
+        "query:ag-bg-div"
+      ],
+      "llm_score": 9.0,
+      "llm_evidence_en": "links between litter properties and decomposers under global change",
+      "llm_evidence_cn": "全球变化下凋落物性质与分解者的联系",
+      "llm_evidence": "全球变化下凋落物性质与分解者的联系",
+      "canonical_evidence": "全球变化下凋落物性质与分解者的联系",
+      "llm_tldr_en": "This study examines how drought and elevated CO2 alter litter decomposition by modifying interactions between litter chemical properties and the decomposer environment in oak forests.",
+      "llm_tldr_cn": "该研究通过长期野外实验，探究干旱和升高CO2如何通过改变凋落物化学性质与分解环境（包括土壤生物）的相互作用来影响凋落物分解。结果揭示了全球变化因子重塑了地上（凋落物）与地下（分解者）之间的联系，对理解生态系统功能至关重要。",
+      "llm_tldr": "该研究通过长期野外实验，探究干旱和升高CO2如何通过改变凋落物化学性质与分解环境（包括土壤生物）的相互作用来影响凋落物分解。结果揭示了全球变化因子重塑了地上（凋落物）与地下（分解者）之间的联系，对理解生态系统功能至关重要。",
+      "llm_tags": [
+        "query:ag-bg-div"
+      ],
+      "matched_query_tag": "query:ag-bg-div",
+      "matched_query_text": "interactions between aboveground and belowground functional diversity",
+      "matched_requirement_id": "req-6",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "biorxiv-10-64898-2026-05-29-728892-v1",
+      "source": "biorxiv",
+      "title": "Microbial exometabolite responses to root exudates from tallgrass prairie plants",
+      "abstract": "Root exudates influence soil microbial community assembly and function, yet plant species-specific effects on microbially-driven metabolic transformations remain insufficiently characterized under controlled conditions. Here, we present a multi-omic dataset of exudate-microbe interactions across six plant species, including tallgrass prairie species (Helianthus pauciflorus, Carex brevior, Eragrostis spectabilis, Astragalus canadensis, and Panicum virgatum) and a model grass (Brachypodium distachyon), generated using an in vitro incubation experiment. Sterile root exudates were used to amend a soil-mimicking medium inoculated with a native tall-grass prairie soil microbiome. The dataset includes full-length 16S rRNA gene sequencing for microbial community profiling, untargeted LC-MS/MS metabolomics for exometabolomic profiling, and optical density measurements of microbial growth. We describe the axenic plant growth protocols, experimental design, data acquisition, processing workflows, and technical validation. This dataset provides a resource for investigating microbially mediated exometabolite transformations across diverse plant species to help understand rhizosphere processes, microbiome assembly, and ecosystem function.",
+      "authors": [
+        "Novak, V.",
+        "de Raad, M.",
+        "Vittaladevuni, A.",
+        "Saraf, V.",
+        "Midgley, M.",
+        "Hernandez, C.",
+        "Barber, N. A.",
+        "Northen, T. R."
+      ],
+      "primary_category": "microbiology",
+      "categories": [
+        "microbiology"
+      ],
+      "published": "2026-05-30T00:00:00+00:00",
+      "link": "https://www.biorxiv.org/content/10.64898/2026.05.29.728892v1.full.pdf",
+      "tags": [
+        "keyword:ag-bg-div",
+        "query:ag-bg-div"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "studies plant root exudates influencing soil microbial community, linking aboveground plant species to belowground functional diversity in grassland",
+      "llm_evidence_cn": "研究草原植物根系分泌物影响土壤微生物群落，连接地上植物与地下功能多样性",
+      "llm_evidence": "研究草原植物根系分泌物影响土壤微生物群落，连接地上植物与地下功能多样性",
+      "canonical_evidence": "研究草原植物根系分泌物影响土壤微生物群落，连接地上植物与地下功能多样性",
+      "llm_tldr_en": "This paper investigates how root exudates from tallgrass prairie plants shape soil microbial community composition and functional traits, providing mechanistic insight into aboveground-belowground coupling.",
+      "llm_tldr_cn": "该研究针对植物物种特异性根系分泌物对土壤微生物功能的影响尚不清楚的问题，通过体外培养实验，用六种草原植物的无菌根分泌物处理模拟土壤，结合16S rRNA基因测序，展示了不同植物通过代谢产物差异化调控微生物群落组成，揭示了地上植物功能性状与地下微生物功能性状协调的潜在机制，为预测生态系统多功能性提供基础。",
+      "llm_tldr": "该研究针对植物物种特异性根系分泌物对土壤微生物功能的影响尚不清楚的问题，通过体外培养实验，用六种草原植物的无菌根分泌物处理模拟土壤，结合16S rRNA基因测序，展示了不同植物通过代谢产物差异化调控微生物群落组成，揭示了地上植物功能性状与地下微生物功能性状协调的潜在机制，为预测生态系统多功能性提供基础。",
+      "llm_tags": [
+        "query:ag-bg-div"
+      ],
+      "matched_query_tag": "query:ag-bg-div",
+      "matched_query_text": "How does the relationship between aboveground plant functional diversity and belowground soil microbial and nematode functional diversity drive ecosystem multifunctionality in grassland ecosystems?",
+      "matched_requirement_id": "req-10",
+      "selection_source": "fresh_fetch"
+    }
+  ],
+  "quick_skim": [
+    {
+      "id": "2605.27590v1",
+      "source": "arxiv",
+      "title": "ForestHG-Trace: Traceable Long-Horizon Ecological Reasoning over Large-Scale Forest Scenes",
+      "abstract": "Remote sensing question answering (RS-QA) often requires more than direct semantic prediction, especially in large-scale forest scenes where ecological analysis involves multi-step filtering, numerical aggregation, neighborhood reasoning, and verifiable evidence. We introduce ForestHG-Trace, a framework for traceable long-horizon ecological reasoning over forest environments. It represents multimodal NEON forest scenes as ecological hypergraphs, where tree instances, spatial units, semantic groups, and neighborhood relations support higher-order reasoning beyond pairwise scene graphs. An LLM-guided agent then invokes deterministic tools for reading, filtering, expansion, aggregation, comparison, and auditing, producing replayable execution traces and compact evidence records rather than only free-form answers. We further construct ForestTraceQA, an executable benchmark for evaluating ecological QA across diverse task types and reasoning depths. Experiments show that ForestHG-Trace substantially improves answer accuracy and execution faithfulness over single-step baselines and scene-graph agents, while highlighting execution depth as the main bottleneck for long-horizon ecological QA.",
+      "authors": [
+        "Zihang Cheng",
+        "Duanchu Wang",
+        "Cheng Li",
+        "Jing Huang",
+        "Huanzhao Fu",
+        "Di Wang"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "cs.MM"
+      ],
+      "published": "2026-05-26T19:04:02+00:00",
+      "link": "https://arxiv.org/pdf/2605.27590v1",
+      "tags": [
+        "keyword:ag-bg-div",
+        "query:ag-bg-div"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "traceable ecological reasoning framework applicable to functional diversity analysis",
+      "llm_evidence_cn": "可追踪的生态推理框架，可应用于功能多样性分析",
+      "llm_evidence": "可追踪的生态推理框架，可应用于功能多样性分析",
+      "canonical_evidence": "可追踪的生态推理框架，可应用于功能多样性分析",
+      "llm_tldr_en": "Develops ForestHG-Trace, a hypergraph-based framework with LLM-guided agent for traceable long-horizon ecological reasoning over forest scenes, offering a transferable approach for analyzing above-belowground functional diversity interactions.",
+      "llm_tldr_cn": "该研究提出ForestHG-Trace框架，将森林场景表示为生态超图，结合大语言模型引导的智能体进行可追踪的长程生态推理，能够支持多步过滤、数值聚合和邻域推理等操作，为分析地上-地下功能多样性相互作用提供了一种可迁移的计算方法。",
+      "llm_tldr": "该研究提出ForestHG-Trace框架，将森林场景表示为生态超图，结合大语言模型引导的智能体进行可追踪的长程生态推理，能够支持多步过滤、数值聚合和邻域推理等操作，为分析地上-地下功能多样性相互作用提供了一种可迁移的计算方法。",
+      "llm_tags": [
+        "query:ag-bg-div:composite"
+      ],
+      "matched_query_tag": "query:ag-bg-div:composite",
+      "matched_query_text": "Papers central to 请帮我查找有关地上和地下功能多样性及其关系对生态系统功能影响的论文, especially work that connects or combines: n; Tibetan Plateau; e; aboveground functional diversity effects on ecosystem function; belowground functional diversity effects on ecosystem function; interactions between aboveground and belowground functional diversity; What is the relative contribution of aboveground plant functional diversity, belowground soil biota functional diversity, and their cross trophic coupling (or asymmetry) to ecosystem multifunctionality, and how do these contributions shift along environmental gradients?; Are plant functional traits coordinated with soil microbial life history strategies and nematode functional traits across environmental gradients, and does the strength of this cross trophic trait coordination predict ecosystem multifunctionality?; How do climate gradients modulate the coupling between aboveground and belowground functional diversity and their joint effects on ecosystem function across large spatial scales?; How does the relationship between aboveground plant functional diversity and belowground soil microbial and nematode functional diversity drive ecosystem multifunctionality in grassland ecosystems?.",
+      "matched_requirement_id": "req-composite-ag-bg-div",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "biorxiv-10-1101-2025-08-07-669121-v2",
+      "source": "biorxiv",
+      "title": "misosoup: A metabolic modeling tool for identifying minimal microbial communities provides valuable insights into microbial ecology and biotechnological applications",
+      "abstract": "Microbial survival and function often depend on metabolic interactions within communities. Therefore, a central question in disentangling microbial organization is determining which minimal groups of species are able to thrive in a given medium - referred to as \"minimal communities\". Answering this question is essential for understanding microbial distribution, enhancing laboratory cultivation, and designing synthetic communities (SynComs). Here, we introduce misosoup, a Python package for identifying minimal communities (MInimal Supplying community Search). Through genome-scale constraint-based metabolic modeling, misosoup enables the systematic identification of communities that support microbial growth in environments where individual species fail to survive alone. We validate misosoup against experimentally verified minimal communities, demonstrating its ability to predict known cooperative interactions, cocultures, and consortia with biotechnological potential. We further illustrate the use of misosoup to investigate broad microbial ecology questions by applying it to a set of 60 marine microbes, finding pervasive cross-feeding-driven niche expansion, and showing how the detailed outputs provided by misosoup facilitate research on hot topics such as the identification of functional groups. In summary, misosoup provides a powerful tool for microbial ecology and community design, with potential applications in both research and biotechnological innovation.\n\nImportanceMicrobes often rely on each other to survive, especially in environments where they cant live alone. Understanding which small groups of microbes can thrive together--called minimal communities--is key to improving lab research, designing synthetic ecosystems, and exploring how microbes spread in nature. To support this, we developed misosoup, a Python tool that identifies these communities using advanced metabolic modeling. misosoup helps scientists discover how microbes cooperate by sharing nutrients, a process known as metabolic cross-feeding. When tested on sets of species from different origins, the tool showed that species could thrive in more environments when part of a group. This highlights the importance of teamwork in microbial life. misosoup not only predicts these interactions but also provides detailed insights that can guide ecological studies and biotechnological innovation. By revealing how microbes support each other, misosoup contributes to a deeper understanding of lifes interconnectedness and offers tools for solving real-world challenges.",
+      "authors": [
+        "Ochsner, N.",
+        "San Roman, M.",
+        "Jimenez-Fernandez, A.",
+        "Bonhoeffer, S.",
+        "Pascual-Garcia, A."
+      ],
+      "primary_category": "bioinformatics",
+      "categories": [
+        "bioinformatics"
+      ],
+      "published": "2026-05-25T00:00:00+00:00",
+      "link": "https://www.biorxiv.org/content/10.1101/2025.08.07.669121v2.full.pdf",
+      "tags": [
+        "keyword:ag-bg-div",
+        "query:ag-bg-div"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "metabolic modeling tool for identifying minimal microbial communities",
+      "llm_evidence_cn": "用于识别最小微生物群落的代谢建模工具",
+      "llm_evidence": "用于识别最小微生物群落的代谢建模工具",
+      "canonical_evidence": "用于识别最小微生物群落的代谢建模工具",
+      "llm_tldr_en": "misosoup is a Python package that uses genome-scale constraint-based metabolic modeling to systematically identify minimal microbial communities capable of surviving in a given medium.",
+      "llm_tldr_cn": "本文介绍了misosoup工具，通过全基因组约束的代谢模型系统识别在特定培养基中生存的最小微生物群落。该方法有助于理解微生物分布、优化实验室培养和设计合成群落，为研究土壤微生物功能多样性及其对生态系统功能的影响提供了重要工具。",
+      "llm_tldr": "本文介绍了misosoup工具，通过全基因组约束的代谢模型系统识别在特定培养基中生存的最小微生物群落。该方法有助于理解微生物分布、优化实验室培养和设计合成群落，为研究土壤微生物功能多样性及其对生态系统功能的影响提供了重要工具。",
+      "llm_tags": [
+        "query:ag-bg-div"
+      ],
+      "matched_query_tag": "query:ag-bg-div",
+      "matched_query_text": "belowground functional diversity effects on ecosystem function",
+      "matched_requirement_id": "req-5",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "biorxiv-10-64898-2026-05-26-728009-v1",
+      "source": "biorxiv",
+      "title": "Drought escape as an adaptive strategy across an aridity gradient in wild sunflower",
+      "abstract": "Premise Drought is intensifying in many regions under climate change, affecting plant growth, phenology, and resource allocation. Plants cope with water limitation through strategies such as escape, avoidance, and tolerance, but how these strategies are reflected in trait variation across natural drought gradients remains poorly understood. We examined how drought-related traits vary across a drought gradient in wild sunflower (Helianthus annuus L.). Methods We conducted a common-garden experiment using 19 wild sunflower populations collected across Southern California spanning a climatic moisture deficit gradient. We quantified growth, phenology, morphology, biomass allocation, and physiological traits, and evaluated their relationships with climatic moisture deficit and soil variables using regression and correlation analyses. Results Populations from drier environments exhibited coordinated shifts in life-history strategy, combining faster growth, earlier flowering, and increased reproductive output. These changes were coupled with reduced allocation to roots and structural tissues and diminished investment in traits that buffer plant water status, as reflected in declines in relative water content and higher (less negative) leaf water potentials. Ordinal modeling further indicated that populations from drier environments had a greater probability of severe wilting under drought stress. Together, these patterns are consistent with a drought escape strategy rather than drought avoidance or drought tolerance. Conclusion Our results suggest that increasing aridity can favor integrated drought escape strategies characterized by rapid growth and early reproduction. These coordinated shifts reveal trade-offs between fast life-history strategies and investment in traits associated with drought resistance, highlighting how environmental gradients shape adaptive trait syndromes in wild plant populations.",
+      "authors": [
+        "Neupane, R.",
+        "Silva, B. R.",
+        "Santiago, L. S.",
+        "Ostevik, K. L."
+      ],
+      "primary_category": "evolutionary biology",
+      "categories": [
+        "evolutionary biology"
+      ],
+      "published": "2026-05-29T00:00:00+00:00",
+      "link": "https://www.biorxiv.org/content/10.64898/2026.05.26.728009v1.full.pdf",
+      "tags": [
+        "keyword:ag-bg-div",
+        "query:ag-bg-div"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "trait variation across aridity gradient in wild sunflower",
+      "llm_evidence_cn": "野生向日葵沿干旱梯度的性状变异",
+      "llm_evidence": "野生向日葵沿干旱梯度的性状变异",
+      "canonical_evidence": "野生向日葵沿干旱梯度的性状变异",
+      "llm_tldr_en": "A common-garden experiment with 19 wild sunflower populations across a drought gradient quantifies traits related to drought escape, avoidance, and tolerance.",
+      "llm_tldr_cn": "该研究通过同园实验，利用沿干旱梯度采集的19个野生向日葵群体，量化了生长、物候、形态和生理性状的变异。揭示了干旱逃避策略在自然梯度中的重要性，为理解植物功能性状对环境梯度的响应提供了依据。",
+      "llm_tldr": "该研究通过同园实验，利用沿干旱梯度采集的19个野生向日葵群体，量化了生长、物候、形态和生理性状的变异。揭示了干旱逃避策略在自然梯度中的重要性，为理解植物功能性状对环境梯度的响应提供了依据。",
+      "llm_tags": [
+        "query:ag-bg-div"
+      ],
+      "matched_query_tag": "query:ag-bg-div",
+      "matched_query_text": "aboveground functional diversity effects on ecosystem function",
+      "matched_requirement_id": "req-4",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "biorxiv-10-64898-2026-05-28-728425-v1",
+      "source": "biorxiv",
+      "title": "Agroforestry transition increases insect diversity and reorganizes soil function in a Mediterranean orchard",
+      "abstract": "Agricultural intensification has reduced biodiversity and weakened ecosystem functions essential for sustainable crop production. Agroforestry has been proposed as a regenerative strategy to restore these functions through vegetation diversification, yet its ecological effects at the farm scale remain insufficiently documented, particularly in Mediterranean perennial systems. Here, adaptive field monitoring and soil shotgun metagenomics were combined to investigate ecological responses across a 10 year agroforestry transition gradient in a Mediterranean citrus and olive farm. Mature agroforestry plots supported higher insect richness and functional diversity while maintaining stable pollinator communities. Plant insect interaction analyses suggested that potential pest activity was largely associated with spontaneous and supportive vegetation rather than crops. In contrast, soil communities showed limited changes in overall richness but substantial compositional and functional restructuring, including enrichment of the arbuscular mycorrhizal fungus Rhizophagus and proteins with nutrient cycling functions in advanced plots. Together, these findings suggest that agroforestry transition can promote functional diversification above and below ground and highlight the value of farmer led regenerative transitions coupled with integrative ecological monitoring for the development of more resilient agricultural systems.",
+      "authors": [
+        "Patalano, S.",
+        "Aplakidou, E.",
+        "Kagiali, E.",
+        "Miloczki, J.",
+        "Catana, M.",
+        "Vardakas, P.",
+        "Lembessis, P.",
+        "Katsoni, E.",
+        "Hatzis, P.",
+        "Pavlopoulos, G. A.",
+        "Darmos, S."
+      ],
+      "primary_category": "ecology",
+      "categories": [
+        "ecology"
+      ],
+      "published": "2026-05-30T00:00:00+00:00",
+      "link": "https://www.biorxiv.org/content/10.64898/2026.05.28.728425v1.full.pdf",
+      "tags": [
+        "keyword:ag-bg-div",
+        "query:ag-bg-div"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "studies insect functional diversity aboveground and soil function belowground",
+      "llm_evidence_cn": "研究了地上昆虫功能多样性和地下土壤功能",
+      "llm_evidence": "研究了地上昆虫功能多样性和地下土壤功能",
+      "canonical_evidence": "研究了地上昆虫功能多样性和地下土壤功能",
+      "llm_tldr_en": "This paper examines how agroforestry transition affects insect diversity and soil function, linking aboveground and belowground components in a Mediterranean orchard.",
+      "llm_tldr_cn": "该研究针对农业集约化导致生物多样性下降和生态系统功能减弱的问题，通过10年过渡梯度监测和土壤宏基因组测序，发现成熟农林复合系统提高了昆虫功能多样性并维持了传粉者群落，同时重组了土壤功能，表明地上-地下耦合在生态恢复中具有重要作用。",
+      "llm_tldr": "该研究针对农业集约化导致生物多样性下降和生态系统功能减弱的问题，通过10年过渡梯度监测和土壤宏基因组测序，发现成熟农林复合系统提高了昆虫功能多样性并维持了传粉者群落，同时重组了土壤功能，表明地上-地下耦合在生态恢复中具有重要作用。",
+      "llm_tags": [
+        "query:ag-bg-div"
+      ],
+      "matched_query_tag": "query:ag-bg-div",
+      "matched_query_text": "interactions between aboveground and belowground functional diversity",
+      "matched_requirement_id": "req-6",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    }
+  ]
+}

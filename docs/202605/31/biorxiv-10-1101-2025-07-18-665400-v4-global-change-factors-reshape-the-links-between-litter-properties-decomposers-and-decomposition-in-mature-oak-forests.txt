@@ -1,0 +1,2542 @@
+Title: Global change factors reshape the links between litter properties, decomposers, and decomposition in mature oak forests
+
+URL Source: https://www.biorxiv.org/content/10.1101/2025.07.18.665400v4.full.pdf
+
+Number of Pages: 52
+
+Markdown Content:
+1
+
+UNCLASSIFIED - NON CLASSIFIÉ 
+
+Global change factors reshape the links between litter properties, decomposers, and 1
+
+decomposition in mature oak forests 2
+
+3
+
+Matthew L. Meehan 1,10* , Mathilde Chomel 1,2 , Zhabiz Vilkiji 1, Katy J. Faulkner 3,4 , Tancredi 4
+
+Caruso 5, A. Robert MacKenzie 6,7 , Virginie Baldy 8, Richard D. Bardgett 1,9 , David Johnson 1,9 
+
+5
+
+6
+
+> 1
+
+Department of Earth and Environmental Sciences, The University of Manchester, Manchester, 7
+
+United Kingdom 8
+
+> 2
+
+FiBL France, Research Institute of Organic Agriculture, Eurre, France 9
+
+> 3
+
+Department of Plant Sciences, University of Cambridge, Downing Street, Cambridge, United 10 
+
+Kingdom 11 
+
+> 4
+
+School of Medicine, University of St. Andrews, North Haugh, KY16 9TF, St. Andrews, United 12 
+
+Kingdom 13 
+
+> 5
+
+School of Biology and Environmental Science, University College Dublin, Dublin, Ireland. 14 
+
+> 6
+
+School of Geography, Earth & Environmental Sciences, University of Birmingham, Birmingham, 15 
+
+United Kingdom 16 
+
+> 7
+
+Birmingham Institute of Forest Research, University of Birmingham, Birmingham,  United 17 
+
+Kingdom 18 
+
+> 8
+
+IMBE, Aix -Marseille Université, Univ Avignon, CNRS, IRD, Marseille, France 19 
+
+> 9
+
+Lancaster Environment Centre, Lancaster University, Bailrigg, LA1 4YQ, Lancaster, United 20 
+
+Kingdom 21 
+
+> 10
+
+Current address: Natural Resources Canada, Canadian Forest Service, Laurentian Forestry 22 
+
+Centre, Québec, Canada 23 
+
+> .CC-BY 4.0 International license available under a was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint (which this version posted May 28, 2026. ;https://doi.org/10.1101/2025.07.18.665400 doi: bioRxiv preprint
+
+2
+
+UNCLASSIFIED - NON CLASSIFIÉ 
+
+*Corresponding author’s email:  matthew.meehan@nrcan -rncan.gc.ca 24 
+
+25 
+
+ORCID 26 
+
+Matthew L. Meehan:  https://orcid.org/ 0000 -0001 -5427 -8241 27 
+
+Mathilde Chomel:  https://orcid.org/ 0000 -0001 -5110 -2355 28 
+
+Katy J. Faulkner: https://orcid.org/0000 -0002 -9204 -6502 29 
+
+Tancredi Caruso:  https://orcid.org/0000 -0002 -3607 -9609 30 
+
+A. Robert MacKenzie: https://orcid.org/0000 -0002 -8227 -742X 31 
+
+Virginie Baldy:  https://orcid.org/0000 -0002 -4048 -5132 32 
+
+Richard D. Bardgett: https://orcid.org/0000 -0002 -5131 -0127 33 
+
+David Johnson: https://orcid.org/ 0000 -0003 -2299 -2525 34 
+
+35 
+
+Acknowledgments 36 
+
+This study was funded by a UKRI Natural Environment Research Council (NERC) grant 37 
+
+NE/S002189/1. ARMK gratefully acknowledges additional support from NERC through grant 38 
+
+NE/S015833/1 (QUINTUS). TC acknowledges support by Research Ireland (20/FFP -P/8584). 39 
+
+The BIFoR -FACE facility acknowledges generous underpinning support from the JABBS 40 
+
+Foundation, Norbury Park Estate, The John Horseman Trust, Ecological Continuity Trust, and the 41 
+
+University of Birmingham. We thank Dr Kris Hart and the operations team at BIFoR FACE, Dr. 42 
+
+Ully Kritzler, Deborah Ashworth, Dr. Thomas Bishop, and Dr. Benjamin Bell for technical support. 43 
+
+We thank Dr. Stéphane Greff (Aix -Marseille Université) for analyzing leaf litter and Jean -Phillipe 44 
+
+Orts (Aix -Marseille Université) for collecting litter from the O 3HP experimental site. 45 
+
+46 
+
+> .CC-BY 4.0 International license available under a was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint (which this version posted May 28, 2026. ;https://doi.org/10.1101/2025.07.18.665400 doi: bioRxiv preprint
+
+3
+
+UNCLASSIFIED - NON CLASSIFIÉ 
+
+Declaration of competing interest 47 
+
+The authors declare that they have no known competing financial interests or personal 48 
+
+relationships that could have appeared to influence the work reported in this paper. 49 
+
+50 
+
+Data availability statement 51 
+
+Data will be submitted to the Natural Environment Research Council (NERC) data repository 52 
+
+(Environmental Information Data Center) upon acceptance of the manuscript. 53 
+
+54 
+
+Author Contributions 55 
+
+DJ and MC conceptualized the study, and DJ, MC, VB, RDB, ARMK obtained funding. MLM, 56 
+
+MC, ZV and KJF collected data. ARMK and VB help designed the elevated CO 2 and drought 57 
+
+sites, respectively, and coordinated work there. MLM and MC curated data, and MLM performed 58 
+
+the data analysis with support from TC. MLM wrote the first version of the manuscript and MC, 59 
+
+KJF, TC, ARMK, VB, RDB, and DJ provided feedback and contributed to finalizing the 60 
+
+manuscript. 61 
+
+62 
+
+63 
+
+> .CC-BY 4.0 International license available under a was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint (which this version posted May 28, 2026. ;https://doi.org/10.1101/2025.07.18.665400 doi: bioRxiv preprint
+
+4
+
+UNCLASSIFIED - NON CLASSIFIÉ 
+
+Abstract 64 
+
+1.)  Increasing atmospheric CO 2 concentrations alongside more frequen t and sever e drought s65 
+
+are key global change factors impacting litter decomposition and global carbon cycle s. Yet, 66 
+
+we have a poor understanding of how these pertu rbations impact interactions between 67 
+
+initial litter chemical properties and the abiotic and biotic properties of the decomposition 68 
+
+environment , especially under field conditions .69 
+
+2.)  We tested how drought and elevated atmospheric CO 2 concentrations modify litter 70 
+
+decomposition via litter properties and decompos ition environment using two sep arate ,71 
+
+long -term manipulative drought or elevated CO 2 field experiments in mature oak 72 
+
+woodland s. Litterbags were deployed in a reciprocal transplant design within each 73 
+
+experiment , where we measured litter mass loss, carbon -bio chemistry , C:N ratios , moisture 74 
+
+content, and microbial and mesofaunal properties .75 
+
+3.)  We found that li tter placed in droughted plots decomposed slower than in control plots and 76 
+
+experimental litter derived from elevated CO 2 plots decomposed slower over the first three 77 
+
+harvests compared to control litter . Under drought, litter mass loss rates and C:N ratio was 78 
+
+regulated by initial litter properties and the d ecomposition environment , while elevated 79 
+
+CO 2 impacted mass loss via changes in initial litter properties. 80 
+
+4.)  Synthesis : We show that drought and elevated atmospheric CO 2 can modify the 81 
+
+decomposability of litter prior to litterfall and during the subsequent decomposition ,82 
+
+highlight ing the need to disentangle their individual and interactive effects to better predict 83 
+
+how global change factors influence decomposition. 84 
+
+85 
+
+> .CC-BY 4.0 International license available under a was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint (which this version posted May 28, 2026. ;https://doi.org/10.1101/2025.07.18.665400 doi: bioRxiv preprint
+
+5
+
+UNCLASSIFIED - NON CLASSIFIÉ 
+
+Keywords: Decomposition, Drought, Elevated CO 2, Global Change, Ecology, Mesof auna, Litter, 86 
+
+Microbial , Reciprocal Transplant 87 
+
+.CC-BY 4.0 International license available under a was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint (which this version posted May 28, 2026. ;https://doi.org/10.1101/2025.07.18.665400 doi: bioRxiv preprint 6
+
+UNCLASSIFIED - NON CLASSIFIÉ 
+
+Introduction 88 
+
+Forest ecosystems cover 31% of global land cover (FAO, 2020) and play a critical role in 89 
+
+global carbon (C) cycling (Harris et al., 2021)  as global forests take up 1.1 ± 0.8 Pg C year -1 (Pan 90 
+
+et al., 2011) . Yet these ecosystems are being reshaped by global change factors , including 91 
+
+increasing atmospheric CO 2 concentrations and increa sed frequen cy and intens ity of extreme 92 
+
+weather events such as droughts (IPCC, 2021) . Elevated CO 2 and drought independently affect C93 
+
+cycling because forests exhibit cellular - to ecosystem -level responses to both factors  (Arain et al., 94 
+
+2022; Blaschke et al., 2001; Cech et al., 2003; Lee et al., 2021; Martínez -Sancho et al., 2022; 95 
+
+Norby et al., 2024; Reay et al., 2025) . For example, in a mature stand of Eucalyptus tereticornis ,96 
+
+elevated CO 2 increase d C uptake (through gross primary production) by 12% , al though net gains 97 
+
+were lost due to an increase in soil fluxes, including from respiration  (Jiang et al., 2020) . In 98 
+
+addition, a summer drought in 2022 resulted in nearly half of Europe’s soil moisture levels 99 
+
+becoming critically low  (Toreti et al., 2022) , which corresponded with a reduced C uptake of ~60 100 
+
+Tg C (van der Woude et al., 2023) . Because drought and elevated atmospheric CO 2 concentrations 101 
+
+affect ecosystem C exchange, it is critical to understand how these global change factors influence 102 
+
+key ecosystem processes connect ed to C cycling , such as litter decomposition. 103 
+
+104 
+
+Litter decomposition is driven by soil biota , which break down litter into simplified 105 
+
+compounds , lead ing to plant uptake of nutrients (Krishna & Mohan, 2017) , the release of by -106 
+
+products into the atmosphere , and incorporation of nutrients into various soil pools (Lavallee et al., 107 
+
+2020) . The decomposer community consist of soil animals , including mesofauna , such as mites 108 
+
+and collemb ol ans, and larger macrofauna like isopods, which impact decomposition through 109 
+
+fragmentation of litter and grazing of microbes (Coleman et al., 2018; Seastedt, 1984) , in addition 110 
+
+> .CC-BY 4.0 International license available under a was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint (which this version posted May 28, 2026. ;https://doi.org/10.1101/2025.07.18.665400 doi: bioRxiv preprint
+
+7
+
+UNCLASSIFIED - NON CLASSIFIÉ 
+
+to bacteria and fungi that minerali ze the organic matter via the secretion of enzymes (Romaní et 111 
+
+al., 2006) . Globally , litter decomposition is also driven by climatic factors , which regulate the 112 
+
+activity of decomposers,  such as temperature and annual precipitation, along with initial litter 113 
+
+properties such as C:N ratio , lignin and tannins  (Zhang et al., 2008; Wu et al., 2025) . Importantly ,114 
+
+both elevated CO 2 and drought can impact litter decomposition  (Liu et al., 2024; Wu et al., 2020) 115 
+
+through modifications to initial litter properties (which we refer to below as litter origin ) and by 116 
+
+modifying the environment (which we refer to below as the decomposition environment). Yet , t he 117 
+
+mechanisms , direction , and magnitude of responses to initial litter properties and decomposition 118 
+
+environment in response to elevated CO 2 and drought may differ substantially. 119 
+
+120 
+
+Drought and elevated atmospheric CO 2 can affect litter decomposition by modifying the 121 
+
+litter and soil environment and decomposer community. Reductions in moisture content from 122 
+
+drought s have cascading effects on soil processes and microbial and animal communities. 123 
+
+Desiccation has differential effects on particular groups of organisms: for example, fungi are 124 
+
+generally more resistant to drought than bacteria  (de Vries et al., 2012, 2018; Manzoni et al., 2012; 125 
+
+Yuste et al., 2011) . Martin et al. (2024)  found that reduced precipitation decreased soil fauna 126 
+
+abundance by 35%, while the effects of elevated CO 2 on decomposer communities are more subtle 127 
+
+and often variable (Blankinship et al., 2011) . Although not nearly as intense as drought, elevated 128 
+
+CO 2 concentrations can also potentially influence the soil microclimate stemming from changes 129 
+
+to the canopy under enriched CO 2 concentrations (Franzaring et al., 2010) . In addition, a further 130 
+
+distinction between elevated CO 2 and drought on the decomposition environment is from changes 131 
+
+in C allocation below -ground. Elevated CO 2 and drought have contrasting effects on the flux of 132 
+
+recent plant photosynthate, which in forests is a major pathway of energy flow to soils (Högberg 133 
+
+> .CC-BY 4.0 International license available under a was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint (which this version posted May 28, 2026. ;https://doi.org/10.1101/2025.07.18.665400 doi: bioRxiv preprint
+
+8
+
+UNCLASSIFIED - NON CLASSIFIÉ 
+
+et al., 2001) . Under elevated CO 2, trees increase below -ground inputs of C : f or example, at the 134 
+
+Duke Forest FACE experiment, fine root biomass increased by 23%, microbial biomass by 15% 135 
+
+in response to sustained elevated CO 2 (Drake et al., 2011) . In a mature oak forest, similar increases 136 
+
+in below -ground productivity were seen, including in the production and turnover of mycorrhizal 137 
+
+mycelium (Reay et al., 2025) . By contrast, droughted trees tend to fix and allocate less C below -138 
+
+ground (Hagedorn et al., 2016) , until their recovery where plants then allocate more C to roots to 139 
+
+facilitate water and nutrient uptake (Gao et al., 2024; Joseph et al., 2020) .140 
+
+141 
+
+Both drought and elevated CO 2 concentrations affect leaf properties , such a s the C and 142 
+
+nitrogen (N) content of leaves and shoots (Sun et al., 2020; Yuan & Chen, 2015) . Changes due to 143 
+
+drought can stem from increased sugar accumulation, decreasing N content, and changes to 144 
+
+primary and secondary plant metabolites (Chen et al., 2015; Orians et al., 2019; Wang & Wang, 145 
+
+2025) . For elevated CO 2, N dilution within leaves together with C can alter the C :N ratio (Taub & 146 
+
+Wang, 2008; Welti et al., 2020) . These and other changes to  litter properties  can affect litter quality 147 
+
+and subsequently decomposer community composition (Gergócs & Hufnagel, 2016; Ilieva -148 
+
+Makulec et al., 2006) . Changes to the decomposer community will subsequently impact the litter 149 
+
+decomposition process but understanding how changes to both initial litter properties and 150 
+
+decomposition environment impact animals and microbes remains poorly resolved .151 
+
+152 
+
+Disentangling the effects of initial litter properties from those of the decomposition 153 
+
+environment on litter mass loss is challenging , especially under field conditions . For instance, 154 
+
+Prieto et al., (2019)  found strong interactive effects between litter origin and decomposition 155 
+
+environment on litter mass under experimental (i.e., warming and reduced rainfall ) conditions .156 
+
+> .CC-BY 4.0 International license available under a was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint (which this version posted May 28, 2026. ;https://doi.org/10.1101/2025.07.18.665400 doi: bioRxiv preprint
+
+9
+
+UNCLASSIFIED - NON CLASSIFIÉ 
+
+They also found that subsequent linkages between microbial communities , litter moisture , and 157 
+
+litter mass loss differed when experimental treated litter was incubated in control plots (both litter 158 
+
+moisture and microbial communities were correlated with mass loss) or in treated plots (litter 159 
+
+moisture was correlated with microbial community structure and microbes was the sole parameter 160 
+
+correlated with mass loss) further highlighting interactions between initial litter properties and 161 
+
+decomposition environment during mass loss . Overall,  both drought and elevated atmospheric 162 
+
+CO 2 ha ve potential to affect litter decomposition via alteration of litter properties and the 163 
+
+decomposition environment (which includes decomposers and litter moisture content) but how 164 
+
+initial changes to litter properties interact with the decomposition alongside changes to the 165 
+
+decomposer community in situ remains poorly understood . Moreover, the impacts of climate 166 
+
+change factors can vary with time (Blankinship et al., 2011) , but few studies have tested responses 167 
+
+to treatments applied in the long -term (e.g. ~10 years). Resolving this uncertainty requires large -168 
+
+scale experimental infrastructure with long -term history of treatments in combination with multi -169 
+
+variate analysis of litter properties and other factors. 170 
+
+171 
+
+We investigated how drought and elevated atmospheric CO 2 independently affect litter 172 
+
+decomposition in mature forests by conducting reciprocal transplant s within two, large -scale 173 
+
+manipulative field experiments: the Birmingham Institute of Forest Research Free -Air CO 2174 
+
+Enrichment (BIFoR FACE) experiment and the Oak Observatory at the Observatoire de Haute -175 
+
+Provence (O 3HP) drought experiment. We hypothesized that drought and elevated CO₂ influence s176 
+
+litter decomposition through two distinct pathways. The f irst pathway involves changes to the 177 
+
+decomposition environment and  involves testing decomposition of the same litter in contrasting 178 
+
+environments ( i.e. control vs. drought and control versus elevated CO 2 plots).  These effects 179 
+
+> .CC-BY 4.0 International license available under a was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint (which this version posted May 28, 2026. ;https://doi.org/10.1101/2025.07.18.665400 doi: bioRxiv preprint
+
+10 
+
+UNCLASSIFIED - NON CLASSIFIÉ 
+
+capture how changes in soil moisture, microclimate, and decomposer communities directly 180 
+
+regulate decomposition.  We hypothesi zed that drought and elevated CO 2 have contrasting impacts 181 
+
+on soil prop erties and microclimat e, notably because drought has strong direct impact on 182 
+
+environmental conditions, such as litter and soil moisture . The s econd pathway involves litter 183 
+
+origin , which occur s when different treatments ( e.g. control v er sus drought , or control v er sus 184 
+
+elevated CO₂) change litter properties prior to decompos ition , but which carry -over to affect the 185 
+
+decomposition process . For example, plant growth under drought and elevated CO 2 conditions 186 
+
+may modify litter properties, especially chemistry (e.g. C:N ratio, lignin, tannins) , prior to litterfall 187 
+
+and subsequent decomposition. We hypothesized that litter originating from treated plots would 188 
+
+have long -term (carry over) effects on decomposition stemming from differences in litter 189 
+
+properties. Our reciprocal transplant design allowed us to test whether interactive effects between 190 
+
+litter origin and decomposition environment influence decomposition rates when subject to global 191 
+
+change drivers .192 
+
+193 
+
+Methods 194 
+
+Overview 195 
+
+Within each experimental facility, w e collected control and experimental litter and in 196 
+
+January 2020 transpla nted the two litter types into control and treated plots (Supplementary 197 
+
+Information F igure S1 ). We harvested litterbags across four time points and measured (across all 198 
+
+or a subset of time points) litter mass loss , litter C-bi ochemistry and metabolomics, and the 199 
+
+microbial (phospholipid fatty acid analysis; PLFA) and animal community structure (the 200 
+
+abundance of mites, collembolans and other larger macrofauna) directly associated with the 201 
+
+recovered litter . Note that we did not transplant litter between the two experiments (i.e. , litter from 202 
+
+> .CC-BY 4.0 International license available under a was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint (which this version posted May 28, 2026. ;https://doi.org/10.1101/2025.07.18.665400 doi: bioRxiv preprint
+
+11 
+
+UNCLASSIFIED - NON CLASSIFIÉ 
+
+BIFoR FACE was not transplanted at O 3HP and vice versa) . We only transplanted litter within 203 
+
+each experimental facility between the control and experimental apparatus , but we will continue 204 
+
+to refer to it as a reciprocal transplant experiment. 205 
+
+206 
+
+Experimental sites 207 
+
+The reciprocal transplant study used the BIF oR FACE ( 52.80 1N, 2.30 1W) elevated CO 2208 
+
+experiment in the United Kingdom and the O3HP ( 43. 936 N, 5. 719 E) drought experiment in 209 
+
+southern France (Supplementary Figure S1) . The BIFoR FACE facility started in 2017 on a210 
+
+Quercus robur L. forest that was planted around 1850 (Hart et al., 2020; MacKenzie et al., 2021) 211 
+
+containing coppice Corylus avellana L. and abundant self -set Acer pseudoplatanus L. understory .212 
+
+The CO 2 treatment began in April 2017 and comprises six infrastructure plots (elevated CO 2, n = 213 
+
+3, ambient CO 2, n = 3). Each plot is approximately 30 m in diameter and comprise s 16 peripheral 214 
+
+towers and one central tower that extend ~ 1m above the canopy. In the elevated CO 2 plots, an 215 
+
+additional 150 ppm of CO 2 above ambient (i.e. ~36 % increase over ambient) is emitted lateral ly 216 
+
+from the ground to the forest canopy , while ambient CO 2 arrays mimic the treatment but only 217 
+
+receive ambient air. The increase of CO 2 concentrations i s seen from the soil level infrastructure 218 
+
+and across the entire vertical profile of the plot (Hart et al., 2020) , meaning litterbags would be 219 
+
+incubate d in an enriched CO 2 environment. The towers release CO 2 from ~April 1 to October 31 220 
+
+each year, coinciding with oak bud burst and last leaf fall (Supplementary Information Figure S2). 221 
+
+The +150 ppm of CO 2 is  similar to other large -scale experimental facilities such as EucFACE  (e.g., 222 
+
+Jiang et al., 2020)  and  represents the projected mid -century CO 2 concentration , regardless of model 223 
+
+scenario (Friedlingstein et al., 2014) . It also a llows for ecophysiological effects to be detected 224 
+
+with both aboveground and belowground measurements (Gardner et al., 2022; Norby et al., 2024; 225 
+
+> .CC-BY 4.0 International license available under a was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint (which this version posted May 28, 2026. ;https://doi.org/10.1101/2025.07.18.665400 doi: bioRxiv preprint
+
+12 
+
+UNCLASSIFIED - NON CLASSIFIÉ 
+
+Reay et al., 2025)  and provides an end -member of the small set of forest FACE treatments  (Norby, 226 
+
+2025) .227 
+
+228 
+
+The O3HP drought experiment started in 2012 on Quercus pubescens Willd forest ,229 
+
+contai ning Acer monspessulanum L. (75% vs. 25% coverage, respectively) and Cotinus coggygria 230 
+
+Scop understory . A rain exclusion device, measuring 15 m x 20 m excludes ~30% of precipitation 231 
+
+at canopy top , relative to the nearby control plot. In our study, t he rain exclusion device was 232 
+
+operational between May to September and the total precipitation was 40% lower in rain exclusion 233 
+
+plots over the course of the experiment (total precipitation, control: 1652 mm, drought: 997 mm; 234 
+
+Supplementary Information Figure S3 ) (Aupic -Samain et al., 2021; Gauquelin et al., 2011; 235 
+
+Santonja et al., 2017) . There is only a single drought apparatus established at O 3HP , but to create 236 
+
+near -independent ‘plot -like’ conditions relevant to the scale of litterbags , the bags were place d in 237 
+
+a clumped distribution under and outside of the rain exclusion devices to create three experimental 238 
+
+plots within the treatment , mirroring the set -up at BIFoR FACE. 239 
+
+240 
+
+Litterbag preparation and sampling 241 
+
+Quercus litter was sampled from spatially separated areas of each site in BIFoR FACE and 242 
+
+O3HP in October 2019 and shipped in coolers to The University of Manchester and air dried . We243 
+
+measu red the %C, %N, C:N and metabolomic signature s on the initial litter (Quer et al ., 2022 ; see 244 
+
+Metabolomic signature of initial litter in Methods S1 for m ore details ). Litterbags comprised of 245 
+
+1.8 m m nylon mesh with two separate compartments (Supplementary Information Image S1), each 246 
+
+receiving 3 g of dried litter. One compartment was used for chemical analysis of litter and 247 
+
+assessment of microbial community composition , decomposition , and moisture content . The other 248 
+
+> .CC-BY 4.0 International license available under a was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint (which this version posted May 28, 2026. ;https://doi.org/10.1101/2025.07.18.665400 doi: bioRxiv preprint
+
+13 
+
+UNCLASSIFIED - NON CLASSIFIÉ 
+
+compartment was used solely to characterize soil fauna communities. A total of 480 litterbags 249 
+
+were used (i.e. 240 litterbags for BIFoR FACE and 240 for O 3HP). For each experimental site, 250 
+
+we had 2 decomposition environments (control and drought or elevated CO 2) x 2 litter origin s251 
+
+(control and experimental) x 3 plots x 4-time points x 5 replicates = 240 ). The experiment began 252 
+
+January 2020 where litterbags were placed on the experimental sites. Freshly fallen litter was 253 
+
+removed prior to placing the litterbags on the ground surface and then replaced over the litterbags. 254 
+
+Litterbags were then fixed with two galvanize d nail s to prevent movement by animals or wind. 255 
+
+Litterbags were harvested across four time points at both experimental sites . At BIF oR FACE ,256 
+
+litterbags were harvested September 2020 ( 8 months ; Harvest one ; H1) , January 2021 ( 12 months; 257 
+
+Harvest two ; H2 ), June 2021 ( 17 months; Harvest three , H3) and December 2021 ( 23 months; 258 
+
+Harvest four , H4 ), corresponding to the fourth and fifth year of activation of the elevated CO 2259 
+
+treatment . Four litter bags could not be retrieved from BIF oR FACE at H4 due to a tree limb 260 
+
+falling and disturbing litter bags. At O 3HP, litterbags were harvested October 2020 ( 10 months; 261 
+
+H1 ), January 2021 ( 13 months; H2 ), September 2021 ( 21 months; H3) and October 2022 ( 34262 
+
+months; H4) . The duration of decomposition differed between experimental sites due to variation 263 
+
+in decomposition rate . W e initially aimed for  ~24 months of decomposition but incubation in the 264 
+
+drought experiment was extended by an additional year to achieve 50% mass loss .265 
+
+266 
+
+At each sampling time, litterbags were shipped to The University of Manchester for 267 
+
+processing. In order to prevent contamination of litter by soil , remaining litter from the ‘ chemical 268 
+
+analysis compartment’ was wiped thoroughly by hand or with a brush when needed . The fresh 269 
+
+weight (g) of the litter was taken before litter was frozen at -20 C overnight and 48 hours of 270 
+
+freeze -drying for determination of dry weight . For soil fauna, litter was removed from the 271 
+
+> .CC-BY 4.0 International license available under a was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint (which this version posted May 28, 2026. ;https://doi.org/10.1101/2025.07.18.665400 doi: bioRxiv preprint
+
+14 
+
+UNCLASSIFIED - NON CLASSIFIÉ 
+
+compartment and placed on Tullgren funnels to extract individual animal s for seven days into 272 
+
+absolute ethanol. After extraction, litter was placed into ovens at 65 C for two days before 273 
+
+weighing to measure litter dry weight. Apart from litter mass loss rates (measured at all dates ),274 
+
+litter properties and decomposer communities were measured from H3 onward , when ~2 0-60% of 275 
+
+the original litter remain ed , to capture drought and elevated CO 2 effects during mid to late stage 276 
+
+of decomposition. 277 
+
+278 
+
+Litter decomposition , quality , stoichiometry , and moisture content 279 
+
+Litter decomposition was calculated as litter mass loss using the following equation: 280 
+
+281 
+
+𝑀𝑎𝑠𝑠 𝑙𝑜𝑠𝑠 (%) = 𝐼𝑛𝑖𝑡𝑖𝑎𝑙 𝑙𝑖𝑡𝑡𝑒𝑟 (𝑔 ) − ℎ𝑎𝑟𝑣𝑒𝑠𝑡𝑒𝑑 𝑙𝑖𝑡𝑡𝑒𝑟 (𝑔 )
+
+𝐼𝑛𝑖𝑡𝑖𝑎𝑙 𝑙𝑖𝑡𝑡𝑒𝑟 ∗ 100 282 
+
+We also calculated the exponential decomposition rate coefficient ( kt) at each harvest point 283 
+
+using the equation from (Olson, 1963) :284 
+
+𝑘 𝑡 =
+
+− ln (𝑋 𝐻 
+
+𝑋 𝐼 )
+
+𝑡 
+
+285 
+
+Where  𝑋 𝐻  is the weight (in g) of harvested litter,  𝑋 𝐼  is the weight of initial litter (in g) , and 286 
+
+𝑡  is time in years since the beginning of the experiment . Litter decomposition and litter moisture 287 
+
+was measured from all litterbags across all four time points. We measured the %C, %N and C:N 288 
+
+ratio of initial and decomposed litter with a n Elementar Vario EL element analyser (Hanau, 289 
+
+Germany) on 5 mg of ball -milled litter (Retsch Ball Mill MM 400, Haan, Germany) at both sites. 290 
+
+291 
+
+We also measured litter C-bio chemistry (specifically, characterizing C-containing 292 
+
+functional groups) of H3 and H4 litter from both sites using Fourier transform infrared (FTIR) 293 
+
+> .CC-BY 4.0 International license available under a was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint (which this version posted May 28, 2026. ;https://doi.org/10.1101/2025.07.18.665400 doi: bioRxiv preprint
+
+15 
+
+UNCLASSIFIED - NON CLASSIFIÉ 
+
+spectroscopy (Bell et al., 2018) . Ball -milled litter samples were placed onto a Universal 294 
+
+Attenuated Total Reflection (UATR) spectrometer diamond crystal to cover the 2 -mm window ,295 
+
+and the absorbance (A cm -1) was measured within a 650 to 4000 A cm -1 range , at 4 cm -1 resolution 296 
+
+and 16 scans per sample . We also ran a background correction after every ten samples. We applied 297 
+
+a baseline correction for each spectra (i.e., sample) using the modpolyfit method in the R package 298 
+
+‘baseline’. To standardize values across our samples, we Z -transform ed each spectra, w here 299 
+
+values were transformed to a mean of 0 and SD of 1 by subtracting by its own mean and divid ing 300 
+
+by its own standard deviation (akin to a S tandard Normal Variate normalization) to red uce 301 
+
+multiplicative scatter effects (Bell et al., 2018; Jardine et al., 2017) . W e then calculated the area 302 
+
+of the curve for each respective functional group using a shoelace formula (Wang et al., 2023) .303 
+
+The assignment of wave number regions to leaf litter functional groups was based on Liu et al., 304 
+
+(2016)  who used FTIR to examine functional groups across four deciduous litter origin s, including 305 
+
+Quercus robur (Supplementary Information Table S1).306 
+
+307 
+
+Phospholipid fatty acid analysis (PLFA) 308 
+
+We used PLFAs to measure how fungal and bacteria concentrations and the general 309 
+
+microbial community were impacted by drought and elevated CO 2 in leaf litter at both sites (Buyer 310 
+
+& Sasser, 2012) . Due to high litter mass loss rates in the fourth harvest of BIFoR FACE, we did 311 
+
+not have enough material remaining to quantify microbial communities through PLFAs . So, we 312 
+
+elected to measure PLFAs for both sites only on litterbags collected in the third harvest . We 313 
+
+quantified PLFAs with ~0.4 -0.5 g of ball milled, freeze -dried litter . Four ml of Bligh -Dyer 314 
+
+extract ant containing C19:0 of an internal standard was added to each sample to extract lipids. 315 
+
+Once extracted, we used a gas chromatograph (Agilent 7890A Gas chromatograph, Santa Clara, 316 
+
+> .CC-BY 4.0 International license available under a was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint (which this version posted May 28, 2026. ;https://doi.org/10.1101/2025.07.18.665400 doi: bioRxiv preprint
+
+16 
+
+UNCLASSIFIED - NON CLASSIFIÉ 
+
+CA, USA) to assign and calculate peak height, where PLFA group concentrations were expressed 317 
+
+as nmol g dry weight of litter -1. We used 18 fatty acid mark er s to characteri ze microbial 318 
+
+communities (Frostegård et al., 1993; Hill et al., 2000) on leaf litter, consisting of 6 and 4 markers 319 
+
+for gram positive ( i14:0, i15:0 , a15:0, i16:0, i17:0 , a17:0 ) and gram negative (16:1ω7c, cy17:0, 320 
+
+18:1ω7 , and cy19:0) bacteria , respectively . In addition, we used 15:0 and 17:0 as general bacteria 321 
+
+mark er s, and 10Me16:0, 10Me17:0, and 10Me18:0 as markers for actinobacteria . The marker 322 
+
+18:2 ω6,9 was the sole fungal marker in our experiments . Fatty acids 14:0 and 16:0 were used as 323 
+
+general microbial markers in our study, not specific to fungi or bacteria. With th ese markers, we 324 
+
+analyzed decomposition environment and litter origin effects on total PLFA concentrations ( proxy 325 
+
+for microbial biomass) , F:B ratio (by div iding 18:2 ω6,9 abundance by the summed total of bacteria 326 
+
+markers) and PLFA community composition across both experiments .327 
+
+328 
+
+Soil fauna community 329 
+
+Soil fauna was sorted and counted into higher taxonomic or mixed groups, comprising: 330 
+
+Collembola , Oribatida , Astigmata , Prostigmata , Mesostigmata , and ‘other’ fauna, which included 331 
+
+Annelida, Isopoda, and Insecta. Soil fauna abun dances were standardized by the dry weight of 332 
+
+litter (individuals g dwt -1), to account for differences in sample mass prior to analysis. Although 333 
+
+found in litterbags , macrofauna counted for less than 5% (on average) of total abundances in our 334 
+
+study. Meaning, most individuals captured w ere mesofauna, like mites and collembolans. 335 
+
+336 
+
+Statistical analysis 337 
+
+All statistical analyses were performed with the program R (version 4.3. 1) (R Core Team, 338 
+
+2023) and figures were produced with the package ‘ggplot2’ (Wickham, 2016) . To analyze for 339 
+
+> .CC-BY 4.0 International license available under a was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint (which this version posted May 28, 2026. ;https://doi.org/10.1101/2025.07.18.665400 doi: bioRxiv preprint
+
+17 
+
+UNCLASSIFIED - NON CLASSIFIÉ 
+
+differences in initial litter chemistry between our litter types (litter from control and experimental 340 
+
+plots) prior to the experiment beginning , we used one -way Analysis of Variance (ANOVA) tests 341 
+
+and Permutation Multivariate ANOVAs (PERMANOVAs) to examine for differences between 342 
+
+C%, N% and C:N ratio (ANOVA) and leaf metabolomic profile (PERMANOVA , with Euclidean 343 
+
+distance ) between our treatments (ambient vs. drought or elevated CO 2). To do this, we used the 344 
+
+aov function in base R and the adonis2 function in the package ‘vegan ’ (Oksanen et al., 2022) ,345 
+
+respectively. Here, we partitioned the data by sites (BIFoR FACE and O 3HP) and ran separate 346 
+
+models for both. 347 
+
+348 
+
+We tested the effect of decomposition environment (ambient vs. drought or elevated CO 2)349 
+
+and litter origin (control vs. experimental) on our parameters, analyzing the sites (BIFoR FACE 350 
+
+and O 3HP) and harvest time points (H1 -4) separately (excluding litter decomposition, for more 351 
+
+details see below ). For univariate variables, we used linear mixed models where the fixed factors 352 
+
+were decomposition environment, litter origin, and their interaction, with a random factor of 353 
+
+experimental plot. We used linear mixed models for %C, %N, C:N ratio, total PLFA concentration 354 
+
+(nmol g dwt -1), fungi : bacteria ratio, animal total and group abundances (individuals g dwt -1), 355 
+
+which includes Collembola, Oribatida, Astigmata, Mesostigmata, Prostigmata, and ‘other’ fauna. 356 
+
+Note, we did not analyze Astigmata abundances in the drought experiment as low abundances 357 
+
+were present in samples. For litter decomposition (measured as mass loss) we included all time 358 
+
+points together into a single model, where the fixed factors were decomposition environment, litter 359 
+
+origin, harvest, and their subsequent interactions with a random factor of experimental plot. To 360 
+
+run linear mixed models, we used the lmer function in the package ‘lme4’ (Bates et al., 2015) 361 
+
+where we calculated F -statistics and p -values with Satterthwaite’s method using the package 362 
+
+> .CC-BY 4.0 International license available under a was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint (which this version posted May 28, 2026. ;https://doi.org/10.1101/2025.07.18.665400 doi: bioRxiv preprint
+
+18 
+
+UNCLASSIFIED - NON CLASSIFIÉ 
+
+‘lmerTest’ (Kuznetsova et al., 2017) . If model residuals were not normally distributed, we ln or 363 
+
+arscine -transformed the dependent variable and re -ran the model. At times, we found singularity 364 
+
+within our linear mixed models as the variance within our random factor terms was extremely low 365 
+
+(essentially zero) and the model was overfit. When this occurred, we removed the random factor, 366 
+
+and we re -ran the model without the random term. We found this had no effect on p -values 367 
+
+(because experimental plot explained little variance within the linear mixed model), so we reported 368 
+
+the ANOVA results. 369 
+
+370 
+
+For multivariate variables, including leaf litter functional groups (FTIR) and microbial 371 
+
+community composition , we ran PERMANOVAs using the adonis2 function in the package ‘vegan’ 372 
+
+(Oksanen et al., 2022) . For leaf litter functional groups, we used Euclidean distances within our 373 
+
+models , while with microbial communities we used Bray -Curtis dissimilarity as it better suited for 374 
+
+compositional data (like the abundances of each PLFA peak ). Each model was fitted with the 375 
+
+same fixed factors, consist ing of decomposition environment , litter origin and their interaction. 376 
+
+To visualize leaf litter functional groups and microbial communities we used a Principal 377 
+
+Component Analysis (PCA) ordination plot using the rda function in the package ‘vegan’ 378 
+
+(Oksanen et al., 2022) . For microbial communities, we Hellinger -transformed datasets using the 379 
+
+decostand function in the ‘vegan’ package prior to the PCA .380 
+
+381 
+
+Finally, we used additional linear mixed models to detail  relationships between the 382 
+
+treatments , litter properties , and decomposer communities with litter mass loss at the third and 383 
+
+fourth harvest, for each experiment. To do th is, we z-transformed (mean = 0, SD = 1) mass loss 384 
+
+rates, litter moisture, remaining litter C:N, total PLFAs, F:B, PLFA PC1, PLFA PC2, FTIR PC1, 385 
+
+> .CC-BY 4.0 International license available under a was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint (which this version posted May 28, 2026. ;https://doi.org/10.1101/2025.07.18.665400 doi: bioRxiv preprint
+
+19 
+
+UNCLASSIFIED - NON CLASSIFIÉ 
+
+FTIR PC2, and total animal abundances data for each site at H3 and H4 . We then constructed 386 
+
+Pearson correlation matrices to provide an initial assessment of the parameters that were correlated 387 
+
+with litter mass loss. From there, we selected the significant correlates (p < 0.05) and ran linear 388 
+
+mixed models where we included those parameters, in addition to litter origin and decomposition 389 
+
+(as non -interacting factors) and plot as the random effect using the lmer function from the ‘lme4’ 390 
+
+package (Bates et al., 2015) . The selected parameters that were tested alongside litter origin and 391 
+
+decomposition environment for each model can be found in Supplementary Tables S 2-5. At H3 392 
+
+in both sites, the relative abundance of fungi : bacteria was strongly correlated with PLFA PC1; 393 
+
+we elected to retain PLFA PC1 (and remove F:B) in both models as the first principal component 394 
+
+analysis strongly explained PLFA composition. After this , w e checked for collinearity within our 395 
+
+four models and found that all parameters had VIF scores < 5, representing absent or low 396 
+
+multicollinearity . With th e dual approach es to model litter mass loss (one described here and the 397 
+
+other detailed earlier) , we examined the overall effect of each treatment on litter mass loss through 398 
+
+four harvest points, and then subsequently analyze d the effect of litter properties and decomposer 399 
+
+communities on mass loss at specific harvests. Note that mass and C -loss were highly correlated 400 
+
+with each other at both sites (p < 0.0001) , so we elected to model litter mass loss rates for th e401 
+
+experiment. 402 
+
+403 
+
+Results 404 
+
+Initial litter chemistry 405 
+
+We found strong differences between the C:N ratio of the initial litter collected at control 406 
+
+and drought ed plots at O 3HP (F1,8 = 13.92, p = 0.006 ; Supplementary Information Table S 6), with 407 
+
+the C:N ratio of control litter exceeding th at of the droughted litter . Furthermore, strong 408 
+
+> .CC-BY 4.0 International license available under a was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint (which this version posted May 28, 2026. ;https://doi.org/10.1101/2025.07.18.665400 doi: bioRxiv preprint
+
+20 
+
+UNCLASSIFIED - NON CLASSIFIÉ 
+
+differences were detected between the metabolomic profiles between the initial control and 409 
+
+droughted litter (F 1,8 = 3.91, p = 0.009 ; Supplementary Information Figure S 4). Control litter from 410 
+
+the drought experiment was mainly composed of ellagitannins (from C 34 H24 O22 to C 56 H40 O31 ), 411 
+
+catechin (C 15 H14 O6), and ellagic hexoside (C 20 H16 O13 ) that were overexpressed within litter. Other 412 
+
+metabolites such as quercetin hexosides (or rhamnoside), kaempferol hexosides, and isorhamnetin 413 
+
+hexosides were at similar quantities between control and drought treatment. By contrast, there 414 
+
+were no differences in C:N ratio (F 1,8 = 0.001, p = 0.977 ; Supplementary Information Table S 6) or 415 
+
+metabolomic profiles (F 1,8 = 1.04, p = 0.336; Supplementary Information Figure S 4) between litter 416 
+
+collected from the ambient and elevated CO 2 plots at BIFoR FACE .417 
+
+418 
+
+Elevated CO 2 experiment at BIFoR FACE 419 
+
+Although minimal differences were detected between control and experimental litter when 420 
+
+measuring initial litter chemistry, we found that during the first eighteen months of the 421 
+
+decomposition experiment , litter from elevated CO 2 plots (i.e., experimental litter) decomposed 422 
+
+slower than litter from control plots (litter origin: F1, 21 5. 09 = 5.932 , p = 0.0 16 ) through H1 -3 (time: 423 
+
+F3,21 5.46 = 1 55 .97 , p < 0.001) until H4 in both decomposition environments . At H4 , mass loss 424 
+
+varied little between the decomposition environments and litter origin s (Figure 1, Supplementary 425 
+
+Information Table S 7 contains exponential decomposition rate coefficient, kt, values ). Similarly, 426 
+
+the C:N of litter was higher in experimental litter compared to controls (F 1, 56 = 6. 03, p = 0.02) at 427 
+
+H3, but not at H4 ( Supplementary Information Table S8 and S 9). This finding wa s also supported 428 
+
+by FTIR spectroscopy analysis , which showed significant differences in leaf litter C-containing 429 
+
+functional groups at H3 between litter origin s (F 1, 56 = 4.3 3, p = 0.0 3). However, l itter C-430 
+
+biochemistry composition between control and experimental litter was no longer significant at H4 431 
+
+> .CC-BY 4.0 International license available under a was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint (which this version posted May 28, 2026. ;https://doi.org/10.1101/2025.07.18.665400 doi: bioRxiv preprint
+
+21 
+
+UNCLASSIFIED - NON CLASSIFIÉ 
+
+(F 1, 52 = 0. 26 , p = 0. 81 ; Figure 2A -B). Neither decomposition environment nor litter origin affected 432 
+
+litter moisture content at either H3 or H4 ( Supplementary Information Table S 8 and S 9). 433 
+
+434 
+
+Decomposition environment and litter origin did not influence PLFA abundance , the fungi : 435 
+
+bacteria (F:B) ratio, and microbial community composition at H 3 (Supplementary Information 436 
+
+Table S 8, Supplementary Information Figure S5). Likewise, no individual or total animal group 437 
+
+abundances , were affected by decomposition environment or litter origin in H3 . In H4 , however ,438 
+
+the abundance of Mesostigmata (F 1, 52 = 5.04 , p = 0.0 3) and Prostigmata (F 1, 52 = 7. 30 , p = 0.009) 439 
+
+was significantly greater in control litter relative to experimental litter in both decomposition 440 
+
+environments (Supplementary Information Table S 9).441 
+
+442 
+
+Further modeling of mass loss rates (with litter properties and decomposer communities )443 
+
+yielded strong relationships of mass loss with microbial communities (both PLFA PC1 (t = -4.871, 444 
+
+p < 0 .001) and PC2 (t = 4.219, p < 0.001 )), total animal abundances (t = 2.40, p = 0.02 ), and litter 445 
+
+C-biochemistry (FTIR PC1; t = 3.30, p = 0.002) for litterbags at the third harvest . Here, larger 446 
+
+mesofauna and macrofauna population corresponded with higher mass loss rates . Furthermore, 447 
+
+both microbial PC1 , driven by fungal abundance (PLFA marker C 18:2 ω6,9) , and microbial PC2, 448 
+
+where bacteria markers were strongly separated (Supplementary Information Figure S 5), were 449 
+
+predictors of litter mass loss rates . In addition, the C-biochemistry of the remaining litter explained 450 
+
+mass loss rates, highlighting th at chemical differences in litter (stemming from litter origin 451 
+
+treatment ) impacted mass loss rates, even after more than 50% of material has decomposed. 452 
+
+However, by the fourth harvest, only FTIR PC2 was found to significantly explain litter mass loss 453 
+
+rates ( t = -3.22, p = 0.002 ) as litter C -biochemistry was a predictor of mass loss when ~ 20% of 454 
+
+> .CC-BY 4.0 International license available under a was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint (which this version posted May 28, 2026. ;https://doi.org/10.1101/2025.07.18.665400 doi: bioRxiv preprint
+
+22 
+
+UNCLASSIFIED - NON CLASSIFIÉ 
+
+the original leaf material remain ing . Differe nces in the number of significant parameters between 455 
+
+the two harvest s partly stem from additional measurements detailing microbial communities at H3; 456 
+
+however, it is notable that animals were no longer correlated with mass loss by the fourth harvest. 457 
+
+458 
+
+459 
+
+Drought experiment at O 3HP 460 
+
+By contrast to elevated CO 2, there were strong er effect s of both decomposition 461 
+
+environment and litter origin on measured parameters in response to drought , matching our first 462 
+
+and second hypotheses . First, litter decomposition was slower in droughted plots relative to 463 
+
+controls (decomposition environment : F1,4 = 147.9 1, p < 0.00 1) with remaining litter mass 464 
+
+decreasing at varying rates ( decomposition environment x time: F 1, 220 = 4.56 , p = 0.0 04 ; Figure 1;465 
+
+Supplementary Information Table S 7). Remaining l itter had lower C:N ratios in control plots (H3: 466 
+
+F1,4 = 21.92, p = 0.009 ; H4: F1, 56 = 3 7.85 , p < 0.001 ) compared to drought plots. In addition, 467 
+
+experimental litter (i.e., litter derived from drought plots) had lower C:N ratio, relative to the 468 
+
+control litter in both decomposition environment s (H3: F1,52 = 32.53, p < 0.001 ; H4: F1, 56 = 9.54 ,469 
+
+p = 0.00 3) suggesting both decomposition environment and litter origin affected litter properties 470 
+
+during the experiment (C:N but also %C and %N; Figure 3; Supplementary Information Table S10 471 
+
+and S 11 ). 472 
+
+473 
+
+Similarly, we observed a strong effect of decomposition environment on leaf litter C 474 
+
+biochemistry (H3: F 1,56 = 6.73, p = 0.006; H4: F 1,56 = 15.32, p = 0.002) (Figure 2C -D); hydroxyl 475 
+
+groups (B1) and amides (I and II, B4 and B6) were grouped together along PC1 in drought litter 476 
+
+at both H3 and H4 time points. Conversely, carboxylates (B5), sulfones and esters (B10), along 477 
+
+> .CC-BY 4.0 International license available under a was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint (which this version posted May 28, 2026. ;https://doi.org/10.1101/2025.07.18.665400 doi: bioRxiv preprint
+
+23 
+
+UNCLASSIFIED - NON CLASSIFIÉ 
+
+with aromatics (B15) were correlated with ambient litter and both H3 and H4. We found divergent 478 
+
+effects of the experimental drought on litter moisture conten t at O 3HP . At H3, litter moisture 479 
+
+content significantly decreased (by around 35%) in drought plots (F 1, 4 = 8 5.96 , p < 0.001; 480 
+
+Supplementary Information Table S10 ). However, at H4, when litter moisture content in control 481 
+
+plots was already low, there was no significant difference between the control and drought plots 482 
+
+(F 1,56 = 1.086 , p = 0.3 0; Supplementary Information Table S 11 ). 483 
+
+484 
+
+After 21 months of decomposition ( H3), experimental litter (i.e., litter from the droughted 485 
+
+plots ) had greater concentrations of PLFA s in both decomposition environment (F1,52 = 9.06, p =486 
+
+0.004, Figure 4A), but the drought treatment reduced total PLFA concentrations (F 1,4 = 15.69, p = 487 
+
+0.02) in litter regardless of its origin . The F:B ratio was greater in litter bags from the drought 488 
+
+environment across both litter types (F1, 4 = 19.42 , p = 0.0 1, Fig ure 4B ). Both l itter origin (F 1,5 6 =489 
+
+6.64 , p = 0.00 4) and decomposition environment (F 1,5 6 = 2 3.59 , p < 0.001 ; Fig ure 4C ) shifted 490 
+
+PLFA compositio n. Microbial composition in response to decomposition environments was 491 
+
+largely explained by PC1 whereas microbial comp osition in response to litter origin was explained 492 
+
+more by PC2. These axes reflected distinct PLFAs , with the fungal -related PLFA C18: 2ω6,9 493 
+
+driving separation in both PC1 and PC2 (Fig ure 4C) with general bacteria and microbial markers 494 
+
+(14:0, 15:0, 16:0 and 17:0) reflected litter origin differences on PC2 . In addition , animal 495 
+
+communities responded more to the decomposition environment than litter origin (Supplementary 496 
+
+Information Table S10 and S 11 ). Here , mesostigmatid (H3: F 1, 56 = 31 .18 , p < 0.001) and 497 
+
+prostigmatid mite (H4: F 1, 56 = 7.65 , p = 0.0 07 ) abundances significantly decreased , and there was 498 
+
+a trend for drought to reduce total animal abundances at H4 (F 1,4 = 6.04, p = 0.07). Notably, there 499 
+
+was a significant interaction of decomposition environment and litter origin on ‘ other’ macro fauna 500 
+
+> .CC-BY 4.0 International license available under a was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint (which this version posted May 28, 2026. ;https://doi.org/10.1101/2025.07.18.665400 doi: bioRxiv preprint
+
+24 
+
+UNCLASSIFIED - NON CLASSIFIÉ 
+
+abundances at H3 ( decomposition environment x litter origin : F1,52 = 6.51, p = 0.01) where 501 
+
+abundances were greatest in the drought ed plots with control litter. 502 
+
+503 
+
+In our expanded models to assess the drivers of litter mass l oss at the third and fourth 504 
+
+harvest, we found the same significant predictors of decomposition in both. Here, litter originating 505 
+
+from droughted plots (i.e., experimental litter) decreased mass loss rates at both time points (H3: t 506 
+
+= -2.25, p = 0.03 ; H4: t = -2. 46 , p = 0.017 ). The drought treatment itself was no longer significant 507 
+
+in these model s, instead, higher C:N ratios in remaining litter in the third (t = -4.37 p < 0.001) and 508 
+
+fourth (t = -6.89 p < 0.001) corresponded with lower mass loss rates as litter C -biochemistry (FTIR) 509 
+
+PC1 was also a predictor of with mass loss in the third and fourth harvest (H3: t = 3. 02 , p = 0.004; 510 
+
+H4: t = 4.91 , p < 0.001 ). Together, these models show that litter properties , both initial and after 511 
+
+decomposition had begun, were drivers of litter decomposition .512 
+
+513 
+
+Discussion 514 
+
+The use of two large scale, long -term experimental manipulations of drought and e levated 515 
+
+atmospheric CO 2 provide results that address the need for ‘ecologically relevant’ (Rineau et al., 516 
+
+2019) investigations of the impact global change factors on soil C cycling processes. Our results 517 
+
+reveal that long -term in situ manipulations of drought and elevated atmospheric CO 2 to mature 518 
+
+oak forests have differing impacts on litter decomposition process , thereby supporting our first 519 
+
+hypothesis . We found that litter incubated under trees subjected to long -term drought at O 3HP had 520 
+
+greater C:N ratio during decomposition and reduced mass loss compared to litter incubated in 521 
+
+ambient rainfall conditions . Litter mass loss m odels contain ing both treatment and measured 522 
+
+parameters also revealed that a main correlate of litter mass loss was the origin of litter, i.e. ,523 
+
+> .CC-BY 4.0 International license available under a was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint (which this version posted May 28, 2026. ;https://doi.org/10.1101/2025.07.18.665400 doi: bioRxiv preprint
+
+25 
+
+UNCLASSIFIED - NON CLASSIFIÉ 
+
+whether leaves were subject to either drought or ambient rainfall prior to litterfall , at both the third 524 
+
+and fourth harvest . Both the C:N ratio and the composition of secondary metabolites differed 525 
+
+according to the origin of the litter , and mass loss was lower in experimental litter . Conversely, in 526 
+
+the elevated CO 2 experiment at BIFoR FACE , the decomposition environment was not a strong 527 
+
+driver of litter decomposition , but litter originating from elevated CO 2 plots had slower 528 
+
+decomposition rates . The effect of l itter origin on mass loss in both experiments provides support 529 
+
+for our second hypothesis that changes to litter properties stemming from drought and elevated 530 
+
+CO 2 has long -term impacts on decomposition rate. 531 
+
+532 
+
+Our finding that litter origin , capturing treatment -driven changes in initial litter properties ,533 
+
+affected mass loss months after the onset of decomposition suggest s strong carry -over effects of 534 
+
+global change factors on decomposition acting via modifications on traits of living leaves. These 535 
+
+effects occurred in the elevated CO 2 experiment even though significant differences in initial 536 
+
+properties we measured were not detected , suggest ing that the treatment may have changed other 537 
+
+important litter traits . For example, it is possible that changes to leaf thickness, stemming from 538 
+
+cell expansion  (Gardner et al., 2022; Pritchard et al., 1999) , and nutrient concentrations , such as 539 
+
+phosphorus and potassium  (Cha et al., 2017) , could have impacted decompos ition . Regardless of 540 
+
+the exact mechanism, t he carry -over effect of litter origin was  also reflected by the colonization 541 
+
+and establishment of microbial communities (drought experiment) and animal abundances 542 
+
+(elevated CO 2 experiment) in litter . Specifically, microbial biomass (measured as total PLFA 543 
+
+concentration) was higher in the experimental litter under drought , while fewer animals were 544 
+
+present in experimental litter in response to elevated CO 2. Overall , leaves grown under global 545 
+
+change factors prior to litterfall continue to impact decomposition and its drivers even when >50% 546 
+
+> .CC-BY 4.0 International license available under a was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint (which this version posted May 28, 2026. ;https://doi.org/10.1101/2025.07.18.665400 doi: bioRxiv preprint
+
+26 
+
+UNCLASSIFIED - NON CLASSIFIÉ 
+
+of litter has been decomposed. This result highlights the longevity of impacts of drought and 547 
+
+elevated CO 2 on litter decomposition , and thus C cycling within forests .548 
+
+549 
+
+Litter m ass loss in drought and elevated CO 2 experiments was explained by dissimilar 550 
+
+pathways. In the drought experiment, both litter origin and decomposition environment affected 551 
+
+remaining litter C:N , with litter C -biochemistry also respon ding strongly to the droughted 552 
+
+decomposition environment , which together were strong correlate s of mass loss rates. By contrast, 553 
+
+in the elevated CO 2 experiment, litter origin but not decomposition environment explained litter 554 
+
+mass loss. The lack of a decomposition environment effect at BIFoR FACE is surprising given 555 
+
+the numerous microbially -driven below -ground impacts reported at this site that are known to 556 
+
+regulate processes such as decomposition. These effects include increases in abundance and 557 
+
+turnover of mycorrhizal hyphae, root exudation, and root traits , such as branching frequency 558 
+
+(Kourmouli et al., 2025; Reay et al., 2025; Rumeau et al., 2025) . One hypothesis that might explain 559 
+
+these findings is that the microorganisms driving the changes noted above are not tightly associated 560 
+
+with freshly fallen litter , but with other soil fractions . For example , there is strong evidence for 561 
+
+vertical segregation of ectomycorrhizal fungi in organic soils (Dickie et al., 2002; Rosling et al., 562 
+
+2003) and therefore highly probable to find strong impacts of elevated CO 2 in soil fungal 563 
+
+communities but not on leaf litter as observed in our study .564 
+
+565 
+
+Our experimental design enabled us to test for interactive effects between litter origin and 566 
+
+decomposition environment. This analysis is important because litter properties and decomposers 567 
+
+interact during decomposition (Prieto et al., 2019) and microbes and animals often show a 568 
+
+consistent ability to accelerate decomposition of ‘home’ litter relative to ‘away’ litter (i.e. the 569 
+
+> .CC-BY 4.0 International license available under a was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint (which this version posted May 28, 2026. ;https://doi.org/10.1101/2025.07.18.665400 doi: bioRxiv preprint
+
+27 
+
+UNCLASSIFIED - NON CLASSIFIÉ 
+
+home field advantage ) (Ayres et al., 2009; Veen et al., 2015) . This variation is driven partly by 570 
+
+litter quality, where recalcitrant litter is typically subject to stronger home field advantage than 571 
+
+more labile litter (Chomel et al., 2015; Wallenstein et al., 2013) . Nevertheless, under drought, 572 
+
+there was no significant interaction between the litter origin and decomposition environment 573 
+
+treatments with litter mass loss, suggesting that changes to the decomposer community or initial 574 
+
+litter properties under droughted conditions was not strong enough to produce a synergistic or 575 
+
+antagonistic response. There was also no interactive response between litter origin and 576 
+
+decomposition environment in the elevated CO 2 experiment, although this observation is less 577 
+
+surprising given that initial litter properties and microbial and animal communities did not show 578 
+
+strong responses to the treatment. 579 
+
+580 
+
+In the drought experiment, m icrobial communities were strongly correlated with remaining 581 
+
+litter C:N (shown with the Pearson correlation matrix ), but this was not found in the elevated CO 2582 
+
+experiment . This difference may be explained by the overall higher C:N ratio s at O 3HP compared 583 
+
+to BIFoR FACE . Fungal abundance is typically greater on recalcitrant litter because fungi possess 584 
+
+enzymes that breakdown larger carbon -rich molecules and polymers , such as lignin, relative to 585 
+
+bacteria (Leifheit et al., 2024; Romaní et al., 2006; Wang & Kuzyakov, 2024) . Microbial 586 
+
+community composition rapidly change s during decomposition (Gołębiewski et al., 2019; 587 
+
+Voříšková & Baldrian, 2013) but litter C:N is strong ly related to microbial communities, including 588 
+
+F:B ratio, in litter layer material (Kohl et al., 2021) . When comparing the two experiments, we 589 
+
+found that the F:B was higher in the drought experiment, which had more recalcitrant litter, but 590 
+
+lower in the elevated CO 2 experiment, which had more labile litter. By the third harvest, t he 591 
+
+advanced state of decomposition in the elevated CO 2 experiment may have weakened the linkage 592 
+
+> .CC-BY 4.0 International license available under a was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint (which this version posted May 28, 2026. ;https://doi.org/10.1101/2025.07.18.665400 doi: bioRxiv preprint
+
+28 
+
+UNCLASSIFIED - NON CLASSIFIÉ 
+
+between microbial communities to litter C:N , despite both being correlated with litter mass loss 593 
+
+rate. Interestingly, remaining litter C:N was linked to animal abundances in the elevated CO 2 at 594 
+
+the third harvest, as evidenced by litter with higher C:N (~25:1) containing fewer animals than 595 
+
+litter with lower C:N (~18:1). This finding is supported by other work, albei t in different contexts ,596 
+
+including heathland (Holmstrup et al., 2017) and suburban forests (Hasegawa & Takeda, 1996) .597 
+
+While the specific mechanism s linking litter C:N to animals remains to be identified, our findings 598 
+
+show that linkages exist between resource quality and decomposers and that on -going 599 
+
+decomposition will affect pathways between animals, microbes, and litter chemical properties, 600 
+
+such as litter C:N. Further research should document how these pathways change over time under 601 
+
+these and other global change factors. 602 
+
+603 
+
+Analysis of litter properties using FTIR provided a more detailed perspective of how 604 
+
+decomposition shapes C biochemistry , which enables better understand ing of how decomposition 605 
+
+may influence the formation of specific C pools with different rates of turnover, which underpins 606 
+
+recent concepts of soil C cycling  (e.g., Lavallee et al., 2020) . We found that FTIR signatures 607 
+
+generally reflected mass loss rates. In addition, at under elevated CO 2, the composition of FTIR -608 
+
+functional groups between control and experiment al litter converged between the third and fourth 609 
+
+harvest , while c onversely, under drought , decomposition environment still shaped FTIR functional 610 
+
+groups of litter in the fourth harvest . At the fourth harvest , we found match ing responses between 611 
+
+litter properties and mass loss between the two experiments. Whether litter properties converge 612 
+
+(Moore et al., 2011) or diverge (Wickings et al., 2012) during mass loss will likely depend on 613 
+
+interactions between time decomposed, litter properties, decomposer community , and 614 
+
+> .CC-BY 4.0 International license available under a was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint (which this version posted May 28, 2026. ;https://doi.org/10.1101/2025.07.18.665400 doi: bioRxiv preprint
+
+29 
+
+UNCLASSIFIED - NON CLASSIFIÉ 
+
+environmental conditions . Overall , we found that FTIR functional groups in litter and mass loss 615 
+
+responded similarly to decomposition environment and litter origin within each experiment. 616 
+
+617 
+
+We found that experimental litter from the elevated CO 2 experiment was populated with 618 
+
+fewer mesostigmatid and prostigmatid mites at the fourth harvest than the control litter. Most 619 
+
+mesostigmatid mites , and some prostigmatid mite species, are predators, feeding on arthropods 620 
+
+and nematodes (Lindquist et al., 2009; Walter et al., 2009) . Lower abundance of these mites 621 
+
+suggest s that changes to prey composition (but likely not group abundances in our experiments) 622 
+
+hindered predators in our litterbags. Changing mesofauna and macrofauna predator composition 623 
+
+can indirectly influence litter decomposition (Koltz et al., 2018; Lang et al., 2014) and similar 624 
+
+effects may explain decomposition in our study. For example, predators can reduce competition 625 
+
+amongst lower trophic levels resulting in higher litter decomposition (Melguizo -Ruiz et al., 2020) ,626 
+
+highlighting the complexity of these trophic interactions on litter decomposition. Although not 627 
+
+statistically significant, there was a trend for oribatid mite abundance to be lower under drought 628 
+
+than control conditions, which aligns with past studies (Aupic -Samain et al., 2021; Santonja et al., 629 
+
+2017) .630 
+
+631 
+
+Despite modest changes in animal abundances in litter, the expanded m odels of litter mass 632 
+
+loss for BIFoR FACE showed that animal abundances (in addition to microbial community 633 
+
+structure ) were correlated with mass loss in the third harvest, supporting past work  (Handa et al., 634 
+
+2014; Hättenschwiler et al., 2005; Njoroge et al., 2022; Rouifed et al., 2010; Tan et al., 2021) . By 635 
+
+contrast, only litter properties, litter C:N and litter C -biochemistry , best explained mass loss in the 636 
+
+drought experiment , reflecting the lack of effects of animals in this treatment . We suggest two 637 
+
+> .CC-BY 4.0 International license available under a was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint (which this version posted May 28, 2026. ;https://doi.org/10.1101/2025.07.18.665400 doi: bioRxiv preprint
+
+30 
+
+UNCLASSIFIED - NON CLASSIFIÉ 
+
+potential reasons for the contrasting influence of animals between the two experiments : First, 638 
+
+there are notable climate differences between the two sites; BIFoR FACE is in a cool, moist 639 
+
+temperate -maritime climate (MacKenzie et al., 2021) , while O 3HP is in a seasonally hot and drier 640 
+
+Mediterranean climate (Gauquelin et al., 2011) (Figures S2 and S3). Joly et al. (2023)  highlighted 641 
+
+the importance of macroclimate (i.e., temperature and precipitation) in litter decomposition , as 642 
+
+animal contributions to decomposition can be strongly climate dependent  (Wall et al., 2008)  which 643 
+
+may have contribute d to the differing significant pathways between these models . Second, the 644 
+
+decomposer community was strongly correlated to mass loss at later stages of decomposition ;645 
+
+potentiall y, the semi -advanced state of the decomposed litter led to significant linkages to both 646 
+
+litter properties and decomposers at BIFoR FACE , and not at O 3HP where decomposition rates 647 
+
+were slower . By the fourth harvest, when only  ~20% of litter remain ed , animal abundances were 648 
+
+no longer correlated with litter mass loss rate . Because t he relative influence of litter properties, 649 
+
+biota, and climate on decomposition will shift over time (Canessa et al., 2021; Currie et al., 2010; 650 
+
+García -Palacios et al., 2016) , future research should recognize that climate x temporal interactions 651 
+
+may be critical to disentangling the contributions of litter properties and local environmental 652 
+
+conditions on biota and subsequently litter decomposition. 653 
+
+654 
+
+Conclusions 655 
+
+We investigated how drought and elevated atmospheric CO 2 independently affect litter 656 
+
+decomposition in mature forests by conducting reciprocal transplants within two large -scale long -657 
+
+term manipulative field experiments of elevated CO 2 (BIFoR FACE) and drought (O3HP ). Our 658 
+
+findings reveal how separate in situ manipulation of elevated CO 2 or drought impact litter 659 
+
+decomposition through distinct pathways involving changes in either litter properties prior to 660 
+
+> .CC-BY 4.0 International license available under a was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint (which this version posted May 28, 2026. ;https://doi.org/10.1101/2025.07.18.665400 doi: bioRxiv preprint
+
+31 
+
+UNCLASSIFIED - NON CLASSIFIÉ 
+
+decomposition or the decomposition environment itself . Consistent with our hypotheses, drought 661 
+
+exerted the strongest control on decomposition, primarily through environmental constraints such 662 
+
+as reduced soil moisture and altered microclimatic conditions. In addition, both drought and 663 
+
+elevated CO 2 impact ed litter mass loss through modifications of litter properties prior to the onset 664 
+
+of decomposition . This litter -origin effect provide s clear evidence that the impact of drought and 665 
+
+elevated CO 2 leads to strong carry -over effects on decomposition , confirming the importance of 666 
+
+pre -litterfall changes in litter properties alongside in situ environmental modification . Future 667 
+
+climate scenarios of increased atmospheric CO 2 concentrations will alter litter decomposition 668 
+
+through alterations to litter properties , which may include C:N rati o and underlying litter chemical 669 
+
+functional groups . Reduced seasonal rainfall will both strongly shape litter properties prior to 670 
+
+litterfall and during decomposition , along side the associated decomposer communities . Overall, 671 
+
+our findings , using long -term, realistic in situ manipulations, provide a more complete 672 
+
+understanding of how global change factors shape C cycling in forest s and highlight a need to 673 
+
+disentangle the ir individual and interactive effects on litter inputs, properties and decomposition 674 
+
+dynamics .675 
+
+676 
+
+> .CC-BY 4.0 International license available under a was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint (which this version posted May 28, 2026. ;https://doi.org/10.1101/2025.07.18.665400 doi: bioRxiv preprint
+
+32 
+
+UNCLASSIFIED - NON CLASSIFIÉ 
+
+References 677 
+
+Arain, M. A., Xu, B., Brodeur, J. J., Khomik, M., Peichl, M., Beamesderfer, E., Restrepo -678 
+
+Couple, N., & Thorne, R. (2022). Heat and drought impact on carbon exchange in an age -679 
+
+sequence of temperate pine forests.  Ecological Processes , 11 , 7. 680 
+
+https://doi.org/10.1186/s13717 -021 -00349 -7681 
+
+Aupic -Samain, A., Santonja, M., Chomel, M., Pereira, S., Quer, E., Lecareux, C., Limousin, J. 682 
+
+M., Ourcival, J. M., Simioni, G., Gauquelin, T., Fernandez, C., & Baldy, V. (2021).  Soil 683 
+
+biota response to experimental rainfall reduction depends on the dominant tree species in 684 
+
+mature northern Mediterranean forests. Soil Biology and Biochemistry , 154 , 108122. 685 
+
+https://doi.org/10.1016/j.soilbio.2020.108122 686 
+
+Ayres, E., Steltzer, H., Simmons, B. L., Simpson, R. T., Steinweg, J. M., Wallenstein, M. D., 687 
+
+Mellor, N., Parton, W. J., Moore, J. C., & Wall, D. H. (2009). Home -field advantage 688 
+
+accelerates leaf litter decomposition in forests. Soil Biology and Biochemistry , 41 , 606 –689 
+
+610. https://doi.org/10.1016/j.soilbio.2008.12.022 690 
+
+Bates, D., Maechler, M., Bolker, B., & Walker, S. (2015). Fitting linear mixed -effects models 691 
+
+using lme4. Journal of Statistical Software , 67 , 1 –48. 692 
+
+https://doi.org/10.18637/jss.v067.i01 693 
+
+Bell, B. A., Fletcher, W. J., Ryan, P., Seddon, A. W. R., Wogelius, R. A., & Ilmen, R. (2018). 694 
+
+UV -B-absorbing compounds in modern Cedrus atlantica pollen: The potential for a 695 
+
+summer UV -B proxy for Northwest Africa. The Holocene , 28 , 1382 –1394. 696 
+
+https://doi.org/10.1177/0959683618777072 697 
+
+> .CC-BY 4.0 International license available under a was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint (which this version posted May 28, 2026. ;https://doi.org/10.1101/2025.07.18.665400 doi: bioRxiv preprint
+
+33 
+
+UNCLASSIFIED - NON CLASSIFIÉ 
+
+Blankinship, J. C., Niklaus, P. A., & Hungate, B. A. (2011). A meta -analysis of responses of soil 698 
+
+biota to global change.  Oecologia , 165 , 553 –565. https://doi.org/10.1007/s00442 -011 -699 
+
+1909 -0700 
+
+Blaschke, L., Schulte, M., Raschi, A., Slee, N., Rennenberg, H., & Polle, A. (2001). 701 
+
+Photosynthesis, soluble and structural carbon compounds in two Mediterranean oak 702 
+
+species ( Quercus pubescens and Q. ilex ) after lifetime growth at naturally elevated CO 2703 
+
+concentrations. Plant Biology , 3, 288 –298. https://doi.org/10.1055/s -2001 -15203 704 
+
+Buyer, J. S., & Sasser, M. (2012). High throughput phospholipid fatty acid analysis of soils. 705 
+
+Applied Soil Ecology , 61 , 127 –130. https://doi.org/10.1016/j.apsoil.2012.06.005 706 
+
+Canessa, R., van den Brink, L., Saldaña, A., Rios, R. S., Hättenschwiler, S., Mueller, C. W., 707 
+
+Prater, I., Tielbörger, K., & Bader, M. Y. (2021). Relative effects of climate and litter 708 
+
+traits on decomposition change with time, climate and trait variability. Journal of 709 
+
+Ecology , 109 , 447 –458. https://doi.org/10.1111/1365 -2745.13516 710 
+
+Cech, P. G., Pepin, S., & Körner, C. (2003). Elevated CO 2 reduces sap flux in mature deciduous 711 
+
+forest trees. Oecologia , 137 , 258 –268. https://doi.org/10.1007/s00442 -003 -1348 -7712 
+
+Cha, S., Chae, H. -M., Lee, S. -H., & Shim, J. -K. (2017). Effect of elevated atmospheric CO2 713 
+
+concentration on growth and leaf litter decomposition of Quercus acutissima and 714 
+
+Fraxinus rhynchophylla . PLoS ONE , 12 , e0171197. 715 
+
+https://doi.org/10.1371/journal.pone.0171197 716 
+
+Chen, D., Wang, S., Xiong, B., Cao, B., & Deng, X. (2015). Carbon/nitrogen imbalance 717 
+
+associated with drought -induced leaf senescence in Sorghum bicolor . PLoS ONE , 10 ,718 
+
+e0137026. https://doi.org/10.1371/journal.pone.0137026 719 
+
+> .CC-BY 4.0 International license available under a was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint (which this version posted May 28, 2026. ;https://doi.org/10.1101/2025.07.18.665400 doi: bioRxiv preprint
+
+34 
+
+UNCLASSIFIED - NON CLASSIFIÉ 
+
+Chomel, M., Guittonny -Larchevêque, M., DesRochers, A., & Baldy, V. (2015). Home field 720 
+
+advantage of litter decomposition in pure and mixed plantations under boreal climate. 721 
+
+Ecosystems , 18 , 1014 –1028. https://doi.org/10.1007/s10021 -015 -9880 -y722 
+
+Coleman, D. C., Callaham Jr., M. A., & Crossley Jr., D. A. (2018). Fundamentals of soil 723 
+
+ecology . Elsevier Inc. 724 
+
+Currie, W. S., Harmon, M. E., Burke, I. C., Hart, S. C., Parton, W. J., & Silver, W. (2010). 725 
+
+Cross -biome transplants of plant litter show decomposition models extend to a broader 726 
+
+climatic range but lose predictability at the decadal time scale. Global Change Biology ,727 
+
+16 , 1744 –1761. https://doi.org/10.1111/j.1365 -2486.2009.02086.x 728 
+
+de Vries, F. T., Griffiths, R. I., Bailey, M., Craig, H., Girlanda, M., Gweon, H. S., Hallin, S., 729 
+
+Kaisermann, A., Keith, A. M., Kretzschmar, M., Lemanceau, P., Lumini, E., Mason, K. 730 
+
+E., Oliver, A., Ostle, N., Prosser, J. I., Thion, C., Thomson, B., & Bardgett, R. D. (2018). 731 
+
+Soil bacterial networks are less stable under drought than fungal networks. Nature 732 
+
+Communications , 9, 3033. https://doi.org/10.1038/s41467 -018 -05516 -7733 
+
+de Vries, F. T., Liiri, M. E., Bjørnlund, L., Bowker, M. A., Christensen, S., Setälä, H. M., & 734 
+
+Bardgett, R. D. (2012). Land use alters the resistance and resilience of soil food webs to 735 
+
+drought.  Nature Climate Change , 2, 276 –280. https://doi.org/10.1038/nclimate1368 736 
+
+Dickie, I. A., Xu, B., & Koide, R. T. (2002).  Vertical niche differentiation of ectomycorrhizal 737 
+
+hyphae in soil as shown by T‐RFLP analysis. New Phytologist , 156 , 527 –535. 738 
+
+https://doi.org/10.1046/j.1469 -8137.2002.00535.x 739 
+
+Drake, J. E., Gallet -Budynek, A., Hofmockel, K. S., Bernhardt, E. S., Billings, S. A., Jackson, R. 740 
+
+B., Johnsen, K. S., Lichter, J., McCarthy, H. R., McCormack, M. L., Moore, D. J. P., 741 
+
+Oren, R., Palmroth, S., Phillips, R. P., Pippen, J. S., Pritchard, S. G., Treseder, K. K., 742 
+
+> .CC-BY 4.0 International license available under a was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint (which this version posted May 28, 2026. ;https://doi.org/10.1101/2025.07.18.665400 doi: bioRxiv preprint
+
+35 
+
+UNCLASSIFIED - NON CLASSIFIÉ 
+
+Schlesinger, W. H., DeLucia, E. H., & Finzi, A. C. (2011). Increases in the flux of carbon 743 
+
+belowground stimulate nitrogen uptake and sustain the long -term enhancement of forest 744 
+
+productivity under elevated CO 2. Ecology Letters , 14 , 349 –357. 745 
+
+https://doi.org/10.1111/j.1461 -0248.2011.01593.x 746 
+
+FAO. (2020). Global Forest Resources Assessment 2020 —Key Findings .747 
+
+https://doi.org/10.4060/ca8753en 748 
+
+Franzaring, J., Högy, P., Erbs, M., & Fangmeier, A. (2010). Responses of canopy and soil 749 
+
+climate in a six year free -air CO 2 enrichment study with spring crops. Agricultural and 750 
+
+Forest Meteorology , 150 , 354 –360. https://doi.org/10.1016/j.agrformet.2009.11.018 751 
+
+Friedlingstein, P., Meinshausen, M., Arora, V. K., Jones, C. D., Anav, A., Liddicoat, S. K., & 752 
+
+Knutti, R. (2014). Uncertainties in CMIP5 climate projections due to carbon cycle 753 
+
+feedbacks. Journal of Climate , 27 , 511 –526. https://doi.org/10.1175/JCLI -D-12 -00579.1 754 
+
+Frostegård, Å., Tunlid, A., & Bååth, E. (1993). Phospholipid fatty acid composition, biomass, 755 
+
+and activity of microbial communities from two soil types experimentally exposed to 756 
+
+different heavy metals. Applied and Environmental Microbiology , 59 , 3605 –3617. 757 
+
+https://doi.org/10.1128/aem.59.11.3605 -3617.1993 758 
+
+Gao, D., Luster, J., Zürcher, A., Arend, M., Bai, E., Gessler, A., Rigling, A., Schaub, M., 759 
+
+Hartmann, M., Werner, R. A., Joseph, J., Poll, C., & Hagedorn, F. (2024). Drought 760 
+
+resistance and resilience of rhizosphere communities in forest soils from the cellular to 761 
+
+ecosystem scale – insights from 13 C pulse labeling. New Phytologist , 242 , 960 –974. 762 
+
+https://doi.org/10.1111/nph.19612 763 
+
+> .CC-BY 4.0 International license available under a was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint (which this version posted May 28, 2026. ;https://doi.org/10.1101/2025.07.18.665400 doi: bioRxiv preprint
+
+36 
+
+UNCLASSIFIED - NON CLASSIFIÉ 
+
+García -Palacios, P., Shaw, E. A., Wall, D. H., & Hättenschwiler, S. (2016). Temporal dynamics 764 
+
+of biotic and abiotic drivers of litter decomposition. Ecology Letters , 19 , 554 –563. 765 
+
+https://doi.org/10.1111/ele.12590 766 
+
+Gardner, A., Ellsworth, D. S., Crous, K. Y., Pritchard, J., & MacKenzie, A. R. (2022). Is 767 
+
+photosynthetic enhancement sustained through three years of elevated CO2 exposure in 768 
+
+175 -year -old Quercus robur ? Tree Physiology , 42 , 130 –144. 769 
+
+https://doi.org/10.1093/treephys/tpab090 770 
+
+Gauquelin, T., Boer, M., Baldy, V., Fernandez, C., Montes, N., Santonja, M., Orts, J., & Reiter, 771 
+
+I. (2011).  L’O3HP, Oak Observatory at OHP Un site expérimental pour l’étude du 772 
+
+fonctionnement et de la biodiversité de la chênaie pubescente face aux changements 773 
+
+climatiques.  Forêt Méditerranéenne , XXXII , 127 –132. 774 
+
+Gergócs, V., & Hufnagel, L. (2016). The effect of microarthropods on litter decomposition 775 
+
+depends on litter quality.  European Journal of Soil Biology , 75 , 24 –30. 776 
+
+https://doi.org/10.1016/j.ejsobi.2016.04.008 777 
+
+Gołębiewski, M., Tarasek, A., Sikora, M., Deja -Sikora, E., Tretyn, A., & Niklińska, M. (2019). 778 
+
+Rapid microbial community changes during initial stages of pine litter decomposition. 779 
+
+Microbial Ecology , 77 , 56 –75. https://doi.org/10.1007/s00248 -018 -1209 -x780 
+
+Hagedorn, F., Joseph, J., Peter, M., Luster, J., Pritsch, K., Geppert, U., Kerner, R., Molinier, V., 781 
+
+Egli, S., Schaub, M., Liu, J. -F., Li, M., Sever, K., Weiler, M., Siegwolf, R. T. W., 782 
+
+Gessler, A., & Arend, M. (2016). Recovery of trees from drought depends on 783 
+
+belowground sink control. Nature Plants , 2, 16111. 784 
+
+https://doi.org/10.1038/nplants.2016.111 785 
+
+> .CC-BY 4.0 International license available under a was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint (which this version posted May 28, 2026. ;https://doi.org/10.1101/2025.07.18.665400 doi: bioRxiv preprint
+
+37 
+
+UNCLASSIFIED - NON CLASSIFIÉ 
+
+Handa, I. T., Aerts, R., Berendse, F., Berg, M. P., Bruder, A., Butenschoen, O., Chauvet, E., 786 
+
+Gessner, M. O., Jabiol, J., Makkonen, M., McKie, B. G., Malmqvist, B., Peeters, E. T. H. 787 
+
+M., Scheu, S., Schmid, B., Van Ruijven, J., Vos, V. C. A., & Hättenschwiler, S. (2014). 788 
+
+Consequences of biodiversity loss for litter decomposition across biomes. Nature , 509 ,789 
+
+218 –221. https://doi.org/10.1038/nature13247 790 
+
+Harris, N. L., Gibbs, D. A., Baccini, A., Birdsey, R. A., de Bruin, S., Farina, M., Fatoyinbo, L., 791 
+
+Hansen, M. C., Herold, M., Houghton, R. A., Potapov, P. V., Suarez, D. R., Roman -792 
+
+Cuesta, R. M., Saatchi, S. S., Slay, C. M., Turubanova, S. A., & Tyukavina, A. (2021). 793 
+
+Global maps of twenty -first century forest carbon fluxes. Nature Climate Change , 11 ,794 
+
+234 –240. https://doi.org/10.1038/s41558 -020 -00976 -6795 
+
+Hart, K. M., Curioni, G., Blaen, P., Harper, N. J., Miles, P., Lewin, K. F., Nagy, J., Bannister, E. 796 
+
+J., Cai, X. M., Thomas, R. M., Krause, S., Tausz, M., & MacKenzie, A. R. (2020). 797 
+
+Characteristics of free air carbon dioxide enrichment of a northern temperate mature 798 
+
+forest. Global Change Biology , 26 , 1023 –1037. https://doi.org/10.1111/gcb.14786 799 
+
+Hasegawa, M., & Takeda, H. (1996). Carbon and nutrient dynamics in decomposing pine needle 800 
+
+litter in relation to fungal and faunal abundances. Pedobiologia , 40 , 171 –184. 801 
+
+https://doi.org/10.1016/S0031 -4056(24)00350 -0802 
+
+Hättenschwiler, S., Tiunov, A. V., & Scheu, S. (2005). Biodiversity and litter decomposition in 803 
+
+terrestrial ecosystems. Annual Review of Ecology, Evolution, and Systematics , 36 , 191 –804 
+
+218. https://doi.org/10.1146/annurev.ecolsys.36.112904.151932 805 
+
+Hill, G. T., Mitkowski, N. A., Aldrich -Wolfe, L., Emele, L. R., Jurkonie, D. D., Ficke, A., 806 
+
+Maldonado -Ramirez, S., Lynch, S. T., & Nelson, E. B. (2000). Methods for assessing the 807 
+
+> .CC-BY 4.0 International license available under a was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint (which this version posted May 28, 2026. ;https://doi.org/10.1101/2025.07.18.665400 doi: bioRxiv preprint
+
+38 
+
+UNCLASSIFIED - NON CLASSIFIÉ 
+
+composition and diversity of soil microbial communities. Applied Soil Ecology , 15 , 25 –808 
+
+36. https://doi.org/10.1016/S0929 -1393(00)00069 -X809 
+
+Högberg, P., Nordgren, A., Buchmann, N., Taylor, A. F. S., Ekblad, A., Högberg, M. N., 810 
+
+Nyberg, G., Ottosson -Löfvenius, M., & Read, D. J. (2001). Large -scale forest girdling 811 
+
+shows that current photosynthesis drives soil respiration. Nature , 411 , 789 –792. 812 
+
+https://doi.org/10.1038/35081058 813 
+
+Holmstrup, M., Damgaard, C., Schmidt, I. K., Arndal, M. F., Beier, C., Mikkelsen, T. N., 814 
+
+Ambus, P., Larsen, K. S., Pilegaard, K., Michelsen, A., Andresen, L. C., Haugwitz, M., 815 
+
+Bergmark, L., Priemé, A., Zaitsev, A. S., Georgieva, S., Dam, M., Vestergård, M., & 816 
+
+Christensen, S. (2017). Long -term and realistic global change manipulations had low 817 
+
+impact on diversity of soil biota in temperate heathland. Scientific Reports , 7, 41388. 818 
+
+https://doi.org/10.1038/srep41388 819 
+
+Ilieva -Makulec, K., Olejniczak, I., & Szanser, M. (2006). Response of soil micro - and mesofauna 820 
+
+to diversity and quality of plant litter. European Journal of Soil Biology , 42 , S244 –S249. 821 
+
+https://doi.org/10.1016/j.ejsobi.2006.07.030 822 
+
+IPCC. (2021). Summary for Policymakers. In V. Masson -Delmotte, P. Zhai, A. Pirani, S. L. 823 
+
+Connors, C. Péan, S. Berger, N. Caud, Y. Chen, L. Goldfarb, M. I. Gomis, M. Haung, K. 824 
+
+Leitzell, E. Lonnoy, J. B. R. Matthews, T. K. Maycock, T. Waterfield, O. Yelekçi, R. Yu, 825 
+
+& B. Zhou (Eds.), Climate Change 2021: The Physical Science Basis. Contribution of 826 
+
+Working Group I to the Sixth Assessment Report of the Intergovernmental Panel on 827 
+
+Climate Change (pp. 3 –32). Cambridge University Press. 828 
+
+Jardine, P. E., Abernethy, F. A. J., Lomax, B. H., Gosling, W. D., & Fraser, W. T. (2017). 829 
+
+Shedding light on sporopollenin chemistry, with reference to UV reconstructions. Review 830 
+
+> .CC-BY 4.0 International license available under a was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint (which this version posted May 28, 2026. ;https://doi.org/10.1101/2025.07.18.665400 doi: bioRxiv preprint
+
+39 
+
+UNCLASSIFIED - NON CLASSIFIÉ 
+
+of Palaeobotany and Palynology , 238 , 1 –6. 831 
+
+https://doi.org/10.1016/j.revpalbo.2016.11.014 832 
+
+Jiang, M., Medlyn, B. E., Drake, J. E., Duursma, R. A., Anderson, I. C., Barton, C. V. M., Boer, 833 
+
+M. M., Carrillo, Y., Castañeda -Gómez, L., Collins, L., Crous, K. Y., De Kauwe, M. G., 834 
+
+dos Santos, B. M., Emmerson, K. M., Facey, S. L., Gherlenda, A. N., Gimeno, T. E., 835 
+
+Hasegawa, S., Johnson, S. N., … Ellsworth, D. S. (2020). The fate of carbon in a mature 836 
+
+forest under carbon dioxide enrichment. Nature , 580 , 227 –231. 837 
+
+https://doi.org/10.1038/s41586 -020 -2128 -9838 
+
+Joly, F. X., Scherer -Lorenzen, M., & Hättenschwiler, S. (2023). Resolving the intricate role of 839 
+
+climate in litter decomposition. Nature Ecology and Evolution , 7, 214 –223. 840 
+
+https://doi.org/10.1038/s41559 -022 -01948 -z841 
+
+Joseph, J., Gao, D., Backes, B., Bloch, C., Brunner, I., Gleixner, G., Haeni, M., Hartmann, H., 842 
+
+Hoch, G., Hug, C., Kahmen, A., Lehmann, M. M., Li, M. -H., Luster, J., Peter, M., Poll, 843 
+
+C., Rigling, A., Rissanen, K. A., Ruehr, N. K., … Gessler, A. (2020). Rhizosphere 844 
+
+activity in an old -growth forest reacts rapidly to changes in soil moisture and shapes 845 
+
+whole -tree carbon allocation. Proceedings of the National Academy of Sciences , 117 ,846 
+
+24885 –24892. https://doi.org/10.1073/pnas.2014084117 847 
+
+Kohl, L., Myers‐Pigg, A., Edwards, K. A., Billings, S. A., Warren, J., Podrebarac, F. A., & 848 
+
+Ziegler, S. E. (2021). Microbial inputs at the litter layer translate climate into altered 849 
+
+organic matter properties. Global Change Biology , 27 , 435 –453. 850 
+
+https://doi.org/10.1111/gcb.15420 851 
+
+Koltz, A. M., Classen, A. T., & Wright, J. P. (2018). Warming reverses top -down effects of 852 
+
+predators on belowground ecosystem function in Arctic tundra. Proceedings of the 853 
+
+> .CC-BY 4.0 International license available under a was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint (which this version posted May 28, 2026. ;https://doi.org/10.1101/2025.07.18.665400 doi: bioRxiv preprint
+
+40 
+
+UNCLASSIFIED - NON CLASSIFIÉ 
+
+National Academy of Sciences of the United States of America , 115 , E7541 –E7549. 854 
+
+https://doi.org/10.1073/pnas.1808754115 855 
+
+Kourmouli, A., Hamilton, R. L., Pihlblad, J., Bartlett, R., MacKenzie, A. R., Hartley, I. P., Ullah, 856 
+
+S., & Shi, Z. (2025). Rapid increase in soil respiration and reduction in soil nitrate 857 
+
+availability following CO 2 enrichment in a mature oak forest. ACS Omega , 10 , 1624 –858 
+
+1634. https://doi.org/10.1021/acsomega.4c09495 859 
+
+Krishna, M. P., & Mohan, M. (2017). Litter decomposition in forest ecosystems: A review. 860 
+
+Energy, Ecology and Environment , 2, 236 –249. https://doi.org/10.1007/s40974 -017 -861 
+
+0064 -9862 
+
+Kuznetsova, A., Brockhoff, P. B., & Christensen, R. H. B. (2017). lmerTest Package: Tests in 863 
+
+Linear Mixed Effects Models. Journal of Statistical Software , 82 , 1–26. 864 
+
+https://doi.org/10.18637/jss.v082.i13 865 
+
+Lang, B., Rall, B. C., Scheu, S., & Brose, U. (2014). Effects of environmental warming and 866 
+
+drought on size -structured soil food webs. Oikos , 123 , 1224 –1233. 867 
+
+https://doi.org/10.1111/j.1600 -0706.2013.00894.x 868 
+
+Lavallee, J. M., Soong, J. L., & Cotrufo, M. F. (2020). Conceptualizing soil organic matter into 869 
+
+particulate and mineral -associated forms to address global change in the 21st century. 870 
+
+Global Change Biology , 26 , 261 –273. https://doi.org/10.1111/gcb.14859 871 
+
+Lee, H., Jeon, J., Kang, M., Cho, S., Park, J., Lee, M., Lee, H., Kim, D., & Kim, H. S. (2021). 872 
+
+The resilience of the carbon cycles of temperate coniferous and broadleaved forests to 873 
+
+drought. Forest Ecology and Management , 491 , 119178. 874 
+
+https://doi.org/10.1016/j.foreco.2021.119178 875 
+
+> .CC-BY 4.0 International license available under a was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint (which this version posted May 28, 2026. ;https://doi.org/10.1101/2025.07.18.665400 doi: bioRxiv preprint
+
+41 
+
+UNCLASSIFIED - NON CLASSIFIÉ 
+
+Leifheit, E. F., Camenzind, T., Lehmann, A., Andrade -Linares, D. R., Fussan, M., Westhusen, 876 
+
+S., Wineberger, T. M., & Rillig, M. C. (2024). Fungal traits help to understand the 877 
+
+decomposition of simple and complex plant litter. FEMS Microbiology Ecology , 100 ,878 
+
+fiae033. https://doi.org/10.1093/femsec/fiae033 879 
+
+Lindquist, E. E., Krantz, G. W., & Walter, D. E. (2009). Order Mesostigmata. In A manual of 880 
+
+Acarology (pp. 124 –232). Texas Tech University Press. 881 
+
+Liu, D., Keiblinger, K. M., Leitner, S., Mentler, A., & Zechmeister -Boltenstern, S. (2016). Is 882 
+
+there a convergence of deciduous leaf litter stoichiometry, biochemistry and microbial 883 
+
+population during decay? Geoderma , 272 , 93 –100. 884 
+
+https://doi.org/10.1016/j.geoderma.2016.03.005 885 
+
+Liu, Y., Zhang, A., Li, X., Kuang, W., & Islam, W. (2024). Litter decomposition rate response to 886 
+
+multiple global change factors: A meta -analysis. Soil Biology and Biochemistry , 195 ,887 
+
+109474. https://doi.org/10.1016/j.soilbio.2024.109474 888 
+
+MacKenzie, A. R., Krause, S., Hart, K. M., Thomas, R. M., Blaen, P. J., Hamilton, R. L., 889 
+
+Curioni, G., Quick, S. E., Kourmouli, A., Hannah, D. M., Comer -Warner, S. A., 890 
+
+Brekenfeld, N., Ullah, S., & Press, M. C. (2021). BIFoR FACE: Water –soil –vegetation –891 
+
+atmosphere data from a temperate deciduous forest catchment, including under elevated 892 
+
+CO 2. Hydrological Processes , 35 , e14096. https://doi.org/10.1002/hyp.14096 893 
+
+Manzoni, S., Schimel, J. P., & Porporato, A. (2012). Responses of soil microbial communities to 894 
+
+water stress: Results from a meta -analysis. Ecology , 93 , 930 –938. 895 
+
+https://doi.org/10.1890/11 -0026.1 896 
+
+Martin, P. A., Fisher, L., Pérez‐Izquierdo, L., Biryol, C., Guenet, B., Luyssaert, S., Manzoni, S., 897 
+
+Menival, C., Santonja, M., Spake, R., Axmacher, J. C., & Yuste, J. C. (2024). Meta‐ 898 
+
+> .CC-BY 4.0 International license available under a was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint (which this version posted May 28, 2026. ;https://doi.org/10.1101/2025.07.18.665400 doi: bioRxiv preprint
+
+42 
+
+UNCLASSIFIED - NON CLASSIFIÉ 
+
+analysis reveals that the effects of precipitation change on soil and litter fauna in forests 899 
+
+depend on body size. Global Change Biology , 30 , e17305. 900 
+
+https://doi.org/10.1111/gcb.17305 901 
+
+Martínez -Sancho, E., Treydte, K., Lehmann, M. M., Rigling, A., & Fonti, P. (2022). Drought 902 
+
+impacts on tree carbon sequestration and water use – evidence from intra -annual tree -ring 903 
+
+characteristics. New Phytologist , 236 , 58 –70. https://doi.org/10.1111/nph.18224 904 
+
+Melguizo -Ruiz, N., Jiménez -Navarro, G., De Mas, E., Pato, J., Scheu, S., Austin, A. T., Wise, D. 905 
+
+H., & Moya -Laraño, J. (2020). Field exclusion of large soil predators impacts lower 906 
+
+trophic levels and decreases leaf -litter decomposition in dry forests. Journal of Animal 907 
+
+Ecology , 89 , 334 –346. https://doi.org/10.1111/1365 -2656.13101 908 
+
+Moore, T. R., Trofymow, J. A., ,Prescott, C. E., Titus, B. D., & CIDET Working Group. (2011). 909 
+
+Nature and nurture in the dynamics of C, N and P during litter decomposition in 910 
+
+Canadian forests. Plant and Soil , 339 , 163 –175. https://doi.org/10.1007/s11104 -010 -911 
+
+0563 -3912 
+
+Njoroge, D. M., Chen, S. -C., Zuo, J., Dossa, G. G. O., & Cornelissen, J. H. C. (2022). Soil fauna 913 
+
+accelerate litter mixture decomposition globally, especially in dry environments. Journal 914 
+
+of Ecology , 110 , 659 –672. https://doi.org/10.1111/1365 -2745.13829 915 
+
+Norby, R. J. (2025). Forest productivity response to elevated CO 2 in free‐air CO 2 enrichment 916 
+
+experiments: The 23 percent solution, revisited. New Phytologist , 246 , 1952 –1959. 917 
+
+https://doi.org/10.1111/nph.70162 918 
+
+Norby, R. J., Loader, N. J., Mayoral, C., Ullah, S., Curioni, G., Smith, A. R., Reay, M. K., Van 919 
+
+Wijngaarden, K., Amjad, M. S., Brettle, D., Crockatt, M. E., Denny, G., Grzesik, R. T., 920 
+
+Hamilton, R. L., Hart, K. M., Hartley, I. P., Jones, A. G., Kourmouli, A., Larsen, J. R., … 921 
+
+> .CC-BY 4.0 International license available under a was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint (which this version posted May 28, 2026. ;https://doi.org/10.1101/2025.07.18.665400 doi: bioRxiv preprint
+
+43 
+
+UNCLASSIFIED - NON CLASSIFIÉ 
+
+MacKenzie, A. R. (2024). Enhanced woody biomass production in a mature temperate 922 
+
+forest under elevated CO 2. Nature Climate Change , 14 , 983 –988. 923 
+
+https://doi.org/10.1038/s41558 -024 -02090 -3924 
+
+Oksanen, J., Simpson, G., Blanchet, F., Kindt, R., Legendre, P., Minchin, P., O’Hara, R., 925 
+
+Solymos, P., Stevens, M., Szoecs, E., Wagner, H., Barbour, M., Bedward, M., Bolker, B., 926 
+
+Borcard, D., Carvalho, G., Chirico, M., De Caceres, M., Durand, S., … Weedon, J. 927 
+
+(2022). vegan: Community Ecology Package (Version R package version 2.6 -4). 928 
+
+Olson, J. S. (1963). Energy storage and the balance of producers and decomposers in ecological 929 
+
+systems. Ecology , 44 , 322 –331. https://doi.org/10.2307/1932179 930 
+
+Orians, C. M., Schweiger, R., Dukes, J. S., Scott, E. R., & Müller, C. (2019). Combined impacts 931 
+
+of prolonged drought and warming on plant size and foliar chemistry. Annals of Botany ,932 
+
+124 , 41 –52. https://doi.org/10.1093/aob/mcz004 933 
+
+Pan, Y., Birdsey, R. A., Fang, J., Houghton, R., Kauppi, P. E., Kurz, W. A., Phillips, O. L., 934 
+
+Shvidenko, A., Lewis, S. L., Canadell, J. G., Ciais, P., Jackson, R. B., Pacala, S. W., 935 
+
+McGuire, A. D., Piao, S., Rautiainen, A., Sitch, S., & Hayes, D. (2011). A large and 936 
+
+persistent carbon sink in the world’s forests.  Science , 333 , 988 –993. 937 
+
+https://doi.org/10.1126/science.1201609 938 
+
+Prieto, I., Almagro, M., Bastida, F., & Querejeta, J. I. (2019).  Altered leaf litter quality 939 
+
+exacerbates the negative impact of climate change on decomposition. Journal of Ecology ,940 
+
+107 , 2364 –2382. https://doi.org/10.1111/1365 -2745.13168 941 
+
+Pritchard, S. G., Rogers, H. H., Prior, S. A., & Peterson, C. M. (1999). Elevated CO 2 and plant 942 
+
+structure: A review. Global Change Biology , 5, 807 –837. https://doi.org/10.1046/j.1365 -943 
+
+2486.1999.00268.x 944 
+
+> .CC-BY 4.0 International license available under a was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint (which this version posted May 28, 2026. ;https://doi.org/10.1101/2025.07.18.665400 doi: bioRxiv preprint
+
+44 
+
+UNCLASSIFIED - NON CLASSIFIÉ 
+
+Quer, E., Pereira, S., Michel, T., Santonja, M., Gauquelin, T., Simioni, G., Ourcival, J. -M., 945 
+
+Joffre, R., Limousin, J. M., Aupic -Samain, A., Lecareux, C., Dupouyet, S., Orts, J. -P., 946 
+
+Bousquet -Mélou, A., Gros, R., Sagova -Mareckova, M., Kopecky, J., Fernandez, C., & 947 
+
+Baldy, V. (2022).  Amplified drought alters leaf litter metabolome, slows down litter 948 
+
+decomposition, and modifies home field (dis)advantage in three Mediterranean forests. 949 
+
+Plants , 11 , 2582. https://doi.org/10.3390/plants11192582 950 
+
+R Core Team. (2023). R: A language and environment for statistical computing . R Foundation 951 
+
+for Statistical Computing. 952 
+
+Reay, M. K., Sayer, E. J., Smith, A., Pastor, V., Kourmouli, A., Marshall, M., Grzesik, R. T., 953 
+
+Evans, I., Rumeau, M., Hart, K., Ma, J., Norby, R. J., MacKenzie, A. R., Hamilton, R. L., 954 
+
+Hartley, I. P., & Ullah, S. (2025). Elevated CO 2 alters relative belowground carbon 955 
+
+investment for nutrient acquisition in a mature temperate forest. Proceedings of the 956 
+
+National Academy of Sciences , 122 , e2503595122. 957 
+
+https://doi.org/10.1073/pnas.2503595122 958 
+
+Rineau, F., Malina, R., Beenaerts, N., Arnauts, N., Bardgett, R. D., Berg, M. P., Boerema, A., 959 
+
+Bruckers, L., Clerinx, J., Davin, E. L., De Boeck, H. J., De Dobbelaer, T., Dondini, M., 960 
+
+De Laender, F., Ellers, J., Franken, O., Gilbert, L., Gudmundsson, L., Janssens, I. A., … 961 
+
+Vangronsveld, J. (2019). Towards more predictive and interdisciplinary climate change 962 
+
+ecosystem experiments.  Nature Climate Change , 9, 809 –816. 963 
+
+https://doi.org/10.1038/s41558 -019 -0609 -3964 
+
+Romaní, A. M., Fischer, H., Mille -Lindblom, C., & Tranvik, L. J. (2006).  Interactions of bacteria 965 
+
+and fungi on decomposing litter: Differential extracellular enzyme activities. Ecology , 87 ,966 
+
+2559 –2569. https://doi.org/10.1890/0012 -9658(2006)87[2559:IOBAFO]2.0.CO;2 967 
+
+> .CC-BY 4.0 International license available under a was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint (which this version posted May 28, 2026. ;https://doi.org/10.1101/2025.07.18.665400 doi: bioRxiv preprint
+
+45 
+
+UNCLASSIFIED - NON CLASSIFIÉ 
+
+Rosling, A., Landeweert, R., Lindahl, B. D., Larsson, K. ‐H., Kuyper, T. W., Taylor, A. F. S., & 968 
+
+Finlay, R. D. (2003). Vertical distribution of ectomycorrhizal fungal taxa in a podzol soil 969 
+
+profile. New Phytologist , 159 , 775 –783. https://doi.org/10.1046/j.1469 -970 
+
+8137.2003.00829.x 971 
+
+Rouifed, S., Handa, I. T., David, J. -F., & Hättenschwiler, S. (2010). The importance of biotic 972 
+
+factors in predicting global change effects on decomposition of temperate forest leaf 973 
+
+litter. Oecologia , 163 , 247 –256. https://doi.org/10.1007/s00442 -009 -1528 -1974 
+
+Rumeau, M., Pihlblad, J., Sgouridis, F., Fereday, G., Reay, M., Carrillo, Y., Hartley, I., Sayer, 975 
+
+E., Hamilton, R. L., MacKenzie, A. R., & Ullah, S. (2025). Root exudate stoichiometry is 976 
+
+a key driver of soil N cycling: Implications for forest responses to global change. Soil 977 
+
+Biology and Biochemistry , 208 , 109856. https://doi.org/10.1016/j.soilbio.2025.109856 978 
+
+Santonja, M., Fernandez, C., Proffit, M., Gers, C., Gauquelin, T., Reiter, I. M., Cramer, W., & 979 
+
+Baldy, V. (2017). Plant litter mixture partly mitigates the negative effects of extended 980 
+
+drought on soil biota and litter decomposition in a Mediterranean oak forest. Journal of 981 
+
+Ecology , 105 , 801 –815. https://doi.org/10.1111/1365 -2745.12711 982 
+
+Seastedt, T. R. (1984). The role of microarthropods in decomposition and mineralization process. 983 
+
+Annual Review of Entomology , 29 , 25 –46. https://doi.org/10.1146/annurev.ento.29.1.25 984 
+
+Sun, Y., Liao, J., Zou, X., Xu, X., Yang, J., Chen, H. Y. H., & Ruan, H. (2020). Coherent 985 
+
+responses of terrestrial C:N stoichiometry to drought across plants, soil, and 986 
+
+microorganisms in forests and grasslands. Agricultural and Forest Meteorology , 292 –987 
+
+293 , 108104. https://doi.org/10.1016/j.agrformet.2020.108104 988 
+
+Tan, B., Yin, R., Zhang, J., Xu, Z., Liu, Y., He, S., Zhang, L., Li, H., Wang, L., Liu, S., You, C., 989 
+
+& Peng, C. (2021). Temperature and moisture modulate the contribution of soil fauna to 990 
+
+> .CC-BY 4.0 International license available under a was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint (which this version posted May 28, 2026. ;https://doi.org/10.1101/2025.07.18.665400 doi: bioRxiv preprint
+
+46 
+
+UNCLASSIFIED - NON CLASSIFIÉ 
+
+litter decomposition via different pathways. Ecosystems , 24 , 1142 –1156. 991 
+
+https://doi.org/10.1007/s10021 -020 -00573 -w992 
+
+Taub, D. R., & Wang, X. (2008). Why are nitrogen concentrations in plant tissues lower under 993 
+
+elevated CO 2? A critical examination of the hypotheses. Journal of Integrative Plant 994 
+
+Biology , 50 , 1365 –1374. https://doi.org/10.1111/j.1744 -7909.2008.00754.x 995 
+
+Toreti, A., Bavera, D., Acosta Navarro, J., Cammalleri, C., de Jager, A., Di Ciollo, C., Hrast 996 
+
+Essenfelder, A., Maetens, W., Magni, D., Masante, D., Mazzeschi, M., Niemeyer, S., & 997 
+
+Spinoni, J. (2022).  Drought in Europe August 2022. In Publications Office of the 998 
+
+European Union . https://doi.org/10.2760/264241 999 
+
+van der Woude, A. M., Peters, W., Joetzjer, E., Lafont, S., Koren, G., Ciais, P., Ramonet, M., 1000 
+
+Xu, Y., Bastos, A., Botía, S., Sitch, S., De Kok, R., Kneuer, T., Kubistin, D., Jacotot, A., 1001 
+
+Loubet, B., Herig -Coimbra, P. -H., Loustau, D., & Luijkx, I. T. (2023). Temperature 1002 
+
+extremes of 2022 reduced carbon uptake by forests in Europe. Nature Communications ,1003 
+
+14 , 6218. https://doi.org/10.1038/s41467 -023 -41851 -01004 
+
+Veen, G. F. (Ciska), Freschet, G. T., Ordonez, A., & Wardle, D. A. (2015). Litter quality and 1005 
+
+environmental controls of home -field advantage effects on litter decomposition. Oikos ,1006 
+
+124 , 187 –195. https://doi.org/10.1111/oik.01374 1007 
+
+Voříšková, J., & Baldrian, P. (2013). Fungal community on decomposing leaf litter undergoes 1008 
+
+rapid successional changes. The ISME Journal , 7, 477 –486. 1009 
+
+https://doi.org/10.1038/ismej.2012.116 1010 
+
+Wall, D. H., Bradford, M. A., St. John, M. G., Trofymow, J. A., Behan -Pelletier, V., Bignell, D. 1011 
+
+E., Dangerfield, J. M., Parton, W. J., Rusek, J., Voigt, W., Wolters, V., Gardel, H. Z., 1012 
+
+Ayuke, F. O., Bashford, R., Beljakova, O. I., Bohlen, P. J., Brauman, A., Flemming, S., 1013 
+
+> .CC-BY 4.0 International license available under a was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint (which this version posted May 28, 2026. ;https://doi.org/10.1101/2025.07.18.665400 doi: bioRxiv preprint
+
+47 
+
+UNCLASSIFIED - NON CLASSIFIÉ 
+
+Henschel, J. R., … Zou, X. (2008). Global decomposition experiment shows soil animal 1014 
+
+impacts on decomposition are climate -dependent. Global Change Biology , 14 , 2661 –1015 
+
+2677. https://doi.org/10.1111/j.1365 -2486.2008.01672.x 1016 
+
+Wallenstein, M. D., Haddix, M. L., Ayres, E., Steltzer, H., Magrini -Bair, K. A., & Paul, E. A. 1017 
+
+(2013). Litter chemistry changes more rapidly when decomposed at home but converges 1018 
+
+during decomposition –transformation. Soil Biology and Biochemistry , 57 , 311 –319. 1019 
+
+https://doi.org/10.1016/j.soilbio.2012.09.027 1020 
+
+Walter, D. E., Lindquist, E. E., Smith, I. M., Cook, D. R., & Krantz, G. W. (2009). Order 1021 
+
+Trombidiformes. In A manual of Acarology (pp. 233 –420). Texas Tech University Press. 1022 
+
+Wang, C., & Kuzyakov, Y. (2024). Mechanisms and implications of bacterial –fungal 1023 
+
+competition for soil resources. The ISME Journal , 18 , wrae073. 1024 
+
+https://doi.org/10.1093/ismejo/wrae073 1025 
+
+Wang, T., Bell, B. A., Fletcher, W. J., Ryan, P. A., & Wogelius, R. A. (2023). Influence of 1026 
+
+common palynological extraction treatments on ultraviolet absorbing compounds (UACs) 1027 
+
+in sub -fossil pollen and spores observed in FTIR spectra. Frontiers in Ecology and 1028 
+
+Evolution , 11 , 1096099. https://doi.org/10.3389/fevo.2023.1096099 1029 
+
+Wang, Z., & Wang, C. (2025). Dynamics of nonstructural carbohydrates during drought and 1030 
+
+subsequent recovery: A global meta -analysis. Agricultural and Forest Meteorology , 363 ,1031 
+
+110429. https://doi.org/10.1016/j.agrformet.2025.110429 1032 
+
+Welti, E. A. R., Roeder, K. A., De Beurs, K. M., Joern, A., & Kaspari, M. (2020). Nutrient 1033 
+
+dilution and climate cycles underlie declines in a dominant insect herbivore. Proceedings 1034 
+
+of the National Academy of Sciences , 117 , 7271 –7275. 1035 
+
+https://doi.org/10.1073/pnas.1920012117 1036 
+
+> .CC-BY 4.0 International license available under a was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint (which this version posted May 28, 2026. ;https://doi.org/10.1101/2025.07.18.665400 doi: bioRxiv preprint
+
+48 
+
+UNCLASSIFIED - NON CLASSIFIÉ 
+
+Wickham, H. (2016). Elegant Graphics for Data Analysis . Springer -Verlag. 1037 
+
+Wickings, K., Grandy, A. S., Reed, S. C., & Cleveland, C. C. (2012). The origin of litter 1038 
+
+chemical complexity during decomposition. Ecology Letters , 15 , 1180 –1188. 1039 
+
+https://doi.org/10.1111/j.1461 -0248.2012.01837.x 1040 
+
+Wu, Q., Ni, X., Sun, X., Chen, Z., Hong, S., Berg, B., Zheng, M., Chen, J., Zhu, J., Ai, L., 1041 
+
+Zhang, Y., & Wu, F. (2025). Substrate and climate determine terrestrial litter 1042 
+
+decomposition. Proceedings of the National Academy of Sciences , 122 , e2420664122. 1043 
+
+https://doi.org/10.1073/pnas.2420664122 1044 
+
+Wu, Q., Yue, K., Wang, X., Ma, Y., & Li, Y. (2020). Differential responses of litter 1045 
+
+decomposition to warming, elevated CO 2, and changed precipitation regime. Plant and 1046 
+
+Soil , 455 , 155 –169. https://doi.org/10.1007/s11104 -020 -04675 -11047 
+
+Yuan, Z. Y., & Chen, H. Y. H. (2015). Decoupling of nitrogen and phosphorus in terrestrial 1048 
+
+plants associated with global changes.  Nature Climate Change , 5, 465 –469. 1049 
+
+https://doi.org/10.1038/nclimate2549 1050 
+
+Yuste, J. C., Peñuelas, J., Estiarte, M., Garcia -Mas, J., Mattana, S., Ogaya, R., Pujol, M., & 1051 
+
+Sardans, J. (2011).  Drought -resistant fungi control soil organic matter decomposition and 1052 
+
+its response to temperature. Global Change Biology , 17 , 1475 –1486. 1053 
+
+https://doi.org/10.1111/j.1365 -2486.2010.02300.x 1054 
+
+Zhang, D., Hui, D., Luo, Y., & Zhou, G. (2008). Rates of litter decomposition in terrestrial 1055 
+
+ecosystems: Global patterns and controlling factors. Journal of Plant Ecology , 1, 85 –93. 1056 
+
+https://doi.org/10.1093/jpe/rtn002 1057 
+
+1058 
+
+1059 
+
+1060 
+
+> .CC-BY 4.0 International license available under a was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint (which this version posted May 28, 2026. ;https://doi.org/10.1101/2025.07.18.665400 doi: bioRxiv preprint
+
+49 
+
+UNCLASSIFIED - NON CLASSIFIÉ 
+
+1061 
+
+1062 
+
+1063 
+
+Figure 1. Litter decomposition (shown as % remaining litter) for the elevated CO 2 experiment (top) 1064 
+
+and drought experiment (bottom) . The x -axis indicates the number of months since initiation of 1065 
+
+the experiment and differs for upper and lower panels . Larger points represent mean (  SE) while 1066 
+
+smaller points are the raw data values . * = p < 0.05, ** = p < 0.01, and *** = p < 0.001. We have 1067 
+
+only provided p -values of factors that were statistically significant. Litter bags in the elevated CO 21068 
+
+experiment were harvested after 8 (H1) , 12 (H2) , 1 7 (H3) and 23 (H4) months, while litter bags in 1069 
+
+the drought experiment were harvested after 10 (H1) , 1 3 (H2) , 21 (H3) , and 34 (H4) months. To1070 
+
+improve plot interpretation, points were positioned with greater spacing on the x -axis . Note the 1071 
+
+differences in y axis -es between the two experiments if comparing results with one another. 1072 
+
+1073 
+
+1074 
+
+> .CC-BY 4.0 International license available under a was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint (which this version posted May 28, 2026. ;https://doi.org/10.1101/2025.07.18.665400 doi: bioRxiv preprint
+
+50 
+
+UNCLASSIFIED - NON CLASSIFIÉ 
+
+1075 
+
+1076 
+
+Figure 2. Principal component analysis (PCA) ordinations of leaf litter functional groups measured 1077 
+
+by Fourier transform infrared (FTIR) spectroscopy for the elevated CO 2 experiment (top) and 1078 
+
+drought experiment (bottom) at harvest three (A and C , left ) and four (B and D , right ). 1079 
+
+Corresponding functional groups for band numbers (B1, B2, B3 , etc.) can be found in 1080 
+
+Supplementary Information Table S1. * = p < 0.05, ** = p < 0.01, and *** = p < 0.001 . We have 1081 
+
+only provided p -values of factors that were statistically significant. 1082 
+
+> .CC-BY 4.0 International license available under a was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint (which this version posted May 28, 2026. ;https://doi.org/10.1101/2025.07.18.665400 doi: bioRxiv preprint
+
+51 
+
+UNCLASSIFIED - NON CLASSIFIÉ 
+
+1083 
+
+1084 
+
+Figure 3. % Carbon ( %C; A and D ), % Nitrogen ( %N ; B and E ) and C:N (C and F ) of drought 1085 
+
+experiment litter sampled at the at third (left) and four th harvest (right) . Larger points represent 1086 
+
+mean (  SE) while smaller points are the raw data values. * = p < 0.05, ** = p < 0.01, and *** = 1087 
+
+p < 0.001. We have only provided p -values of factors that were statistically significant. E =1088 
+
+Environment and L O = litter origin .1089 
+
+> .CC-BY 4.0 International license available under a was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint (which this version posted May 28, 2026. ;https://doi.org/10.1101/2025.07.18.665400 doi: bioRxiv preprint
+
+52 
+
+UNCLASSIFIED - NON CLASSIFIÉ 
+
+1090 
+
+1091 
+
+1092 
+
+Figure 4. Microbial community indices as measured by p hospholipid fatty acid analysis (PLFA) 1093 
+
+in litter for the drought experiment after 21 months (harvest 3) . For A) ( total PLFA ) and B) (fungi : 1094 
+
+bacteria) larger points represent mean (  SE) while smaller points are the raw data values. C) 1095 
+
+Principal component analysis (PCA) ordination of microbial community structure. * = p < 0.05, 1096 
+
+** = p < 0.01, and *** = p < 0.001. We have only provided p -values of factors that were 1097 
+
+statistically significant. 1098
