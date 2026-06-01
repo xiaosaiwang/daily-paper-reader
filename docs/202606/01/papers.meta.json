@@ -1,0 +1,69 @@
+{
+  "label": "2026-06-01",
+  "date": "2026-06-01",
+  "generated_at": "2026-06-01T22:54:36",
+  "count": 4,
+  "papers": [
+    {
+      "paper_id": "202606/01/biorxiv-10-64898-2026-05-26-727979-v1-reconstructing-the-hyphosphere-using-a-hyphal-release-capture-soil-microcosm",
+      "section": "deep",
+      "title_en": "Reconstructing the hyphosphere using a hyphal release-capture soil microcosm",
+      "authors": "Abeysinghe, G., Nagy, E., Wagner, T., Parunandi, S., Santos, J., Bagavathiannan, M., Antony-Babu, S.",
+      "date": "2026-05-27",
+      "pdf": "https://www.biorxiv.org/content/10.64898/2026.05.26.727979v1.full.pdf",
+      "score": "8.0",
+      "evidence": "构建菌丝圈土壤微宇宙，研究植物-真菌-细菌互作",
+      "tldr": "真菌菌丝在土壤中形成菌丝圈，与细菌密切互作但实验获取困难。本研究设计土壤模拟微宇宙，整合田间土壤、微生物接种、棉花苗和空间限定的尖孢镰刀菌接种装置，实现菌丝延伸入土壤并回收费菌丝界面。16S rRNA分析显示菌丝圈细菌群落丰富度和均匀度显著低于土壤和根际，且组成高度特异。该可重复平台为研究植物关联土壤中菌丝圈微生物组提供了生态真实的实验工具。",
+      "tags": "query:ag-bg-div",
+      "abstract_en": "Fungal hyphae form spatially confined interfaces in soil that mediate close associations with bacteria, collectively referred to as the hyphosphere. Despite its recognized ecological importance, experimental access to hyphosphere-associated microbial communities under realistic soil and plant-associated conditions has remained limited. Here, we present a soil-mimetic microcosm that enables controlled reconstruction and recovery of hyphosphere bacterial communities embedded within plant-associated soil. The system integrates field-derived soil, a native soil microbial inoculum, living cotton seedlings, and a spatially constrained fungal inoculum housed within sterile cell-strainer assemblies, permitting hyphal extension into soil while preserving a recoverable fungal-soil boundary. Using the soil-borne plant pathogen Fusarium oxysporum f. sp. vasinfectum as a model filamentous fungus, we show that the microcosm enables reproducible recovery of hypha-associated soil microaggregates containing physically attached bacterial cells. Full-length 16S rRNA profiling revealed pronounced reductions in bacterial richness and evenness in hyphosphere samples relative to bulk and rhizosphere soils, consistent with recruitment of a restricted subset of the surrounding microbiota. Ordination analyses demonstrated clear compositional separation between soil and hyphosphere compartments, with convergence of hypha-associated communities across bulk and rhizosphere contexts. Phylogenetic turnover analyses indicated phylogenetic structuring, whereas taxonomic analyses identified a conserved set of bacterial genera consistently associated with hyphae alongside compartment-specific taxa influenced by soil and plant context. Together, these findings establish the novel hyphal release-and-capture microcosm as a reproducible, ecologically grounded platform for studying hyphosphere-associated bacterial communities in plant-associated soils.",
+      "source": "biorxiv",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "paper_id": "202606/01/biorxiv-10-1101-2025-07-04-663154-v2-genomic-functional-architecture-predicts-ecological-adaptation-across-a-highly-diverse-bacterial-phylum",
+      "section": "quick",
+      "title_en": "Genomic functional architecture predicts ecological adaptation across a highly diverse bacterial phylum",
+      "authors": "HUETE, S. G., COULLIN, K., CHAPEAUBLANC, E., TORCHET, R., BENAROUDJ, N., PICARDEAU, M.",
+      "date": "2026-05-28",
+      "pdf": "https://www.biorxiv.org/content/10.1101/2025.07.04.663154v2.full.pdf",
+      "score": "6.0",
+      "evidence": "基因组功能架构预测生态适应",
+      "tldr": "螺旋体门是古老细菌门，生态多样性极广，包括重要病原体和自由生活种。本研究通过对所有可培养螺旋体物种的基因组进行系统分析，发现功能基因组架构（即各生物过程分配编码容量的比例）与生态生活方式显著相关，且这种关联独立于系统发育关系。系统发育基因组学重新定根，将短螺旋体属（Brachyspira）确定为最早分支，并证明螺旋形态是祖先特征，仅在单一进化转换中丢失。祖先基因组重建揭示共同祖先为运动、异养、螺旋形细菌，具有先前未知的代谢和结构特征。这些结果提供了螺旋体门的功能整合框架，展示了基因组架构可用于追踪广泛细菌门的生态多样化。",
+      "tags": "query:ag-bg-div",
+      "abstract_en": "Understanding the genetic basis of ecological adaptation is a fundamental challenge of evolutionary biology. Spirochaetes are an ancient bacterial phylum of exceptional ecological breadth, encompassing major human pathogens such as the causative agents of syphilis, Lyme disease, and leptospirosis, alongside free-living species from contrasting environments and recently described species that lack the canonical spiral morphology of the phylum. Here, using a curated dataset of genomes representing all cultivable spirochete species, we show that functional genome architecture (defined as the proportional allocation of coding capacity across biological processes) correlates with ecological lifestyle and phenotypic traits in Spirochaetes independently of phylogenetic relationships, with host-dependent lineages from distinct evolutionary origins converging on shared functional profiles. Phylum-wide phylogenomic analyses identified Brachyspira as the earliest-diverging lineage, revisiting the evolutionary rooting of the phylum, and establishing that the spiral morphology is ancestral and was lost in a single evolutionary transition also associated with coordinated functional changes. Lastly, ancestral genome reconstruction uncovers the common ancestor as a motile, heterotrophic, and spiral-shaped bacterium, with metabolic and structural features not previously described. Together, these results provide an integrated and functional framework for Spirochaetes, illustrating how genome architecture can be used to track the ecological diversification of a widespread bacterial phylum.",
+      "source": "biorxiv",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "paper_id": "202606/01/biorxiv-10-64898-2026-02-21-707176-v2-deciphering-the-microbial-architecture-of-pesticide-and-antibiotics-biodegradation",
+      "section": "quick",
+      "title_en": "Deciphering the microbial architecture of pesticide and antibiotics biodegradation",
+      "authors": "Thieffry, S., Aubert, J., Beguet, J., Devers-Lamrani, M., Martin-Laurent, F., PESCE, S., Romdhane, S., Rouard, N., Siol, M., Spor, A.",
+      "date": "2026-06-01",
+      "pdf": "https://www.biorxiv.org/content/10.64898/2026.02.21.707176v2.full.pdf",
+      "score": "6.0",
+      "evidence": "研究微生物功能多样性对降解功能的预测作用，与地下功能多样性效应相关",
+      "tldr": "微生物群落的降解功能预测是生物修复的关键。本研究通过自上而下方法获得农药和抗生素降解群落的组成变体，尝试用多样性指数和功能基因丰度作为降解能力的代理，但结果不稳定。进而借用基因组选择的统计模型，基于群落组成预测矿化潜力，发现使用物种存在/缺失数据比相对丰度更有效，随机森林模型也能筛选重要预测因子。最终提出借鉴基因型-表型映射的概念，构建降解功能的微生物架构，为理解群落水平功能提供新视角。",
+      "tags": "query:ag-bg-div",
+      "abstract_en": "Understanding emerging functions at the scale of a bacterial community is a major challenge in microbial ecology and could lead up to promising tools for engineering microbial communities, for example in bioremediation. Here, through a top-down approach we obtained compositional variants of pesticide and antibiotics-degrading communities and further investigated communities features associated with their degradation abilities. We first tested whether diversity index or functional genes abundance could reliably be used as a proxy for this function, and obtained encouraging, albeit variable results. Further, through the use of statistical tools borrowed from the genomic selection literature, we were able to derive accurate prediction of the mineralisation potential of a bacterial community, based on its composition. However, the parallel between genotype-phenotype and community composition-mineralisation potential suffers a crucial caveat: bacterial abundances vary on a much wider scale than allele dosage at a given locus and are prone to change over time (particularly at the mineralisation scale). Here we observed that using presence/absence data instead of relative abundance can overcome these limitations and provide a clearer functional signal for mineralisation prediction through linear regression models. Random forest can also intrinsically deal with microbial data without transformation and select for significant predictors. We suggest drawing inspiration from the tools and concepts used in genotype-phenotype mapping to elucidate microbial functions at the community level while keeping in mind the significant differences between these two fields. This parallel is here exemplified by the concept of microbial architecture of degrading functions, akin to the genetic architecture of phenotypic traits.",
+      "source": "biorxiv",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "paper_id": "202606/01/biorxiv-10-64898-2026-05-22-727091-v1-beyond-the-annotated-protein-foundation-models-enable-robust-prediction-of-microbial-root-competence",
+      "section": "quick",
+      "title_en": "Beyond the annotated: protein foundation models enable robust prediction of microbial root competence",
+      "authors": "Matyskova, P., Selten, G., Pieterse, C. M., Abeln, S., de Jonge, R.",
+      "date": "2026-05-26",
+      "pdf": "https://www.biorxiv.org/content/10.64898/2026.05.22.727091v1.full.pdf",
+      "score": "6.0",
+      "evidence": "蛋白质基础模型预测微生物根系定殖能力，这是一个关键的地下功能性状",
+      "tldr": "根能力是土壤细菌定殖植物根的关键生态性状。传统基于注释或序列聚类的方法受限于注释偏见和特征维度过高，难以跨进化远缘细菌泛化。本研究对比了蛋白/ DNA基础模型（ESM-2、Bacformer、DNABERT-S）与传统方法，发现只有预训练蛋白序列表示在测试菌属于训练集完全未见门类时仍保持预测性能，其中Bacformer因整合基因组上下文最强。特征归因揭示TonB/SusD受体、小分子转运蛋白及未注释蛋白对根能力重要。",
+      "tags": "query:ag-bg-div",
+      "abstract_en": "BackgroundRoot competence, the ability of soil bacteria to establish and grow on plant roots, is a key ecological trait influencing plant nutrition, growth, and health. However, identifying genomic determinants of root competence across bacteria remains challenging, in part because model generalisability depends strongly on how genomes are represented. Traditional approaches based on curated annotations are incomplete and biased toward well-characterised organisms and functions, limiting generalisation. Sequence-similarity clustering improves coverage but yields high-dimensional features relative to dataset size, hindering training. Foundation models offer an alternative by learning com-pact representations without relying on prior annotation.\n\nResultsHere, we compared pretrained genome representations from protein and DNA foundation models (ESM-2, Bacformer, DNABERT-S) with annotation- and clustering-based features (KEGG orthology, OrthoFinder protein families) for predicting root competence using synthetic microbial community data from Arabidop-sis thaliana and assessed generalisability across bacteria. When training and test sets contained taxonomically related bacteria, most approaches performed similarly. However, when test bacteria belonged to phyla entirely absent from training, reflecting high evolutionary separation across all levels of bacterial classification, only pretrained protein representations retained predictive performance. Bacformer-derived representations, which incorporate genomic context, supported the strongest generalisation, suggesting that conserved genomic organisation contributes to predicting root competence. Feature attribution quantifying protein contributions to model decisions linked root competence to TonB/SusD-dependent receptors, small-molecule transporters, and unannotated proteins with conserved regulatory motifs and homology to carbon starvation-response loci.\n\nConclusionsProtein foundation models support generalisation across evolutionarily distant bacteria and identify genomic determinants of root competence, including unannotated proteins.",
+      "source": "biorxiv",
+      "selection_source": "fresh_fetch"
+    }
+  ],
+  "errors": []
+}

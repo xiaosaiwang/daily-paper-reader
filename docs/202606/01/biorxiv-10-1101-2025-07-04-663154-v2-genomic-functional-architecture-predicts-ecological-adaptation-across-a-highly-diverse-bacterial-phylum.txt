@@ -1,0 +1,2294 @@
+Title: 76780782
+
+URL Source: https://www.biorxiv.org/content/10.1101/2025.07.04.663154v2.full.pdf
+
+Number of Pages: 44
+
+Markdown Content:
+1
+
+# Genomic functional architecture predicts ecological adaptation 1
+
+# across a highly diverse bacterial phylum 2
+
+AUTHORS 3
+
+Samuel G. Huete 1$*, Killian Coullin 1, Elodie Chapeaublanc 2,3, Rachel Torchet 2,3 , Nadia 4
+
+Benaroudj 1, Mathieu Picardeau 1*5
+
+6 
+
+> 1
+
+Biology of Spirochetes Unit, Institut Pasteur, Université Paris Cité, CNRS UMR 6047, F -75015 Paris, 7
+
+France 8 
+
+> $
+
+Current address: Department of Infectious Diseases , Ramón y Cajal Health Research Institute 9
+
+(IRYCIS) , Ramón y Cajal  University Hospital , Carretera de Colmenar Viejo, Km 9.100, 28034, Madrid, 10 
+
+Spain 11  
+
+> 2
+
+Bioinformatics and Biostatistics Hub, Institut Pasteur, Universite Paris Cite, F -75015 , Paris, France 12  
+
+> 3
+
+Scientific Information Systems and Technical Expertise division , Institut Pasteur, Universite Paris 13 
+
+Cite, F -75015 , Paris, France 14 
+
+* Co -co rresponding authors : samuel.garcia@salud.madrid.org  ; mathieu.picardeau@pasteur.fr 15 
+
+Contributing authors : killian.coullin@pasteur.fr , elodie.chapeaublanc@pasteur.fr ,16 
+
+rachel.torchet@pasteur.fr , nadia.benaroudj@pasteur.fr 17 
+
+> .CC-BY 4.0 International license made available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is The copyright holder for this preprint this version posted May 28, 2026. ;https://doi.org/10.1101/2025.07.04.663154 doi: bioRxiv preprint
+
+2
+
+ABSTRACT 18 
+
+Understanding the genetic basis of ecological adaptation is a fundamental challenge of evolutionary 19 
+
+biology . Spirochaetes are an ancient bacterial phylum of exceptional ecological breadth, 20 
+
+encompassing major human pathogens such as the causative agents of syphilis, Lyme disease, and 21 
+
+leptospirosis, alongside free -living species from contrasting environments and recently described 22 
+
+spe cies that lack the canonical spiral morphology of the phylum . Here, using a curated dataset of 23 
+
+genomes representing all cultivable spirochete species, we show that functional genome architecture 24 
+
+(defined as the proportional allocation of coding capacity ac ross biological processes ) correlates with 25 
+
+ecological lifestyle and phenotypic traits in Spirochaetes independently of phylogenetic relationships ,26 
+
+with h ost -dependent lineages from distinct evolutionary origins converg ing on shared functional 27 
+
+profiles . Phylum -wide p hylogenomic analyses identif ied Brachyspira as the earliest -diverging lineage, 28 
+
+revis iting the evolutionary rooting of the phylum, and establish ing that the spiral morphology is 29 
+
+ancestral and was lost in a single evolutionary transition also as sociated with coordinated functional 30 
+
+changes. Lastly, a ncestral genome reconstruction uncovers the common ancestor as a motile, 31 
+
+heterotrophic, and spiral -shaped bacteri um , with metabolic and structural features not previously 32 
+
+described. Together, these res ults provide an integrated and functional framework for Spirochaetes ,33 
+
+illustrating how genome architecture can be used to track the ecological diversification of a34 
+
+widespread bacterial phylum. 35 
+
+Keywords: Spiroch aetes , evolution, ecology , phylogenomics, adaptation, motility , ancestral 36 
+
+> .CC-BY 4.0 International license made available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is The copyright holder for this preprint this version posted May 28, 2026. ;https://doi.org/10.1101/2025.07.04.663154 doi: bioRxiv preprint
+
+3
+
+ARTICLE TEXT 37 
+
+INTRODUCTION 38 
+
+Spirochaetes (or Spirochaetota ) form a coherent and ancient phylogenetic phylum  (1)  of exceptional 39 
+
+ecological breadth, whose diversity of lifestyles offers a n opportunity  for understanding how closely 40 
+
+related orga nisms adapt to radically different environments . The phylum  Spirochaetes  comprises a 41 
+
+single class,  Spirochaetia , and includes four orders:  Brachyspirales , Brevinematales , Leptospirales ,42 
+
+and  Spirochaetales . The order  Spirochaetales  is the largest, containin g five families and numerous 43 
+
+genera, such as  Borrelia , Treponema , or  Spirochaeta  (2) . Spirochaetes  are widely distributed across 44 
+
+diverse environments, occupying a broad range of ecological niches from free -living environmental 45 
+
+species to host -associated lineages. Despite their common evolutionary origin, t hey inhabit highly 46 
+
+contrasting environments, including highly alkaline lakes  (3) , the deep subsurface  (4) , or the gut 47 
+
+microbiome  (5,6) . Members of this phylum display substantial metabolic diversity, existing as 48 
+
+anaerobes, facultative anaerobes, microaerophiles, or aerobes . Several genera are of major medical 49 
+
+and ecological importance, encompassing both pathogenic and non -pathogenic representatives. 50 
+
+Other genera include symbiotic  spirochetes  inhabiting t he hindguts of termites and wood -eating 51 
+
+cockroaches  (7) . Among the  human  pathogens,  Borrelia  spp. include the agents of Lyme disease ( B. 52 
+
+bu rgdorferi ), one of the most prevalent vector -borne infections in North America and Europe, affecting 53 
+
+several hundred thousand people annually  (8 –10) . Treponema  spp. include  T. pallidum , the causative 54 
+
+agent of  over  50  million cases of syphilis worldwide  annually  (11) . Leptospirosis is a re -emergent 55 
+
+zoonotic disease caused by pathogenic  Leptospira  species and accounts for approximately 1 million 56 
+
+severe cases and 60,000 deaths every year  (12) . Lastly, novel taxa , some  uncultivated , are being 57 
+
+described, but their significance remains to be elucidated  (1 3) .58 
+
+Until recently, all spirochetes were believed to share a specific spiral -shaped morphology and utilize 59 
+
+endoflagellar systems for motility  (14) . However,  the discovery of  new  coccoid, non -spiral 60 
+
+Spirochaetes  species that lack the helical  or spiral  morphology traditionally considered  a defining 61 
+
+feature of the phylum  challenged long -standing paradigms by suggesting that key  spirochete  traits 62 
+
+such as morphology and motility may  be evolutionarily labile  (5,15 –19) . Yet  these findings  remain 63 
+
+> .CC-BY 4.0 International license made available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is The copyright holder for this preprint this version posted May 28, 2026. ;https://doi.org/10.1101/2025.07.04.663154 doi: bioRxiv preprint
+
+4
+
+fragmented across a limited number of lineages and have not been placed w ithin a phylum -wide 64 
+
+evolutionary context.  Whether non -spiral spirochetes originated from a single evolutionary transition 65 
+
+or multiple independent events across the phylum  remain s unresolved . Addressing  these  and similar 66 
+
+ecological  question s is essential to understand the evolutionary origin of spirochete traits  and  requires 67 
+
+a standardized and comprehensive  phylum -wide  perspective .68 
+
+Th e diversity of lifestyles comprised within a single phylum highlights the potential of Spirochaetes as 69 
+
+a model  for  investigating how genomic variation under lies  ecological specialization.  The particular 70 
+
+combination of phylogenetic coherence and ecological diversity, provides a powerful framework to 71 
+
+investigate how closely related organisms adapt to distinct lifesty les , bridging the gap between broad 72 
+
+tree -of -life comparisons and genus -level studies  (20) . Import antly, d espite their clinical relevance and 73 
+
+ecological diversity, key aspects of spirochete biology remain underexplored . Spirochaetes  are 74 
+
+classically  difficult to study due to their fastidious growth , recalcitrance to genetic manipulation and 75 
+
+complex genomes.  B. burgdorferi  possesses one of the most segmented bacterial genomes,  with 76 
+
+over 20 plasmids  (21) . T. pallidum  has a s mall genome of around 1.1 Mb and, until very recently,  it 77 
+
+could not be continuously cultured  in vitro , dramatically  hamper ing  progress in genetic manipulation 78 
+
+(22,23) . Anot her  characteristic  feature is the presence of two circular chromosomes in  Leptospira  spp. 79 
+
+(24) .80 
+
+More generally, a central questio n is to what extent genomic architecture predicts ecological 81 
+
+strategies and phenotypic  diversification  across evolutionary scales . While phylogenetic relationships 82 
+
+provide a framework for evolutionary history, they do not fully capture functional and ecological 83 
+
+diversification, particularly in lineages that have undergone rapid adaptation or gene content shifts. 84 
+
+Therefore, u nderstan ding  how genome composition  maps ont o ecological specialization  within large 85 
+
+bacterial lineages is central to  interpreting  evolutionary transitions in  microb iology , and the 86 
+
+Spirochaetes  phylum  provides an exceptional system to address this question directl y.87 
+
+Since the last phylogenetic analysis of the Spirochaetes phylum more than a decade ago (2) , over 88 
+
+100 new species have been described , yet no study has systematically integrated this expanded 89 
+
+diversity in a single reference phylogenetic framework with incorporated functional genomic and trait 90 
+
+> .CC-BY 4.0 International license made available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is The copyright holder for this preprint this version posted May 28, 2026. ;https://doi.org/10.1101/2025.07.04.663154 doi: bioRxiv preprint
+
+5
+
+analyses . In particu lar, the extent to which functional genome composition reflects ecological 91 
+
+strategies across the phylum remains unclear. Here, we address this gap by integrating species -level 92 
+
+phylogenomic reconstruction with comprehensive in -depth functional genome analys es across an 93 
+
+exhaustive curated dataset of Spirochaetes species. We identify lineage -specific functional signatures 94 
+
+associated with major ecological lifestyles and show that functional genome composition captures 95 
+
+phenotypic and ecological differentiation beyond phylogenetic relationships, revealing convergent 96 
+
+ecological strategies across the phylum . Within this framework, we resolve the evolutionary origin of 97 
+
+non -spiral spirochetes, demonstrating that the loss of spiral morphology is consistent with a sing le 98 
+
+evolutionary transition associated with coordinated functional changes. Finally, reconstruction of the 99 
+
+Last Spirochaetal Common Ancestor (LSCA) features pr ovides insights into the ancestral genomic 100 
+
+traits triggering the latter diversification of the phy lum. Together, our results establish a unified 101 
+
+framework linking genome architecture to phenotypic and ecological transitions across bacterial 102 
+
+lineages .103 
+
+> .CC-BY 4.0 International license made available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is The copyright holder for this preprint this version posted May 28, 2026. ;https://doi.org/10.1101/2025.07.04.663154 doi: bioRxiv preprint
+
+6
+
+RESULTS 104 
+
+Main features of the genomes of Spirochaetes 105 
+
+To construct a comprehensive database of cultured species within the phylum , we selected 17 2106 
+
+genomes that ensured both representativeness and highest quality for each species. These genomes 107 
+
+are a ll, except for Borrreliella chilensis and Longinema margulisiae , RefSeq curated genomes , with 108 
+
+an average N50 (t he contig length above which 50% of the assembly is contained ) of 1.37 Mb ,109 
+
+indicating high assembly quality . Among them, 71 are affiliated with Leptospiraceae , 39 with 110 
+
+Borreliaceae , 28 with Treponemataceae , 9 with Brachyspiraceae , 3 with Brevinemataceae , and 22 111 
+
+have unclear taxonomic assignments within Spirochaet ia (Table S1). In the phylum Spirochaetes ,112 
+
+genome size s var y widely, ranging from 0.9 M b for Borreliella garinii (812 protein s) to 4.9 M b for 113 
+
+Spirochaeta isovalerica (4318 proteins). Generally, the largest genomes belong to Leptospiraceae 114 
+
+while the smallest genomes belong to Borreliaceae , which is consistent with their vector -borne , host -115 
+
+dependent parasit ic lifestyle (Fig 1 A, Table S1 ). Additionally, GC percentage varies significantly ,116 
+
+spanning from 24.1% for Brachyspira intermedia to 60.9 % for Spirochaeta thermophila . Genomes 117 
+
+from Brachyspiraceae and Borreliaceae exhibit the lowest GC content , while Alkalispirochaeta spp. 118 
+
+posses s the highest GC content s (Fig 1B , Table S1 ).119 
+
+A revisited phylogenetic framework for Spirochaetes 120 
+
+To study the evolution of Spirochaetes , we inferred orthologs using OMA (Orthologous M atrix ), a121 
+
+validated high -accuracy orthology inference framework (25,26) , and retrieved 34124 ortholog groups 122 
+
+(OGs) . Of these , only 1.47% (N=503 ) were shared by at least 50% of the species (N=86) , highlighting 123 
+
+the low conservation of core genes in the phylum (Fig S 1). Notably , 50% of the species captured 91% 124 
+
+of the reference pangenome (N=30906 OGs) , illustrating th e wide genetic diversity found within th is 125 
+
+phylum (Fig S 1). From these OGs , 140 highly conserved soft -core genome markers were selected 126 
+
+for phylogenetic inference . The resulting maximum -likelihood (ML) tree is well resolved under both 127 
+
+homogeneous and heterogeneous models of evolution ( Fig 2, Fig S2 -S3). The topology of the 128 
+
+unrooted phylogeny under both models was identical except for the placement of the three 129 
+
+> .CC-BY 4.0 International license made available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is The copyright holder for this preprint this version posted May 28, 2026. ;https://doi.org/10.1101/2025.07.04.663154 doi: bioRxiv preprint
+
+7
+
+Entomospira  species  (Fig S 2).  In addition, we performed the same process using  Lindowbacteria , the 130 
+
+closest phylum to  Spirochaetes  (27) , as a root for  both the OG inference and the phylogeny.  This time 131 
+
+no discrepancies were observed between  homogeneous and heterogeneous models  (Fig S2 ). When 132 
+
+comparing with the  unrooted tree, o nly the pair  L. stimsonii  and  L. ainazelensis , two close ly 133 
+
+phylogenetically related  Leptospira  species of the  P1  sub clade , showed different placement  (Fig S 3).134 
+
+Lastly, a s an additional control of the topology, we  performed  a coalescence -based method  that 135 
+
+handles  incomplete lineage sorting  using  the  same  soft -core markers.  We found more differences 136 
+
+between  tree  topologies when comparing with this method, the  major  being the placement of the  non -137 
+
+spiral  Spirochaetes  species  (Bullifex porci , Parasphaerochaeta  coccoides , Sphaerochaeta 138 
+
+pleomorpha , Sphaerochaeta globosa  and  Sphaerochaeta halotolerans ) ( Fig S 4).  This  difference 139 
+
+correlates with  the incomplete sorting of  some genes in this clade ( Fig  S4).  However, in  all 140 
+
+phylogenies , the non -spiral  Spirochaetes  form  a monophyletic clade , thus  providing the first robust 141 
+
+phylum -wide  evidence that the spiral shape is ancestral  to this phylum  and was lost only once  dur in g142 
+
+the evolution of  Spirochaetes  (Fig  S2-S4 ). 143 
+
+We thus concluded that the tree topology that best reflects the evolution of the phylum was that 144 
+
+obtained under the rooted heterogeneous model ( Fig 2). Contrary to previous studies that used more 145 
+
+distant phyla to root the phylogeny (2) , our results show that Spirochaetes separate in two large clades 146 
+
+with the first including Brachyspira species and the second including the rest of Spirochaetes (Fig 2).147 
+
+In this phylogeny, the genus Brachyspira is the closest to the root, forming a monophyletic clade . The 148 
+
+three sequenced species within Brevinematales make a monophyletic clade where Brevinema 149 
+
+andersonii is the longest branch in that clade. Although Brachyspira and Brevinema tales lineages are 150 
+
+only re presented by a limited number of genomes, their placement was consistent across all 151 
+
+reconstructions and evolutionary models (Fig S 2-S4 ) suggesting a robust evolutionary signal, 152 
+
+although further sampling may help refine their exact phylogenetic placement. Similarly, the three only 153 
+
+sequenced species within Entomospira make a monophyletic clade with a long separation from other 154 
+
+Spirochaetia species ( Fig 2). 155 
+
+> .CC-BY 4.0 International license made available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is The copyright holder for this preprint this version posted May 28, 2026. ;https://doi.org/10.1101/2025.07.04.663154 doi: bioRxiv preprint
+
+8
+
+As previously described, a mong the three most represented genera in Spirochaetes (Leptospira spp., 156 
+
+Borreli aceae spp., and Treponema spp.) , Leptospira and Borrelia ceae form monophyletic clades 157 
+
+subdivided in four and two major subclades, respectively ( Fig 2) (28,29) . However, the classification 158 
+
+of the clade containing Treponema species is less clear. W hile all Treponemataceae species form a 159 
+
+monophyletic clade alongside the recently described Breznakiellaceae family (30,31) , the naming of 160 
+
+some of these genera may lead to confusion. Based on this and prior phylogenomic evidence (30,31) ,161 
+
+we pro pose reclassifying the species Treponema primitia to a different genus and renaming 162 
+
+Teretinema zuelzerae and Brucepastera parasyntroph ica to Treponema zuelzerae and Treponema 163 
+
+parasyntrophica , respectively . Such change would imply that termite gut treponemes in the 164 
+
+Breznakiellaceae family would conform a basal clade to all Treponema spp. which would then 165 
+
+separate in two main subclades ( Fig 2). To further clarify the status of T. zuelzerae and B. 166 
+
+parasyntrop hica , we performed another phylogenetic inference restricted to the Treponematales 167 
+
+clade . This increased by over 3-fold the number of phylogenetic markers (N=440 ), thus representing 168 
+
+the most robust phylogenetic inference performed to date in Treponema species . Our data confirmed 169 
+
+tha t Treponema species subdivide in two main sub clades , the first (T1) containing T. pallidum and T. 170 
+
+denticola alongside T. zuelzerae and B. parasyntrophica , among other treponemes , and the second 171 
+
+(T2) containing T. maltophilum and T. porcinum , among other treponemes ( Fig S5) (30,31) .172 
+
+Overall, our phylogenomic analyses support an evolutionary scenario where the Last Spirochaetal 173 
+
+Common Ancestor (LSCA) gave rise to two main clades, separating Brachyspira species from the 174 
+
+rest of Spirochaetes early in the phylum’s evolution. 175 
+
+Pairwise comparisons support the phylogenetic analysis 176 
+
+Pairwise comparison  analyses  using average nucleotide identity (ANIb , Fig S6 ), kmer -based 177 
+
+tetranucleotide  frequencies  (TETRA,  Fig S7 ), and  the percentage of conserved  proteins (POCP , Fig 178 
+
+2), all  showed strong concordance  with the phylogeny presented in  Fig  2. As previously described for 179 
+
+other  prokaryotes  (32) , POCP was the  most  consistent  predictor of genus -level  boundaries  within 180 
+
+Spirochaetes  (Fig S 8). All  Brachyspira  spp.  and  members of  Borrelia ceae  share  POCP  values  ≥ 50%, 181 
+
+> .CC-BY 4.0 International license made available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is The copyright holder for this preprint this version posted May 28, 2026. ;https://doi.org/10.1101/2025.07.04.663154 doi: bioRxiv preprint
+
+9
+
+supporting their classification within single, standard cohesive genera . In contrast , some Leptospira 182 
+
+spp. and Treponema spp. share lower intra -genus POCP values below 50%, reflecting a higher 183 
+
+degree of genomic and evolutionary divergence than Brachyspira and Borrelia ceae (Fig 2, Fig S8 ,184 
+
+Table S 2). 185 
+
+Within Treponema , POCP -based clustering reveals two major groups: the first including a subset of 186 
+
+the T1 sub clade (T. denticola , T. putidum , T. pedis , T. vincentii , and T. medium , Fig 2), and the second 187 
+
+including all T2 -sub clade treponemes (Fig 2, Fig S8 ). Notably, the Treponema genus falls below 188 
+
+classical genus -level classification thresholds, indicating that , as currently defined, it aggregates 189 
+
+lineages with substantially distinct genomic divergence . This inconsistency likely reflects the historical 190 
+
+expansion of the ge nus based on ecological and host -associated traits (33,34) rather than uniform 191 
+
+genomic criteria (30,31) . We determined that a pplying a uniform POCP threshold of 45% for genus 192 
+
+definition , as supported by the global distribution of values across the phylum ( Fig S8 ), would 193 
+
+therefore imply the subdivision of Treponema into multiple genera, while conversely supporting the 194 
+
+unification of currently separated taxa such as members of the Borrelia ceae family ( Fig S8 ). 195 
+
+Similar inconsistencies based on POCP clustering are observed in other lineages . Our results suggest 196 
+
+that Longinema margulisiae and Thermospira aquatica , two Brevinematales , should be renamed to 197 
+
+be included in the same genus. This app lies as well to T. primitia and Leadbettera azotonutricia (Fig 198 
+
+2, Table S2 ). Together, our phylum -wide results highlight that genus nomenclature within 199 
+
+Spirochaetes should be treated with caution since it does not accurately reflect uniform levels of 200 
+
+genomic divergence for the same taxonomic status. 201 
+
+Altogether, our results support a revised phylogenetic framework of the phylum Spirochaetes and 202 
+
+show that standardized phylum -wide genomic similarity metrics , such as POCP -based clustering ,203 
+
+may help delineate e volutionary relationships and lineage diversification more consistently than 204 
+
+current taxonomic nomenclatures . Th ese discordance s also indicate that current evolutionary 205 
+
+frameworks alone may not fully capture the functional and ecological diversification of the phylum .206 
+
+Cluster -based annotation improves functional characterization in Spirochaetes 207 
+
+> .CC-BY 4.0 International license made available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is The copyright holder for this preprint this version posted May 28, 2026. ;https://doi.org/10.1101/2025.07.04.663154 doi: bioRxiv preprint
+
+10 
+
+We next asked whether genome -wide functional information could capture ecological diversification 208 
+
+that phylogenetic and genomic similarity metrics alone do not resolve . To characterize th e functio nal 209 
+
+repertoire encoded across Spirochaetes , we annotated ortholog groups ( OGs ) using a cluster -based 210 
+
+approach with fine -grained orthology (see Methods) . This strategy leverages high -confidence OG 211 
+
+inference to propagate functional information across related sequences, thereby improving annotation 212 
+
+in divergent proteins. Functional coherence within OGs was confirmed by individually annotating each 213 
+
+sequence of the 491 most prevalent OGs (63423 proteins , 14.5% of the total dataset ), of which 96.3 %214 
+
+of the annotated sequences showed consistent COG categories with in the ir OG , thus validating our 215 
+
+approach . This method allowed us to assign a COG category to 58% ( N=19893) of all OGs , with an 216 
+
+average 70% annotation level per species (ranging 48 –87% ) (Fig S 9). In addition, we successfully 217 
+
+assigned a maximum annotation level to 83% ( N=28389 ) of all OGs , with an average 88 % annotation 218 
+
+level per species (ranging 64 –100%) (Fig S 9). 219 
+
+Interestingly, Leptospira spp. had a significantly higher number of OGs of putative eukaryotic origin 220 
+
+than other Spirochaetes , including proteins related to actin cytoskeleton dynamics, growth regulation, 221 
+
+and transcriptional control (Fig S10 , Table S3 ). Most of the se OGs were classified among the 222 
+
+functional categories of posttranslational modification (O, 14 .2 %), signal transduction mechanisms 223 
+
+(T, 12.2%) , lipid metabolism (I, 8 .8 %) or unknown function (S, 19.6% ) (Table S3 ). About a third of the 224 
+
+eukaryotic OGs (N=44, 29.7%) were assigned to the Metazoa kingdom , 20.2% ( N=30) were assigned 225 
+
+to the Fungi kingdom, and 17.6% ( N=26) were assigned to the Streptophyta phylum (Table S3 ). Other 226 
+
+represented taxonomic levels were the Aconoidasida class (3.4%, N=5) or the Opisthokonta clade 227 
+
+(1.4%, N=2). Remarkably, s ome of the assigned functions of the se OGs are typically associated with 228 
+
+eukaryotic cellular processes and are uncommon in bacterial genomes, suggesting the presence of 229 
+
+eukaryotic -like domains or proteins that may have been acquired through horizontal gene transfer or 230 
+
+evolved convergently (Table S3 ) (35,36) . Given the ability of Leptospira species to colonize diverse 231 
+
+hosts and environmental reservoirs, the presence of such eukaryotic -like functions m ay reflect 232 
+
+molecular strategies for interacting with unicellular eukaryotes , niche adaptation or modulating host 233 
+
+processes (37) .234 
+
+> .CC-BY 4.0 International license made available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is The copyright holder for this preprint this version posted May 28, 2026. ;https://doi.org/10.1101/2025.07.04.663154 doi: bioRxiv preprint
+
+11 
+
+In contrast,  Borreliaceae  spp. showed a significant enrichment in OGs of viral origin  (Fig S 10 ). These 235 
+
+elements are  consistent with the known abundance of phage -derived plasmids in  Borreliaceae  (21) 236 
+
+and suggest that viral sequence integration has been a recurrent feature  of genome evolution in this 237 
+
+lineage .238 
+
+Functional genome composition differentiates ecological and phenotypic structure in 239 
+
+Spirochaetes 240 
+
+We next analysed the proportion of each genome assigned to functional categories (COG) and 241 
+
+observed distinct functional signatures across the phylum and among different clades (Fig 3A).242 
+
+Principal component analysis (PCA) evidenced that 81 % of the total functional variability is captured 243 
+
+by two linear components (PC1 and PC2), indicating that a limited number of functional axes structure 244 
+
+genome diversity in Spirochaetes (Fig S11 ). These axes are primarily driven by variation in 245 
+
+transcription (K), signal transduction (T), energy production (C), and , additionally, secondary 246 
+
+metabo lism (Q), which contributes the most to PC2 (16.28%) ( Fig S11 ). In contrast, categories such 247 
+
+as RNA processing (A) and chromatin structure (B) contributed minimally (1.90 -1.96%) , due to thei r248 
+
+low representation across the phylum (Fig S11 , Table S4 ). However, some lineage -specific 249 
+
+enrichments were observed , like chromatin -associated functions (B) in Leptospira (13-18 %) (Fig 3A,250 
+
+Fig S11 , Table S4 ). Together, these results indicate that variation in regulatory and metabolic 251 
+
+capacities, rather than housekeeping functions, define the major axes of functional diversification in 252 
+
+Spirochaetes .253 
+
+PCA analysis of individual s revealed clusters that only partial ly recapitulate phylogenetic relationships 254 
+
+(Fig 3B). Instead, genomes tend to group according to key phenotypic and ecological traits. Host -255 
+
+dependent species, including Treponema pallidum , Treponema paraluiscuniculi , and members of the 256 
+
+Borreliaceae , formed a distinct cluster despite their phylogenetic distance, consistent with convergent 257 
+
+functional adaptation to parasitic lifestyles (Fig 3B). This clustering is not solely explained by genome 258 
+
+reduction, as species with similarly small genomes (e.g. Entomospi ra spp. or Brevinematales ) occupy 259 
+
+distinct regions of the functional space ( Fig 1A , Fig 3B). Similarly, all non -spiral Spirochaetes clustered 260 
+
+together, independently of their phylogenetic position within Spirochaetia , indicating a shared 261 
+
+> .CC-BY 4.0 International license made available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is The copyright holder for this preprint this version posted May 28, 2026. ;https://doi.org/10.1101/2025.07.04.663154 doi: bioRxiv preprint
+
+12 
+
+functional signatu re associated with th eir unique shape phenotype in the phylum . Leptospira species 262 
+
+also formed a separate cluster, reflecting their distinct functional repertoire ( Fig 3B, Table S4 ). 263 
+
+Altogether, these results show that functional genome composition captures phenotypic and 264 
+
+ecological convergence across the phylum more effectively than phylogenetic relationships alone, 265 
+
+particularly in lineages that have undergone strong ecological specialization. 266 
+
+Functional genome allocation distinguishes host -dependent lifestyles in Spirochaetes 267 
+
+Once we identified functional signatures across the Spirochaetes phylum , we characteriz ed them 268 
+
+using enrichment analysis o f functional categories . Here, enrichment is defined as the relative 269 
+
+proportion of the genome allocated to a given functional category (COG) , rather than the proportion 270 
+
+of shared genes, allowing that different species may converge on similar functional profiles through 271 
+
+different gene repertoires. 272 
+
+Host -dependent species showed a significant enrichment in categories related to translation (J) and 273 
+
+cell cycle control (D) , together with a depletion in secondary metabolism (Q), signal transduction (T) 274 
+
+and transcription (K) (Fig 4A ). In contrast , Leptospiraceae were enriched in secondary metabolism 275 
+
+(Q) and chromatin dynamics (B ) and displayed a reduced proportion of genes devoted to translation 276 
+
+(J) or carbohydrate metabolism (G) (Fig 4B ). This is consistent with previous studies showing that the 277 
+
+Leptospira genus are the only spirochetes encoding for his tone -like proteins involved in chromatin 278 
+
+organization (38) . Non -spiral Spirochaetes showed a marked depletion in motility functions (N , log 2FC 279 
+
+of -3.8 ), along side an enrichment in carbohydrate transport and metabolism (G) (Fig 4C). Notably ,280 
+
+motility -related genes were nearly absent in these genomes , indicating that the loss of the spiral 281 
+
+morphology is tightly associated with loss of motility functions (Fig 4C, Table S 4).282 
+
+To further illustrate the resolution of this functional classification , we applied the same approach within 283 
+
+the genus Leptospira . To date, no study has previously been able to distinguish a priori highly virulent 284 
+
+leptospires (P1+ group ) from non -pathogenic species of the P clade (P1 - group and P2 subclade) 285 
+
+based solely on their genomic features . Here, COG categories distribution s reveal ed clearly distinct 286 
+
+functional signatures between these groups, with all P1+ Leptospira spp. cluster ing together, while 287 
+
+> .CC-BY 4.0 International license made available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is The copyright holder for this preprint this version posted May 28, 2026. ;https://doi.org/10.1101/2025.07.04.663154 doi: bioRxiv preprint
+
+13 
+
+P1 - species  grouped  with P2 species despite belonging to  a different  phylogenetic subclade ( Fig  2,288 
+
+Fig  4D, Fig 4 E).  Notably , L. borgpetersenii  serovar Hardjo -Bovis, the most host -dependent  Leptospira 289 
+
+species  (39) , showed the most differential  functional divergence  from  other  pathogenic leptospires ,290 
+
+suggesting that  stronger  ecological specialization is  reflected in  more  pronounced  functional genome 291 
+
+allocation patterns  (Fig  4E ). 292 
+
+Overall, these results demonstrate that genome -wide functional allocation patterns , rather than gene 293 
+
+content alone, provide a robust , sensitive and generalizable signature for ecological specialization 294 
+
+and lifestyle diversification in Spirochaetes .295 
+
+Ancestral reconstruction and phylogenetic profiling uncover conserved spirochete traits 296 
+
+To further investigate the evolution of Spirochaetes , we used a conservative maximum -likelihood -297 
+
+based ancestral reconstruction approach to identify OGs present at the ancestral root of the phylum 298 
+
+(LSCA) (Fig 2). Among the 34124 OGs analyzed, 511 OGs (1.5% ) were inferred as ancestral to the 299 
+
+whole phylum , with a probability above 80% for 60% of them (N=304) (Fig S1 2, Table S5 ). The most 300 
+
+represented functions (31 %, N=159 ) were housekeeping processes such as DNA replication (L) ,301 
+
+transcription (K) and translation (J) (Fig 5).302 
+
+We also identified 23 ancestral flagellar proteins , representing a nearly complete flagellar apparatus 303 
+
+and supporting a motile LSCA ( Fig 5, Table S5 ). Notably, genes encoding the L - and P -ring 304 
+
+components (FlgH and Flg I) were consistently absent from the reconstructed ancestral genome (Fig 305 
+
+5). This absence is unlikely to reflect limited methodological sensitivity , as m ost other flagellar 306 
+
+components were recovered with high confidence (>95% for 78% of them , Table S5 ), and multiple 307 
+
+orthologs of FlgH, FlgI and FlgJ were correctly annotated across all Spirochaetes . Specifically, we 308 
+
+annotated 4 putative FlgH orthologs  (OGs 11125, 12021, 12664 and 33851), 3 FlgI orthologs (OGs 309 
+
+5854, 6973, and 12267), and 9 FlgJ orthologs (OGs 16 615, 21301, 22375, 20264, 20665, 22998, 310 
+
+24731, 27829, and 31845 ). However, their inferred absence  probabilities  at the root  ranged from  90 -311 
+
+99% for FlgH , 57 -96% for FlgI , and  80 -98% for FlgJ, indicating  very limited  support for vertical 312 
+
+inheritance from the LSCA  in most cases,  except  for a single  FlgI ortholog (OG12267 ; N=4 species, 313 
+
+> .CC-BY 4.0 International license made available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is The copyright holder for this preprint this version posted May 28, 2026. ;https://doi.org/10.1101/2025.07.04.663154 doi: bioRxiv preprint
+
+14 
+
+57.6% absence probability). This pattern is  also  consistent with the  revisited  phylogenetic placement 314 
+
+of early -branching lineages such a s Brachyspira  and  Brevinematales , suggesting  that the LSCA may 315 
+
+have lacked  flagellar structures traversing the peptidoglycan  (Fig  2). Supporting this, domain 316 
+
+annotation  identified  that all  FlgJ  orthologs lacked the muramidase domain required for peptidoglycan 317 
+
+penetration in externally flagellated systems. Together, these observations are consistent with a 318 
+
+periplasmic, endoflagellar configuration in the LSCA, although alternative evolutionary sce narios 319 
+
+cannot be excluded , especially  for components with weaker support  (Fig  5, Table S5 ).320 
+
+In addition to these ancestral functions, we recovered genes involved in cell wall biogenesis , including 321 
+
+peptidoglycan production ( murABCDEFGJ , mraY ), enzymes of lipid A biosynthesis (lpxAB , lgt , kdsA ,322 
+
+htrB ), components of the Maintenance of Lipid Assymetry pathway (mlaDEF ), and a homolog of the 323 
+
+LPS permease LptG , most with probabilities above 80 -90% ( Fig 5). Cytoskeletal proteins associated 324 
+
+with either membrane or cell curvature (mreB , ccmA ) were also present with high probabilit y (>98%) ,325 
+
+consistent with a putatively s piral -shaped ancestor (40,41) . Genes involved in metabolic pathways, 326 
+
+such as glycolysis, TCA cycle , and the re spiratory chain, further indicate that the LSCA was a 327 
+
+heterotrophic bacterium capable of central carbon metabolism ( Fig 5). Finally , we identified genes 328 
+
+encoding oxidative ( sod , tpx , trxAB ) and proteotoxic ( dnaKJ , groEL , clpB ) stress -response factor s,329 
+
+together with two heme -related enzymes ( hemNH ). Together, these findings indicate that the LSCA 330 
+
+combined a conserved housekeeping core with features consistent with an environmentally versatile, 331 
+
+heterotrophic, motile, and likely spiral -shaped bacterium. 332 
+
+To complement this ancestral reconstruction, we generated a comprehensively annotated ortholog 333 
+
+database that is made available to the community interested in spirochete research in the site 334 
+
+spirochase.pasteu r.cloud . This website allow s the community to search for any ortholog of interest ,335 
+
+explore its phylogenetic profile on the phylum , and extract its available functional information . To 336 
+
+illustrate the combined versatility of these datasets, we used phylogene tic profiling to generate 337 
+
+functional predictions over previously uncharacterized genes. We search ed for genes conserved in 338 
+
+most spirochetes but absent from the non -spiral lineages. As expected, most candidate genes 339 
+
+identified by this approach were motility -related, confirming the internal consistency of the strategy .340 
+
+> .CC-BY 4.0 International license made available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is The copyright holder for this preprint this version posted May 28, 2026. ;https://doi.org/10.1101/2025.07.04.663154 doi: bioRxiv preprint
+
+15 
+
+Beyond these, several highly conserved gene families of unknown function also emerged from this 341 
+
+analysis, representing interesting candidates for future experimental characterization (Fig S1 3, Table 342 
+
+S6 ). These results illustrate how comparative functional genomics can generate testable hypotheses 343 
+
+about conserved but functionally uncharacterized spirochete traits , with the full list of candidates 344 
+
+available in Table S6 and through the  spirochase.pasteur.cloud  resource .345 
+
+Overall , the analyses here presented demonstrate that integrating phylogenomic reconstruction with 346 
+
+phylum -wide functional genome profiling provides a powerful framework for li nking genome 347 
+
+architecture to ecological transitions in bacteria .348 
+
+DISCUSSION 349 
+
+In this study, we showed that functional genome architecture provides a robust and generalizable lens 350 
+
+for interpreting ecological diversification in bacteria , a finding demonstrated here across the full 351 
+
+ecological breadth of the very diverse Spirochaetes phylum . We determined that the proportional 352 
+
+allocation of coding capacities across functional biological processes helps predict ecological 353 
+
+lifestyles and phe notypic diversificatio n in Spirochaetes independently of phylogenetic relationships. 354 
+
+Despite syphilis, Lyme disease and leptospirosis being emerging or re -emerging diseases, little is 355 
+
+known about the biology of spirochetes compared to model bacteria. Spirochete research in both 356 
+
+pathogenic and non -pathogenic species has traditionally been hampered by fastidious growth, limited 357 
+
+genetic tools and incomplete genome annotations, complicating the progress of hypothesis -driven 358 
+
+studies following omics analyses (42,43) . To address this, we significantly improved the functional 359 
+
+annotation of spirochaetal proteins by applying a cluster -based approach, achieving an average 70% 360 
+
+annotation level pe r species and nearly 90% annotation for some genomes. This represents a361 
+
+significant improvement (∼15%) over previous studies, w here, for example, only 44% of the L. 362 
+
+interrogans genome was annotated, compared to 6 4% in our analysis (24,44) . In addition, we 363 
+
+assigned putative origin (bacterial, eukaryotic, viral or archaeal) and closest ortholog for 60% 364 
+
+(N=8496) of genes of unknown function (S) , reducing the proportion of orphan genes in Spirochaetes 365 
+
+to just 16% (N=5735) , a significant advancement for the field. 366 
+
+> .CC-BY 4.0 International license made available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is The copyright holder for this preprint this version posted May 28, 2026. ;https://doi.org/10.1101/2025.07.04.663154 doi: bioRxiv preprint
+
+16 
+
+The improved annotation coverage enabled the detection of potential lineage -specific genomic 367 
+
+acquisitions with ecological significan ce. Leptospira spp. showed a significantly higher number of 368 
+
+ortholog groups of eukaryotic origin compared to other Spirochaetes , including proteins associated 369 
+
+with actin cytoskeleton dynamics or growth regulation , functions typically absent or rare in bact erial 370 
+
+genomes. While this pattern may partly reflect annotation bias, whereby divergent bacterial 371 
+
+sequences are preferentially assigned to eukaryotic homologs due to database composition , the 372 
+
+consistent enrichment observed in all Leptospira spp. also supports the presence of bona fide 373 
+
+eukaryotic -like genes. Although the frequenc y and directionality of inter -kingdom gene transfers is 374 
+
+often difficult to resolve, horizontal gene exchange between eukaryotes and bacteria has been 375 
+
+documented in se veral host -associated microorganisms (35,45) , raising the possibility that such 376 
+
+events of acquisition contributed to the evolution of this lineage . Leptospira spp. were previously 377 
+
+estimated to appear as environmental bacteria (46) . Therefore , they may have exc hanged genetic 378 
+
+material over long periods in the soils, which harbour a remarkably diverse array of eukaryotes, 379 
+
+ranging from plants and fungi to protis ts and animals, encompassing multiple major lineages across 380 
+
+the eukaryotic tree. Pathogenic leptospires subsequently emerged with the rise of mammals and, over 381 
+
+long periods, adapted in some cases to animal reservoirs. The ir co -evolution with eukaryotes over 382 
+
+hundreds of millions of years may be reflected here in this enrichment of eukaryotic -like proteins. 383 
+
+Alt hough the ecological context differs , in Legionella species, horizontal gene transfer with their 384 
+
+natural hosts (free -living protozoa ) has shaped their genomes, which contain a high number of genes 385 
+
+encoding proteins with eukaryotic domains, reflecting the long -term co -evolution of these 386 
+
+microorganisms (47) . Whether these eukaryotic acquisitions in Leptospira spp. were retained through 387 
+
+selective advantage in host interaction, niche adaptation, or modulation of eukaryotic cellular 388 
+
+processes remains to be determined, but they may represent yet another distinctive feature of 389 
+
+Leptospira genome evolution relative to the rest of the phylum (36) . Conversely, Borreliaceae showed 390 
+
+a significant enrichment in ortholog groups of viral origin, consistent with the abundance of phage -391 
+
+derived plasmids in these species (21) . These elements are known to contribute to genome plasticity 392 
+
+and have been implicated in host adaptation and immune evasion in Borrelia species (48 –50) ,393 
+
+suggesting that viral genetic material has been repeatedly selected as an adaptive resource during 394 
+
+> .CC-BY 4.0 International license made available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is The copyright holder for this preprint this version posted May 28, 2026. ;https://doi.org/10.1101/2025.07.04.663154 doi: bioRxiv preprint
+
+17 
+
+the evolution of this lineage. Together, these findings indicate that horizontal acquisition of foreign 395 
+
+genetic material has contributed to shaping the distinct genomic identities of these lineages. 396 
+
+In this study we provide a robust comprehensive and updated phylogeny for the Spirochaetes phylum 397 
+
+supported by multiple comparative genomic methods . This revisited phylogeny redefines the 398 
+
+evolutionary rooting of the phylum relative to previous studies , likely reflecting the increased species 399 
+
+coverage and more adequate selection of the out group (Fig 2) (2) , and provides a basis for revising 400 
+
+its taxonomy. We propose a 45% POCP threshold for genus delineation within Spirochaetes , which 401 
+
+would resolve a long -standing controversy over genus classification (51 –54) . Applying this threshold 402 
+
+consistently reveals that the Treponema genus, as currently defined, aggregates lineages with 403 
+
+substantially different levels of genomic divergence, while conversely supporting the unification of 404 
+
+current ly separated taxa within Borreliaceae . We therefore strongly recommend either standardizing 405 
+
+genus nomenclature across the phylum under objective genomic criteria or, alternatively, explicitly 406 
+
+recognizing that the rank “genus” within Spirochaetes re flects varying levels of species divergence 407 
+
+depending on the lineage . For example, we show that the Leptospira genus encompasses greater 408 
+
+diversity than the Borreliaceae family (which includes the genera Borrelia and Borreliella ). 409 
+
+These inconsistencies highlight ed the limits of phylogenetic and genomic similarity metrics alone in 410 
+
+capturing the observed functional and ecological diversification within Spirochaetes . Here, we 411 
+
+demonstrat e that functional genome composition correlates with ecological lifestyles , reveali ng 412 
+
+convergent functional adaptation between distant lineages , consistent with the response to parallel 413 
+
+selective pressures . Indeed, we show that genome -wide functional allocation patterns , defined as the 414 
+
+proportional coding capacity devoted to each functional category , correlate with ecological lifestyle 415 
+
+and phenotypic traits across Spirochaetes , independently of gene content or phylogenetic 416 
+
+relatedness . Host -dependent lineages converge on a shared functional profile characterized by 417 
+
+enrichment in translation and cell cycle control categories and depletion in transcription and 418 
+
+secondary metabolism, despite their phylogenetic distance. The simplest interpretation is that 419 
+
+adaptation to obligat e host dependence imposes common constraints on coding functional allocation, 420 
+
+regardless of the ancestral genomic background . Consistently, we showed that host -dependent 421 
+
+> .CC-BY 4.0 International license made available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is The copyright holder for this preprint this version posted May 28, 2026. ;https://doi.org/10.1101/2025.07.04.663154 doi: bioRxiv preprint
+
+18 
+
+species allocate a larger fraction of their genome to translation and a reduced one to transcription. 422 
+
+This may suggest that parasitic microorganisms have shifted genome regulation towards reducing 423 
+
+transcription factors but increasing post -transcriptional regulation, as evoked by Borrelia spp. (48,55 –424 
+
+58) .425 
+
+Importantly, this functional framework also revealed finer ecological differences within the genus 426 
+
+Leptospira that had previously resisted g enomic classification . Highly virulent P1+ leptospires display 427 
+
+a distinct functional profile from non -pathogenic species of the P 1 clade . This distinction emerges 428 
+
+from functional genome allocation alone, without recourse to phenotypic data, indicating that 429 
+
+ecological specialization leaves a measurable imprint on the genom ic architecture of P1+ species that 430 
+
+existing classification approaches had not previously captured (46) . Additionally, the most host -431 
+
+dependent Leptospira species, L. borgpetersenii serovar Hardjo -Bovis, shows the most pronounced 432 
+
+functional divergence from other pathogenic leptospires . This relationship between degree of host 433 
+
+dependence and magnitude of functional divergence suggests that functional genome remodeling is 434 
+
+not a binary transition but a gradual process that evolves as ecological constraints become more 435 
+
+restrictive . Whether these functional signatures reflect a universal principle of microbial specialization 436 
+
+remains to be tested, but their predictive power is demonstrated here across the ecological diversity 437 
+
+of a phylum .438 
+
+Beyond these evolutionary insights, the annotated ortholog database generated here provides a 439 
+
+practical resource for characterizing previously uncharacterized gene families in Spirochaetes . This 440 
+
+resource , as applied here by comparing gene cons ervation patterns between spiral and non -spiral 441 
+
+lineages , offers a systematic route to identifying candidate functions among the large proportion of 442 
+
+conserved hypothetical proteins that remain uncharacterized in this phylum . Whether any of the 443 
+
+candidate families identified through this approach contribute to motility, cell shape, or other 444 
+
+spirochete -specific traits remains to be determined experimentally, but the strategy demonstrates the 445 
+
+predictive value of integrating functional and phylogenetic informa tion at the phylum scale. The full 446 
+
+annotated ortholog database is available at  spirochase.pasteur.cloud .447 
+
+> .CC-BY 4.0 International license made available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is The copyright holder for this preprint this version posted May 28, 2026. ;https://doi.org/10.1101/2025.07.04.663154 doi: bioRxiv preprint
+
+19 
+
+Lastly, r econstruction of the genome of the Last Spirochaetal Common Ancestor reveal ed a motile, 448 
+
+dide rm, heterotrophic bacterium with a nearly complete flagellar apparatus, a conserved 449 
+
+housekeeping core, and stress response systems consistent with its emergence around the Great 450 
+
+Oxidation Event (~2300 MYA) (59) . The LSCA possessed a SOD -Trx system for oxidative stress 451 
+
+resistance and two heme -related enzymes ( hemNH ), suggesting a partial heme biosynthesis capacity 452 
+
+subsequently lost in modern Borrelia and Treponema (60) . The absence of L - and P-ring flagellar 453 
+
+components from the reconstructed ancestral genome, supported by the lack of a muramidase 454 
+
+domain across all identified FlgJ orthologs and consistent with the phylogenetic placement of early -455 
+
+branching lineages (14) , is coherent with a periplasmic endoflagellar configuration in the LSCA , a nd 456 
+
+aligns with most updated mode ls on flagellar evolution (61,62) . Of note , while cytoskeletal proteins 457 
+
+such as MreB and bactofilins were identified in the LSCA, their presence alone is insufficient to 458 
+
+conclude a spiral morphology , as these proteins influence membrane curvatur e but do not universally 459 
+
+determine cell shape across bacteria . Indeed, B. burgdorferi encodes bactofilins yet its spiral shape 460 
+
+depends primarily on flagellar mechanics (63) . The determinatio n of the spiral shape of spirochetes 461 
+
+is therefore likely multifactorial and genus -dependent , involving both flagellar and peptidoglycan -462 
+
+associated proteins (41,64,65) , some of which may correspond to the gene families identified here as 463 
+
+absent in non -spiral lineages, repr esenting interesting candidates for future investigation . Regardless 464 
+
+of the mechanism, the monophyly of all non -spiral species and their restriction to a single clade within 465 
+
+Spirochaetia provides sufficient evidence to conclude that the spiral morphology is ancestral to the 466 
+
+phylum and was lost only once ( Fig 2). The presence of only a partial LPS biosynthe sis and export 467 
+
+pathway in the LSCA is insufficient t o conclude on LPS presence , consistent with Leptospira being 468 
+
+the only known LPS -containing Spirochaet es (66) . Together, these inferred ancestral features shed 469 
+
+light on the ecology and lifestyle of the earliest spirochetes , and on the evolution ary trajectories of 470 
+
+some of the hallmark traits of modern spirochetes .471 
+
+The present framework, built on cultivable representatives with high -quality genomes, provides a 472 
+
+robust reference for future integration of metagenome -assembled genomes from uncultivated 473 
+
+spirochete lineages, which may further refine the evolutionary picture presented here and could reveal 474 
+
+> .CC-BY 4.0 International license made available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is The copyright holder for this preprint this version posted May 28, 2026. ;https://doi.org/10.1101/2025.07.04.663154 doi: bioRxiv preprint
+
+20 
+
+additional functional transitions associated with unexplored ecological niches in Spirochaetes .475 
+
+Overall, this study provides a reference framework for spirochete research while illustrating how 476 
+
+functional genome composition can be used to track ecological diversification across the breadth of 477 
+
+a bacterial phylum .478 
+
+METHODS 479 
+
+Data collection 480 
+
+17 6 genomes covering all cultivable species within the Spirochaetes phylum were downloaded from 481 
+
+the National Center for Biotechnology Information (NCBI) as of August 2024 following manual 482 
+
+curation. The genomes corresponding to the species Alkalispirochaeta odontotermitis 483 
+
+(G CF_000768055.1 ), Rectinema subterraneum (GCF_009768935.1 ), Treponema lecithinolyticum 484 
+
+(GCF_000468055.1 ), and Marispirochaeta associata (GCA_001749745.1 ) were removed because of 485 
+
+high level contamination with other organisms. For the selection of genomes, one genome was 486 
+
+chosen per species TaxID in NCBI prioritizing the RefSeq -validated genome per TaxID. For the two 487 
+
+species in which there was no RefSeq -validated reference genome ( Borrreliella chilensis and 488 
+
+Longinema margulisiae ), we inspected the literature and selected the only available GenBank 489 
+
+genome after checking completeness and contamination. For t he reference genomes of the 69 490 
+
+Leptospira spp., we followed the latest Position Statement of the International Leptospirosis Society 491 
+
+(ILS) (67) and the International Committee on Systematics of Prokaryotes Subcommittee on the 492 
+
+taxonomy of Leptospiraceae (68) . It should be noted that there is n o publicly available genome for the 493 
+
+genus Cristispira . The final selected number of genomes is 172 and their description and assembly 494 
+
+numbers are available in Table S1 .495 
+
+Orthology inference 496 
+
+For the orthology inference, we employed the protocol described in (69) with a few modifications. We 497 
+
+used OMA standalone version 2.5.0 (25) with the exported reference proteomes. To ensure that 498 
+
+orthologs were computed without bias, in a first run we used only the 172 pre -selected proteomes 499 
+
+with the following parameters: estimated s pecies tree , bottom -up inference of HOGs, mid -point 500 
+
+> .CC-BY 4.0 International license made available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is The copyright holder for this preprint this version posted May 28, 2026. ;https://doi.org/10.1101/2025.07.04.663154 doi: bioRxiv preprint
+
+21 
+
+rooting, minimum score of 181, length tolerance ratio of 0.61, stable pair tolerance of 1.81, inparalog 501 
+
+tolerance of 3.0, verified pair tolerance of 1.53, minimum sequence length of 50, and minimum edge 502 
+
+completeness of 0.65 . In a second run, we used the 172 pre -selected proteomes along with two 503 
+
+Lindowbacteria species ( GCA_001782795, GCA_001784175 ) used as outgroup for rooting, with the 504 
+
+same parameters as above except for the rooting. For the orthology inf erence of Treponematales , we 505 
+
+used the 28 pre -selected genomes belonging to the Treponemataceae clade (Table S1 ) alongside 506 
+
+three of their closest relatives for the rooting (GCF_000143985.1 , GCF_000378205.1 ,507 
+
+GCF_002087085.1 ) (Fig 2) with the same parameters as above .508 
+
+Calculation of the pangenome accumulation curve was obtained following the method described in 509 
+
+(70) , using 100 random iterations in the presence/absence matrix of OGs. The regression curve was 510 
+
+calculated using a generalized additive model (gam) with a cubic spline under the formula y ~ s(x, bs 511 
+
+= "cs") .512 
+
+Tree inference 513 
+
+Tree inference was determined as des cribed in (69) with a few modifications. Briefly, we fi rst selected 514 
+
+140 highly -conserved soft -core genome markers (95% conservation , 163 species ) from the first run 515 
+
+of OMA OGs using the filter_groups .py script from (69) and aligned them individually with MAFFT 516 
+
+version 7 .505 under the L-INS -i algorithm (71) . We then soft -trimmed the alignments individually using 517 
+
+BMGE version 1.12 (72) under the BLOSUM30 matrix with the following parameters: maximum 518 
+
+entropy thres hold of 0.95 , sliding window size of 1, minimum length of selected regions of 1. Lastly, 519 
+
+we concatenated the trimmed alignments to build the supermatrix using the concat_alignments.py 520 
+
+script available in (69) . This supermatrix was then used as input for IQ -TR EE version 2.3.2 (73) with 521 
+
+10 ,000 ultra -fast bootstraps and 10 ,000 SH -alrt (Shimodaira -Hasegawa -like procedure test) (74) 522 
+
+under the homologous best -fit bacterial model of evolution LG+F+I+R10 . The tree generated was 523 
+
+then used as a guide tree for a second tree inference under the heterogeneous model of evolution 524 
+
+LG+C20+R10 with IQ -TREE and the same parameters. The same process was repeated with the 525 
+
+second run of OMA OGs including the two Lindowbacteria genomes (see above) with 130 highly 526 
+
+conserved soft -core genome markers (95% conservation, 165 species). 527 
+
+> .CC-BY 4.0 International license made available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is The copyright holder for this preprint this version posted May 28, 2026. ;https://doi.org/10.1101/2025.07.04.663154 doi: bioRxiv preprint
+
+22 
+
+For the coalescence -based method , we used the same 130 tri mmed soft -core genome marker 528 
+
+alignments including the two Lindowbacteria genomes (see above) and inferred individual 529 
+
+phylogenies using FastTree version 2.1.11 (75) . We then used these individual phylogenies to infer 530 
+
+the final species tree using ASTRAL version 5.7.8 (76) .531 
+
+For t he Treponematales phylogenetic inference, we used 440 soft -core genome markers (95% 532 
+
+conservation, 29 species) obtained from the orthology inference (see above) and proceeded as before 533 
+
+to obtain the supermatrix . This supermatrix was then used as input for I Q-TREE version 2.3.2 with 534 
+
+10000 ultra -fast bootstraps and 10000 SH -alrt ( Shimodaira -Hasegawa -like procedure test) under the 535 
+
+homologous best -fit bacterial model of evolution LG+F+I+R10 .536 
+
+To support the phylogenetic tree, we calculated pairwise comparisons of Percentage of Conserved 537 
+
+Proteins (POCP), Average Nucleotide Identity (ANI) and a kmer -based method (TETRA). ANI (with 538 
+
+the BLASTn module) and TETRA were calculated with PyAni version 0.2.11 (77) . POCP was 539 
+
+calculated with POCP -nf version 2.2.0 (32,78) .540 
+
+Functional annotation 541 
+
+Functional annotation of the proteomes was determined using a cluster -based approach with fine -542 
+
+grained orthology. This strategy assumes that all sequences within an ortholog group share a 543 
+
+common function, allowing functional information available for a single well -characterized sequence 544 
+
+to be propa gated across all members of the OG . This is particularly advantageous for divergent 545 
+
+proteins that may not reach the identity thresholds required for direct database hits in classical 546 
+
+annotation pipelines. However, this approach requires ortholog groups inf erred with high precision 547 
+
+(that is, with a high fraction of true orthologs and minimal paralog contamination ). OMA -based 548 
+
+ortholog groups are therefore well -suited for this purpose, given their stringent evolutionary -aware 549 
+
+inference and low false -positive r ates. Combined with the fine -grained ortholog annotations derived 550 
+
+from eggNOG and eggNOG -mapper, this strategy improves annotation quality and coverage 551 
+
+compared to other sequence -similarity -only pipelines. 552 
+
+> .CC-BY 4.0 International license made available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is The copyright holder for this preprint this version posted May 28, 2026. ;https://doi.org/10.1101/2025.07.04.663154 doi: bioRxiv preprint
+
+23 
+
+Briefly, we obtained a single representative seque nce per ortholog group by clustering each OG from 553 
+
+the OMA orthology inference (see above) using MMseqs2 version 15 -6f452 (79) with the following 554 
+
+parameters: workflow easy -cluster , infinite e -value, minimum sequence identity 0, coverage mode 1, 555 
+
+alignment coverage 0. Each representative sequence was then searched with eggNOG -ma pper 556 
+
+version 2.1.12 (80) on eggNOG DB version 5.0.2 (81) . Sequence searches were performed using 557 
+
+four consecutive approaches: DIAMOND ultra -sensitive (82) , HMMER with database 2 (bacteria) ,558 
+
+HMMER with database 2157 (archaea) , and HMMER with database 10239 (viruses) (83) . We then 559 
+
+assigned an annotation to each OG according to the following hierarchy: if the DIAMOND search 560 
+
+provided a COG category different from “unknown” (S/NA) it was retained, otherwise we looked for 561 
+
+the unannotated OGs in the HMMER searches (first bacterial, then archaeal, lastly viruses). The 562 
+
+DIAMOND search provided an annotation for 53.5% of all OGs, and the HMMER searches 563 
+
+complemented this to 58.2% of all O Gs. For assignment of the maximum annotation level following 564 
+
+eggNOG -mapper, the same hierarchical procedure was followed. 565 
+
+Principal Component Analysis (PCA) was performed with the PCA function of the FactoMineR 566 
+
+package (84) in R version 4.3.0 (85) wit h the normalized percentage of known COG categories per 567 
+
+genome as input . Log 2FC values were calculated as the log arithmic base 2 ratio between the 568 
+
+percentage of OGs within a species ’ genome annotated as a given COG category and the percentage 569 
+
+of OGs within all other species ’ genome s annotated as the same COG category , unless otherwise 570 
+
+stated .571 
+
+Ancestral genome reconstruction 572 
+
+The genom ic components present in the LSCA were reconstructed using PastML version 1.9.41 (86) 573 
+
+with a combination of the presence/absence matrix of OGs and the phylogeny presented in Fig 2. To 574 
+
+ensure a robust inference, ancestry prediction was performed in two steps: first, we run PastML with 575 
+
+a marginal posterior probabilities approximation (MPPA method) to determine the maximum -576 
+
+likelihood model parameters and marginal probabilit ies for each column under the F81 model (87) ;577 
+
+then, we run PastML again using the se pre -determined model parameters to evaluate the most likely 578 
+
+evolutionary scenario and produce a n internally consistent result for all nodes under t he JOINT 579 
+
+> .CC-BY 4.0 International license made available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is The copyright holder for this preprint this version posted May 28, 2026. ;https://doi.org/10.1101/2025.07.04.663154 doi: bioRxiv preprint
+
+24 
+
+method (88) . The refore, the final root status is the one obtained under the JOINT prediction and the 580 
+
+probabilities presented are the ones obtained under the MPPA prediction. For the final analysis, only 581 
+
+OGs with JOINT -based root status “presence” and an MPPA -based probability ≥55% were retained. 582 
+
+Phylogenetic profiling 583 
+
+To obtain the OGs lost by the non -spiral Spirochaetes (Bullifex porci , Parasphaerochaeta coccoides ,584 
+
+Sphaerochaeta pleomorpha , Sphaerochaeta globosa and Sphaerochaeta halotolerans ), we first 585 
+
+looked for OGs that were completely absent from those species but present in 80% or more of the 586 
+
+other Spirochaetes phylum species (Type = “ABSENT ”). As a complementary strategy, we also 587 
+
+looked for OGs completely absent from th e same species but highly conserved ( ≥95% conservation) 588 
+
+in the closest clade species (all Treponemataceae spp., Alkalispirochaeta alkalica , Alkalispirochaeta 589 
+
+americana , Alkalispirochaeta sphaeroplastigenens , Marispirochaeta aestuarii , Salinispira pacifica ,590 
+
+Sediminispirochaeta bajacaliforniensis , Sediminispirochaeta smaragdinae , Spirochaeta africana ,591 
+
+Spirochaeta lutea , and  Spirochaeta thermophila ) (Type = “LOST ”). Both datasets were then combined 592 
+
+and are available in  Table S6 .593 
+
+AKNOWLEDGEMENTS 594 
+
+We thank Linda G rillova and Zach ary Ardern for their support and valuable feedback through the 595 
+
+earliest stages of development of this project. We thank the Biology of Spirochetes Unit at Institut 596 
+
+Pasteur for their assistance in testing the Spirochase website and for their constructive feedback on 597 
+
+the manuscript . We are grateful to Dr. Kevin Waldron and Dr. Pierre Garcia for helpful discussion and 598 
+
+critically reading this manuscript. In the Spirochase website, RT oversaw UI/UX design and produced 599 
+
+the in terface mock -ups , and EC oversaw website implementation, development and deployment. We 600 
+
+thank David Hampson and Kittita t Lugsomya for their help with finding new Brachyspira strains. This 601 
+
+work was also supported by a PTR (Programmes Transversaux de Recherche) grant (PTR2019 -310 ,602 
+
+NB ) from Institut Pasteur (Paris , France) , and by National Institutes of Health grant P01 AI -168148 603 
+
+(MP & NB) . SGH is a recipient of the Pasteur -Paris University PhD program. KC has received a PhD 604 
+
+scholarship from BioS PC doctoral school (ED562, Université Paris Cité). The authors acknowledge 605 
+
+> .CC-BY 4.0 International license made available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is The copyright holder for this preprint this version posted May 28, 2026. ;https://doi.org/10.1101/2025.07.04.663154 doi: bioRxiv preprint
+
+25 
+
+the use of AI -assisted copy -editing tools (LLMs) to support language editing , readability, formatting 606 
+
+and style . All scientific content was developed and verified by the authors. 607 
+
+REFERENCES 608 
+
+1. Paster BJ, Dewhirst FE. Phylogenetic foundation of spirochetes. J Mol Microbiol Biotechnol. 2000 609 
+
+Oct;2(4):341 –4. PubMed PMID: 11075904. 610 
+
+2. Gupta RS, Mahmood S, Adeolu M. A phylogenomic and molecular signature based approach for 611 
+
+characterization of the phylum Spirochaetes and its major clades: proposal for a taxonomic revision of 612 
+
+the phylum. Front Microbiol. 2013;4:217. doi:10.3389/fmicb.2013.00217 PubMed PMID: 23908650 ;613 
+
+PubMed Central PMCID: PMC3726837. 614 
+
+3. Zhilina TN, Zavarzin GA, Rainey F, Kevbrin VV, Kostrikina NA, Lysenko AM. Spirochaeta alkalica sp. nov., 615 
+
+Spirochaeta africana sp. nov., and Spirochaeta asiatica sp. nov., alkaliphilic anaerobes from the 616 
+
+Continental So da Lakes in Central Asia and the East African Rift. Int J Syst Bacteriol. 1996 Jan;46(1):305 –617 
+
+12. doi:10.1099/00207713 -46 -1-305 PubMed PMID: 8573509. 618 
+
+4. Magot M, Fardeau ML, Arnauld O, Lanau C, Ollivier B, Thomas P, et al. Spirochaeta smaragdinae sp. nov., 619 
+
+a new mesophilic strictly anaerobic spirochete from an oil field. FEMS Microbiol Lett. 1997 Oct 620 
+
+15;155(2):185 –91. doi:10.1111/j.1574 -6968.1997.tb13876.x PubMed PMID: 9351200. 621 
+
+5. Wylensek D, Hitch TCA, Riedel T, Afrizal A, Kumar N, Wortmann E, et al. A coll ection of bacterial isolates 622 
+
+from the pig intestine reveals functional and taxonomic diversity.  Nat Commun. 2020 Dec 15;11(1):6389. 623 
+
+doi:10.1038/s41467 -020 -19929 -w624 
+
+6. Belkhou C, Tadeo RT, Bacigalupe R, Valles -Colomer M, Chaffron S, Joossens M, et al.  Trepon ema 625 
+
+peruense sp. nov., a commensal spirochaete isolated from human faeces. Int J Syst Evol Microbiol. 2021 626 
+
+Oct;71(10):005050. doi:10.1099/ijsem.0.005050 PubMed PMID: 34672919; PubMed Central PMCID: 627 
+
+PMC8604162. 628 
+
+7. Tokuda G. Origin of symbiotic gut spirochet es as key players in the nutrition of termites. Environ 629 
+
+Microbiol. 2021 Aug;23(8):4092 –7. doi:10.1111/1462 -2920.15625 PubMed PMID: 34097340. 630 
+
+8. Kugeler KJ, Schwartz AM, Delorey MJ, Mead PS, Hinckley AF. Estimating the Frequency of Lyme Disease 631 
+
+Diagnoses, U nited States, 2010 -2018. Emerg Infect Dis. 2021 Feb;27(2):616 –9. 632 
+
+doi:10.3201/eid2702.202731 PubMed PMID: 33496229; PubMed Central PMCID: PMC7853543. 633 
+
+9. Steinbrink A, Brugger K, Margos G, Kraiczy P, Klimpel S. The evolving story of Borrelia burgdorferi sens u634 
+
+lato transmission in Europe. Parasitol Res. 2022 Mar;121(3):781 –803. doi:10.1007/s00436 -022 -07445 -3635 
+
+PubMed PMID: 35122516; PubMed Central PMCID: PMC8816687. 636 
+
+10. Mead P, Hinckley A, Kugeler K. Lyme Disease Surveillance and Epidemiology in the United State s: A 637 
+
+Historical Perspective. J Infect Dis. 2024 Aug 14;230(Supplement_1):S11 –7. doi:10.1093/infdis/jiae230 638 
+
+PubMed PMID: 39140721. 639 
+
+11. Ubals M, Nadal -Baron P, Arando M, Rivero Á, Mendoza A, Descalzo Jorro V, et al. Oral linezolid 640 
+
+compared with benzathine pe nicillin G for treatment of early syphilis in adults (Trep -AB Study) in Spain: 641 
+
+a prospective, open -label, non -inferiority, randomised controlled trial. Lancet Infect Dis. 2024 642 
+
+Apr;24(4):404 –16. doi:10.1016/S1473 -3099(23)00683 -7 PubMed PMID: 38211601; PubMe d Central 643 
+
+PMCID: PMC10954560. 644 
+
+> .CC-BY 4.0 International license made available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is The copyright holder for this preprint this version posted May 28, 2026. ;https://doi.org/10.1101/2025.07.04.663154 doi: bioRxiv preprint
+
+26 
+
+12. Costa F, Hagan JE, Calcagno J, Kane M, Torgerson P, Martinez -Silveira MS, et al. Global Morbidity and 645 
+
+Mortality of Leptospirosis: A Systematic Review. PLoS Negl Trop Dis. 2015;9(9):e0003898. 646 
+
+doi:10.1371/journal.pntd.000389 8 PubMed PMID: 26379143; PubMed Central PMCID: PMC4574773. 647 
+
+13. Pragya K, Sreya P, Vighnesh L, Mahima D, Sushmita M, Sasikala C, et al. Phylogenomic analysis of 648 
+
+metagenome -assembled genomes indicates new taxa in the order Spirochaetales and proposal of 649 
+
+Thalassospirochaeta sargassi gen. nov. sp. nov. from seaweeds. Syst Appl Microbiol. 2024 May;47(2 –650 
+
+3):126502. doi:10.1016/j.syapm.2024.126502 PubMed PMID: 38458136. 651 
+
+14. San Martin F, Fule L, Iraola G, Buschiazzo A, Picardeau M. Diving into the complexity of the spirochetal 652 
+
+endoflagellum. Trends Microbiol. 2023 Mar;31(3):294 –307. doi:10.1016/j.tim.2022.09.010 PubMed 653 
+
+PMID: 36244923. 654 
+
+15. Bidzhieva SK, Sokolova DS, Grouzdev DS, Kostrikina NA, Poltaraus AB, Tourova TP, et al. Sphaerochaeta 655 
+
+halotolerans sp. nov., a novel spherical halotolerant spirochete from a Russian heavy oil reservoir, 656 
+
+emended description of the genus Sphaerochaeta, reclassification of Sphaerochaeta coccoides to a new 657 
+
+genus Parasphaerochaeta gen. nov. as Parasphaerochaeta coccoides comb. nov. a nd proposal of 658 
+
+Sphaerochaetaceae fam. nov. Int J Syst Evol Microbiol. 2020 Aug;70(8):4748 –59. 659 
+
+doi:10.1099/ijsem.0.004340 PubMed PMID: 32697184. 660 
+
+16. Dröge S, Fröhlich J, Radek R, König H. Spirochaeta coccoides sp. nov., a novel coccoid spirochete from 661 
+
+the h indgut of the termite Neotermes castaneus. Appl Environ Microbiol. 2006 Jan;72(1):392 –7. 662 
+
+doi:10.1128/AEM.72.1.392 -397.2006 PubMed PMID: 16391069; PubMed Central PMCID: PMC1352290. 663 
+
+17. Momper L, Semler A, Lu GS, Miyazaki M, Imachi H, Amend JP. Rectinema sub terraneum sp. nov, a 664 
+
+chemotrophic spirochaete isolated from the deep terrestrial subsurface. Int J Syst Evol Microbiol. 665 
+
+2020;70(8):4739 –47. doi:10.1099/ijsem.0.004339 666 
+
+18. Ritalahti KM, Justicia -Leon SD, Cusick KD, Ramos -Hernandez N, Rubin M, Dornbush J, et al. 667 
+
+Sphaerochaeta globosa gen. nov., sp. nov. and Sphaerochaeta pleomorpha sp. nov., free -living, spherical 668 
+
+spirochaetes. Int J Syst Evol Microbiol. 2012 Jan;62(Pt 1):210 –6. doi:10.1099/ijs.0.023986 -0 PubMed 669 
+
+PMID: 21398503. 670 
+
+19. Caro -Quintero A, Ritalahti KM, Cusick KD, Löffler FE, Konstantinidis KT.  The chimeric genome of 671 
+
+Sphaerochaeta: nonspiral spirochetes that break with the prevalent dogma in spirochete biology. mBio. 672 
+
+2012;3(3):e00025 -12. doi:10.1128/mBio.00025 -12 PubMed PMID: 22589287; PubMed Central  PMCID: 673 
+
+PMC3372971. 674 
+
+20. Taib N, Megrian D, Witwinowski J, Adam P, Poppleton D, Borrel G, et al. Genome -wide analysis of the 675 
+
+Firmicutes illuminates the diderm/monoderm transition. Nat Ecol Evol. 2020 Dec;4(12):1661 –72. 676 
+
+doi:10.1038/s41559 -020 -01299 -7 PubMed P MID: 33077930. 677 
+
+21. Schwartz I, Margos G, Casjens SR, Qiu WG, Eggers CH. Multipartite Genome of Lyme Disease Borrelia: 678 
+
+Structure, Variation and Prophages. Curr Issues Mol Biol. 2021;42:409 –54. doi:10.21775/cimb.042.409 679 
+
+PubMed PMID: 33328355. 680 
+
+22. Edmondson D G, Hu B, Norris SJ. Long -Term In Vitro Culture of the Syphilis Spirochete Treponema 681 
+
+pallidum subsp. pallidum. mBio. 2018 Jun 26;9(3):e01153 -18. doi:10.1128/mBio.01153 -18 PubMed 682 
+
+PMID: 29946052; PubMed Central PMCID: PMC6020297. 683 
+
+23. Romeis E, Tantalo L, Lieb erman N, Phung Q, Greninger A, Giacani L. Genetic engineering of Treponema 684 
+
+pallidum subsp. pallidum, the Syphilis Spirochete. PLoS Pathog. 2021 Jul;17(7):e1009612. 685 
+
+doi:10.1371/journal.ppat.1009612 PubMed PMID: 34228757; PubMed Central PMCID: PMC8284648. 686 
+
+> .CC-BY 4.0 International license made available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is The copyright holder for this preprint this version posted May 28, 2026. ;https://doi.org/10.1101/2025.07.04.663154 doi: bioRxiv preprint
+
+27 
+
+24 . Ren SX, Fu G, Jiang XG, Zeng R, Miao YG, Xu H, et al. Unique physiological and pathogenic features of 687 
+
+Leptospira interrogans revealed by whole -genome sequencing. Nature. 2003 Apr;422(6934):888 –93. 688 
+
+doi:10.1038/nature01597 689 
+
+25. Altenhoff AM, Levy J, Zarowie cki M, Tomiczek B, Warwick Vesztrocy A, Dalquen DA, et al. OMA 690 
+
+standalone: orthology inference among public and custom genomes and transcriptomes. Genome Res. 691 
+
+2019 Jul;29(7):1152 –63. doi:10.1101/gr.243212.118 PubMed PMID: 31235654; PubMed Central PMCID: 692 
+
+PM C6633268. 693 
+
+26. Coleman GA, Davín AA, Mahendrarajah TA, Szánthó LL, Spang A, Hugenholtz P, et al. A rooted phylogeny 694 
+
+resolves early bacterial evolution. Science. 2021 May 7;372(6542):eabe0511. 695 
+
+doi:10.1126/science.abe0511 PubMed PMID: 33958449. 696 
+
+27. Garcia PS, D’Angelo F, Ollagnier de Choudens S, Dussouchaud M, Bouveret E, Gribaldo S, et al.  An early 697 
+
+origin of iron -sulfur cluster biosynthesis machineries before Earth oxygenation. Nat Ecol Evol. 2022 698 
+
+Oct;6(10):1564 –72. doi:10.1038/s41559 -022 -01857 -1 PubMed PMID:  36109654. 699 
+
+28. Estrada -Peña A, Cabezas -Cruz A. Phyloproteomic and functional analyses do not support a split in the 700 
+
+genus Borrelia (phylum Spirochaetes). BMC Evol Biol. 2019 Feb 13;19(1):54. doi:10.1186/s12862 -019 -701 
+
+1379 -2 PubMed PMID: 30760200; PubMed Centr al PMCID: PMC6375133. 702 
+
+29. Vincent AT, Schiettekatte O, Goarant C, Neela VK, Bernet E, Thibeaux R, et al. Revisiting the taxonomy 703 
+
+and evolution of pathogenicity of the genus Leptospira through the prism of genomics. PLoS Negl Trop 704 
+
+Dis. 2019 May;13(5):e00072 70. doi:10.1371/journal.pntd.0007270 PubMed PMID: 31120895; PubMed 705 
+
+Central PMCID: PMC6532842. 706 
+
+30. Brune A, Song Y, Oren A, Paster BJ. A new family for ‘termite gut treponemes’: description of 707 
+
+Breznakiellaceae fam. nov., Gracilinema caldarium gen. nov., com b. nov., Leadbettera azotonutricia gen. 708 
+
+nov., comb. nov., Helmutkoenigia isoptericolens gen. nov., comb. nov., and Zuelzera stenostrepta gen. 709 
+
+nov., comb. nov., and proposal of Rectinemataceae fam. nov. Int J Syst Evol Microbiol. 2022 May;72(5). 710 
+
+doi:10.1099 /ijsem.0.005439 PubMed PMID: 35639582. 711 
+
+31. Song Y, Hervé V, Radek R, Pfeiffer F, Zheng H, Brune A. Characterization and phylogenomic analysis of 712 
+
+Breznakiella homolactica gen. nov. sp. nov. indicate that termite gut treponemes evolved from non -713 
+
+acetogenic sp irochetes in cockroaches. Environ Microbiol. 2021 Aug;23(8):4228 –45. doi:10.1111/1462 -714 
+
+2920.15600 PubMed PMID: 33998119. 715 
+
+32. Qin QL, Xie BB, Zhang XY, Chen XL, Zhou BC, Zhou J, et al. A proposed genus boundary for the 716 
+
+prokaryotes based on genomic insights. J Bacteriol. 2014 Jun;196(12):2210 –5. doi:10.1128/JB.01688 -14 717 
+
+PubMed PMID: 24706738; PubMed Central PMCID: PMC4054180. 718 
+
+33. Kohl PK, Winzer I. [The 100 years since discovery of Spirochaeta pallida]. Hautarzt Z Dermatol Venerol 719 
+
+Verwandte Geb. 2005 Feb;56(2): 112 –5. doi:10.1007/s00105 -004 -0892 -3 PubMed PMID: 15657727. 720 
+
+34. Abt B, Göker M, Scheuner C, Han C, Lu M, Misra M, et al. Genome sequence of the thermophilic fresh -721 
+
+water bacterium Spirochaeta caldaria type strain (H1(T)), reclassification of Spirochaeta cal daria, 722 
+
+Spirochaeta stenostrepta, and Spirochaeta zuelzerae in the genus Treponema as Treponema caldaria 723 
+
+comb. nov., Treponema stenostrepta comb. nov., and Treponema zuelzerae comb. nov., and 724 
+
+emendation of the genus Treponema. Stand Genomic Sci. 2013 Apr 15 ;8(1):88 –105. 725 
+
+doi:10.4056/sigs.3096473 PubMed PMID: 23961314; PubMed Central PMCID: PMC3739177. 726 
+
+> .CC-BY 4.0 International license made available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is The copyright holder for this preprint this version posted May 28, 2026. ;https://doi.org/10.1101/2025.07.04.663154 doi: bioRxiv preprint
+
+28 
+
+35. Chou S, Daugherty MD, Peterson SB, Biboy J, Yang Y, Jutras BL, et al. Transferred interbacterial 727 
+
+antagonism genes augment eukaryotic innate immune function. Nature. 2015 Feb 5;518(7537):98 –101. 728 
+
+doi:10.1038/nature13965 PubMed PMID: 25470067; PubMed Central PMCID: PMC4713192. 729 
+
+36. Wang B, Zhou J, Jin Y, Hu M, Zhao Y, Wang X, et al. A Standardized Framework for Better Understanding 730 
+
+of Phenotypic Differences withi n Bacterial Phyla Based on Protein Domain. J Bacteriol. 2022 Jun 731 
+
+21;204(6):e0014122. doi:10.1128/jb.00141 -22 PubMed PMID: 35652670; PubMed Central PMCID: 732 
+
+PMC9210965. 733 
+
+37. Bierque E, Thibeaux R, Girault D, Soupé -Gilbert ME, Goarant C. A systematic review of Leptospira in 734 
+
+water and soil environments. PloS One. 2020;15(1):e0227055. doi:10.1371/journal.pone.0227055 735 
+
+PubMed PMID: 31986154; PubMed Central PMCID: PMC6984726. 736 
+
+38. Hocher A, Laursen SP, Radford P, Tyson J, Lambert C, Stevens KM, et al. Histones with an unconventional 737 
+
+DNA -binding mode in vitro are major chromatin constituents in the bacterium Bdellovibrio 738 
+
+bacteriovorus. Nat Microbiol. 2023 Nov;8(11):2006 –19. doi:10.1038/s41564 -023 -01492 -x PubMed 739 
+
+PMID: 37814071; PubMed Central PMCID: PMC10627809. 740 
+
+39. Bula ch DM, Zuerner RL, Wilson P, Seemann T, McGrath A, Cullen PA, et al. Genome reduction in 741 
+
+Leptospira borgpetersenii reflects limited transmission potential. Proc Natl Acad Sci U S A. 2006 Sep 742 
+
+26;103(39):14560 –5. doi:10.1073/pnas.0603979103 PubMed PMID: 1697 3745; PubMed Central PMCID: 743 
+
+PMC1599999. 744 
+
+40. Sycuro LK, Wyckoff TJ, Biboy J, Born P, Pincus Z, Vollmer W, et al. Multiple Peptidoglycan Modification 745 
+
+Networks Modulate Helicobacter pylori’s Cell Shape, Motility, and Colonization Potential. PLOS Pathog. 746 
+
+2012 Mar 22;8(3):e1002603. doi:10.1371/journal.ppat.1002603 747 
+
+41. Jackson KM, Schwartz C, Wachter J, Rosa PA, Stewart PE. A widely conserved bacterial cytoskeletal 748 
+
+component influences unique helical shape and motility of the spirochete Leptospira biflexa. Mol 749 
+
+Mi crobiol. 2018;108(1):77 –89. doi:10.1111/mmi.13917 750 
+
+42. Santos LA, Adhikarla H, Yan X, Wang Z, Fouts DE, Vinetz JM, et al. Genomic Comparison Among Global 751 
+
+Isolates of L. interrogans Serovars Copenhageni and Icterohaemorrhagiae Identified Natural Genetic 752 
+
+Variation Caused by an Indel. Front Cell Infect Microbiol. 2018;8:193. doi:10.3389/fcimb.2018.00193 753 
+
+PubMed PMID: 29971217; PubMed Central PMCID: PMC6018220. 754 
+
+43. Thompson C, Waldron C, George S, Ouyang Z. Assessment of the hypothetical protein BB0616 in the 755 
+
+murine infection of Borrelia burgdorferi. Infect Immun. 2024 Jun 11;92(6):e0009024. 756 
+
+doi:10.1128/iai.00090 -24 PubMed PMID: 38700336; PubMed Central PMCID: PMC11237664. 757 
+
+44. Lobb B, Tremblay BJM, Moreno -Hagelsieb G, Doxey AC. An assessment of genome annotati on coverage 758 
+
+across the bacterial tree of life. Microb Genomics. 2020 Mar 3;6(3):e000341. 759 
+
+doi:10.1099/mgen.0.000341 PubMed PMID: 32124724; PubMed Central PMCID: PMC7200070. 760 
+
+45. Nikolaidis N, Doran N, Cosgrove DJ. Plant expansins in bacteria and fungi: evolu tion by horizontal gene 761 
+
+transfer and independent domain fusion. Mol Biol Evol. 2014 Feb;31(2):376 –86. 762 
+
+doi:10.1093/molbev/mst206 PubMed PMID: 24150040. 763 
+
+46. Giraud -Gatineau A, Nieves C, Harrison LB, Benaroudj N, Veyrier FJ, Picardeau M. Evolutionary insights 764 
+
+into the emergence of virulent Leptospira spirochetes. PLoS Pathog. 2024 Jul;20(7):e1012161. 765 
+
+doi:10.1371/journal.ppat.1012161 PubMed PMID: 39018329; PubMed Central PMCID: PMC11285912. 766 
+
+> .CC-BY 4.0 International license made available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is The copyright holder for this preprint this version posted May 28, 2026. ;https://doi.org/10.1101/2025.07.04.663154 doi: bioRxiv preprint
+
+29 
+
+47. Park JM, Ghosh S, O’Connor TJ. Combinatorial selection in amoebal h osts drives the evolution of the 767 
+
+human pathogen Legionella pneumophila. Nat Microbiol. 2020 Apr;5(4):599 –609. doi:10.1038/s41564 -768 
+
+019 -0663 -7 PubMed PMID: 31988381; PubMed Central PMCID: PMC10234074. 769 
+
+48. Wachter J, Cheff B, Hillman C, Carracoi V, Dorward DW, Martens C, et al.  Coupled induction of prophage 770 
+
+and virulence factors during tick transmission of the Lyme disease spirochete. Nat Commun. 2023 Jan 771 
+
+13;14(1):198. doi:10.1038/s41467 -023 -35897 -3 PubMed PMID: 36639656; PubMed Central PMCID: 772 
+
+PMC9839762. 773 
+
+49. Stevenson B, Brissette CA. Erp and Rev Adhesins of the Lyme Disease Spirochete’s Ubiquitous cp32 774 
+
+Prophages Assist the Bacterium during Vertebrate Infection. Infect Immun. 2023 Mar 775 
+
+15;91(3):e0025022. doi:10.1128/iai.00250 -22 PubMed PMID: 36853019; PubMed Cen tral PMCID: 776 
+
+PMC10016077. 777 
+
+50. Babb K, Bykowski T, Riley SP, Miller MC, Demoll E, Stevenson B. Borrelia burgdorferi EbfC, a novel, 778 
+
+chromosomally encoded protein, binds specific DNA sequences adjacent to erp loci on the spirochete’s 779 
+
+resident cp32 prophages. J Bacteriol. 2006 Jun;188(12):4331 –9. doi:10.1128/JB.00005 -06 PubMed 780 
+
+PMID: 16740939; PubMed Central PMCID: PMC1482946. 781 
+
+51. Gupta RS. Distinction between Borrelia and Borreliella is more robustly supported by molecular and 782 
+
+phenotypic characteristics than all other neighbouring prokaryotic genera: Response to Margos’ et al. 783 
+
+‘The genus Borrelia reloaded’ (PLoS ONE 13(12): e0208432). PloS One. 2019;14(8):e0221397. 784 
+
+doi:10.1371/journal.pone.0221397 PubMed PMID: 31454394; PubMed Central PMCID: PMC6711536. 785 
+
+52. Margo s G, Gofton A, Wibberg D, Dangel A, Marosevic D, Loh SM, et al. The genus Borrelia reloaded. PloS 786 
+
+One. 2018;13(12):e0208432. doi:10.1371/journal.pone.0208432 PubMed PMID: 30586413; PubMed 787 
+
+Central PMCID: PMC6306154. 788 
+
+53. Adeolu M, Gupta RS. A phylogenomic an d molecular marker based proposal for the division of the genus 789 
+
+Borrelia into two genera: the emended genus Borrelia containing only the members of the relapsing 790 
+
+fever Borrelia, and the genus Borreliella gen. nov. containing the members of the Lyme disease Borrelia 791 
+
+(Borrelia burgdorferi sensu lato complex). Antonie Van Leeuwenhoek. 2014 Jun;105(6):1049 –72. 792 
+
+doi:10.1007/s10482 -014 -0164 -x PubMed PMID: 24744012. 793 
+
+54. Margos G, Stevenson B, Birtles R, Gofton A, Talagrand -Reboul E, Goeker M, et al. Proposing a sub genus 794 
+
+Borreliella. Ticks Tick -Borne Dis. 2025 Sep;16(5):102536. doi:10.1016/j.ttbdis.2025.102536 PubMed 795 
+
+PMID: 40812006. 796 
+
+55. Samuels DS. Gene regulation in Borrelia burgdorferi. Annu Rev Microbiol. 2011;65:479 –99. 797 
+
+doi:10.1146/annurev.micro.112408.134040 Pub Med PMID: 21801026. 798 
+
+56. Jutras BL, Jones GS, Verma A, Brown NA, Antonicello AD, Chenail AM, et al. Posttranscriptional self -799 
+
+regulation by the Lyme disease bacterium’s BpuR DNA/RNA -binding protein. J Bacteriol. 2013 800 
+
+Nov;195(21):4915 –23. doi:10.1128/JB.00819 -13 PubMed PMID: 23974034; PubMed Central PMCID: 801 
+
+PMC3807498. 802 
+
+57. Savage CR, Jutras BL, Bestor A, Tilly K, Rosa PA, Tourand Y, et al. Borrelia burgdorferi SpoVG DNA - and 803 
+
+RNA -Binding Protein Modulates the Physiology of the Lyme Disease Spirochete. J Bacterio l. 2018 Jun 804 
+
+15;200(12):e00033 -18. doi:10.1128/JB.00033 -18 PubMed PMID: 29632088; PubMed Central PMCID: 805 
+
+PMC5971483. 806 
+
+58. Dulebohn DP, Hayes BM, Rosa PA.  Global repression of host -associated genes of the Lyme disease 807 
+
+spirochete through post -transcriptional mo dulation of the alternative sigma factor RpoS. PloS One. 808 
+
+> .CC-BY 4.0 International license made available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is The copyright holder for this preprint this version posted May 28, 2026. ;https://doi.org/10.1101/2025.07.04.663154 doi: bioRxiv preprint
+
+30 
+
+2014;9(3):e93141. doi:10.1371/journal.pone.0093141 PubMed PMID: 24671196; PubMed Central 809 
+
+PMCID: PMC3966842. 810 
+
+59. Hedges SB, Marin J, Suleski M, Paymer M, Kumar S. Tree of life reveals clock -like speci ation and 811 
+
+diversification. Mol Biol Evol. 2015 Apr;32(4):835 –45. doi:10.1093/molbev/msv037 PubMed PMID: 812 
+
+25739733; PubMed Central PMCID: PMC4379413. 813 
+
+60. Guégan R, Camadro JM, Saint Girons I, Picardeau M. Leptospira spp. possess a complete haem 814 
+
+biosynthetic pathway and are able to use exogenous haem sources. Mol Microbiol. 2003 Aug;49(3):745 –815 
+
+54. doi:10.1046/j.1365 -2958.2003.03589.x PubMed PMID: 12864856. 816 
+
+61. Liu R, Ochman H. Stepwise formation of the bacterial flagellar system. Proc Natl Acad Sci. 2007 Apr 817 
+
+24 ;104(17):7116 –21. doi:10.1073/pnas.0700266104 818 
+
+62. Kaplan M, Sweredoski MJ, Rodrigues JPGLM, Tocheva EI, Chang YW, Ortega DR, et al. Bacterial flagellar 819 
+
+motor PL -ring disassembly subcomplexes are widespread and ancient. Proc Natl Acad Sci. 2020 Apr 820 
+
+21;117(1 6):8941 –7. doi:10.1073/pnas.1916935117 821 
+
+63. Charon NW, Goldstein SF, Marko M, Hsieh C, Gebhardt LL, Motaleb MA, et al. The flat -ribbon 822 
+
+configuration of the periplasmic flagella of Borrelia burgdorferi and its relationship to motility and 823 
+
+morphology. J Bacte riol. 2009 Jan;191(2):600 –7. doi:10.1128/JB.01288 -08 PubMed PMID: 19011030; 824 
+
+PubMed Central PMCID: PMC2620816. 825 
+
+64. Slamti L, de Pedro MA, Guichet E, Picardeau M. Deciphering morphological determinants of the helix -826 
+
+shaped Leptospira. J Bacteriol. 2011 Nov;19 3(22):6266 –75. doi:10.1128/JB.05695 -11 PubMed PMID: 827 
+
+21926230; PubMed Central PMCID: PMC3209227. 828 
+
+65. Wunder EA, Figueira CP, Benaroudj N, Hu B, Tong BA, Trajtenberg F, et al. A novel flagellar sheath 829 
+
+protein, FcpA, determines filament coiling, translational motility and virulence for the Leptospira 830 
+
+spirochete. Mol Microbiol. 2016 Aug;101(3):457 –70. doi:10.1111/mmi.13403 PubMed PMID: 27113476; 831 
+
+PubMed Central PMCID: PMC4979076. 832 
+
+66. Pětrošová H, Mikhael A, Culos S, Giraud -Gatineau A, Gomez AM, Sherman ME, et al . Lipid A structural 833 
+
+diversity among members of the genus Leptospira. Front Microbiol. 2023 May 25;14. 834 
+
+doi:10.3389/fmicb.2023.1181034 835 
+
+67. Google Docs [Internet]. [cited 2025 Mar 6]. Leptospiral Species Definition Position Statement 2023.pdf. 836 
+
+Available from :837 
+
+https://drive.google.com/file/d/1ud1wB0HRo6orTbaCPlOYV4CGnsLTUAQZ/view?usp=embed_facebook 838 
+
+68. Stone NE, Picardeau M. International Committee on Systematics of Prokaryotes Subcommittee on the 839 
+
+taxonomy of Leptospiraceae: minutes of the closed meeting, 3 Se ptember 2024, Brussels, Belgium. Int J 840 
+
+Syst Evol Microbiol. 2025 Feb;75(2). doi:10.1099/ijsem.0.006691 PubMed PMID: 40009065. 841 
+
+69. Dylus D, Nevers Y, Altenhoff AM, Gürtler A, Dessimoz C, Glover NM. How to build phylogenetic species 842 
+
+trees with OMA. F1000Rese arch. 2022 Feb 28;9:511. doi:10.12688/f1000research.23790.2 PubMed 843 
+
+PMID: 35722083; PubMed Central PMCID: PMC9194518. 844 
+
+70. Méric G, Yahara K, Mageiros L, Pascoe B, Maiden MCJ, Jolley KA, et al. A reference pan -genome 845 
+
+approach to comparative bacterial genomic s: identification of novel epidemiological markers in 846 
+
+pathogenic Campylobacter. PloS One. 2014;9(3):e92798. doi:10.1371/journal.pone.0092798 PubMed 847 
+
+PMID: 24676150; PubMed Central PMCID: PMC3968026. 848 
+
+> .CC-BY 4.0 International license made available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is The copyright holder for this preprint this version posted May 28, 2026. ;https://doi.org/10.1101/2025.07.04.663154 doi: bioRxiv preprint
+
+31 
+
+71. Katoh K, Standley DM. MAFFT multiple sequence alignment software version 7: improvements in 849 
+
+performance and usability. Mol Biol Evol. 2013 Apr;30(4):772 –80. doi:10.1093/molbev/mst010 PubMed 850 
+
+PMID: 23329690; PubMed Central PMCID: PMC3603318. 851 
+
+72. Criscuolo A, Gribaldo S. BMGE (Block Mapping and Gathering with Entropy): a new software for 852 
+
+selection of phylogenetic informative regions from multiple sequence alignments. BMC Evol Biol. 2010 853 
+
+Jul 13;10:210. doi:10.1186/1471 -2148 -10 -210 PubMed PMID: 20626897; PubMed Central PMCID: 854 
+
+PMC3017758. 855 
+
+73. Nguyen LT, Schm idt HA, von Haeseler A, Minh BQ.  IQ -TREE: a fast and effective stochastic algorithm for 856 
+
+estimating maximum -likelihood phylogenies. Mol Biol Evol. 2015 Jan;32(1):268 –74. 857 
+
+doi:10.1093/molbev/msu300 PubMed PMID: 25371430; PubMed Central PMCID: PMC4271533. 858 
+
+74. Guindon S, Dufayard JF, Lefort V, Anisimova M, Hordijk W, Gascuel O. New algorithms and methods to 859 
+
+estimate maximum -likelihood phylogenies: assessing the performance of PhyML 3.0. Syst Biol. 2010 860 
+
+May;59(3):307 –21. doi:10.1093/sysbio/syq010 PubMed PMID: 205 25638. 861 
+
+75. Price MN, Dehal PS, Arkin AP. FastTree 2 --approximately maximum -likelihood trees for large alignments. 862 
+
+PloS One. 2010 Mar 10;5(3):e9490. doi:10.1371/journal.pone.0009490 PubMed PMID: 20224823; 863 
+
+PubMed Central PMCID: PMC2835736. 864 
+
+76. Zhang C, Rabie e M, Sayyari E, Mirarab S. ASTRAL -III: polynomial time species tree reconstruction from 865 
+
+partially resolved gene trees. BMC Bioinformatics. 2018 May 8;19(Suppl 6):153. doi:10.1186/s12859 -866 
+
+018 -2129 -y PubMed PMID: 29745866; PubMed Central PMCID: PMC5998893. 867 
+
+77 . Pritchard L, Glover RH, Humphris S, Elphinstone JG, Toth IK. Genomics and taxonomy in diagnostics for 868 
+
+food security: soft -rotting enterobacterial plant pathogens. Anal Methods. 2015 Dec 17;8(1):12 –24. 869 
+
+doi:10.1039/C5AY02550H 870 
+
+78. Hölzer M. POCP -nf: an auto matic Nextflow pipeline for calculating the percentage of conserved proteins 871 
+
+in bacterial taxonomy. Bioinforma Oxf Engl. 2024 Mar 29;40(4):btae175. 872 
+
+doi:10.1093/bioinformatics/btae175 PubMed PMID: 38561180; PubMed Central PMCID: PMC11256958. 873 
+
+79. Steinegger M, Söding J. MMseqs2 enables sensitive protein sequence searching for the analysis of 874 
+
+massive data sets. Nat Biotechnol. 2017 Nov;35(11):1026 –8. doi:10.1038/nbt.3988 PubMed PMID: 875 
+
+29035372. 876 
+
+80. Cantalapiedra CP, Hernández -Plaza A, Letunic I, Bork P, Huerta -Cepas J. eggNOG -mapper v2: Functional 877 
+
+Annotation, Orthology Assignments, and Domain Prediction at the Metagenomic Scale. Mol Biol Evol. 878 
+
+2021 Dec 9;38(12):5825 –9. doi:10.1093/molbev/msab293 PubMed PMID: 34597405; PubMed Central 879 
+
+PMCID: PMC8662613. 880 
+
+81. Huerta -Cepas J, Szklarczyk D, Heller D, Hernández -Plaza A, Forslund SK, Cook H, et al. eggNOG 5.0: a 881 
+
+hierarchical, functionally and phylogenetically annotated orthology resource based on 5090 organisms 882 
+
+and 2502 viruses. Nucleic Acids Res. 2019 Jan 8;47(D1):D309 –14. doi:10.1093/nar/gky1085 PubMed 883 
+
+PMID: 30418610; PubMed Central PMCID: PMC6324079. 884 
+
+82. Buchfink B, Reuter K, Drost HG. Sensitive protein alignments at tree -of -life scale using DIAMOND. Nat 885 
+
+Methods. 2021 Apr;18(4):366 –8. doi:10.1038/s41592 -021 -01101 -x Pub Med PMID: 33828273; PubMed 886 
+
+Central PMCID: PMC8026399. 887 
+
+83. Eddy SR. Accelerated Profile HMM Searches. PLoS Comput Biol. 2011 Oct;7(10):e1002195. 888 
+
+doi:10.1371/journal.pcbi.1002195 PubMed PMID: 22039361; PubMed Central PMCID: PMC3197634. 889 
+
+> .CC-BY 4.0 International license made available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is The copyright holder for this preprint this version posted May 28, 2026. ;https://doi.org/10.1101/2025.07.04.663154 doi: bioRxiv preprint
+
+32 
+
+84. Lê S, Josse J, Hus son F. FactoMineR: An R Package for Multivariate Analysis. J Stat Softw. 2008 Mar 890 
+
+18;25:1 –18. doi:10.18637/jss.v025.i01 891 
+
+85. R Core Team. R: A Language and Environment for Statistical Computing [Internet]. Vienna, Austria: R 892 
+
+Foundation for Statistical Compu ting; 2023. Available from: https://www.R -project.org/ 893 
+
+86. Ishikawa SA, Zhukova A, Iwasaki W, Gascuel O. A Fast Likelihood Method to Reconstruct and Visualize 894 
+
+Ancestral Scenarios. Mol Biol Evol. 2019 Sep 1;36(9):2069 –85. doi:10.1093/molbev/msz131 PubMed 895 
+
+PM ID: 31127303; PubMed Central PMCID: PMC6735705. 896 
+
+87. Felsenstein J. Evolutionary trees from DNA sequences: a maximum likelihood approach. J Mol Evol. 897 
+
+1981;17(6):368 –76. doi:10.1007/BF01734359 PubMed PMID: 7288891. 898 
+
+88. Pupko T, Pe’er I, Shamir R, Graur D. A fast algorithm for joint reconstruction of ancestral amino acid 899 
+
+sequences. Mol Biol Evol. 2000 Jun;17(6):890 –6. doi:10.1093/oxfordjournals.molbev.a026369 PubMed 900 
+
+PMID: 10833195. 901 
+
+902 
+
+FIGURE LEGENDS 903 
+
+Figure 1. General features of the genomes of Spirochaetes 904 
+
+(A) Correlation between genome length (in base pairs) and number of protein -coding genes in the 905 
+
+Spirochaetes genomes, coloured according to the taxonomy. The green histograms on the sides 906 
+
+represent the distribution of the genome length (upper histogram) an d number of protein -coding genes 907 
+
+(right -side histogram). (B) Distribution of GC content (%) in Spirochaetes coloured according to the 908 
+
+taxonomy. Alkalispirochaeta spp. are separated in both plots for clarity and easy distinction in the text, 909 
+
+but taxonomically they must be considered part of Spirochaetia .910 
+
+Figure 2. A phylogenetic framework for the Spirochaetes phylum 911 
+
+Phylogenetic tree of the cultivable species of Spirochaetes , with the main clades highlighted in colours 912 
+
+(yellow for Brachyspira spp., dark grey for Brevinematales , cyan for Leptospirales , red for 913 
+
+Borreliaceae , green for Entomospira spp. , light blue for intermediate Spirochaetia , and dark blue for 914 
+
+Treponemataceae ), represented next to the pairwise matrix of Percentage of Conserved Proteins 915 
+
+(POCP, %) . The colours in the POCP matrix correspond to the continuous scale represented in the 916 
+
+right. The coloured intermediate column represents the main clade classification. The monophyletic 917 
+
+clade containing the n on -spiral species is also highlighted with a dashed line. This figure is also 918 
+
+available on the website  spirochase.pasteur.cloud  for dynamic exploration. 919 
+
+> .CC-BY 4.0 International license made available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is The copyright holder for this preprint this version posted May 28, 2026. ;https://doi.org/10.1101/2025.07.04.663154 doi: bioRxiv preprint
+
+33 
+
+Figure 3. Functional genomic architecture differentiates ecological patterns 920 
+
+(A) Genome repartition by COG categories, excluding unknown function genes . The genomes are 921 
+
+ordered from left to right according to their phylogenetic position in Fig 2, and COG categories are 922 
+
+color -coded and ordered alphabetically from top to bottom as represented in the legend. The full name 923 
+
+of each COG categories is presented at the bottom alongside their legend colours. This figure is also 924 
+
+available on the website  spirochase.pasteur.cloud  for interactive exploration. (B) Principal Component 925 
+
+Analysis (PCA) individuals plot of the COG category distribution, with the main taxonomic clades 926 
+
+coloured as indicated in the legend . T he clusters cont aining the host -dependent species ( Borrelia 927 
+
+spp., T. pallidum and T. paraluiscuniculi ) (upper -left position) and the non -spiral Spirochaetes (lower 928 
+
+position) are circled with a dashed line .929 
+
+Figure 4. Functional genomic signatures of host -dependent phenotypic adaptation 930 
+
+(A) Enrichment analysis of the COG categories of the Borreliaceae family, T. pallidum and T. 931 
+
+paraluiscuniculi (excluding Borreliaceae spp.) against all other Spirochaetes species. (B) Enrichment 932 
+
+analysis of the COG categories of the Leptospiraceae family against all other Spirochaetes species .933 
+
+(C) Enrichment analysis of the COG categories in the non -spiral Spirochaetes (B. porci , P. coccoides ,934 
+
+S. pleomorpha , S. globosa and S. halotolerans ) versus all other Spirochaetes . (D) Enrichment 935 
+
+analysis of the COG categories in the P1+ Leptospira spp. versus all other Leptospira spp. Log 2FC 936 
+
+values are arranged from lower to higher (left -to -right) and coloured according to the legend. The 937 
+
+boxplots indicate the log 2FC median and the firs t and third quartiles for all species within that group. 938 
+
+Enrichment values (expressed as log 2FC) are arranged by increasing order (left -to -right) and coloured 939 
+
+according to the colour gradient on the left of each plot. The boxplots indicate the log 2FC median and 940 
+
+the first and third quartiles for all evaluated species. COG category letters correspond to: [A] RNA 941 
+
+processing and modification , [B] Chromatin structure and dynamics , [C] Energy production and 942 
+
+conversion , [D] Cell cycle control, cell divisio n, chromosome partitioning , [E] Amino acid transport and 943 
+
+metabolism , [F] Nucleotide transport and metabolism , [G] Carbohydrate transport and metabolism ,944 
+
+[H] Coenzyme transport and metabolism , [I] Lipid transport and metabolism , [J] Translation, ribosomal 945 
+
+structure and biogenesis , [K] Transcription , [L] Replication, recombination and repair , [M] Cell wall ,946 
+
+> .CC-BY 4.0 International license made available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is The copyright holder for this preprint this version posted May 28, 2026. ;https://doi.org/10.1101/2025.07.04.663154 doi: bioRxiv preprint
+
+34 
+
+membrane , envelope biogenesis , [N] Cell motility , [O] Posttranslational modification, protein turnover, 947 
+
+chaperones , [P] Inorganic ion transport and metabo lism , [Q] Secondary metabolites biosynthesis, 948 
+
+transport and catabolism , [T] Signal transduction mechanisms , [U] Intracellular trafficking, secretion, 949 
+
+and vesicular transport , and [V] Defense mechanisms . (E) Principal Component Analysis (PCA) 950 
+
+individuals plot of the COG category distribution within Leptospira spp., with the main subclades 951 
+
+coloured as represented in the legend. 952 
+
+Figure 5. Features of the Last Spirochaetal Common Ancestor (LSCA). 953 
+
+Schematic repres entation of the metabolism and selected features of the LSCA as inferred from the 954 
+
+OGs present in the root . Each gene name is coloured according to their probability of presence 955 
+
+indicated in the legend on the lef t-side. Each of the five panels represents a subset of genes with 956 
+
+related functions. Question marks indicate missing functions classically needed for the pathways of 957 
+
+cell wall biogenesis. 958 
+
+SUPPLEMENTARY FIGURES 959 
+
+Figure S1. Pangenome analysis of the phylum Spirochaetes .960 
+
+(A) Pangenome a ccumulation plot of the Spirochaetes phylum representing the cumulative number 961 
+
+of different OGs. This was calculated using 100 random iterations in the presence/absence matrix of 962 
+
+OGs. Each blue dot represents one iteration, and the black line is the smooth curve of regression 963 
+
+calculated using a generalized additive model (gam) with a cubic spline under the formula y ~ s(x, bs 964 
+
+= "cs") . (B) Cumulative (green dots) and non -cumulative (blue dots) numbers of orthologs shared as 965 
+
+the number of species increa ses in the range 2 to 172. The Y axis is represented in logarithmic scale 966 
+
+to facilitate visualization. 967 
+
+Figure S2. Phylogenetic comparisons of the Spirochaetes phylum (I) .968 
+
+(A) Co -phylo plot representing the comparison between the phylogeny obtained under the unrooted 969 
+
+homogeneous model of evolution ( LG+F+I+R10 , left side) and the unrooted heterogeneous model of 970 
+
+evolution ( LG+C20+R10 , right side). Red lines connect the same leaves (species) in both trees. (B) 971 
+
+> .CC-BY 4.0 International license made available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is The copyright holder for this preprint this version posted May 28, 2026. ;https://doi.org/10.1101/2025.07.04.663154 doi: bioRxiv preprint
+
+35 
+
+Co -phylo plot representing the comparison between the phylogeny obtained under the rooted 972 
+
+homogeneous model of evolution ( LG+F+I+R10 , left side) and the rooted heterogeneous model of 973 
+
+evolution ( LG+C20+R10 , right side). Red lines connect the same leaves (species) in both trees. 974 
+
+Figure S3. Phylogenetic com parisons of the Spirochaetes phylum (II) .975 
+
+(A) Co -phylo plot representing the comparison between the phylogeny obtained under the rooted 976 
+
+homogeneous model of evolution ( LG+F+I+R10 , left side) and the unrooted homogeneous model of 977 
+
+evolution ( LG+F+I+R10 , right side). Red lines connect the same leaves (species) in both trees. (B) 978 
+
+Co -phylo plot representing the comparison between the phylogeny obtained under the rooted 979 
+
+heterogeneous model of evolution ( LG+C20+R10 , left side) and the unrooted heterogeneous model 980 
+
+of evolution ( LG+C20+R10 , right side). Red lines connect the same leaves (species) in both trees. 981 
+
+Figure S4. Phylogenetic comparisons of the Spirochaetes phylum (III). 982 
+
+(A) Co -phylo plot representing the comparison between the phylogeny obtained under the rooted 983 
+
+heterogeneous model of evolution ( LG+C20+R10 , left side) and the rooted multi -species coalescen ce 984 
+
+model of evolution (ASTRAL , right side). Red lines connect the same leaves (species) in both trees. 985 
+
+(B) Presence/absence plot of the 140 soft -core genome markers (OGs) used for the phylogenetic 986 
+
+inference , with species in which the OG is present marked in blue and absent in grey. The Y axis 987 
+
+contains the species ordered from top to bottom according to their phylogenetic position in Fig 2.988 
+
+Figure S5. A n updated phylogeny for the Treponematales order. 989 
+
+Phylogeny of the Treponematales order obtained under the model LG+F+I+R10 (best -fit bacterial 990 
+
+model for Spirochaetes ) using 440 soft -core genome markers and rooted using the closest clade in 991 
+
+Fig 2 (Sediminispirochaeta smaragdinae , Sediminispirochaeta bajacaliforniensis , Marispirochaeta 992 
+
+aestuarii ). The two subclades within the Treponema genus are highlighted in blue (T1 subclade) and 993 
+
+grey (T2 subclade). All nodes had SH -alrt and bootstrap support values of 100% except for the one 994 
+
+splitting T. parvum from T. socranskii , T. porcinum and T. bryantii , which had 97/91% support. 995 
+
+Figure S6. Average nucleotide identity matrix of the Spirochaetes .996 
+
+> .CC-BY 4.0 International license made available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is The copyright holder for this preprint this version posted May 28, 2026. ;https://doi.org/10.1101/2025.07.04.663154 doi: bioRxiv preprint
+
+36 
+
+Phylogenetic tree of the cultivable specie s of Spirochaetes , with the main clades highlighted in colours 997 
+
+(yellow for Brachyspira spp., dark grey for Brevinematales , cyan for Leptospirales , red for 998 
+
+Borreliaceae , green for Entomospira spp., light blue for intermediate Spirochaetia , and dark blue for 999 
+
+Treponemataceae ), represented next to the pairwise matrix of Average Nucleotide Identity using the 1000 
+
+BLASTn method (ANIb, %). The colours in the ANIb matrix correspond to the continuous scale 1001 
+
+represented in the right. Th e intermediate col oured column represents the main clade classification. 1002 
+
+Figure S7. Kmer -based tetranucleotide matrix of the Spirochaetes .1003 
+
+Phylogenetic tree of the cultivable species of Spirochaetes , with the main clades highlighted in colours 1004 
+
+(yellow for Brachyspira spp., dark grey for Brevinematales , cyan for Leptospirales , red for 1005 
+
+Borreliaceae , green for Entomospira spp., light blue for intermediate Spirochaetia , and dark blue for 1006 
+
+Treponemataceae ), represented next to the pairwise matrix of a kmer -based tetranucleo tide method 1007 
+
+(TETRA , %). The colours in the TETRA matrix correspond to the continuous scale represented in the 1008 
+
+right. Th e intermediate coloured column represents the main clade classification. 1009 
+
+Figure S8. Percentage of conserved proteins as predictor of genus boundaries in 1010 
+
+Spirochaetes .1011 
+
+(A) Histogram of distribution of Average Nucleotide Identity using the BLASTn method (ANIb, %) 1012 
+
+values for all pairwise comparisons of the phylum Spirochaetes . The distribution of the values is a 1013 
+
+single mode skewed uniformly to the right. (B) Histogram of distribution of Percentage of Conserved 1014 
+
+Proteins (POCP, %) values for all pairwise comparisons of the phylum Spirochaetes . The values are 1015 
+
+distributed in three main modes with clear boundaries between them . (C) Histogram of distribution of 1016 
+
+kmer -based tetranucleotide method (TETRA, %) values for all pairwise comparisons of the phylum 1017 
+
+Spirochaetes . The values are distributed in two main modes , with the first skewed to the right and 1018 
+
+with no clear boundaries between them . (D) POCP matrix of all pairwise comparisons of the phylum 1019 
+
+Spirochaetes that include a POCP value ≥ 45% . Values lower than the 45% threshold are coloured 1020 
+
+in white , all the other colours in the POCP ma trix correspond to the continuous scale represented in 1021 
+
+the right. 1022 
+
+> .CC-BY 4.0 International license made available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is The copyright holder for this preprint this version posted May 28, 2026. ;https://doi.org/10.1101/2025.07.04.663154 doi: bioRxiv preprint
+
+37 
+
+Figure S9. Annotation graph of all Spirochaetes species. 1023 
+
+(A) Annotation graph of g enome repartition by COG categories, including unknown function genes 1024 
+
+(COG category S) . The genomes are ordered from left to right according to their phylogenetic position 1025 
+
+in Fig 2, and COG categories are color -coded and ordered alphabetically as represented in the legend 1026 
+
+on the right. (B) Representation of the maximum annotation level repa rtition per genome, including 1027 
+
+unannotated genes (category S). The legend on the right illustrates the putative origin of the OGs per 1028 
+
+genome: B for bacterial, A for archaeal, V for viral and E for eukaryotic . The genomes are ordered 1029 
+
+from left to right accor ding to their phylogenetic position in Fig 2.1030 
+
+Figure S10. Comparative analysis of the non -bacterial OGs in the main genera of Spirochaetes .1031 
+
+Percentage of OGs of putative eukaryotic (panel A), archaeal (panel B) or viral (panel C) origin in 1032 
+
+Borreliaceae spp. (grey dots ), Leptospira spp. (blue dots ), Treponema spp. (green dots) or 1033 
+
+Brachyspira spp. (purple dots). * p-value < 0.05 , ** p-value < 0.01, *** p-value < 0.001 , **** p-value 1034 
+
+< 0.0001 . The data was analysed using a Brown -Forsythe and Welch ANOVA test with Dunnet t’s T3 1035 
+
+post -comparison test .1036 
+
+Figure S11. Contribution of the individual variables to the Principal Component Analysis 1037 
+
+(PCA). 1038 
+
+Percentage of c ontribution of each COG category to the PC1 and PC2 (panel A), PC1 only (panel B) 1039 
+
+and PC2 only (panel C) . The red dashed line indicates the percentage of contribution if all variables 1040 
+
+contributed the same to the components (5%). 1041 
+
+Figure S12. OGs present in the Last Spirochaetal Common Ancestor 1042 
+
+Presence/absence plot of the 511 OGs found to be present in the LS CA, with species in which the 1043 
+
+OG is present or absent marked in blue and grey , respectively . The Y axis contains the species 1044 
+
+ordered from top to bottom according to their phylogenetic position in Fig 2. OGs are ordered by COG 1045 
+
+category and from most to leas t abundant. The colour -coded lower panel indicates the COG category 1046 
+
+according to the legend on the right. 1047 
+
+> .CC-BY 4.0 International license made available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is The copyright holder for this preprint this version posted May 28, 2026. ;https://doi.org/10.1101/2025.07.04.663154 doi: bioRxiv preprint
+
+38 
+
+Figure S1 3. OGs lost by non -spiral Spirochaetes .1048 
+
+Distribution of the number of OGs found to be lost by the non -spiral Spirochaetes (B. porci , P.1049 
+
+coccoides , S. pleomorpha , S. globosa and S. halotolerans ) through the two approaches employed in 1050 
+
+the study (see Methods). OGs in the LOST type ( 95% conservation or higher in the closest clade 1051 
+
+spiral species) are coloured in dark blue while OGs in the ABSEN T type (80% or higher conservation 1052 
+
+in all other spiral Spirochaetes ) are coloured in light blue. 1053 
+
+> .CC-BY 4.0 International license made available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is The copyright holder for this preprint this version posted May 28, 2026. ;https://doi.org/10.1101/2025.07.04.663154 doi: bioRxiv preprint
+
+39 
+
+SUPPLEMENTARY TABLES 1054 
+
+Table S1. Genomes used in this study and their main features. 1055 
+
+Table S2. Percentage of conserved proteins (POCP) across all Spirochaetes species 1056 
+
+Table S3. Annotation of the OGs of putative eukaryotic origin found in Leptospira spp. 1057 
+
+Table S4. Relative percentage of the genome of each Spirochaetes species devoted to each 1058 
+
+COG functional category. 1059 
+
+Table S5. Annotation of the OGs found present in the LSCA. 1060 
+
+Table S6. OGs lost by the non -spiral Spirochaetes .1061 
+
+> .CC-BY 4.0 International license made available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is The copyright holder for this preprint this version posted May 28, 2026. ;https://doi.org/10.1101/2025.07.04.663154 doi: bioRxiv preprint
+
+.CC-BY 4.0 International license made available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is The copyright holder for this preprint this version posted May 28, 2026. ;https://doi.org/10.1101/2025.07.04.663154 doi: bioRxiv preprint .CC-BY 4.0 International license made available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is The copyright holder for this preprint this version posted May 28, 2026. ;https://doi.org/10.1101/2025.07.04.663154 doi: bioRxiv preprint

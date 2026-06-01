@@ -1,0 +1,181 @@
+{
+  "mode": "standard",
+  "generated_at": "2026-06-01T22:53:39.677383+00:00",
+  "stats": {
+    "mode": "standard",
+    "tag_count": 1,
+    "deep_divecandidates": 1,
+    "deep_cap": 6,
+    "deep_selected": 1,
+    "quick_candidates": 3,
+    "quick_skim_target": 11,
+    "quick_selected": 3
+  },
+  "deep_dive": [
+    {
+      "id": "biorxiv-10-64898-2026-05-26-727979-v1",
+      "source": "biorxiv",
+      "title": "Reconstructing the hyphosphere using a hyphal release-capture soil microcosm",
+      "abstract": "Fungal hyphae form spatially confined interfaces in soil that mediate close associations with bacteria, collectively referred to as the hyphosphere. Despite its recognized ecological importance, experimental access to hyphosphere-associated microbial communities under realistic soil and plant-associated conditions has remained limited. Here, we present a soil-mimetic microcosm that enables controlled reconstruction and recovery of hyphosphere bacterial communities embedded within plant-associated soil. The system integrates field-derived soil, a native soil microbial inoculum, living cotton seedlings, and a spatially constrained fungal inoculum housed within sterile cell-strainer assemblies, permitting hyphal extension into soil while preserving a recoverable fungal-soil boundary. Using the soil-borne plant pathogen Fusarium oxysporum f. sp. vasinfectum as a model filamentous fungus, we show that the microcosm enables reproducible recovery of hypha-associated soil microaggregates containing physically attached bacterial cells. Full-length 16S rRNA profiling revealed pronounced reductions in bacterial richness and evenness in hyphosphere samples relative to bulk and rhizosphere soils, consistent with recruitment of a restricted subset of the surrounding microbiota. Ordination analyses demonstrated clear compositional separation between soil and hyphosphere compartments, with convergence of hypha-associated communities across bulk and rhizosphere contexts. Phylogenetic turnover analyses indicated phylogenetic structuring, whereas taxonomic analyses identified a conserved set of bacterial genera consistently associated with hyphae alongside compartment-specific taxa influenced by soil and plant context. Together, these findings establish the novel hyphal release-and-capture microcosm as a reproducible, ecologically grounded platform for studying hyphosphere-associated bacterial communities in plant-associated soils.",
+      "authors": [
+        "Abeysinghe, G.",
+        "Nagy, E.",
+        "Wagner, T.",
+        "Parunandi, S.",
+        "Santos, J.",
+        "Bagavathiannan, M.",
+        "Antony-Babu, S."
+      ],
+      "primary_category": "microbiology",
+      "categories": [
+        "microbiology"
+      ],
+      "published": "2026-05-27T00:00:00+00:00",
+      "link": "https://www.biorxiv.org/content/10.64898/2026.05.26.727979v1.full.pdf",
+      "tags": [
+        "keyword:ag-bg-div",
+        "query:ag-bg-div"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "soil microcosm to reconstruct hyphosphere bacterial communities, enabling study of plant-fungal-bacterial interactions",
+      "llm_evidence_cn": "构建菌丝圈土壤微宇宙，研究植物-真菌-细菌互作",
+      "llm_evidence": "构建菌丝圈土壤微宇宙，研究植物-真菌-细菌互作",
+      "canonical_evidence": "构建菌丝圈土壤微宇宙，研究植物-真菌-细菌互作",
+      "llm_tldr_en": "This paper presents a soil microcosm that allows controlled reconstruction and recovery of hyphosphere bacterial communities, enabling study of belowground interactions relevant to plant-soil feedback.",
+      "llm_tldr_cn": "菌丝圈是真菌菌丝与细菌互作的关键微界面，但实验获取困难。本研究设计了一种土壤模拟微宇宙，整合田间土壤、微生物接种物、活体植物和真菌接种体，使菌丝延伸并能够回收菌丝圈细菌群落。该系统在更真实条件下实现了对菌丝圈微生物群落的可控重建与回收。该微宇宙为研究植物-真菌-细菌的跨营养级互作提供了新的实验平台，有助于理解地下功能多样性的耦合机制。",
+      "llm_tldr": "菌丝圈是真菌菌丝与细菌互作的关键微界面，但实验获取困难。本研究设计了一种土壤模拟微宇宙，整合田间土壤、微生物接种物、活体植物和真菌接种体，使菌丝延伸并能够回收菌丝圈细菌群落。该系统在更真实条件下实现了对菌丝圈微生物群落的可控重建与回收。该微宇宙为研究植物-真菌-细菌的跨营养级互作提供了新的实验平台，有助于理解地下功能多样性的耦合机制。",
+      "llm_tags": [
+        "query:ag-bg-div"
+      ],
+      "matched_query_tag": "query:ag-bg-div",
+      "matched_query_text": "interactions between aboveground and belowground functional diversity",
+      "matched_requirement_id": "req-6",
+      "selection_source": "fresh_fetch"
+    }
+  ],
+  "quick_skim": [
+    {
+      "id": "biorxiv-10-1101-2025-07-04-663154-v2",
+      "source": "biorxiv",
+      "title": "Genomic functional architecture predicts ecological adaptation across a highly diverse bacterial phylum",
+      "abstract": "Understanding the genetic basis of ecological adaptation is a fundamental challenge of evolutionary biology. Spirochaetes are an ancient bacterial phylum of exceptional ecological breadth, encompassing major human pathogens such as the causative agents of syphilis, Lyme disease, and leptospirosis, alongside free-living species from contrasting environments and recently described species that lack the canonical spiral morphology of the phylum. Here, using a curated dataset of genomes representing all cultivable spirochete species, we show that functional genome architecture (defined as the proportional allocation of coding capacity across biological processes) correlates with ecological lifestyle and phenotypic traits in Spirochaetes independently of phylogenetic relationships, with host-dependent lineages from distinct evolutionary origins converging on shared functional profiles. Phylum-wide phylogenomic analyses identified Brachyspira as the earliest-diverging lineage, revisiting the evolutionary rooting of the phylum, and establishing that the spiral morphology is ancestral and was lost in a single evolutionary transition also associated with coordinated functional changes. Lastly, ancestral genome reconstruction uncovers the common ancestor as a motile, heterotrophic, and spiral-shaped bacterium, with metabolic and structural features not previously described. Together, these results provide an integrated and functional framework for Spirochaetes, illustrating how genome architecture can be used to track the ecological diversification of a widespread bacterial phylum.",
+      "authors": [
+        "HUETE, S. G.",
+        "COULLIN, K.",
+        "CHAPEAUBLANC, E.",
+        "TORCHET, R.",
+        "BENAROUDJ, N.",
+        "PICARDEAU, M."
+      ],
+      "primary_category": "microbiology",
+      "categories": [
+        "microbiology"
+      ],
+      "published": "2026-05-28T00:00:00+00:00",
+      "link": "https://www.biorxiv.org/content/10.1101/2025.07.04.663154v2.full.pdf",
+      "tags": [
+        "keyword:ag-bg-div",
+        "query:ag-bg-div"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "genomic functional architecture predicts ecological adaptation",
+      "llm_evidence_cn": "基因组功能架构预测生态适应",
+      "llm_evidence": "基因组功能架构预测生态适应",
+      "canonical_evidence": "基因组功能架构预测生态适应",
+      "llm_tldr_en": "Functional genome architecture predicts ecological adaptation across diverse bacterial species, offering a method to study microbial functional diversity relevant to belowground ecosystem functions.",
+      "llm_tldr_cn": "为了解生态适应的遗传基础，该研究聚焦于螺旋体门细菌，通过分析所有可培养物种的基因组，发现功能基因组架构（编码能力在不同生物过程中的比例分配）与生态生活方式和表型性状密切相关。研究结果表明，基因组功能组成可以预测细菌的生态适应性，为从基因组水平理解微生物功能多样性提供了新工具。这一方法可扩展到土壤微生物群落的功能多样性研究。",
+      "llm_tldr": "为了解生态适应的遗传基础，该研究聚焦于螺旋体门细菌，通过分析所有可培养物种的基因组，发现功能基因组架构（编码能力在不同生物过程中的比例分配）与生态生活方式和表型性状密切相关。研究结果表明，基因组功能组成可以预测细菌的生态适应性，为从基因组水平理解微生物功能多样性提供了新工具。这一方法可扩展到土壤微生物群落的功能多样性研究。",
+      "llm_tags": [
+        "query:ag-bg-div"
+      ],
+      "matched_query_tag": "query:ag-bg-div",
+      "matched_query_text": "belowground functional diversity effects on ecosystem function",
+      "matched_requirement_id": "req-5",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "biorxiv-10-64898-2026-02-21-707176-v2",
+      "source": "biorxiv",
+      "title": "Deciphering the microbial architecture of pesticide and antibiotics biodegradation",
+      "abstract": "Understanding emerging functions at the scale of a bacterial community is a major challenge in microbial ecology and could lead up to promising tools for engineering microbial communities, for example in bioremediation. Here, through a top-down approach we obtained compositional variants of pesticide and antibiotics-degrading communities and further investigated communities features associated with their degradation abilities. We first tested whether diversity index or functional genes abundance could reliably be used as a proxy for this function, and obtained encouraging, albeit variable results. Further, through the use of statistical tools borrowed from the genomic selection literature, we were able to derive accurate prediction of the mineralisation potential of a bacterial community, based on its composition. However, the parallel between genotype-phenotype and community composition-mineralisation potential suffers a crucial caveat: bacterial abundances vary on a much wider scale than allele dosage at a given locus and are prone to change over time (particularly at the mineralisation scale). Here we observed that using presence/absence data instead of relative abundance can overcome these limitations and provide a clearer functional signal for mineralisation prediction through linear regression models. Random forest can also intrinsically deal with microbial data without transformation and select for significant predictors. We suggest drawing inspiration from the tools and concepts used in genotype-phenotype mapping to elucidate microbial functions at the community level while keeping in mind the significant differences between these two fields. This parallel is here exemplified by the concept of microbial architecture of degrading functions, akin to the genetic architecture of phenotypic traits.",
+      "authors": [
+        "Thieffry, S.",
+        "Aubert, J.",
+        "Beguet, J.",
+        "Devers-Lamrani, M.",
+        "Martin-Laurent, F.",
+        "PESCE, S.",
+        "Romdhane, S.",
+        "Rouard, N.",
+        "Siol, M.",
+        "Spor, A."
+      ],
+      "primary_category": "microbiology",
+      "categories": [
+        "microbiology"
+      ],
+      "published": "2026-06-01T00:00:00+00:00",
+      "link": "https://www.biorxiv.org/content/10.64898/2026.02.21.707176v2.full.pdf",
+      "tags": [
+        "keyword:ag-bg-div",
+        "query:ag-bg-div"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "investigates microbial functional diversity as predictor of degradation function, relevant to belowground functional diversity effects",
+      "llm_evidence_cn": "研究微生物功能多样性对降解功能的预测作用，与地下功能多样性效应相关",
+      "llm_evidence": "研究微生物功能多样性对降解功能的预测作用，与地下功能多样性效应相关",
+      "canonical_evidence": "研究微生物功能多样性对降解功能的预测作用，与地下功能多样性效应相关",
+      "llm_tldr_en": "Examines whether diversity indices or functional gene abundance predict pesticide/antibiotic degradation in microbial communities. Uses statistical tools from genomic selection for accurate prediction. Directly links belowground functional diversity to an ecosystem function.",
+      "llm_tldr_cn": "该论文采用自上而下的方法构建了降解农药和抗生素的微生物群落变异体，检验了多样性指数和功能基因丰度作为降解功能代理指标的可靠性。并借助基因组选择文献中的统计工具实现了对降解功能的准确预测。研究直接将地下微生物功能多样性与生态系统功能（降解）联系起来，但缺少地上部分和环境梯度。",
+      "llm_tldr": "该论文采用自上而下的方法构建了降解农药和抗生素的微生物群落变异体，检验了多样性指数和功能基因丰度作为降解功能代理指标的可靠性。并借助基因组选择文献中的统计工具实现了对降解功能的准确预测。研究直接将地下微生物功能多样性与生态系统功能（降解）联系起来，但缺少地上部分和环境梯度。",
+      "llm_tags": [
+        "query:ag-bg-div"
+      ],
+      "matched_query_tag": "query:ag-bg-div",
+      "matched_query_text": "belowground functional diversity effects on ecosystem function",
+      "matched_requirement_id": "req-5",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "biorxiv-10-64898-2026-05-22-727091-v1",
+      "source": "biorxiv",
+      "title": "Beyond the annotated: protein foundation models enable robust prediction of microbial root competence",
+      "abstract": "BackgroundRoot competence, the ability of soil bacteria to establish and grow on plant roots, is a key ecological trait influencing plant nutrition, growth, and health. However, identifying genomic determinants of root competence across bacteria remains challenging, in part because model generalisability depends strongly on how genomes are represented. Traditional approaches based on curated annotations are incomplete and biased toward well-characterised organisms and functions, limiting generalisation. Sequence-similarity clustering improves coverage but yields high-dimensional features relative to dataset size, hindering training. Foundation models offer an alternative by learning com-pact representations without relying on prior annotation.\n\nResultsHere, we compared pretrained genome representations from protein and DNA foundation models (ESM-2, Bacformer, DNABERT-S) with annotation- and clustering-based features (KEGG orthology, OrthoFinder protein families) for predicting root competence using synthetic microbial community data from Arabidop-sis thaliana and assessed generalisability across bacteria. When training and test sets contained taxonomically related bacteria, most approaches performed similarly. However, when test bacteria belonged to phyla entirely absent from training, reflecting high evolutionary separation across all levels of bacterial classification, only pretrained protein representations retained predictive performance. Bacformer-derived representations, which incorporate genomic context, supported the strongest generalisation, suggesting that conserved genomic organisation contributes to predicting root competence. Feature attribution quantifying protein contributions to model decisions linked root competence to TonB/SusD-dependent receptors, small-molecule transporters, and unannotated proteins with conserved regulatory motifs and homology to carbon starvation-response loci.\n\nConclusionsProtein foundation models support generalisation across evolutionarily distant bacteria and identify genomic determinants of root competence, including unannotated proteins.",
+      "authors": [
+        "Matyskova, P.",
+        "Selten, G.",
+        "Pieterse, C. M.",
+        "Abeln, S.",
+        "de Jonge, R."
+      ],
+      "primary_category": "genomics",
+      "categories": [
+        "genomics"
+      ],
+      "published": "2026-05-26T00:00:00+00:00",
+      "link": "https://www.biorxiv.org/content/10.64898/2026.05.22.727091v1.full.pdf",
+      "tags": [
+        "keyword:ag-bg-div",
+        "query:ag-bg-div"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "protein foundation models predict microbial root competence, a key belowground functional trait",
+      "llm_evidence_cn": "蛋白质基础模型预测微生物根系定殖能力，这是一个关键的地下功能性状",
+      "llm_evidence": "蛋白质基础模型预测微生物根系定殖能力，这是一个关键的地下功能性状",
+      "canonical_evidence": "蛋白质基础模型预测微生物根系定殖能力，这是一个关键的地下功能性状",
+      "llm_tldr_en": "This study uses protein foundation models to predict bacterial root competence from genomes, enabling large-scale assessment of belowground functional traits without relying on annotations.",
+      "llm_tldr_cn": "微生物根系定殖能力是影响植物健康和养分利用的关键性状，但基于注释的预测方法存在局限。本研究利用蛋白质基础模型直接从基因组序列学习紧凑表征，无需依赖功能注释即可预测多种细菌的根定殖能力。实验表明，该模型在跨菌种预测中表现出鲁棒性。该方法为大规模评估地下微生物功能性状提供了新途径，有助于理解微生物组与植物的互作。",
+      "llm_tldr": "微生物根系定殖能力是影响植物健康和养分利用的关键性状，但基于注释的预测方法存在局限。本研究利用蛋白质基础模型直接从基因组序列学习紧凑表征，无需依赖功能注释即可预测多种细菌的根定殖能力。实验表明，该模型在跨菌种预测中表现出鲁棒性。该方法为大规模评估地下微生物功能性状提供了新途径，有助于理解微生物组与植物的互作。",
+      "llm_tags": [
+        "query:ag-bg-div"
+      ],
+      "matched_query_tag": "query:ag-bg-div",
+      "matched_query_text": "belowground functional diversity effects on ecosystem function",
+      "matched_requirement_id": "req-5",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    }
+  ]
+}
