@@ -1,6 +1,9 @@
 * <a class="dpr-sidebar-root-link" href="#/">首页</a>
 * <a class="dpr-sidebar-root-link dpr-sidebar-noactive-link" href="javascript:void(0)" data-dpr-hash="#/tutorial/README">使用教程</a>
 * Daily Papers
+  * 2026-06-03 <!--dpr-date:20260603-->
+    * 速读区
+      * <a class="dpr-sidebar-item-link dpr-sidebar-item-structured" href="#/202606/03/biorxiv-10-64898-2026-05-28-728426-v1-multiscale-intraspecific-variation-and-coordination-of-hydraulic-traits-in-silver-fir" data-sidebar-item="{&quot;title&quot;: &quot;Multiscale intraspecific variation and coordination of hydraulic traits in silver fir&quot;, &quot;link&quot;: &quot;https://arxiv.org/abs/biorxiv-10-64898-2026-05-28-728426-v1-multiscale-intraspecific-variation-and-coordination-of-hydraulic-traits-in-silver-fir&quot;, &quot;score&quot;: &quot;6.0&quot;, &quot;tags&quot;: [{&quot;kind&quot;: &quot;query&quot;, &quot;label&quot;: &quot;ag-bg-div&quot;}], &quot;evidence&quot;: &quot;研究了地上功能性状变异及其沿环境梯度的协调&quot;}">Multiscale intraspecific variation and coordination of hydraulic traits in silver fir</a>
   * 2026-06-01 <!--dpr-date:20260601-->
     * 精读区
       * <a class="dpr-sidebar-item-link dpr-sidebar-item-structured" href="#/202606/01/biorxiv-10-64898-2026-05-26-727979-v1-reconstructing-the-hyphosphere-using-a-hyphal-release-capture-soil-microcosm" data-sidebar-item="{&quot;title&quot;: &quot;Reconstructing the hyphosphere using a hyphal release-capture soil microcosm&quot;, &quot;link&quot;: &quot;https://arxiv.org/abs/biorxiv-10-64898-2026-05-26-727979-v1-reconstructing-the-hyphosphere-using-a-hyphal-release-capture-soil-microcosm&quot;, &quot;score&quot;: &quot;8.0&quot;, &quot;tags&quot;: [{&quot;kind&quot;: &quot;query&quot;, &quot;label&quot;: &quot;ag-bg-div&quot;}], &quot;evidence&quot;: &quot;构建菌丝圈土壤微宇宙，研究植物-真菌-细菌互作&quot;}">Reconstructing the hyphosphere using a hyphal release-capture soil microcosm</a>

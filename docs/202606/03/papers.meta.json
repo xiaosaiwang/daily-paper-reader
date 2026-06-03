@@ -1,0 +1,24 @@
+{
+  "label": "2026-06-03",
+  "date": "2026-06-03",
+  "generated_at": "2026-06-03T22:47:53",
+  "count": 1,
+  "papers": [
+    {
+      "paper_id": "202606/03/biorxiv-10-64898-2026-05-28-728426-v1-multiscale-intraspecific-variation-and-coordination-of-hydraulic-traits-in-silver-fir",
+      "section": "quick",
+      "title_en": "Multiscale intraspecific variation and coordination of hydraulic traits in silver fir",
+      "authors": "Acuna-Miguez, B., Copie, A., Lefevre, F., Mencuccini, M., Scotti, I., Cochard, H., Delzon, S., Druel, A., Fady, B., Jean, F., Scotti-Saintagne, C., Torres-Ruiz, J. T., Martin-StPaul, N. K.",
+      "date": "2026-06-01",
+      "pdf": "https://www.biorxiv.org/content/10.64898/2026.05.28.728426v1.full.pdf",
+      "score": "6.0",
+      "evidence": "研究了地上功能性状变异及其沿环境梯度的协调",
+      "tldr": "银杉的水力安全性状和木材密度种内变异低，显示强约束；而水分利用和效率性状变异高。干旱影响若干性状，但叶片残余导度和肉质性受稳定化选择导致方差降低。种群内性状协调弱于种群间，表明尺度依赖的性状关系。研究强调在预测物种干旱适应能力时需考虑尺度依赖的性状变异及其驱动因素。",
+      "tags": "query:ag-bg-div",
+      "abstract_en": "- Intraspecific variability in hydraulic and morphological traits may alter projections of forest vulnerability to climate change. Recognizing multiscale nature is essential, as trait relationships within populations may not reflect those across the species' range. - We assessed variability in 11 traits in 10 natural populations of Abies alba across environmental and phylogeographic gradients to evaluate potential impacts on drought vulnerability. We quantified trait variation within and among populations, tested effects of climate, phylogeny and local factors, and evaluated trait coordination across scales. - Hydraulic safety traits and wood density showed low variability, indicating strong constraints. In contrast, water-use and efficiency traits were highly variable. Aridity influenced several traits, but reduced variance was detected only for leaf residual conductance and succulence consisted with stabilising selection. Trait coordination was weak within populations than among populations. - Overall, A. alba combines constrained hydraulic safety traits with variable water use traits. This may buffer drought impacts but limits shifts in hydraulic safety margins, potentially increasing risks of hydraulic failure, especially in humid environments where populations lack the capacity to tolerate prolonged dry periods. Thus, our findings highlight the need to account for scale-dependent trait variability, coordination, and their underlying drivers when predicting species' adaptive capacity to drought.",
+      "source": "biorxiv",
+      "selection_source": "fresh_fetch"
+    }
+  ],
+  "errors": []
+}

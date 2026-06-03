@@ -1,0 +1,64 @@
+{
+  "mode": "standard",
+  "generated_at": "2026-06-03T22:47:31.631563+00:00",
+  "stats": {
+    "mode": "standard",
+    "tag_count": 1,
+    "deep_divecandidates": 0,
+    "deep_cap": 6,
+    "deep_selected": 0,
+    "quick_candidates": 1,
+    "quick_skim_target": 11,
+    "quick_selected": 1
+  },
+  "deep_dive": [],
+  "quick_skim": [
+    {
+      "id": "biorxiv-10-64898-2026-05-28-728426-v1",
+      "source": "biorxiv",
+      "title": "Multiscale intraspecific variation and coordination of hydraulic traits in silver fir",
+      "abstract": "- Intraspecific variability in hydraulic and morphological traits may alter projections of forest vulnerability to climate change. Recognizing multiscale nature is essential, as trait relationships within populations may not reflect those across the species' range. - We assessed variability in 11 traits in 10 natural populations of Abies alba across environmental and phylogeographic gradients to evaluate potential impacts on drought vulnerability. We quantified trait variation within and among populations, tested effects of climate, phylogeny and local factors, and evaluated trait coordination across scales. - Hydraulic safety traits and wood density showed low variability, indicating strong constraints. In contrast, water-use and efficiency traits were highly variable. Aridity influenced several traits, but reduced variance was detected only for leaf residual conductance and succulence consisted with stabilising selection. Trait coordination was weak within populations than among populations. - Overall, A. alba combines constrained hydraulic safety traits with variable water use traits. This may buffer drought impacts but limits shifts in hydraulic safety margins, potentially increasing risks of hydraulic failure, especially in humid environments where populations lack the capacity to tolerate prolonged dry periods. Thus, our findings highlight the need to account for scale-dependent trait variability, coordination, and their underlying drivers when predicting species' adaptive capacity to drought.",
+      "authors": [
+        "Acuna-Miguez, B.",
+        "Copie, A.",
+        "Lefevre, F.",
+        "Mencuccini, M.",
+        "Scotti, I.",
+        "Cochard, H.",
+        "Delzon, S.",
+        "Druel, A.",
+        "Fady, B.",
+        "Jean, F.",
+        "Scotti-Saintagne, C.",
+        "Torres-Ruiz, J. T.",
+        "Martin-StPaul, N. K."
+      ],
+      "primary_category": "plant biology",
+      "categories": [
+        "plant biology"
+      ],
+      "published": "2026-06-01T00:00:00+00:00",
+      "link": "https://www.biorxiv.org/content/10.64898/2026.05.28.728426v1.full.pdf",
+      "tags": [
+        "keyword:ag-bg-div",
+        "query:ag-bg-div"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "studies aboveground functional trait variation and coordination across environmental gradients",
+      "llm_evidence_cn": "研究了地上功能性状变异及其沿环境梯度的协调",
+      "llm_evidence": "研究了地上功能性状变异及其沿环境梯度的协调",
+      "canonical_evidence": "研究了地上功能性状变异及其沿环境梯度的协调",
+      "llm_tldr_en": "This paper quantifies intraspecific variation and coordination of hydraulic traits in silver fir across populations, linking trait variability to climate and drought vulnerability, relevant to aboveground functional diversity effects on ecosystem function.",
+      "llm_tldr_cn": "该研究针对冷杉水力性状的种内变异及多尺度协调关系，评估了11个性状在10个自然种群中的变异程度及其对气候和系统发育的响应。结果表明，水力安全性状和木材密度变异较低，而水分利用效率变异较大，且性状协调关系随尺度变化。这为了解地上功能多样性对生态系统功能（如干旱脆弱性）的影响提供了视角。",
+      "llm_tldr": "该研究针对冷杉水力性状的种内变异及多尺度协调关系，评估了11个性状在10个自然种群中的变异程度及其对气候和系统发育的响应。结果表明，水力安全性状和木材密度变异较低，而水分利用效率变异较大，且性状协调关系随尺度变化。这为了解地上功能多样性对生态系统功能（如干旱脆弱性）的影响提供了视角。",
+      "llm_tags": [
+        "query:ag-bg-div"
+      ],
+      "matched_query_tag": "query:ag-bg-div",
+      "matched_query_text": "aboveground functional diversity effects on ecosystem function",
+      "matched_requirement_id": "req-4",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    }
+  ]
+}
