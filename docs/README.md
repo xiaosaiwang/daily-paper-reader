@@ -6,26 +6,37 @@
 </div>
 
 ## 每次日报
-- 最新运行日期：2026-06-03
-- 运行时间：2026-06-03 22:47:47 UTC
+- 最新运行日期：2026-06-04
+- 运行时间：2026-06-04 21:56:04 UTC
 - 运行状态：成功
-- 本次总论文数：1
-- 精读区：0
-- 速读区：1
+- 本次总论文数：5
+- 精读区：1
+- 速读区：4
 
 ### 今日简报（AI）
-1) 今日速读一篇关于银杉水力性状多尺度种内变异与协调的论文。  
-2) 研究发现银杉水力性状在个体、种群尺度上均存在变异，且性状间具有协调性。  
-3) 对植物生理生态或气候变化下森林水分适应策略感兴趣的读者，可深入阅读该文。
-- 详情：[/202606/03/README](/202606/03/README)
+今日精读聚焦青藏高原植物生长型塑造生物多样性格局，为保护规划提供依据；速读覆盖形态学开放集评估、空间组学特征选择及LLM证据提取。  
+最值得关注的是《Plant growth forms shaping biodiversity patterns》一文，揭示了生长型差异如何驱动物种分布与共存，可直接指导高寒生态系统的保护区选址。  
+建议读者结合精读论文的结论，尝试将植物生长型分类整合到区域性生物多样性评估中，并关注MorphOTU方法对非模式物种的图像识别瓶颈。
+- 详情：[/202606/04/README](/202606/04/README)
 
 ### 精读区论文标签
-- 本次无精读推荐。
+1. [Plant growth forms shaping biodiversity patterns can guide conservation planning on the Qinghai-Tibet Plateau](/202606/04/biorxiv-10-64898-2026-05-31-729149-v1-plant-growth-forms-shaping-biodiversity-patterns-can-guide-conservation-planning-on-the-qinghai-tibet-plateau)  
+   标签：评分：9.0/10、query:ag-bg-div
+   evidence：研究青藏高原植物生长型塑造生物多样性模式，直接匹配要求
 
 ### 速读区论文标签
-1. [Multiscale intraspecific variation and coordination of hydraulic traits in silver fir](/202606/03/biorxiv-10-64898-2026-05-28-728426-v1-multiscale-intraspecific-variation-and-coordination-of-hydraulic-traits-in-silver-fir)  
+1. [MorphOTU: image-derived morphological operational units for open-set biodiversity assessment](/202606/04/biorxiv-10-64898-2026-04-28-721370-v2-morphotu-image-derived-morphological-operational-units-for-open-set-biodiversity-assessment)  
+   标签：评分：7.0/10、query:ag-bg-div
+   evidence：基于图像的操作单元方法，支持跨营养级功能多样性评估
+2. [Consistent Bayesian Local Spatial Feature Selection with Application to Spatial Multimodal Omics](/202606/04/2605.30658v1-consistent-bayesian-local-spatial-feature-selection-with-application-to-spatial-multimodal-omics)  
    标签：评分：6.0/10、query:ag-bg-div
-   evidence：研究了地上功能性状变异及其沿环境梯度的协调
+   evidence：用于梯度分析的贝叶斯局部空间特征选择
+3. [A Registry-Bound LLM Pipeline for Evidence-Grounded Trait Extraction across Tropical Plants, Aquatic Species, and Exotic Pets](/202606/04/2606.00994v1-a-registry-bound-llm-pipeline-for-evidence-grounded-trait-extraction-across-tropical-plants-aquatic-species-and-exotic-pets)  
+   标签：评分：6.0/10、query:ag-bg-div
+   evidence：从物种中提取性状的LLM流水线，可用于功能性状数据库
+4. [Drought Dominates Engineered Lipid Sink Effects on Sorghum Physiology and Carbon Allocation](/202606/04/biorxiv-10-64898-2026-05-28-728502-v1-drought-dominates-engineered-lipid-sink-effects-on-sorghum-physiology-and-carbon-allocation)  
+   标签：评分：6.0/10、query:ag-bg-div
+   evidence：干旱条件下地上脂质库与地下碳分配
 
 
 <div class="dpr-home-promo-card">

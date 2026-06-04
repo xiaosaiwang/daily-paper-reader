@@ -1,0 +1,2392 @@
+Title: 69761743
+
+URL Source: https://www.biorxiv.org/content/10.64898/2026.04.28.721370v2.full.pdf
+
+Number of Pages: 52
+
+Markdown Content:
+> 1
+
+MorphOTU: image-derived morphological operational units for open-set 1
+
+biodiversity assessment 2
+
+Zhihong Zhan 1,2 , Maolin Ye 3, Michael C. Orr 4 , Weiqiang Chen 1,2 , Xue Liu 1,2 , Ling Yue 1,2 ,3
+
+Xin Sun 5,6,7* and Feng Zhang 1,2*  
+
+> 4
+> 1
+
+State Key Laboratory of Agricultural and Forestry Biosecurity, College of Plant Protection, 5
+
+Nanjing Agricultural University, Nanjing, 210095, China 6 
+
+> 2
+
+Department of Entomology, College of Plant Protection, Nanjing Agricultural University, 7
+
+Nanjing, 210095, China 8 
+
+> 3
+
+College of Plant Protection, South China Agricultural University, Guangzhou, 510600, 9
+
+China 10  
+
+> 4
+
+Stuttgart Naturkundemuseum, Rosenstein 1, Stuttgart, 70191, Germany 11  
+
+> 5
+
+State Key Laboratory of Regional and Urban Ecology, Ningbo Observation and Research 12 
+
+Station, Fujian Key Laboratory of Watershed Ecology, Institute of Urban Environment, 13 
+
+Chinese Academy of Sciences, Xiamen, China 14  
+
+> 6
+
+Zhejiang Key Laboratory of Urban Environmental Processes and Pollution Control, CAS 15 
+
+Haixi Industrial Technology Innovation Center in Beilun, Ningbo, China 16  
+
+> 7
+
+University of Chinese Academy of Sciences, Beijing, China 17  
+
+> *
+
+Corresponding authors: 18 
+
+fzhang@njau.edu.cn (Feng Zhang) 19 
+
+xsun@iue.ac.cn (Xin Sun) 20 
+
+Abstract 21 
+
+The absence of a scalable system for organizing the vast majority of unidentified 22 
+
+species is a central obstacle in biodiversity science. Molecular methods can generate 23 
+
+OTUs without species names but require sequencing infrastructure and often remain 24 
+
+difficult to link to observable morphology, whereas most computer-vision methods 25 
+
+still rely on closed-set species labels. These limitations hamper biodiversity 26 
+
+quantification under the open, incomplete conditions that characterize real ecosystems. 27 
+
+Here, we introduce morphOTUs, a general image-based framework that constructs 28 
+
+operational units of biodiversity directly from phenotypes. Using morphOTU, we 29 
+
+derive image-based OTUs across five standardized benchmark datasets spanning 30 
+
+flowers, wood anatomy, and beetle dorsal habitus. These units closely approximate 31 
+
+reference species-level groupings, including closely related species, retain coherent 32 
+
+structure when most species are “unseen’’ during training, and accurately approximate 33 
+
+> .CC-BY 4.0 International license available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint this version posted June 2, 2026. ;https://doi.org/10.64898/2026.04.28.721370 doi: bioRxiv preprint 2
+> α
+
+-diversity metrics under sparse labeling or limited sampling. Furthermore, 34 
+
+morphOTUs remain effective on a heterogeneous, long-tailed real-world insect survey 35 
+
+dataset, demonstrating robustness beyond standardized imaging conditions. Visual 36 
+
+explanations reveal that morphOTU consistently focuses on biologically meaningful 37 
+
+traits and captures continuous phenotypic variation. By providing a scalable and 38 
+
+open-set framework for quantifying phenotypic diversity, morphOTUs enable 39 
+
+biodiversity assessment that includes unnamed species and unlock the ecological 40 
+
+value of rapidly expanding digital image repositories. 41 
+
+Key words 42 
+
+Biodiversity assessment, Morphological diversity, Phenotypic variation, Operational 43 
+
+taxonomic units, Unnamed species approaches, Open-set biodiversity, Ecological 44 
+
+monitoring, Dark taxa, Trait-based ecology 45 
+
+Introduction 46 
+
+Biodiversity underpins the functioning, stability, and resilience of Earth’s ecosystems, 47 
+
+yet our ability to quantify it remains fundamentally constrained—despite the growing 48 
+
+need for a deeper understanding driven by ecosystem services (Millennium 49 
+
+Ecosystem Assessment 2005; Cardinale et al. 2012), economic value (de Groot et al. 50 
+
+2012; Costanza et al. 1997, 2014), links to human health (Hanski et al. 2012; Civitello 51 
+
+et al. 2015; Keesing & Ostfeld 2000, 2021), and ethical or cultural motivations 52 
+
+(Rolston 1988; Berkes et al. 2017). Taxonomy forms the foundational infrastructure of 53 
+
+biodiversity science: the hierarchical structure of the Linnaean system (Linnaeus 1758) 54 
+
+and the standardization provided by international codes (ICZN; ICNafp; ICNB; ICTV) 55 
+
+enable biological data to be acquired, managed, compared, and shared as structured 56 
+
+scientific knowledge. 57 
+
+Despite centuries of progress, traditional morphology-based taxonomy faces the 58 
+
+well-documented challenges of the taxonomic impediment (Hoagland 1996; Evenhuis 59 
+
+2007; Hortal et al. 2015), entailing extremely high species diversity, strong 60 
+
+> .CC-BY 4.0 International license available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint this version posted June 2, 2026. ;https://doi.org/10.64898/2026.04.28.721370 doi: bioRxiv preprint 3
+
+dependence on expert knowledge, slow and low-throughput workflows, and limited 61 
+
+transferability across taxa. Whether considering the ~2.2 million reported species 62 
+
+(Bánki et al. 2026) or the millions or even tens of millions yet to be described (Mora 63 
+
+et al. 2011; Stork 2018; Wiens 2023), classical taxonomy struggles to meet the 64 
+
+identification demands of modern biodiversity research. Taxonomic chauvinism 65 
+
+further biases biodiversity knowledge toward vertebrates or large flowering plants 66 
+
+(Bonnet et al. 2002; Feeley et al. 2016; Groom et al. 2025), diminishing the scientific 67 
+
+value of datasets by marginalizing the overwhelmingly diverse invertebrate fauna. In 68 
+
+current workflows, unnamed or unidentified individuals remain “silent” in data 69 
+
+systems; because categorization into units (typically species) is a hard prerequisite for 70 
+
+downstream ecological analyses and policy-based management, biodiversity 71 
+
+quantification and protection become tightly coupled to taxonomic completeness. 72 
+
+Molecular approaches such as DNA barcoding (Hebert et al. 2003) and 73 
+
+metabarcoding (Taberlet et al. 2012) overcome many morphological limitations 74 
+
+through standardized genetic markers, high throughput, lower expertise requirements, 75 
+
+and fine taxonomic resolution. They support distance-based species delimitation, the 76 
+
+concept of molecular operational taxonomic units (OTUs) (Callahan et al. 2016; 77 
+
+Edgar 2016), flexible sampling from individuals or environmental mixtures 78 
+
+(Hajibabaei et al. 2016; Alberdi et al. 2017), and DNA acquisition from tissues or 79 
+
+eDNA (Orgiazzi et al. 2014), enabling full-spectrum biodiversity detection from 80 
+
+individuals to communities (Cristescu 2014; DeSalle & Goldstein 2019). Nevertheless, 81 
+
+molecular workflows are not without limits: laboratory infrastructure, strict sample 82 
+
+preservation, and issues such as primer bias (Leray et al. 2013; Elbrecht & Leese 2017; 83 
+
+Alberdi et al. 2017; Ruppert et al. 2019; Rishan et al. 2023) restrict their applicability, 84 
+
+and sequencing costs remain non-trivial for large-scale work (Stein et al. 2014). 85 
+
+Incomplete reference databases (Keck et al. 2022) give rise to large numbers of 86 
+
+unnamed “dark taxa” (Hartop et al. 2022; Nilsson et al. 2023), which—although 87 
+
+analyzable as OTUs—remain unusable in conservation policy or species-level 88 
+
+ecological interpretation. The genetic-only paradigm also deepens the disconnect 89 
+
+> .CC-BY 4.0 International license available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint this version posted June 2, 2026. ;https://doi.org/10.64898/2026.04.28.721370 doi: bioRxiv preprint 4
+
+between molecular OTUs and morphological species concepts, as OTUs cannot be 90 
+
+intuitively mapped back to morphology. 91 
+
+Machine-learning approaches grounded in computer vision have recently 92 
+
+emerged as promising tools for automating biodiversity monitoring. Deep learning 93 
+
+can detect taxonomically diagnostic morphological traits (Hansen et al. 2020; Zhao et 94 
+
+al. 2023; Rayeed et al. 2025) and may match or exceed expert identification 95 
+
+performance (Valan et al. 2019). Multimodal classification combining morphology 96 
+
+and molecules can further enhance accuracy (Yang et al. 2022; Hofmann et al. 2024; 97 
+
+Karbstein et al. 2024; Kösters et al. 2025; Hunt et al. 2025). However, most existing 98 
+
+models operate under closed-set supervised learning: they require predefined species 99 
+
+labels, their training labels mirror traditional taxonomy, and they cannot handle the 100 
+
+substantial unseen or undescribed diversity present in real ecosystems. Moreover, 101 
+
+supervised models usually rely on background cues rather than organismal 102 
+
+phenotypes (Geirhos et al. 2020; Caron et al. 2021). Zero-shot and few-shot methods 103 
+
+may generalize to genus-level or higher (Stevens et al. 2023; Gu et al. 2025; Rayeed 104 
+
+et al. 2025; Wang et al. 2026), but still cannot delineate species-level entities or define 105 
+
+operational units. Without solving open-set recognition, machine learning cannot 106 
+
+generate truly actionable biodiversity data. 107 
+
+We propose that overcoming this impasse requires a shift in perspective: 108 
+
+phenotypic diversity can be measured directly within a continuous morphological 109 
+
+space, independent of species identities. By treating morphology as a 110 
+
+high-dimensional, organism-centered signal—rather than a set of discrete 111 
+
+classification labels—image-derived phenotypes can serve as a broadly applicable 112 
+
+substrate for biodiversity quantification. Such a framework should (i) operate under 113 
+
+fully open-set conditions, (ii) integrate both described and undescribed taxa, and (iii) 114 
+
+exploit rapidly expanding global digital biodiversity resources. Yet no existing 115 
+
+approach provides a general, scalable, and interpretable pathway for constructing 116 
+
+morphology-based operational taxonomic units parallel to molecular OTUs. 117 
+
+Here, we introduce morphOTU, a general and high-throughput workflow for 118 
+
+> .CC-BY 4.0 International license available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint this version posted June 2, 2026. ;https://doi.org/10.64898/2026.04.28.721370 doi: bioRxiv preprint 5
+
+deriving morphology-based OTUs directly from specimen images, analogous to the 119 
+
+molecular OTU paradigm. Our approach combines a two-stage self-supervised and 120 
+
+metric-learning architecture (OTU-Former) with a dynamic threshold-scanning 121 
+
+strategy to transform image-only, DNA-free, and often poorly annotated 122 
+
+resources—such as museum collections, large-scale unidentified materials, and 123 
+
+biodiversity survey images—into biologically interpretable morphOTUs. The 124 
+
+morphOTU workflow demonstrates stable and reliable image-derived OTU formation 125 
+
+under both supervised learning and combined self-supervised-plus-fine-tuning 126 
+
+workflows, providing greater flexibility and practical extensibility. Across five plant 127 
+
+and beetle datasets covering heterogeneous imaging conditions, morphOTUs align 128 
+
+with expert-defined species labels under limited-label and open-set conditions. 129 
+
+Moreover, morphOTU-based α-diversity estimates closely match morphology-derived 130 
+
+diversity indices. Visual explanations show that OTU-Former focuses on biologically 131 
+
+meaningful traits such as body outlines, sculpture, floral symmetry, and wood vessel 132 
+
+architecture, enabling expert validation. Importantly, morphOTUs also remain robust 133 
+
+when applied to a real-world biodiversity survey dataset, demonstrating the feasibility 134 
+
+of generating abundance-based morphological OTUs beyond standardized imaging 135 
+
+environments. Together, these results establish MorphOTU as a scalable, image-based 136 
+
+framework capable of generating abundance-based morphological OTUs under 137 
+
+real-world ecological conditions. 138 
+
+Results 139 
+
+Overview of the MorphOTU workflow 140 
+
+Across five standardized benchmark datasets spanning flowers, wood transverse 141 
+
+sections, and beetle dorsal habitus (2k–63k images; 7–291 taxa), the 142 
+
+Transformer-based encoder transformed each specimen image into a 143 
+
+fixed-dimensional “morphological barcode”—here used as a metaphor for an 144 
+
+image-derived embedding rather than a homologous sequence marker. Using 145 
+
+lineage-specific static or dynamic thresholds together with hierarchical clustering, 146 
+
+> .CC-BY 4.0 International license available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint this version posted June 2, 2026. ;https://doi.org/10.64898/2026.04.28.721370 doi: bioRxiv preprint 6
+
+these embeddings were organized into morphOTUs, producing abundance-based 147 
+
+diversity data. In parallel, class activation maps (CAMs; Zhou et al. 2015) highlighted 148 
+
+diagnostic morphological regions, including floral symmetry elements, wood vessel 149 
+
+architecture, beetle body outlines, sculpturing, and surface textures. These visual 150 
+
+explanations allow users to inspect and validate phenotypic differences among 151 
+
+morphOTUs, linking cluster boundaries to biologically interpretable traits and 152 
+
+accelerating morphological assessment and diversity correction. The three beetle 153 
+
+datasets also differed substantially in image quality—ZZH-Lucaninae being the 154 
+
+highest and NHM-Carabids the lowest—allowing us to evaluate robustness to 155 
+
+imaging noise and specimen-preparation variability. Together, these results establish a 156 
+
+unified, high-throughput workflow for converting digital images into 157 
+
+abundance-based morphological OTUs 158 
+
+that bridge traditional morphology with modern representation learning (Fig. 1). 159 
+
+Figure 1 | Overview of the morphOTU framework and OTU-Former 160 
+
+architecture 161 
+
+a, Workflow illustrating the construction of image-based morphological operational 162 
+
+taxonomic units (morphOTUs). Raw specimen images are first encoded using two 163 
+
+embedding-learning workflows: 1) supervised learning (SL) and 2) the proposed 164 
+
+self-supervised plus metric-learning approach (SSL+SFT), to generate 165 
+
+> .CC-BY 4.0 International license available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint this version posted June 2, 2026. ;https://doi.org/10.64898/2026.04.28.721370 doi: bioRxiv preprint 7
+
+high-dimensional morphological embeddings. Hierarchical clustering and dynamic 166 
+
+threshold scanning partition the embedding space into stable, abundance-based 167 
+
+morphOTUs suitable for biodiversity assessment. 168 
+
+b, Schematic of the SSL+SFT architecture used in OTU-Former. 169 
+
+OTU-Former adopts a stabilized self-supervised teacher–student ViT framework with 170 
+
+multi-crop augmented views. The student learns organism-centred morphological 171 
+
+features using the teacher—updated via EMA—as a stable self-distillation target. 172 
+
+Global/local contrastive losses and masked-token prediction yield robust CLS 173 
+
+embeddings. A subsequent ArcFace fine-tuning stage sharpens class boundaries, 174 
+
+producing fixed-dimensional phenotypic vectors for open-set, image-based OTU 175 
+
+delineation. 176 
+
+> 177
+
+Benchmarking MorphOTUs on closed-set datasets 178 
+
+Across all five closed-set datasets, we systematically evaluated four 179 
+
+embedding-learning paradigms: (1) pretrained backbone models, (2) supervised 180 
+
+fine-tuned backbones (SL), (3) self-supervised learning (SSL), and (4) supervised 181 
+
+fine-tuning applied to SSL features (SSL+SFT). Our SSL encoder is a lightweight 182 
+
+architecture specifically designed for small- to medium-scale datasets (typically up to 183 
+
+100k images), and, when combined with ArcFace fine-tuning (Deng et al. 2022), 184 
+
+forms the OTU-Former module (Fig. 1b). To assess model-family differences 185 
+
+independent of training strategy, we tested a diverse panel of CNN and Transformer 186 
+
+backbones: CNNs (ResNet-50, ConvNeXt-v2, RegNetY) (He et al. 2016; Woo et al. 187 
+
+2023; Radosavovic et al. 2020), and Vision Transformers (ViT, EVA02, DINOv3) 188 
+
+(Dosovitskiy et al. 2020; Fang et al. 2024; Siméoni et al. 2025). Except for 189 
+
+OTU-Former, which uses ViT exclusively, we trained each architecture under all four 190 
+
+learning paradigms. This design allowed us to compare the relative contributions of 191 
+
+backbone choice and training objective to embedding quality. 192 
+
+> .CC-BY 4.0 International license available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint this version posted June 2, 2026. ;https://doi.org/10.64898/2026.04.28.721370 doi: bioRxiv preprint 8
+> 193
+
+Figure 2 | Embedding quality, pairwise distances, and visual clustering under 194 
+
+closed-set conditions 195 
+
+a, Progressive improvement in embedding structure for ZZH-Lucaninae across four 196 
+
+embedding-learning regimes: pretrained backbones, supervised learning (SL), 197 
+
+self-supervised learning (SSL), and SSL with supervised fine-tuning (SSL+SFT). 198 
+
+b, Pairwise cosine distance distributions from SSL+SFT embeddings for 199 
+
+ZZH-Lucaninae. The broad, partially structured distribution reflects overlapping intra-200 
+
+and interspecific variation rather than a discrete barcoding gap. 201 
+
+> .CC-BY 4.0 International license available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint this version posted June 2, 2026. ;https://doi.org/10.64898/2026.04.28.721370 doi: bioRxiv preprint 9
+
+c, UMAP visualization of SSL+SFT embeddings for ZZH-Lucaninae after supervised 202 
+
+fine-tuning shows well-defined species-level structure. Together, these panels 203 
+
+demonstrate that morphOTU generates biologically coherent phenotypic organization 204 
+
+under ideal closed-set conditions. 205 
+
+> 206
+
+Across all five closed-set datasets, we evaluated embedding quality using three 207 
+
+representative metrics: classification transferability (LP accuracy), retrieval 208 
+
+performance (mAP), and clustering quality (ARI). Embeddings extracted from 209 
+
+pretrained backbone models already performed well on Flowers-102, likely reflecting 210 
+
+the strong overlap between this dataset and the large-scale image corpora used during 211 
+
+pretraining. A summary of these performance improvements across the four 212 
+
+embedding-learning paradigms is shown in Fig. 2a. 213 
+
+For Flowers-102, further fine-tuning offered limited additional benefit in this 214 
+
+case, and we therefore did not conduct SSL experiments. In contrast, embeddings 215 
+
+from WOOD and ZZH-Lucaninae were moderate in quality, whereas Rove-Tree-11 216 
+
+and NHM-Carabids showed substantially lower performance (e.g., LP accuracy < 0.5, 217 
+
+mAP < 0.3, ARI < 0.35; Fig. S1). As expected, ResNet-50 consistently lagged behind 218 
+
+the other backbones, while the remaining pretrained CNN and Transformer models 219 
+
+showed no decisive winner. 220 
+
+Supervised fine-tuning using AutoGluon substantially improved embedding 221 
+
+quality across nearly all backbones and datasets. Except for RegNetY-400MF, all 222 
+
+models achieved LP accuracy > 0.95, mAP > 0.85, and ARI > 0.7 across the five 223 
+
+datasets (Fig. S2). ConvNeXt-v2 and EVA02 exhibited the strongest performance 224 
+
+overall; remarkably, even their smallest variants (~5M parameters; ConvNeXt-v2-F 225 
+
+and EVA02-T) maintained most metrics above 0.95. 226 
+
+Self-supervised learning (SSL) provided a notable improvement over pretrained 227 
+
+backbones, with LP accuracy increases exceeding 0.2 on several datasets and 228 
+
+approaching 1.0 on WOOD. As dataset difficulty increased, the relative gains 229 
+
+achieved by SSL diminished, indicating that datasets of varying complexity offer 230 
+
+> .CC-BY 4.0 International license available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint this version posted June 2, 2026. ;https://doi.org/10.64898/2026.04.28.721370 doi: bioRxiv preprint 10
+
+different capacities for effective feature learning (Fig. S3). After ArcFace fine-tuning 231 
+
+(SSL+SFT), embedding quality approached that of fully supervised training across all 232 
+
+datasets (Fig. S4), including the most challenging NHM-Carabids dataset, where LP 233 
+
+accuracy exceeded 0.97, mAP surpassed 0.9, and ARI exceeded 0.7. Within the 234 
+
+two-stage OTU-Former pipeline, increasing ViT model size (T/S/B) yielded limited 235 
+
+gains, indicating that moderate-capacity encoders are sufficient for small- to 236 
+
+medium-scale biodiversity datasets. Together, these embedding evaluations show that 237 
+
+supervised fine-tuning (SL, SSL+SFT) and SSL alone produce high-quality, 238 
+
+clusterable morphological barcodes under closed-set conditions. 239 
+
+To characterize embedding geometry, we computed pairwise cosine distances 240 
+
+between all images. Distance ranges were largely determined by model family: 241 
+
+RegNetY and ResNet-50 produced narrower ranges (0–1), substantially lower than 242 
+
+other models (0–1.5; Fig. S5). SSL distances were generally slightly smaller than SL 243 
+
+or SSL+SFT (Fig. S6), likely because supervised fine-tuning explicitly enlarges 244 
+
+interclass margins (Pan et al. 2023; Liu et al. 2024). Unlike molecular genetic 245 
+
+distances, which often display a well-defined “barcoding gap”, cosine-distance 246 
+
+distributions from image embeddings exhibited no single, discrete separation (Fig. 2b; 247 
+
+Figs. S7–S16). Instead, they showed at most a shallow trough, consistent with 248 
+
+lineage-specific variability in morphological divergence. UMAP projections of the 249 
+
+same embeddings nevertheless showed well-defined species-level structure under 250 
+
+SSL+SFT (Fig. 2c). Intra-class distances remained tightly constrained, with mean 251 
+
+values typically within approximately 0.3 (Fig. S17). These patterns jointly indicate 252 
+
+that although fixed global thresholds are inappropriate, morphology-based OTU 253 
+
+formation remains feasible when adaptive, lineage-specific thresholds are used. 254 
+
+To examine this process, we applied UPGMA trees to illustrate how dynamic 255 
+
+thresholds determine morphOTU boundaries. As shown in Fig. 3a, no single cutoff 256 
+
+yields perfect partitions: some thresholds oversplit species (P1–3), whereas others 257 
+
+lump several species into one OTU (P2–4). Ideally, final decisions would incorporate 258 
+
+expert evaluation or CAM-based guidance, using multiple partitioning schemes and 259 
+
+> .CC-BY 4.0 International license available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint this version posted June 2, 2026. ;https://doi.org/10.64898/2026.04.28.721370 doi: bioRxiv preprint 11
+
+UPGMA trees (with bootstrap support) to verify ambiguous groupings. To streamline 260 
+
+this procedure and assess practicality, we compared morphOTUs generated under a 261 
+
+single (often suboptimal) threshold against reference species labels. Using a two-stage 262 
+
+dynamic threshold scanning procedure, we identified lineage-appropriate interspecific 263 
+
+distance ranges (typically spanning 0.2–0.4), selected the best-scoring cutoff 264 
+
+according to BCubed-F score (Bagga & Baldwin 1998), and calculated richness and 265 
+
+Shannon diversity indices. The BCubed-F optimum was used only for retrospective 266 
+
+benchmarking against reference species labels. In label-free applications, candidate 267 
+
+thresholds would instead be selected using distance-profile stability, 268 
+
+bootstrap-supported clusters, abundance filtering, and expert inspection of CAMs. 269 
+
+MorphOTU-derived diversity estimates closely matched true species-level values, 270 
+
+particularly when abundance-based noise filtering was applied. Shannon indices were 271 
+
+less sensitive than richness, but all three metrics showed high concordance with 272 
+
+reference species labels (Fig. S18). 273 
+
+Overall, these results demonstrate that morphological barcodes produced by both 274 
+
+SL and SSL-based training regimes are stable and intrinsically clusterable. When 275 
+
+paired with dynamic, lineage-specific distance thresholds—and optionally guided by 276 
+
+expert inspection—the resulting morphOTUs approximate reference species-level 277 
+
+groupings with high fidelity. Even when using a single operational cutoff within each 278 
+
+dataset, morphOTU-based diversity indices remain usable and closely match the 279 
+
+expert-assigned species labels, confirming the feasibility of morphology-driven OTU 280 
+
+construction on closed-set datasets. 281 
+
+Robustness under real-world biodiversity constraints 282 
+
+Tests for case scenarios under realistic limitations 283 
+
+In real-world applications, available training data, particularly specimens that can be 284 
+
+confidently identified to species (i.e., labeled data), are often limited due to 285 
+
+well-known scaling constraints, and operational settings frequently involve open-set 286 
+
+> .CC-BY 4.0 International license available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint this version posted June 2, 2026. ;https://doi.org/10.64898/2026.04.28.721370 doi: bioRxiv preprint 12
+
+conditions. To further estimate the practical scope, strengths, and weaknesses of the 287 
+
+morphOTU framework under such realistic constraints, we designed a series of 288 
+
+subsampling experiments across the three beetle datasets. All tests employed a unified 289 
+
+backbone architecture (ViT-T) to control for model capacity. Evaluation criteria 290 
+
+remained consistent with the closed-set benchmarks, including embedding quality, 291 
+
+variation in pairwise distance distributions, and the accuracy of diversity estimates. 292 
+
+Open-set with “unseen” species 293 
+
+Real-world biodiversity surveys frequently involve open-set conditions in which 294 
+
+many encountered species are absent from the training data: a scenario especially 295 
+
+common in invertebrate groups (Stork 2018). To evaluate how morphOTU behaves 296 
+
+under such conditions, we examined the generalization performance of both SL and 297 
+
+SSL+SFT embeddings as the number of open-set species increased, thereby 298 
+
+characterizing the framework's scaling behavior. We constructed four gradients in 299 
+
+which unseen species constituted 0%, 25%, 50%, and 75% of all images. SL and 300 
+
+SSL+SFT performed comparably across these settings. 301 
+
+As expected, embedding quality decreased as the proportion of open-set data 302 
+
+increased. When unseen species increased to 75% of all images, leaving only 25% 303 
+
+represented in training, LP accuracy dropped to 0.66–0.81, mAP to 0.45–0.56, and 304 
+
+ARI to 0.44–0.46 (Figs. S19, S20). Pairwise cosine distances and intra-class distances 305 
+
+also became slightly more variable as unseen species increased (Figs. S21, S22), 306 
+
+indicating a loosening of embedding compactness. Nevertheless, the overall 307 
+
+embedding geometry remained structured, suggesting that meaningful clusters can 308 
+
+still be recovered even when the majority of species are not present during training. 309 
+
+When morphOTUs were generated using a single distance threshold, OTU 310 
+
+counts increased relative to baseline models trained under closed-set conditions. After 311 
+
+abundance filtering, ZZH-Lucaninae and Rove-Tree-11 retained richness estimates 312 
+
+similar to their closed-set baselines, whereas NHM-Carabids exhibited more than a 313 
+
+two-fold increase in estimated OTU richness. Shannon diversity derived from 314 
+
+> .CC-BY 4.0 International license available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint this version posted June 2, 2026. ;https://doi.org/10.64898/2026.04.28.721370 doi: bioRxiv preprint 13
+
+morphOTUs showed errors within 0.4, with abundance-filtered estimates performing 315 
+
+better in larger datasets (Fig. 3c; Fig. S18). 316 
+
+Our experiments demonstrate that scaling laws strongly influence embedding 317 
+
+quality, yet morphOTUs retain coherent structure even when the available training 318 
+
+data are reduced to only 25% of the full dataset. This robustness is crucial for 319 
+
+practical applications such as discovering novel species and quantifying diversity in 320 
+
+large volumes of unidentified material under realistic open-set ecological conditions. 321 
+
+Sparse labeled supervision 322 
+
+In the scaling-law tests above, labeled data and training data were identical. However, 323 
+
+in practical self-supervised learning workflows, the amount of labeled material is 324 
+
+typically far smaller than the amount of imagery available for training. This 325 
+
+corresponds to a common biodiversity scenario in which large numbers of specimens 326 
+
+can be incorporated into pretraining (without labels), but only a limited fraction can 327 
+
+be taxonomically identified. To assess the impact of labeled data availability on the 328 
+
+ArcFace SFT stage, we varied the size of the annotated subset while keeping SSL 329 
+
+pretraining fixed. Experiments were conducted on the Dun25 setting, with 75% of 330 
+
+images used for SSL pretraining and the remaining 25% unseen species held out as 331 
+
+open-set test data. We then fine-tuned ArcFace using 75% (as in the pretraining), 50%, 332 
+
+25%, or 10% of the labeled portion. 333 
+
+Even with only 10% labeled data for SFT, embeddings remained stable, 334 
+
+achieving LP accuracy > 0.65, mAP > 0.44, and ARI > 0.41. Pairwise cosine distances 335 
+
+and intra-class distances also remained consistent across label fractions (Figs. S19, 336 
+
+S20). Diversity estimates behaved similarly to the open-set results above: richness and 337 
+
+Shannon indices derived from morphOTUs remained close to expert-assigned species 338 
+
+labels (Fig. S18). 339 
+
+These results show that, given strong SSL pretraining, extensive high-quality 340 
+
+taxonomic annotation is not essential. Moderate labeled fractions (10%–25% in this 341 
+
+study) are sufficient to preserve good generalization performance, in line with 342 
+
+> .CC-BY 4.0 International license available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint this version posted June 2, 2026. ;https://doi.org/10.64898/2026.04.28.721370 doi: bioRxiv preprint 14
+
+contemporary paradigms of “large-scale pretraining followed by small-scale 343 
+
+finetuning” (Chen et al. 2020; Konstantakos et al. 2025). Open-set data can be fully 344 
+
+leveraged during SSL pretraining to further enhance representation quality. In the 345 
+
+most extreme cases, such as WOOD and ZZH-Lucaninae, SSL pretraining alone, 346 
+
+without any supervised finetuning, was sufficient to recover reliable morphOTUs (Fig. 347 
+
+S3). 348 349 
+
+> .CC-BY 4.0 International license available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint this version posted June 2, 2026. ;https://doi.org/10.64898/2026.04.28.721370 doi: bioRxiv preprint 15
+
+Figure 3 | Dynamic thresholding, interpretability, cross-lineage generalization, 350 
+
+and sampling robustness 351 
+
+a, Dynamic threshold scanning on a UPGMA tree for Prosopocoilus . Stable 352 
+
+morphOTU boundaries are revealed across cosine-distance cutoffs. Orange vertical 353 
+
+bars indicate reference species labels, and the four partitioning schemes (P1–P4) 354 
+
+illustrate how clusters split or merge as thresholds increase. Score-CAM overlays 355 
+
+(right) highlight the diagnostic morphological regions driving these separations, 356 
+
+linking phenotypic evidence directly to tree structure. 357 
+
+b, Cross-lineage generalization across beetle datasets. Models trained on one lineage 358 
+
+show reduced performance—Linear Probe Accuracy (LPA), mAP, and ARI—when 359 
+
+transferred to another due to deep morphological divergence. Fine-tuning the SSL 360 
+
+encoder on labeled data from the receiving lineage (SSL_newSFT) restores cluster 361 
+
+separability and retrieval performance, demonstrating the portability of OTU-Former 362 
+
+features across lineages. 363 
+
+c, α-diversity estimation under real-world constraints. Richness and Shannon diversity 364 
+
+remain stable across closed-set and progressively more challenging open-set scenarios. 365 
+
+SSL+SFT maintains consistent diversity estimates, particularly after low-abundance 366 
+
+morphOTU filtering, underscoring the robustness of morphOTUs under open-set 367 
+
+noise and sparse taxonomic labeling. 368 
+
+d, Sensitivity of embedding structure to per-species image number (Carabids). Panels 369 
+
+compare how different data-limitation regimes affect embedding separability (LPA, 370 
+
+mAP, ARI). Five training-data conditions are shown: raw: Full SSL+SFT trained on 371 
+
+all images from closed-set species; SL train size / SSL train size / SFT finetune size: 372 
+
+Three subsampling regimes in which each species is limited to 100, 50, 25, or 10 373 
+
+images, applied respectively to supervised training, SSL pretraining, or ArcFace 374 
+
+fine-tuning (SSL pretraining uses full unlabeled data unless subsampling is explicitly 375 
+
+applied); class size: Closed-set species filtered by a minimum-image threshold 376 
+
+(species ≥105), altering training-set composition while retaining each species’ full 377 
+
+sample size. 378 
+
+> .CC-BY 4.0 International license available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint this version posted June 2, 2026. ;https://doi.org/10.64898/2026.04.28.721370 doi: bioRxiv preprint 16
+
+Across these regimes, SSL embeddings remain more robust than SL, and SSL+SFT 379 
+
+achieves the highest stability. Performance declines sharply only when species have 380 
+
+> ≤
+
+10 images, emphasizing the minimum sampling required for reliable 381 
+
+morphology-based OTU construction. 382 
+
+Limited images per species 383 
+
+We next examined how reductions in per-species sample size affect generalization by 384 
+
+reducing the observed intra-class diversity. Using fixed training and test species, we 385 
+
+created four sampling regimes with 100 images per species (NHM-Carabids only), 50, 386 
+
+25, and 10 images per species. Test sets always included the remaining closed-set 387 
+
+material as well as open-set species. Embedding quality declined with decreasing 388 
+
+sample size, but performance remained acceptable at ≥25 images per species (LP 389 
+
+accuracy > 0.75, mAP > 0.52, ARI > 0.49), and cosine distance and intra-class 390 
+
+distance distributions remained stable. At 10 images per species, however, 391 
+
+performance degraded sharply (Fig. 3d; Figs. S19 −S22). 392 
+
+SSL encoders were consistently more robust than supervised models for 393 
+
+ZZH-Lucaninae and Rove-Tree-11, whereas NHM-Carabids showed weaker 394 
+
+performance, likely reflecting its noisy, low-quality imagery, which limits the 395 
+
+learnability of generalizable features. Richness and Shannon indices remained 396 
+
+accurate after abundance filtering, though errors at n = 10 per species exceeded those 397 
+
+from all prior testing scenarios (Fig. S18). 398 
+
+Cross-lineage transfer 399 
+
+We also evaluated an extreme setting in which a model trained on one beetle dataset 400 
+
+was tested entirely on the other two (i.e., test sets consisted exclusively of open-set 401 
+
+species). Embedding clusterability improved with larger training sample sizes, 402 
+
+confirming that representation learning remains sensitive to sample density. SL 403 
+
+embeddings performed slightly better than SSL and SSL+SFT in this fully open-set 404 
+
+setting, but overall performance remained limited (Fig. 3b). After ArcFace fine-tuning 405 
+
+> .CC-BY 4.0 International license available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint this version posted June 2, 2026. ;https://doi.org/10.64898/2026.04.28.721370 doi: bioRxiv preprint 17
+
+on the receiving lineage (SSL_newSFT), however, both embedding quality (LP 406 
+
+accuracy > 0.93; mAP > 0.83; ARI > 0.76) and diversity estimates (Fig. S18) reached 407 
+
+levels comparable to the closed-set baselines. 408 
+
+Accelerating morphological diagnosis through interpretable feature 409 
+
+representations 410 411 412 
+
+Figure 4 | Morphological interpretability and taxonomic insight from 413 
+
+morphOTUs 414 
+
+a, Score-CAM comparisons between supervised learning (SL) and SSL+SFT across 415 
+
+beetle genera. OTU-Former focuses more precisely on biologically informative 416 
+
+structures, yielding cleaner and more coherent activation maps that align with 417 
+
+expert-known diagnostic traits. 418 
+
+b, Fine-scale phenotypic structure in Prosopocoilus revealed by SSL+SFT 419 
+
+> .CC-BY 4.0 International license available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint this version posted June 2, 2026. ;https://doi.org/10.64898/2026.04.28.721370 doi: bioRxiv preprint 18
+
+embeddings. Left: UMAP visualization showing clear separation of large-bodied (L) 420 
+
+and small-bodied (S) individuals across different species, highlighting subtle 421 
+
+intraspecific morphological structuring captured by morphOTUs. Right: 422 
+
+Representative P. astacoides specimens (equal scale; scale bar = 10 mm) illustrating 423 
+
+the corresponding morphological differences between large-bodied (L) and 424 
+
+small-bodied (S) individuals. These examples demonstrate how image-based 425 
+
+morphOTUs capture continuous phenotypic gradients not evident from coarse 426 
+
+categorical traits alone. 427 
+
+Beyond providing diversity estimates, morphOTUs derived from image 428 
+
+embeddings also enable transparent visualization of the morphological cues 429 
+
+underlying OTU separation through class-activation mapping (Zhou et al.  2015). If 430 
+
+the model successfully learns object-focused rather than background-driven features, 431 
+
+the resulting heatmaps should reveal meaningful morphological differences among 432 
+
+individuals and species. To evaluate this, we constructed three genus-level subsets for 433 
+
+each beetle dataset (Table 2), with sample sizes ranging 230 −13,265 images, and 434 
+
+examined whether SL and OTU-Former architectures consistently attend to the beetle 435 
+
+body and whether the highlighted regions correspond to biologically interpretable 436 
+
+traits. Here, we define “biologically interpretable” as regions that: (i) correspond to 437 
+
+diagnostic characters used in taxonomic keys or formal species descriptions (e.g., 438 
+
+body outline, mandible shape, elytral sculpture, punctation patterns), and (ii) were 439 
+
+independently confirmed by expert entomologists as taxonomically meaningful. 440 
+
+These criteria allow us to evaluate interpretability using both formal morphological 441 
+
+character systems and expert assessment. Consequently, OTU-Former completed its 442 
+
+full pretraining pipeline on all subsets, and its two-stage embedding metrics remained 443 
+
+comparable to the closed-set benchmarks, indicating that the framework trains 444 
+
+reliably even on very small (around 200 images) datasets. 445 
+
+Our datasets contain relatively simple backgrounds, and both SL and 446 
+
+OTU-Former models generally focus on the beetle body rather than clustering on 447 
+
+spurious background cues (Fig. 4a). Nonetheless, OTU-Former consistently produced 448 
+
+> .CC-BY 4.0 International license available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint this version posted June 2, 2026. ;https://doi.org/10.64898/2026.04.28.721370 doi: bioRxiv preprint 19
+
+cleaner and more object-focused Score-CAM heatmaps (Wang et al. 2019), with 449 
+
+substantially larger attention concentrated on the beetle body compared to supervised 450 
+
+baselines (shown as paired SL vs SFT examples for each species). This indicates that 451 
+
+OTU-Former learns morphological features more effectively and is less susceptible to 452 
+
+background artifacts or label-related noise. Expert evaluation of these Score-CAM 453 
+
+maps further showed that OTU-Former preferentially attends to biologically 454 
+
+meaningful structures, such as body outlines, cuticular texture, and other continuous 455 
+
+phenotypic traits that are difficult to quantify using traditional morphological 456 
+
+character systems. In this sense, morphOTUs function as “OTUs in continuous 457 
+
+phenotype space,” complementing discrete, character-based taxonomy and providing 458 
+
+an interpretable and image-traceable representation of morphological variation. 459 
+
+The nine genus-level subsets represent groups of closely related species that are 460 
+
+often challenging in practical morphology-based classification (Fig. S28). Detailed 461 
+
+examination of morphOTUs within the three ZZH-Lucaninae genera revealed that 462 
+
+OTU-Former can resolve fine-scale phenotypic differences, including distinct 463 
+
+body-form variants within the same species (Fig. 4b), as well as clearer separations 464 
+
+among historically problematic taxa. These results demonstrate that morphOTUs 465 
+
+provide a consistent and interpretable representation of fine-scale morphological 466 
+
+structure, supporting rapid diagnosis, character exploration, and expert knowledge 467 
+
+transfer within closely related species groups. 468 
+
+Impact of low-quality images on training performance 469 
+
+To evaluate how image quality influences representation learning, we conducted a 470 
+
+controlled degradation experiment on the high-quality ZZH-Lucaninae dataset. 471 
+
+Images were downsampled to short-edge resolutions of 512, 256, 128, 64, and 32 472 
+
+pixels, thereby simulating increasing levels of quality loss (Fig. S27). All models (SL, 473 
+
+SSL, and SSL+SFT) were trained exclusively on degraded images, and embedding 474 
+
+quality was evaluated on the original 512-pixel test images. This design evaluates the 475 
+
+effect of low-quality training data under a standardized high-quality evaluation set. It 476 
+
+> .CC-BY 4.0 International license available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint this version posted June 2, 2026. ;https://doi.org/10.64898/2026.04.28.721370 doi: bioRxiv preprint 20
+
+does not isolate the performance expected when both training and test images are 477 
+
+degraded. 478 
+
+Supervised learning (SL) and supervised fine-tuning after self-supervised 479 
+
+pretraining (SSL+SFT) exhibited minimal performance loss at 512, 256, and 128 480 
+
+pixels, but showed pronounced declines at 64 and 32 pixels (Fig. 5a). In contrast, 481 
+
+purely self-supervised models (SSL) began to degrade substantially at resolutions 482 
+
+below 128 pixels, indicating greater sensitivity to image degradation that disrupts 483 
+
+semantic consistency and induces distributional shift (Bai et al. 2022; Balestriero et al. 484 
+
+2023). This sensitivity also partly explains the weaker SSL performance observed on 485 
+
+the NHM-Carabids dataset, where beetles often occupy only a small portion of the 486 
+
+frame and many specimens are blurred or lack clear structural details. 487 
+
+These results highlight a critical practical insight: while moderate image 488 
+
+degradation has a limited impact on supervised or semi-supervised workflows, 489 
+
+self-supervised feature learning is considerably more fragile to low-resolution or 490 
+
+low-detail inputs. Consistent image quality and sufficient organismal visibility, 491 
+
+therefore, remain essential for maximizing the benefits of self-supervised 492 
+
+representation learning in large-scale biodiversity applications. 493 
+
+> .CC-BY 4.0 International license available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint this version posted June 2, 2026. ;https://doi.org/10.64898/2026.04.28.721370 doi: bioRxiv preprint 21
+> 494
+
+Figure 5 | Image quality effects and real-world performance of morphOTUs 495 
+
+a, Sensitivity of representation learning workflows to controlled image 496 
+
+degradation. Downsampling experiments on the high-quality ZZH-Lucaninae dataset 497 
+
+reveal distinct robustness profiles across training strategies. Supervised learning (SL) 498 
+
+and SSL+SFT maintain stable embedding quality at 512–128 px, but both decline 499 
+
+sharply at 64–32 px. In contrast, purely self-supervised models (SSL) begin degrading 500 
+
+below 128 px, reflecting greater vulnerability to loss of structural detail and semantic 501 
+
+consistency. These trends explain the weaker SSL performance observed in the 502 
+
+NHM-Carabids dataset, where beetles often occupy only a small portion of the frame 503 
+
+and many specimens are blurred or low-detail. 504 
+
+b, Real-world performance of morphOTUs on the GD-Insect biodiversity survey 505 
+
+dataset. OTU-Former was evaluated on 4,717 habitus images spanning 269 species 506 
+
+across 12 insect orders, with extreme class imbalance and heterogeneous imaging 507 
+
+conditions. Fully self-supervised embeddings (SSL) produced diffuse morphological 508 
+
+structure and inflated OTU counts, reflecting the difficulty of clustering highly 509 
+
+> .CC-BY 4.0 International license available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint this version posted June 2, 2026. ;https://doi.org/10.64898/2026.04.28.721370 doi: bioRxiv preprint 22
+
+diverse assemblages without labeled guidance. Fine-tuning the SSL encoder using 510 
+
+ArcFace metric learning on only 28 common species represented by at least 30 511 
+
+individuals substantially improved embedding quality and morphOTU stability, 512 
+
+yielding OTU partitions and Shannon diversity estimates closely aligned with 513 
+
+reference species labels. These results demonstrate that light expert supervision can 514 
+
+substantially enhance morphOTU accuracy under open-set, imbalanced, and 515 
+
+taxonomically complex real-world conditions. 516 
+
+Performance of OTU-Former on a real-world dataset 517 
+
+To assess the applicability of morphOTUs under realistic field conditions, we 518 
+
+evaluated OTU-Former on the GD-Insect dataset, which contains 4,717 habitus 519 
+
+images representing 269 species across 12 insect orders. Embedding metrics were 520 
+
+computed on the subset of species with sufficient replication for metric evaluation, 521 
+
+whereas all 269 species, including singletons, were retained for morphOTU richness 522 
+
+and Shannon-diversity estimation. The dataset exhibits extreme class imbalance, as 523 
+
+152 species are represented by a single individual, and includes both terrestrial and 524 
+
+aquatic taxa (Shannon index = 3.53). 525 
+
+After self-supervised pretraining using all available images, SSL embeddings 526 
+
+achieved LP accuracy = 0.8675, mAP = 0.7731, and ARI = 0.0906. Using a single 527 
+
+distance threshold, morphOTU partitioning produced an overestimated 305 OTUs and 528 
+
+a Shannon index of 4.83. These results reflect the difficulty of learning robust 529 
+
+morphological structure from highly imbalanced and taxonomically heterogeneous 530 
+
+data without any labeled supervision (Fig. 5b). 531 
+
+To test whether limited expert annotations can improve performance, we 532 
+
+fine-tuned the SSL encoder using ArcFace metric learning applied only to 28 common 533 
+
+species represented by at least 30 individuals. This modest supervision substantially 534 
+
+improved embedding quality: LP accuracy increased to 0.9977, mAP to 0.9902, and 535 
+
+ARI to 0.5940. Correspondingly, both morphOTUs (261 units) and the estimated 536 
+
+Shannon index (3.75) better approximated the expert-assigned species labels, which 537 
+
+> .CC-BY 4.0 International license available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint this version posted June 2, 2026. ;https://doi.org/10.64898/2026.04.28.721370 doi: bioRxiv preprint 23
+
+refer to expert-assigned species labels used only for retrospective evaluation. 538 
+
+These results demonstrate that fully unsupervised pretraining combined with 539 
+
+light supervision from a small number of common, easily diagnosed species offers a 540 
+
+practical and efficient strategy for generating reliable diversity estimates in real-world 541 
+
+insect assemblages. With even minimal expert correction, the resulting morphOTUs 542 
+
+can provide ecologically interpretable and high-fidelity diversity data under open-set, 543 
+
+imbalanced, and taxonomically complex field conditions. 544 
+
+Discussion 545 
+
+A new generalizable workflow for image-based biodiversity discovery 546 
+
+Our morphology-based OTU workflow represents more than a technical improvement 547 
+
+in species identification: it signals a broader conceptual shift toward scalable, 548 
+
+data-driven phenotyping in biodiversity research. By integrating self-supervised 549 
+
+feature learning with lineage-specific clustering, we can convert raw images into 550 
+
+standardized, abundance-based morphOTUs, reducing reliance on expert-driven 551 
+
+labeling and enabling biodiversity assessment at scales previously unattainable via 552 
+
+morphology. This transition parallels the transformative impact that DNA barcoding 553 
+
+and metabarcoding had on molecular ecology two decades ago. 554 
+
+Beyond these operational advantages, morphOTU helps mitigate the 555 
+
+long-standing taxonomic impediment by reducing dependence on complete expert 556 
+
+identification and enabling preliminary organization of poorly annotated specimens 557 
+
+(Hoagland 1996; Evenhuis 2007; Hortal et al. 2015). Although performance still 558 
+
+benefits from sufficient organismal visibility and image quality, the framework can 559 
+
+operate on moderately heterogeneous image collections. Different from many 560 
+
+previous deep-learning approaches, which depend on closed-set supervised 561 
+
+classification and therefore are difficult to apply under biodiversity conditions with 562 
+
+scarce labels (Hansen et al. 2020; Zhao et al. 2023; Rayeed et al. 2025), morphOTU 563 
+
+uses self-supervised learning to extract organism-centered features while reducing 564 
+
+reliance on background artifacts (Geirhos et al. 2020; Caron et al. 2021). This enables 565 
+
+> .CC-BY 4.0 International license available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint this version posted June 2, 2026. ;https://doi.org/10.64898/2026.04.28.721370 doi: bioRxiv preprint 24
+
+scalable, open-set phenotyping even when most species remain unidentified. This 566 
+
+claim is further supported by our real-world evaluation on the GD-Insect dataset. 567 
+
+During supervised fine-tuning, only 28 species (10.41%) were labeled and included in 568 
+
+training, while the remaining approximately 90% of species were entirely unseen. The 569 
+
+model constructed morphOTUs from a mixed test set containing both seen and unseen 570 
+
+taxa, demonstrating stable clustering and consistent phenotypic grouping under 571 
+
+realistic, partially labeled open-set conditions. 572 
+
+Unlike classical morphology-based workflows, morphOTU can operate on 573 
+
+moderately heterogeneous image collections, but its performance benefits from 574 
+
+sufficient organismal visibility, resolution, and standardized imaging. Because 575 
+
+morphOTUs can be generated with limited expert labels, the framework may reduce 576 
+
+the amount of taxonomic training required for preliminary sorting and diversity 577 
+
+assessment. The ability to visualize diagnostic structures through activation maps is 578 
+
+particularly significant: continuous morphological traits, which are foundational but 579 
+
+challenging to formalize, become directly observable and computationally accessible. 580 
+
+Previous deep-learning approaches have been constrained by closed-set assumptions 581 
+
+and limited interpretability; in contrast, morphOTU learns organism-centered features 582 
+
+in an open-set framework, achieving supervised-level performance while maintaining 583 
+
+robustness in systems with many undescribed taxa. 584 
+
+Conceptually, morphOTUs function as morphological analogues to molecular 585 
+
+OTUs and metabarcoding-derived units (Hebert et al. 2003; Taberlet et al. 2012). 586 
+
+They provide a non-destructive, infrastructure-light representation of phenotypic 587 
+
+space without requiring sequencing infrastructure or per-sample sequencing costs 588 
+
+(Stein et al. 2014). Rather than replacing molecular data, morphOTUs complement 589 
+
+and extend existing taxonomic practice: they offer rapid preliminary sorting, reveal 590 
+
+phenotypic structure invisible to coarse categorical traits, and flag specimens that 591 
+
+merit targeted sequencing. This integrative workflow aligns morphology, molecules, 592 
+
+and machine learning into a coherent system for biodiversity discovery, supporting 593 
+
+taxonomic revision and enhancing the digitization and curation of natural history 594 
+
+> .CC-BY 4.0 International license available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint this version posted June 2, 2026. ;https://doi.org/10.64898/2026.04.28.721370 doi: bioRxiv preprint 25
+
+collections. 595 
+
+No universal distance threshold delineates morphOTUs across all lineages 596 
+
+Although conceptually parallel to molecular OTUs, morphOTUs differ fundamentally 597 
+
+in their statistical properties. Molecular systems often exhibit a broad barcoding gap 598 
+
+separating intra- and interspecific divergence (Hebert et al. 2004; Smith et al. 2005), 599 
+
+typically around a COI threshold of 0.03 (Hebert et al. 2003), although overlap 600 
+
+between classes may occur (Meyer & Paulay 2005; Wiemers & Fiedler 2007). 601 
+
+Contrary to this, morphological distances widely vary within species and show 602 
+
+substantial overlap across species. In our datasets, intra-class morphological variation 603 
+
+often spanned cosine-distance ranges up to 0.3, illustrating that image-embedding 604 
+
+distances do not exhibit the same threshold behavior as COI sequence divergences, 605 
+
+reflecting the evolutionary nature of phenotypic variation (e.g., Fig. S7). Some 606 
+
+lineages diversify through discrete, readily visible traits, while others exhibit 607 
+
+continuous variation shaped by adaptation, sexual selection, or phenotypic plasticity. 608 
+
+Consequently, no universal morphological threshold can reliably delineate 609 
+
+species-level units, and morphological barcodes do not exhibit clean “gaps” (Fig. 2b). 610 
+
+Our dynamic-thresholding strategy accommodates this heterogeneity by 611 
+
+generating multiple partitioning schemes, enabling stable clusters to be identified 612 
+
+across thresholds and corroborated using Score-CAM visualizations or taxonomic 613 
+
+knowledge (Fig. 3a). Although absolute OTU boundaries vary with threshold choice, 614 
+
+community-level diversity metrics derived from single-threshold morphOTUs were 615 
+
+robust, suggesting that flexible thresholding need not impede ecological inference. 616 
+
+Imaging conditions can also influence MorphOTU counts. Variations in 617 
+
+background, orientation, illumination, or effective resolution can produce long 618 
+
+branches or weakly supported nodes in UPGMA trees, highlighting individuals 619 
+
+requiring expert review or molecular validation. The NHM-Carabids dataset (Hansen 620 
+
+et al. 2020) underscores this: despite its size, lower image quality reduced embedding 621 
+
+clarity and increased uncertainty, consistent with the reliance of self-supervised 622 
+
+> .CC-BY 4.0 International license available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint this version posted June 2, 2026. ;https://doi.org/10.64898/2026.04.28.721370 doi: bioRxiv preprint 26
+
+representation learning on high-quality, standardized data (Oquab et al. 2023; Entezari 623 
+
+et al. 2023) (Figs. S23 −S27). These findings reinforce the value of standardized 624 
+
+imaging, particularly when leveraging self-supervised representation learning, which 625 
+
+benefits strongly from high-quality data. Although standardized imaging improves 626 
+
+overall consistency, our degradation experiment demonstrates that the primary 627 
+
+limitation for self-supervised representation learning is image quality, particularly 628 
+
+organismal visibility and structural detail, rather than standardization alone. This 629 
+
+distinction explains why the NHM-Carabids dataset, which contains many low-detail, 630 
+
+small-scale specimens, yields weaker representations despite its relatively uniform 631 
+
+imaging protocol. 632 
+
+These observations argue for a conceptual shift away from fixed-threshold 633 
+
+morphology and toward multi-resolution, expert-informed frameworks. Such an 634 
+
+approach is more faithful to the evolutionary complexity of phenotypes and more 635 
+
+suited to the diversity of organisms encountered in large-scale biodiversity surveys. 636 
+
+Limitations and prospects 637 
+
+Although morphOTU demonstrates broad applicability, several limitations point to 638 
+
+opportunities for future development. As with molecular OTUs, morphological 639 
+
+heterogeneity across lineages makes it difficult for a single external marker, for 640 
+
+example, the dorsal view, to capture the full range of diagnostic traits. Integrating 641 
+
+multiple views, combining several morphological markers, or leveraging emerging 642 
+
+3D and multiview technologies could significantly enhance morphOTU resolution 643 
+
+and improve generality across taxa. The taxonomic coverage and imaging diversity of 644 
+
+our current datasets remain limited, underscoring the need for broader evaluation 645 
+
+across additional lineages and imaging contexts. Moreover, applying morphOTU to 646 
+
+holometabolous insects, where larval and adult stages exhibit drastically different 647 
+
+morphologies, remains challenging and requires future methodological extensions. 648 
+
+From a technological perspective, morphOTU was optimized for medium-sized 649 
+
+datasets and accessible hardware. As visual foundation models continue to evolve, 650 
+
+> .CC-BY 4.0 International license available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint this version posted June 2, 2026. ;https://doi.org/10.64898/2026.04.28.721370 doi: bioRxiv preprint 27
+
+integrating larger, more generalizable encoders trained on global biodiversity imagery 651 
+
+will be essential for building a truly universal morphological representation. 652 
+
+Expanding training to include diverse environments, imaging styles, and taxonomic 653 
+
+groups will further improve robustness and reduce domain-specific biases. 654 
+
+Looking ahead, image-based morphOTUs have the potential to reshape 655 
+
+biodiversity science. They could enable real-time phenotypic monitoring in ecological 656 
+
+observatories, support global re-examination of museum collections at an 657 
+
+unprecedented scale, and provide early-warning systems for invasive species or 658 
+
+emerging pests. MorphOTUs and molecular OTUs, when integrated, offer a pathway 659 
+
+toward a unified, global framework for biodiversity assessment encompassing both 660 
+
+phenotypic and genetic dimensions of organismal diversity across ecosystems, time 661 
+
+periods, and spatial scales. 662 
+
+> 663
+
+Materials & Methods 664 
+
+Datasets and images preparation 665 
+
+Dataset selection 666 
+
+To operationalize the concept of morphOTUs, image datasets must represent a 667 
+
+standardized and comparable morphological trait within each organismal 668 
+
+group—analogous to using a single universal marker such as COI in molecular 669 
+
+barcoding. Most publicly available image collections include heterogeneous traits, 670 
+
+multiple anatomical views, inconsistent angles, or variable backgrounds, making them 671 
+
+unsuitable for constructing coherent morphological embeddings. We therefore 672 
+
+assembled two plant datasets and four insect datasets (Table 1), each containing 673 
+
+images captured from a single, biologically interpretable trait: floral structures, wood 674 
+
+transverse-section anatomy, or the dorsal or lateral habitus of adult insects. After 675 
+
+image cleaning, dataset sizes ranged from 2,368 to 63,053 images and from 7 to 291 676 
+
+labeled categories, reflecting the typical scale of small- to medium-sized biodiversity 677 
+
+> .CC-BY 4.0 International license available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint this version posted June 2, 2026. ;https://doi.org/10.64898/2026.04.28.721370 doi: bioRxiv preprint 28
+
+datasets. We used five standardized datasets for benchmarking and one additional 678 
+
+real-world dataset for validation. Except for WOOD, all datasets exhibit characteristic 679 
+
+long-tailed class distributions, mirroring the highly uneven species-abundance 680 
+
+patterns that dominate real biodiversity assemblages (Fig. 6). 681 
+
+> 682
+
+Figure 6 | Representative datasets and morphological interpretability enabled by 683 
+
+morphOTUs. 684 
+
+Overview of the six datasets used in this study: Flowers-102 (images from Nilsback & 685 
+
+Zisserman 2008), WOOD (images from Zannat et al. 2025), ZZH-Lucaninae (this 686 
+
+study), Rove-Tree-11 (images from Hunt & Pedersen 2022), NHM-Carabids (images 687 
+
+from Hansen et al. 2020), and GD-Insect (this study). The five benchmark datasets 688 
+
+comprise two plant-image datasets and three beetle-image datasets; GD-Insect 689 
+
+provides an additional real-world insect survey dataset for validation. Selected 690 
+
+morphological traits span floral structures, wood transverse anatomy, beetle dorsal 691 
+
+habitus, and insect dorsal/lateral habitus. 692 
+
+> .CC-BY 4.0 International license available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint this version posted June 2, 2026. ;https://doi.org/10.64898/2026.04.28.721370 doi: bioRxiv preprint 29
+
+Dataset descriptions 693 
+
+1. Flowers-102 (Nilsback & Zisserman 2008): The Flowers-102 dataset comprises 694 
+
+images of 102 species from 95 genera of flowering plants. Most images are 695 
+
+close-up views of floral structures, although non-target objects such as leaves, 696 
+
+stems, or background vegetation may also be present. The images exhibit 697 
+
+substantial variation in scale, pose, and illumination. 698 
+
+2. WOOD (Zannat et al. 2025): The WOOD dataset includes seven wood species 699 
+
+from multiple plant families originating from Bangladesh. Images depict 700 
+
+transverse sections of wood captured using consumer-grade smartphone cameras. 701 
+
+Anatomical patterns on the cut surface provide the primary morphological 702 
+
+information relevant for species discrimination. 703 
+
+3. ZZH-Lucaninae (this study): This custom dataset includes 52 species from 16 704 
+
+genera of stag beetles. Images were captured using digital cameras and 705 
+
+smartphone devices. After minimal cropping, each specimen is centered within the 706 
+
+frame, and only dorsal-habitus views were retained for analysis. 707 
+
+4. Rove-Tree-11 (Hunt & Pedersen 2022): Rove-Tree-11 contains images of 215 708 
+
+species from 44 genera of museum-preserved staphylinid beetles. Originally 709 
+
+curated to evaluate the phylogenetic signal contained in digitized habitus 710 
+
+photographs (Hunt et al. 2025), the dataset provides standardized dorsal images of 711 
+
+pinned specimens. 712 
+
+5. NHM-Carabids (Hansen et al. 2020): The NHM-Carabids dataset consists of 713 
+
+dorsal habitus images of 291 species from 76 genera of carabid beetles from the 714 
+
+Natural History Museum (London). Images vary widely in resolution, specimen 715 
+
+size within the frame, and background uniformity. Several images contain limited 716 
+
+visible morphological detail due to lower imaging quality. 717 
+
+6. GD-Insect (this study): This real-world dataset was collected as part of a 718 
+
+biodiversity survey and assessment program targeting aquatic insects in the 719 
+
+Guangdong–Hong Kong–Macao Greater Bay Area. It contains 4,717 habitus 720 
+
+> .CC-BY 4.0 International license available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint this version posted June 2, 2026. ;https://doi.org/10.64898/2026.04.28.721370 doi: bioRxiv preprint 30
+
+images representing 269 species across 212 genera, 12 orders, and 68 families, 721 
+
+with an extremely imbalanced taxonomic structure—152 species are represented 722 
+
+by a single individual. Owing to its heterogeneity and strong long-tailed class 723 
+
+distribution, GD-Insect was used exclusively for validating morphOTU 724 
+
+performance under realistic diversity conditions and was not included in any 725 
+
+comparative benchmarking experiments. 726 
+
+> 727
+
+Table 1. Overview of the six datasets analysed in this study. Summary statistics 728 
+
+include the number of genera, the number of class-level categories (species, 729 
+
+subspecies, or strains), and per-class image distribution. All numbers refer to cleaned 730 
+
+datasets. 731 
+
+Datase tFlowers-10 2WOOD Lucanina eRove-Tree-1 1NHM-Carabi ds GD-Inse ct No. of genera 95 7 16 44 76 212 No. of classes 102 7 52 215 291 269 Class image sMean 80.14 1,024.4 345.54 63.80 216.68 17.54 Media n66 1,025 25.50 50 169 2Stdev 44.26 0.98 39.56 52.36 151.72 79.06 Min 40 1,023 9 4 50 1Max 258 1,025 128 257 885 1100 Q1 49.00 1,024 13.75 27.50 111.00 1Q3 92.75 1,025 71.25 84.00 284.00 5Total 8,174 7,171 2,368 13,717 63,053 4,717 Featur eFlower Block surface Dorsum Dorsum Dorsum Dorsum/ Lateral 
+
+> 732
+
+Image cleaning 733 
+
+All images were standardized before feature extraction to ensure consistent file 734 
+
+> .CC-BY 4.0 International license available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint this version posted June 2, 2026. ;https://doi.org/10.64898/2026.04.28.721370 doi: bioRxiv preprint 31
+
+structure, naming, and resolution across datasets. Because original files varied in 735 
+
+naming conventions, formats, and dimensions, each image filename was prefixed with 736 
+
+its corresponding Latin species name to facilitate downstream visualization and to 737 
+
+guarantee unique identifiers. 738 
+
+Images were resized to a maximum short-edge length of 512 pixels. If the short 739 
+
+edge exceeded this value, images were downscaled proportionally while preserving 740 
+
+the aspect ratio. All files were converted to JPG format (Zhang, 2026). 741 
+
+To reduce the impact of potentially mislabelled images in publicly available 742 
+
+datasets, we created a high-confidence reference set using supervised classification. 743 
+
+We trained an image classification model using AutoGluon-Multimodal (AutoMM; 744 
+
+Tang et al. 2024) with a ConvNeXt V2-L backbone (Woo et al. 2023). After 745 
+
+fine-tuning on each dataset, the resulting model was used to predict labels for all 746 
+
+images. Images for which the predicted label did not match the provided class label 747 
+
+were removed from the dataset (Zhang, 2026). Details of the training procedure are 748 
+
+provided in the Training section. 749 
+
+> 750
+
+Model architectures 751 
+
+We evaluated three categories of image-embedding extraction methods: (i) pretrained 752 
+
+backbone models without task-specific training, (ii) supervised fine-tuning using 753 
+
+AutoGluon-Multimodal (AutoMM), and (iii) the OTU-Former architecture combining 754 
+
+self-supervised pretraining and supervised metric learning. 755 
+
+Pretrained backbone models 756 
+
+As baseline representations, we used the script, autogluon_training.py, to extract 757 
+
+embeddings directly from five ImageNet-scale pretrained backbones (base-level 758 
+
+parameter size, ~85M): two CNNs (RegNetY-16GF, ConvNeXt V2-B), two 759 
+
+transformer models (ViT-B, EVA02-B), and one self-supervised model (DINOv3-B). 760 
+
+ResNet-50 (He et al. 2016) was included as an additional reference backbone. 761 
+
+> .CC-BY 4.0 International license available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint this version posted June 2, 2026. ;https://doi.org/10.64898/2026.04.28.721370 doi: bioRxiv preprint 32
+
+Supervised learning with AutoMM 762 
+
+Supervised models were trained using AutoGluon-Multimodal (AutoMM) (Tang et al. 763 
+
+2024). For each dataset, images were split using stratified sampling (90% 764 
+
+train+validation, 10% test). Data augmentation followed AutoMM’s default pipeline, 765 
+
+including resizing, center cropping, horizontal/vertical flips, color jitter, and trivial 766 
+
+augment. Unless otherwise noted, the maximum training run was 50 epochs, using 767 
+
+cross-entropy loss. After fine-tuning, embeddings were extracted from the penultimate 768 
+
+layer of the model. All supervised procedures were implemented from Zhang (2026). 769 
+
+OTU-Former architecture 770 
+
+OTU-Former consists of a self-supervised pretraining (SSL) stage and a supervised 771 
+
+fine-tuning (SFT) stage. A ViT-based encoder serves as the backbone, using the CLS 772 
+
+token as the image-level embedding. 773 
+
+Self-supervised pretraining 774 
+
+The SSL stage employs a teacher–student framework updated by an exponential 775 
+
+moving average (EMA). The student network comprises a ViT encoder followed by a 776 
+
+3-layer MLP projector producing fixed-dimensional L2-normalized embeddings. The 777 
+
+teacher and student receive multi-crop views of each image with geometric and 778 
+
+appearance augmentations. 779 
+
+The SSL objective combines three losses: 780 
+
+1. Global self-distillation loss between teacher and student CLS embeddings, 781 
+
+2. Local-to-global distillation loss , aligning local student crops to teacher global 782 
+
+embeddings, 783 
+
+3. Masked token regression loss , predicting teacher patch-token outputs for 784 
+
+masked positions. 785 
+
+Learning rate schedules, EMA momentum, and temperature warmup followed 786 
+
+cosine or linear schedules as specified in Supplementary Materials. 787 
+
+> .CC-BY 4.0 International license available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint this version posted June 2, 2026. ;https://doi.org/10.64898/2026.04.28.721370 doi: bioRxiv preprint 33
+
+Supervised fine-tuning 788 
+
+The SFT stage applies ArcFace metric learning (Deng et al. 2022) to refine class 789 
+
+separation. For fine-tuning, the first 70% of transformer blocks were frozen, and the 790 
+
+remaining blocks and metric head were trained. The final OTU-Former embedding is 791 
+
+a fixed-length vector. 792 
+
+Embedding evaluation 793 
+
+Embeddings were evaluated using classification and clustering benchmarks, including 794 
+
+k-nearest neighbor accuracy, linear probing performance, retrieval metrics (Recall@K, 795 
+
+mAP), and clustering indices (NMI, ARI, silhouette score, purity). Additional metrics 796 
+
+for metric-learning models (intra-class variance, inter-class distance, embedding 797 
+
+norms) and UMAP visualizations (McInnes et al. 2018) were computed using 798 
+
+standard implementations. Linear probe accuracy was used as a post hoc measure of 799 
+
+embedding separability rather than as an operational open-set classifier. For open-set 800 
+
+experiments, the probe was trained and evaluated on labeled evaluation splits that 801 
+
+included species withheld from representation learning, allowing assessment of 802 
+
+whether unseen species formed linearly separable clusters. Retrieval metrics and 803 
+
+clustering indices were computed using reference labels only for evaluation. For 804 
+
+GD-Insect, singleton species were retained for morphOTU richness and 805 
+
+Shannon-diversity calculations but excluded from metrics requiring train–test or 806 
+
+positive-pair evaluation, including linear probing and mAP. ARI was calculated over 807 
+
+all specimens using expert-assigned species labels unless otherwise specified. 808 
+
+Defining MorphOTUs 809 
+
+We delineated image-based morphological operational taxonomic units (morphOTUs) 810 
+
+by hierarchical clustering in the learned image-embedding space, followed by 811 
+
+threshold-based tree partitioning. Image embeddings were L2-normalized, and 812 
+
+pairwise cosine distances were computed to construct a UPGMA dendrogram using 813 
+
+> .CC-BY 4.0 International license available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint this version posted June 2, 2026. ;https://doi.org/10.64898/2026.04.28.721370 doi: bioRxiv preprint 34
+
+average-linkage hierarchical clustering. 814 
+
+Partitioning across distance thresholds 815 
+
+To obtain clusterings at multiple resolutions, we generated a series of partitioning 816 
+
+schemes by applying distance cutoffs across the same UPGMA tree. For each cutoff, 817 
+
+we recorded cluster membership, the number of resulting clusters, and summary 818 
+
+statistics describing the distribution of clade sizes. Clade stability was assessed using 819 
+
+bootstrap resampling of the original embeddings. 820 
+
+Evaluation of partition quality 821 
+
+Partition quality was quantified using clustering-based and label-based indices, 822 
+
+including normalized mutual information (NMI), adjusted mutual information (AMI), 823 
+
+adjusted Rand index (ARI), silhouette score, purity, homogeneity, completeness, 824 
+
+V-measure, and BCubed precision/recall/F-score. Additional summaries, including 825 
+
+splitting and lumping indices and the proportion of monophyletic groups, were 826 
+
+computed from the partition assignments. Diversity estimates (richness and Shannon 827 
+
+indices) were calculated under alternative filtering schemes, with optional exclusion 828 
+
+of low-abundance morphOTUs. 829 
+
+Two-stage dynamic threshold scanning 830 
+
+To identify informative distance thresholds, we implemented a two-stage dynamic 831 
+
+scanning procedure. Label-based metrics, including BCubed-F, were used only for 832 
+
+retrospective evaluation and threshold benchmarking. They were not part of the 833 
+
+intended label-free morphOTU workflow. In the coarse scan, cutoffs were evaluated 834 
+
+across a broad distance range, and partition quality metrics were computed for each 835 
+
+threshold. The per-metric optima were aggregated to define a candidate threshold 836 
+
+window. Within this window, a fine scan was conducted using smaller step sizes, 837 
+
+during which partition assignments, summary statistics, and diversity indices were 838 
+
+> .CC-BY 4.0 International license available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint this version posted June 2, 2026. ;https://doi.org/10.64898/2026.04.28.721370 doi: bioRxiv preprint 35
+
+recomputed. All clustering and threshold-scanning procedures were implemented in 839 
+
+custom scripts and are detailed in Supplementary Methods. 840 
+
+Experimental scenarios 841 
+
+We evaluated morphOTU performance under multiple controlled experimental 842 
+
+scenarios designed to reflect conditions commonly encountered in image-based 843 
+
+biodiversity assessments. All scenarios were applied using the same embedding 844 
+
+extraction and clustering procedures described above. Unless otherwise noted, 845 
+
+supervised learning (SL) and supervised fine-tuning (SFT) used stratified dataset 846 
+
+splits of 90% for training and 10% for testing. 847 
+
+Baseline closed-set evaluation 848 
+
+Baseline experiments assessed model performance when all test classes were also 849 
+
+present in the training set. For SL, we used four backbone families—ConvNeXt V2, 850 
+
+RegNetY, ViT, and EVA02—each represented by three parameter-scale variants (large, 851 
+
+medium, and small; Table S2). For SSL and SSL+SFT, we used ViT-T, ViT-S, and 852 
+
+ViT-B as backbones. SSL was trained on all available images for each dataset; during 853 
+
+SFT, 90% of the images were used for fine-tuning, with the remaining 10% reserved 854 
+
+for testing. 855 
+
+Open-set evaluation with unknown species 856 
+
+To assess performance when the test data include classes absent from training, we 857 
+
+constructed nested open-set datasets in which the proportion of unknown-class images 858 
+
+in the test set was set to 0%, 25%, 50%, and 75%. The corresponding complements 859 
+
+served as closed-set data, generating the datasets Dun0, Dun25, Dun50, and Dun75 860 
+
+(Table S1). For each proportion, we evaluated SL, SSL, and SSL+SFT models using 861 
+
+identical backbone architectures. 862 
+
+> .CC-BY 4.0 International license available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint this version posted June 2, 2026. ;https://doi.org/10.64898/2026.04.28.721370 doi: bioRxiv preprint 36
+
+Impact of labeled-data availability 863 
+
+To examine the dependence of SFT on labeled sample size, we varied the proportion 864 
+
+of labeled images available during SFT while holding the SSL stage constant. Using 865 
+
+the Dun25 split as the base scenario (25% open-set test, 75% used for SSL), we 866 
+
+subsampled the labeled portion of the training set to 75%, 50%, 25%, and 10% of its 867 
+
+original size, generating the nested datasets Dun25, Dun25_FT50, Dun25_FT25, and 868 
+
+Dun25_FT10. SSL was conducted using all images available under the Dun25 869 
+
+scenario, while only the subsampled labeled fractions were used in the ArcFace SFT 870 
+
+stage. 871 
+
+Limited images per species 872 
+
+To evaluate the effect of reduced within-class sample diversity, we controlled the 873 
+
+number of training images per species while keeping the set of species fixed. Using 874 
+
+the NHM-Carabids dataset as an example, species with at least 105 images were 875 
+
+designated as the closed-set. For each species, we randomly sampled 100, 50, 25, or 876 
+
+10 images for training. Remaining images from these species formed the closed-set 877 
+
+test subset, while all other species served as open-set test classes. This produced the 878 
+
+nested datasets Dsub100, Dsub50, Dsub25, and Dsub10 (Table S1). 879 
+
+Cross-dataset generalization 880 
+
+To test cross-dataset transfer, we trained SL, SSL, and SSL+SFT models on one beetle 881 
+
+dataset (A) and evaluated them on the other two datasets (B and C). In addition to 882 
+
+direct transfer, we evaluated an additional variant (SSL_newSFT) in which SSL 883 
+
+pretrained weights from dataset A were fine-tuned on the labeled subset of dataset B 884 
+
+or C using ArcFace. All other procedures were kept consistent with the baseline and 885 
+
+open-set scenarios. 886 
+
+> .CC-BY 4.0 International license available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint this version posted June 2, 2026. ;https://doi.org/10.64898/2026.04.28.721370 doi: bioRxiv preprint 37
+
+Low-quality images in training 887 
+
+To quantitatively assess the effect of image degradation on representation learning, we 888 
+
+conducted a controlled downsampling experiment using the high-quality 889 
+
+ZZH-Lucaninae dataset. Images were resized to fixed short-edge lengths of 512, 256, 890 
+
+128, 64, and 32 pixels to simulate progressively lower levels of visual detail. For each 891 
+
+resolution, SL, SSL, and SSL+SFT models were trained independently using the 892 
+
+corresponding downsampled images. Embedding quality was evaluated using the 893 
+
+original 512-pixel test images to ensure comparability across conditions. 894 
+
+Because real-world image degradation can arise from multiple factors, including 895 
+
+focus, illumination, contrast, motion blur, and specimen size within the frame, 896 
+
+short-edge downsampling serves as a controlled and quantifiable proxy rather than a 897 
+
+full representation of all quality loss modes. Nevertheless, this procedure provides a 898 
+
+standardized way to examine how reduced image resolution influences the ability of 899 
+
+different learning paradigms to extract stable morphological features. 900 
+
+Test in a real-world dataset 901 
+
+To evaluate the performance of OTU-Former under realistic biodiversity conditions, 902 
+
+we conducted a two-stage assessment (SSL and SSL+SFT) using the GD-Insect 903 
+
+dataset. During supervised fine-tuning, only species represented by ≥30 individuals 904 
+
+were used (28 species in total, accounting for 10.41% of all species). This design 905 
+
+simulates a common scenario in biodiversity surveys in which only a small subset of 906 
+
+widespread and easily identifiable species can be reliably annotated, while the 907 
+
+majority of taxa remain unlabeled. 908 
+
+For OTU construction, a single fixed cosine-distance threshold of 0.3 was 909 
+
+applied to the UPGMA tree. This value was chosen based on empirical observations 910 
+
+from the three beetle datasets and provides a consistent comparison point for diversity 911 
+
+estimation. It should be noted that we used 0.3 as a fixed benchmark threshold, not as 912 
+
+an optimized dataset-specific cutoff, to test whether a threshold derived from 913 
+
+> .CC-BY 4.0 International license available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint this version posted June 2, 2026. ;https://doi.org/10.64898/2026.04.28.721370 doi: bioRxiv preprint 38
+
+independent beetle datasets could provide usable diversity estimates in a 914 
+
+heterogeneous survey dataset. The resulting morphOTUs were then used to compute 915 
+
+richness and Shannon diversity indices. 916 
+
+Morphological interpretability analysis 917 
+
+To examine the spatial focus of model features, we generated visual explanation maps 918 
+
+using Score-CAM (Wang et al. 2019) applied to trained ViT-T models. For each beetle 919 
+
+dataset, we selected three genera comprising closely related species and distinct 920 
+
+sample sizes (Table 2). Heatmaps were produced for representative images and were 921 
+
+inspected alongside clustering and embedding patterns. Score-CAM visualizations 922 
+
+were implemented using GradCam_heatmap.py. 923 
+
+> 924
+
+Table 2. Subsets consisting of all images from a single genus. Each subset contains 925 
+
+all available images for the listed genus; species counts, and per-species image means 926 
+
+are calculated after dataset cleaning. 927 
+
+Dataset Genus No. species No. images Mean per sp. Lucaninae Epidorcus 2 230 115.00 Lucaninae Prosopocoilus 7 313 44.71 Lucaninae Lucanus 21 879 41.86 Rove-Tree-11 Paederus 3 458 152.67 Rove-Tree-11 Lathrobium 11 1,175 106.82 Rove-Tree-11 Philonthus 46 3,411 74.15 NHM-Carabids Ophonus 9 1,645 182.78 NHM-Carabids Amara 21 4,635 220.71 NHM-Carabids Bembidion 51 13,265 260.10 
+
+> 928
+
+Supplementary Information 929 
+
+All supplementary materials, including Supplementary Figures S1–S29, 930 
+
+Supplementary Tables S1–S5, Supplementary Methods, and related analysis scripts, 931 
+
+are available online. 932 
+
+Funding 933 
+
+> .CC-BY 4.0 International license available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint this version posted June 2, 2026. ;https://doi.org/10.64898/2026.04.28.721370 doi: bioRxiv preprint 39
+
+This work was supported by the National Science Foundation of China (grant 934 
+
+numbers 31970434, 32270470, and 32361143523), National Key Research and 935 
+
+Development Program of China (no. 2023YFF1304600), the International Partnership 936 
+
+Program of the Chinese Academy of Sciences (no. 322GJHZ2022028FN), and the 937 
+
+Basic Investigation Research of the Ministry of Science and Technology, China 938 
+
+(2022FY100504). 939 
+
+Conflict of Interest 940 
+
+The authors have no conflict of interest to disclose. 941 
+
+> 942
+
+Reference 943 
+
+1. Millennium Ecosystem Assessment (2005). Ecosystems and human well-being: 944 
+
+synthesis. Washington, DC: Island Press. ISBN 1-59726-040-1. 945 
+
+2. Cardinale, B., Duffy, J., Gonzalez, A. et al. Biodiversity loss and its impact on 946 
+
+humanity. Nature 486 , 59–67 (2012). 947 
+
+3. de Groot, R., Brander, L., Van der Ploeg, S. et al. Global estimates of the value of 948 
+
+ecosystems and their services in monetary units. Ecosyst Serv , 1(1), 50-61 (2012). 949 
+
+4. Costanza, R. et al. The value of the world’s ecosystem services and natural capital. 950 
+
+Nature 387 , 253–260 (1997). 951 
+
+5. Costanza, R. et al. Changes in the global value of ecosystem services. Glob. 952 
+
+Environ. Change 26 , 152–158 (2014). 953 
+
+6. Hanski, I., von Hertzen, L., Fyhrquist, N. et al. Environmental biodiversity, 954 
+
+human microbiota, and allergy are interrelated. Proc. Natl. Acad. Sci. U.S.A. ,955 
+
+109 (21), 8334-8339 (2012). 956 
+
+7. Civitello, D. J., Cohen, J., Fatima, H., et al. Biodiversity inhibits parasites: Broad 957 
+
+evidence for the dilution effect. Proc. Natl. Acad. Sci. U.S.A. , 112 (28), 8667-8671 958 
+
+(2015). 959 
+
+8. Keesing, F. & Ostfeld, R. S. Biodiversity and disease risk: the case of Lyme 960 
+
+> .CC-BY 4.0 International license available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint this version posted June 2, 2026. ;https://doi.org/10.64898/2026.04.28.721370 doi: bioRxiv preprint 40
+
+disease. Conserv. Biol. 14 , 722–728 (2000). 961 
+
+9. Keesing, F. & Ostfeld, R. S. Impacts of biodiversity and biodiversity loss on 962 
+
+zoonotic diseases. Proc. Natl. Acad. Sci. U. S. A. 118 , e2023540118 (2021). 963 
+
+10. Rolston, H. Environmental Ethics: Duties to and Values in the Natural World .964 
+
+(Temple University Press, 1988). 965 
+
+11. Berkes, F. Sacred Ecology . 4th edn (Routledge, 2017). 966 
+
+12. Linnaeus, C. Systema Naturae , 10th ed., Vol. 1. Laurentius Salvius, Holmiae 967 
+
+(1758). 968 
+
+13. Hoagland, K. E. The taxonomic impediment and the Convention of Biodiversity. 969 
+
+Assoc. Syst. Collect. Newsl. 24 , 61–62, 66–67 (1996). 970 
+
+14. Evenhuis, N. L. Helping solve the “other” taxonomic impediment: completing the 971 
+
+eight steps to total enlightenment and taxonomic nirvana. Zootaxa 1407 , 3–12 972 
+
+(2007). 973 
+
+15. Hortal, J. et al. Seven shortfalls that beset large-scale knowledge of biodiversity. 974 
+
+Annu. Rev. Ecol. Evol. Syst. 46 , 523–549 (2015). 975 
+
+16. Bánki, O. et al. Catalogue of Life (2026-02-13 XR). (Catalogue of Life Foundation, 976 
+
+Amsterdam, 2026). 977 
+
+17. Mora, C., Tittensor, D. P., Adl, S., Simpson, A. G. & Worm, B. How many species 978 
+
+are there on Earth and in the ocean? PLoS Biol. 9, e1001127 (2011). 979 
+
+18. Stork, N. E. How many species of insects and other terrestrial arthropods are there 980 
+
+on Earth? Annu. Rev. Entomol. 63 , 31–45 (2018). 981 
+
+19. Wiens, J. J. How many species are there on Earth? Progress and problems. PLoS 982 
+
+Biol. 21 , e3002388 (2023). 983 
+
+20. Bonnet, X., Shine, R. & Lourdais, O. Taxonomic chauvinism. Trends Ecol. Evol. 984 
+
+17 , 1–3 (2002). 985 
+
+21. Feeley, K., Stroud, J. & Perez, T. Most ‘global’ reviews of species’ responses to 986 
+
+climate change are not truly global. Divers. Distrib. 23 , 231–234 (2016). 987 
+
+22. Groom, Q., De Nolf, M., Estupinan-Suarez, L. M. & Meeus, S. Balancing the 988 
+
+supply and demand for taxonomy: an analysis of European taxonomic capacity 989 
+
+> .CC-BY 4.0 International license available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint this version posted June 2, 2026. ;https://doi.org/10.64898/2026.04.28.721370 doi: bioRxiv preprint 41
+
+and policy needs. bioRxiv 2025.07.31.666655 (2025). 990 
+
+23. Hebert, P. D., Cywinska, A., Ball, S. L. & deWaard, J. R. Biological 991 
+
+identifications through DNA barcodes. Proc. Biol. Sci. 270 , 313–321 (2003). 992 
+
+24. Taberlet, P., Coissac, E., Pompanon, F., Brochmann, C. & Willerslev, E. Towards 993 
+
+next-generation biodiversity assessment using DNA metabarcoding. Mol. Ecol. 21 ,994 
+
+2045–2050 (2012). 995 
+
+25. Callahan, B. J. et al. DADA2: high-resolution sample inference from Illumina 996 
+
+amplicon data. Nat. Methods 13 , 581–583 (2016). 997 
+
+26. Edgar, R. C. UNOISE2: improved error-correction for Illumina 16S and ITS 998 
+
+amplicon sequencing. bioRxiv 081257 (2016). 999 
+
+27. Hajibabaei, M., Baird, D. J., Fahner, N. A., Beiko, R., & Golding, G. B. A new 1000 
+
+way to contemplate Darwin’s tangled bank: how DNA barcodes are reconnecting 1001 
+
+biodiversity science and biomonitoring. Philos. Trans. R. Soc. Lond. B Biol. Sci. 1002 
+
+371 , 20150330 (2016). 1003 
+
+28. Alberdi, A., Aizpurua, O., Gilbert, M. T. P. & Bohmann, K. Scrutinizing key steps 1004 
+
+for reliable metabarcoding of environmental samples. Methods Ecol. Evol. 9,1005 
+
+134–147 (2017). 1006 
+
+29. Orgiazzi, A., Dunbar, M. B., Panagos, P., De Groot, G. A. & Lemanceau, P. Soil 1007 
+
+biodiversity and DNA barcodes: opportunities and challenges. Soil Biol. Biochem. 1008 
+
+80 , 244–250 (2014). 1009 
+
+30. Cristescu, M. E. From barcoding single individuals to metabarcoding biological 1010 
+
+communities: towards an integrative approach to the study of global biodiversity. 1011 
+
+Trends Ecol. Evol. 29 , 566–571 (2014). 1012 
+
+31. DeSalle, R. & Goldstein, P. Review and interpretation of trends in DNA barcoding. 1013 
+
+Front. Ecol. Evol. 7, 460426 (2019). 1014 
+
+32. Leray, M., Yang, J.Y., Meyer, C.P. et al. A new versatile primer set targeting a short 1015 
+
+fragment of the mitochondrial COI region for metabarcoding metazoan diversity: 1016 
+
+application for characterizing coral reef fish gut contents. Front. Zool. 10 , 34 1017 
+
+(2013). 1018 
+
+> .CC-BY 4.0 International license available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint this version posted June 2, 2026. ;https://doi.org/10.64898/2026.04.28.721370 doi: bioRxiv preprint 42
+
+33. Elbrecht, V. & Leese, F. Validation and development of COI metabarcoding 1019 
+
+primers for freshwater macroinvertebrate bioassessment. Front. Environ. Sci. 5, 11 1020 
+
+(2017). 1021 
+
+34. Ruppert, K. M., Kline, R. J. & Rahman, M. S. Past, present, and future 1022 
+
+perspectives of environmental DNA (eDNA) metabarcoding: a systematic review 1023 
+
+in methods, monitoring, and applications of global eDNA. Glob. Ecol. Conserv. 1024 
+
+17 , e00547 (2019). 1025 
+
+35. Rishan, S. T., Kline, R. J. & Rahman, M. S. Applications of environmental DNA 1026 
+
+(eDNA) to detect subterranean and aquatic invasive species: a critical review on 1027 
+
+the challenges and limitations of eDNA metabarcoding. Environ. Adv. 100370 1028 
+
+(2023). 1029 
+
+36. Stein, E. D., Martinez, M. C., Stiles, S., Miller, P. E. & Zakharov, E. V. Is DNA 1030 
+
+barcoding actually cheaper and faster than traditional morphological methods? 1031 
+
+Results from a survey of freshwater bioassessment efforts in the United States. 1032 
+
+PLoS One 9, e95525 (2014). 1033 
+
+37. Keck, F., Couton, M. & Altermatt, F. Navigating the seven challenges of 1034 
+
+taxonomic reference databases in metabarcoding analyses. Mol. Ecol. Resour. 23 ,1035 
+
+742–755 (2023). 1036 
+
+38. Hartop, E., Srivathsan, A., Ronquist, F. & Meier, R. Towards large-scale 1037 
+
+integrative taxonomy (LIT): resolving the data conundrum for dark taxa. Syst. Biol. 1038 
+
+71 , 1404–1422 (2022). 1039 
+
+39. Nilsson, R. H. et al. How, not if, is the question mycologists should be asking 1040 
+
+about DNA-based typification. MycoKeys 96 , 143–157 (2023). 1041 
+
+40. Hansen, O. L. P. et al. Species-level image classification with convolutional 1042 
+
+neural networks enables insect identification from habitus images. Ecol. Evol. 10 ,1043 
+
+737–747 (2020). 1044 
+
+41. Zhao, Z., Lu, Y., Tong, Y., Chen, X. & Bai, M. PENet: a phenotype encoding 1045 
+
+network for automatic extraction and representation of morphological 1046 
+
+discriminative features. Methods Ecol. Evol. 14 , 3035–3046 (2023). 1047 
+
+> .CC-BY 4.0 International license available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint this version posted June 2, 2026. ;https://doi.org/10.64898/2026.04.28.721370 doi: bioRxiv preprint 43
+
+42. Rayeed, S. M., East, A., Stevens, S., Record, S. & Stewart, C. V. BeetleVerse: a 1048 
+
+study on taxonomic classification of ground beetles. arXiv: 2504.13393 (2025). 1049 
+
+43. Valan, M., Makonyi, K., Maki, A., Vondrá ček, D. & Ronquist, F. Automated 1050 
+
+taxonomic identification of insects with expert-level accuracy using effective 1051 
+
+feature transfer from convolutional networks. Syst. Biol. 68 , 876–895 (2019). 1052 
+
+44. Yang, Z., Hofmann, M. & Wäldchen, J. Morphology-molecule network: 1053 
+
+integrating morphological and molecular data for species identification. Syst. Biol. 1054 
+
+71 , 1234–1248 (2022). 1055 
+
+45. Hofmann, M., Kiel, S., Kösters, L. M., Wäldchen, J. & Mäder, P. Inferring 1056 
+
+taxonomic affinities and genetic distances using morphological features extracted 1057 
+
+from specimen images: a case study with a bivalve dataset. Syst. Biol. 73 ,1058 
+
+1045–1062 (2024). 1059 
+
+46. Karbstein, K. et al. Species delimitation 4.0: integrative taxonomy meets artificial 1060 
+
+intelligence. Trends Ecol. Evol. 39 , 771–784 (2024). 1061 
+
+47. Kösters, L. M., Karbstein, K., Hofmann, M., Hodac, L., Mäder, P. & Wäldchen, J. 1062 
+
+Data fusion for integrative species identification using deep learning. Syst. Biol. 1063 
+
+74 , 521–538 (2025). 1064 
+
+48. Hunt, R., Reyes-Hernández, J. L., Shaw, J. J., Solodovnikov, A. & Pedersen, K. S. 1065 
+
+Integrating deep learning-derived morphological traits and molecular data for 1066 
+
+total-evidence phylogenetics: lessons from digitized collections. Syst. Biol. 74 ,1067 
+
+453–468 (2025). 1068 
+
+49. Geirhos, R. et al. Shortcut learning in deep neural networks. Nat. Mach. Intell. 2,1069 
+
+665–673 (2020). 1070 
+
+50. Caron, M. et al. Emerging properties in self-supervised vision transformers. In 1071 
+
+Proc. IEEE/CVF Int. Conf. Comput. Vis. (ICCV) 9630–9640 (2021). 1072 
+
+51. Stevens, S. et al. BioCLIP: a vision foundation model for the tree of life. arXiv :1073 
+
+2311.18803 (2023). 1074 
+
+52. Gu, J. et al. BioCLIP 2: emergent properties from scaling hierarchical contrastive 1075 
+
+learning. arXiv : 2505.23883 (2025). 1076 
+
+> .CC-BY 4.0 International license available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint this version posted June 2, 2026. ;https://doi.org/10.64898/2026.04.28.721370 doi: bioRxiv preprint 44
+
+53. Wang, X. et al. Multi-angle, cross-domain fusion strategy enhances automated 1077 
+
+insect identification and hierarchical categorization: a case study on assassin bugs 1078 
+
+(Hemiptera: Reduviidae). Cladistics , 1 −16 (2026). 1079 
+
+54. Zhou, B., Khosla, A., Lapedriza, A., Oliva, A. & Torralba, A. Learning deep 1080 
+
+features for discriminative localization. arXiv : 1512.04150 (2015). 1081 
+
+55. Deng, J., Guo, J., Yang, J., Xue, N., Kotsia, I. & Zafeiriou, S. ArcFace: additive 1082 
+
+angular margin loss for deep face recognition. IEEE Trans. Pattern Anal. Mach. 1083 
+
+Intell. 44 , 5962–5979 (2022). 1084 
+
+56. He, K., Zhang, X., Ren, S. & Sun, J. Deep residual learning for image recognition. 1085 
+
+Proc. IEEE Conf. Comput. Vis. Pattern Recognit. 770–778 (2016). 1086 
+
+57. Woo, S. et al. ConvNeXt V2: Co-designing and scaling ConvNets with masked 1087 
+
+autoencoders. arXiv : 2301.00808 (2023). 1088 
+
+58. Radosavovic, I., Kosaraju, R. P., Girshick, R., He, K. & Dollár, P. Designing 1089 
+
+network design spaces. arXiv : 2003.13678 (2020). 1090 
+
+59. Dosovitskiy, A. et al. An image is worth 16×16 words: transformers for image 1091 
+
+recognition at scale. arXiv : 2010.11929 (2020). 1092 
+
+60. Fang, Y. et al. EVA-02: A visual representation for Neon Genesis. Image Vis. 1093 
+
+Comput. 137 , 105171 (2024). 1094 
+
+61. Siméoni, O. et al. DINOv3. arXiv : 2508.10104 (2025). 1095 
+
+62. Pan, H. et al. Improving fine-tuning of self-supervised models with contrastive 1096 
+
+initialization. Neural Netw. 159 , 198–207 (2023). 1097 
+
+63. Liu, P. et al. Deep metric learning assisted by intra-variance in a semi-supervised 1098 
+
+view of learning. Eng. Appl. Artif. Intell. 131 , 107885 (2024). 1099 
+
+64. Bagga, A. & Baldwin, B. Entity-based cross-document coreferencing using the 1100 
+
+vector space model. In Proc. 36th Annu. Meet. Assoc. Comput. Linguist. & 17th 1101 
+
+Int. Conf. Comput. Linguist. 79–85 (1998). 1102 
+
+65. Chen, T., Kornblith, S., Swersky, K. et al. Big self-supervised models are strong 1103 
+
+semi-supervised learners. arXiv : 2006.10029 (2020). 1104 
+
+> .CC-BY 4.0 International license available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint this version posted June 2, 2026. ;https://doi.org/10.64898/2026.04.28.721370 doi: bioRxiv preprint 45
+
+66. Konstantakos, S., Cani, J., Mademlis, I. et al. Self-supervised visual learning in 1105 
+
+the low-data regime: a comparative evaluation. Neurocomputing 620 , 129199 1106 
+
+(2025). 1107 
+
+67. Wang, H. et al. Score-CAM: score-weighted visual explanations for convolutional 1108 
+
+neural networks. arXiv : 1910.01279 (2019). 1109 
+
+68. Hebert, P. D. N., Stoeckle, M. Y., Zemlak, T. S. & Francis, C. M. Identification of 1110 
+
+birds through DNA barcodes. PLoS Biol. 2, e312 (2004). 1111 
+
+69. Smith, M. A., Fisher, B. L. & Hebert, P. D. N. DNA barcoding for effective 1112 
+
+biodiversity assessment of a hyperdiverse arthropod group: the ants of 1113 
+
+Madagascar. Philos. Trans. R. Soc. Lond. B Biol. Sci. 360 , 1825–1834 (2005). 1114 
+
+70. Meyer, C. P. & Paulay, G. DNA barcoding: error rates based on comprehensive 1115 
+
+sampling. PLoS Biol. 3, e422 (2005). 1116 
+
+71. Wiemers, M. & Fiedler, K. Does the DNA barcoding gap exist? A case study in 1117 
+
+blue butterflies (Lepidoptera: Lycaenidae). Front. Zool. 4, 8 (2007). 1118 
+
+72. Oquab, M. et al. DINOv2: learning robust visual features without supervision. 1119 
+
+arXiv : 2304.07193 (2023). 1120 
+
+73. Entezari, R., Wortsman, M., Saukh, O., Shariatnia, M. M., Sedghi, H. & Schmidt, 1121 
+
+L. The role of pre-training data in transfer learning. arXiv : 2302.13602 (2023). 1122 
+
+74. Nilsback, M. & Zisserman, A. Automated flower classification over a large 1123 
+
+number of classes. In Proc. Indian Conf. Comput. Vis. Graph. Image Process. 1124 
+
+722–729 (2008). 1125 
+
+75. Zannat, A., Islam, M. S., Zaman, M. S. & Saif, S. Indigenous wood species 1126 
+
+classification using a multi-stage deep learning with Grad-CAM explainability 1127 
+
+and an ensemble technique for Northern Bangladesh. PLoS One 20 , e0328102 1128 
+
+(2025). 1129 
+
+76. Hunt, R. & Pedersen, K. S. Rove-tree-11: the not-so-wild rover, a hierarchically 1130 
+
+structured image dataset for deep metric learning research. In Proc. Asian Conf. 1131 
+
+Comput. Vis. (ACCV) 2967–2983 (2022). 1132 
+
+> .CC-BY 4.0 International license available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint this version posted June 2, 2026. ;https://doi.org/10.64898/2026.04.28.721370 doi: bioRxiv preprint 46
+
+77. Zhang, F. EntomoKit: A Python toolkit for insect image dataset construction and 1133 
+
+classification. GitHub repository, version 1 , accessed 15 March 2026 (2026). 1134 
+
+78. Tang, Z. et al. AutoGluon-Multimodal (AutoMM): supercharging multimodal 1135 
+
+AutoML with foundation models. In Proc. Int. Conf. Autom. Mach. Learn. 1136 
+
+(AutoML) (2024). 1137 
+
+79. McInnes, L., Healy, J. & Melville, J. UMAP: uniform manifold approximation 1138 
+
+and projection. J. Open Source Softw. 3, 861 (2018). 1139

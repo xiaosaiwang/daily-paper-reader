@@ -1,0 +1,222 @@
+{
+  "mode": "standard",
+  "generated_at": "2026-06-04T21:53:07.341859+00:00",
+  "stats": {
+    "mode": "standard",
+    "tag_count": 1,
+    "deep_divecandidates": 1,
+    "deep_cap": 6,
+    "deep_selected": 1,
+    "quick_candidates": 4,
+    "quick_skim_target": 11,
+    "quick_selected": 4
+  },
+  "deep_dive": [
+    {
+      "id": "biorxiv-10-64898-2026-05-31-729149-v1",
+      "source": "biorxiv",
+      "title": "Plant growth forms shaping biodiversity patterns can guide conservation planning on the Qinghai-Tibet Plateau",
+      "abstract": "Plant growth forms effectively reflect profound evolutionary adaptations that underpin ecosystem functioning; however, how their biogeographic disparities influence conservation prioritization remains poorly understood. We here integrate a comprehensive phylogeny with high-resolution distribution data for 14,468 vascular plant species across the Qinghai-Tibet Plateau, showing that growth-form identity decouples the spatial patterns of taxonomic and phylogenetic diversity, with distinct forms exhibiting marked differences in geographic range sizes and elevational optima (2,200-3,300 m). Although herbs dominate plant assemblages across spatial scales, their proportional abundance decreases along a northwest-to-southeast aridity gradient, yielding to structurally complex, non-herbaceous forms in humid, species-rich regions. Consequently, priority conservation areas derived for individual growth forms exhibit low spatial similarity. Despite this divergence, we identify trees and climbers as highly effective umbrella growth forms: prioritizing these functional groups captures [&ge;]75% of the multidimensional diversity of all other growth forms within a minimal spatial footprint. Our findings demonstrate that accounting for growth-form-based functional identity is essential for maximizing conservation efficacy, providing a scalable framework for biodiversity hotspots worldwide.",
+      "authors": [
+        "Liu, F.",
+        "Liang, Z.",
+        "Xu, X.",
+        "Kuang, J.",
+        "Ye, J.",
+        "Li, J.",
+        "Yang, F.",
+        "Geng, Y.",
+        "Li, B.",
+        "Hu, J."
+      ],
+      "primary_category": "ecology",
+      "categories": [
+        "ecology"
+      ],
+      "published": "2026-06-03T00:00:00+00:00",
+      "link": "https://www.biorxiv.org/content/10.64898/2026.05.31.729149v1.full.pdf",
+      "tags": [
+        "keyword:ag-bg-div",
+        "query:ag-bg-div"
+      ],
+      "llm_score": 9.0,
+      "llm_evidence_en": "study on plant growth forms shaping biodiversity patterns on Qinghai-Tibet Plateau, directly matches requirement",
+      "llm_evidence_cn": "研究青藏高原植物生长型塑造生物多样性模式，直接匹配要求",
+      "llm_evidence": "研究青藏高原植物生长型塑造生物多样性模式，直接匹配要求",
+      "canonical_evidence": "研究青藏高原植物生长型塑造生物多样性模式，直接匹配要求",
+      "llm_tldr_en": "Integrates phylogeny and distribution data for 14,468 vascular plant species on the Qinghai-Tibet Plateau, showing growth-form decouples taxonomic and phylogenetic diversity patterns.",
+      "llm_tldr_cn": "该论文整合了青藏高原14,468种维管植物的系统发育和高分辨率分布数据，发现生长型类别解耦了分类和系统发育多样性的空间格局。不同生长型具有不同的地理分布范围和海拔偏好（2200-3300米）。草本植物虽占主导但比例沿西北-东南向递减。研究为基于生长型的保护规划提供了依据。",
+      "llm_tldr": "该论文整合了青藏高原14,468种维管植物的系统发育和高分辨率分布数据，发现生长型类别解耦了分类和系统发育多样性的空间格局。不同生长型具有不同的地理分布范围和海拔偏好（2200-3300米）。草本植物虽占主导但比例沿西北-东南向递减。研究为基于生长型的保护规划提供了依据。",
+      "llm_tags": [
+        "query:ag-bg-div"
+      ],
+      "matched_query_tag": "query:ag-bg-div",
+      "matched_query_text": "Tibetan Plateau",
+      "matched_requirement_id": "req-2",
+      "selection_source": "fresh_fetch"
+    }
+  ],
+  "quick_skim": [
+    {
+      "id": "biorxiv-10-64898-2026-04-28-721370-v2",
+      "source": "biorxiv",
+      "title": "MorphOTU: image-derived morphological operational units for open-set biodiversity assessment",
+      "abstract": "The absence of a scalable system for organizing the vast majority of unidentified species is a central obstacle in biodiversity science. Molecular methods can generate OTUs without species names but require sequencing infrastructure and often remain difficult to link to observable morphology, whereas most computer-vision methods still rely on closed-set species labels. These limitations hamper biodiversity quantification under the open, incomplete conditions that characterize real ecosystems. Here, we introduce morphOTUs, a general image-based framework that constructs operational units of biodiversity directly from phenotypes. Using morphOTU, we derive image-based OTUs across five standardized benchmark datasets spanning flowers, wood anatomy, and beetle dorsal habitus. These units closely approximate reference species-level groupings, including closely related species, retain coherent structure when most species are \"unseen during training, and accurately approximate -diversity metrics under sparse labeling or limited sampling. Furthermore, morphOTUs remain effective on a heterogeneous, long-tailed real-world insect survey dataset, demonstrating robustness beyond standardized imaging conditions. Visual explanations reveal that morphOTU consistently focuses on biologically meaningful traits and captures continuous phenotypic variation. By providing a scalable and open-set framework for quantifying phenotypic diversity, morphOTUs enable biodiversity assessment that includes unnamed species and unlock the ecological value of rapidly expanding digital image repositories.",
+      "authors": [
+        "Zhan, Z.",
+        "Ye, M.",
+        "Orr, M. C.",
+        "Chen, W.",
+        "Liu, X.",
+        "Yue, L.",
+        "Sun, X.",
+        "Zhang, F."
+      ],
+      "primary_category": "bioinformatics",
+      "categories": [
+        "bioinformatics"
+      ],
+      "published": "2026-06-02T00:00:00+00:00",
+      "link": "https://www.biorxiv.org/content/10.64898/2026.04.28.721370v2.full.pdf",
+      "tags": [
+        "keyword:ag-bg-div",
+        "query:ag-bg-div"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "image-based OTU method for functional diversity assessment across trophic levels",
+      "llm_evidence_cn": "基于图像的操作单元方法，支持跨营养级功能多样性评估",
+      "llm_evidence": "基于图像的操作单元方法，支持跨营养级功能多样性评估",
+      "canonical_evidence": "基于图像的操作单元方法，支持跨营养级功能多样性评估",
+      "llm_tldr_en": "MorphOTU constructs image-derived operational units directly from phenotypes, enabling biodiversity quantification without species labels and applicable to any organism group.",
+      "llm_tldr_cn": "该论文提出了MorphOTU框架，直接从图像中构建形态操作单元，无需物种标签。在五个涵盖花朵等不同类群的基准数据集上验证了其有效性。该方法可扩展至任何可成像的生物类群，为地上植物和地下土壤生物的功能多样性测量提供了统一工具。该技术有助于大规模地上-地下功能多样性的比较和关联分析，直接服务于用户需求中的核心问题。",
+      "llm_tldr": "该论文提出了MorphOTU框架，直接从图像中构建形态操作单元，无需物种标签。在五个涵盖花朵等不同类群的基准数据集上验证了其有效性。该方法可扩展至任何可成像的生物类群，为地上植物和地下土壤生物的功能多样性测量提供了统一工具。该技术有助于大规模地上-地下功能多样性的比较和关联分析，直接服务于用户需求中的核心问题。",
+      "llm_tags": [
+        "query:ag-bg-div:composite"
+      ],
+      "matched_query_tag": "query:ag-bg-div:composite",
+      "matched_query_text": "Papers central to 请帮我查找有关地上和地下功能多样性及其关系对生态系统功能影响的论文, especially work that connects or combines: n; Tibetan Plateau; e; aboveground functional diversity effects on ecosystem function; belowground functional diversity effects on ecosystem function; interactions between aboveground and belowground functional diversity; What is the relative contribution of aboveground plant functional diversity, belowground soil biota functional diversity, and their cross trophic coupling (or asymmetry) to ecosystem multifunctionality, and how do these contributions shift along environmental gradients?; Are plant functional traits coordinated with soil microbial life history strategies and nematode functional traits across environmental gradients, and does the strength of this cross trophic trait coordination predict ecosystem multifunctionality?; How do climate gradients modulate the coupling between aboveground and belowground functional diversity and their joint effects on ecosystem function across large spatial scales?; How does the relationship between aboveground plant functional diversity and belowground soil microbial and nematode functional diversity drive ecosystem multifunctionality in grassland ecosystems?.",
+      "matched_requirement_id": "req-composite-ag-bg-div",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    },
+    {
+      "id": "2605.30658v1",
+      "source": "arxiv",
+      "title": "Consistent Bayesian Local Spatial Feature Selection with Application to Spatial Multimodal Omics",
+      "abstract": "Motivated by a high-dimensional regression problem in spatial multimodal omics (SMO), we propose a Bayesian framework for local spatial feature selection, where a random domain partition prior is introduced to divide the spatial domain into several contiguous clusters with flexible shapes and an unknown number of clusters, conditional on which a local feature selection prior is imposed within each cluster. The notion of \"feature\" is general and may include both covariates and functional bases, allowing the framework to perform both local variable selection and local basis selection, the latter being essential for adaptively approximating spatially varying functions with localized characteristics. We derive coupled hyperparameter conditions linking domain partition and local feature selection priors, under which the consistency theory and posterior contraction rates of both the domain partition and feature selection are established. We develop an efficient informed reversible jump Markov chain Monte Carlo algorithm to address the computational challenges encountered in joint posterior sampling of domain partitions and selected features. Simulation studies demonstrate the effectiveness of the proposed model and algorithm, highlighting its advantages over existing methods. The application of our model to an SMO dataset reveals biologically meaningful spatial patterns within breast cancer tissue.",
+      "authors": [
+        "Kun Huang",
+        "Xiyu Peng",
+        "Huiyan Sang",
+        "Ligang Lu"
+      ],
+      "primary_category": "stat.ME",
+      "categories": [
+        "stat.ME"
+      ],
+      "published": "2026-05-28T23:36:49+00:00",
+      "link": "https://arxiv.org/pdf/2605.30658v1",
+      "tags": [
+        "keyword:ag-bg-div",
+        "query:ag-bg-div"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "Bayesian local spatial feature selection for gradient analysis",
+      "llm_evidence_cn": "用于梯度分析的贝叶斯局部空间特征选择",
+      "llm_evidence": "用于梯度分析的贝叶斯局部空间特征选择",
+      "canonical_evidence": "用于梯度分析的贝叶斯局部空间特征选择",
+      "llm_tldr_en": "A Bayesian framework for local spatial feature selection with random domain partition, enabling adaptive approximation of spatially varying functions and local variable selection.",
+      "llm_tldr_cn": "该论文提出一种贝叶斯局部空间特征选择框架，使用随机域分割先验将空间域划分为形状灵活的连续聚类，然后在每个聚类内进行局部特征选择。框架可处理协变量和函数基的选择，适用于近似空间变化函数。方法在空间多模态组学数据上得到验证，能够有效识别空间异质性特征。该工具可直接应用于分析环境梯度上功能性状与生态系统功能的关系。",
+      "llm_tldr": "该论文提出一种贝叶斯局部空间特征选择框架，使用随机域分割先验将空间域划分为形状灵活的连续聚类，然后在每个聚类内进行局部特征选择。框架可处理协变量和函数基的选择，适用于近似空间变化函数。方法在空间多模态组学数据上得到验证，能够有效识别空间异质性特征。该工具可直接应用于分析环境梯度上功能性状与生态系统功能的关系。",
+      "llm_tags": [
+        "query:ag-bg-div"
+      ],
+      "matched_query_tag": "query:ag-bg-div",
+      "matched_query_text": "What is the relative contribution of aboveground plant functional diversity, belowground soil biota functional diversity, and their cross trophic coupling (or asymmetry) to ecosystem multifunctionality, and how do these contributions shift along environmental gradients?",
+      "matched_requirement_id": "req-7",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "2606.00994v1",
+      "source": "arxiv",
+      "title": "A Registry-Bound LLM Pipeline for Evidence-Grounded Trait Extraction across Tropical Plants, Aquatic Species, and Exotic Pets",
+      "abstract": "We describe a registry-bound large-language-model extraction pipeline producing evidence-grounded structured trait records at scale, on cultivated tropical plant, aquatic, and pet species. Four mechanisms render LLM-derived rows auditable: a versioned 39-key closed-vocabulary trait registry constraining every admitted value to a typed schema; a per-row verbatim evidence quote tying each value to source text; a per-row confidence label (high or medium; low dropped pre-persist); and multi-version preservation. Applied to 409,880 publishable species from the Tropical Species Encyclopedia, the pipeline executed 706,220 runs and persisted 5,489,881 trait records across 409,820 species (99.985%), 81.57% at high confidence. We report three validation layers in descending evidentiary strength: at full population, 90.12% of 5,427,588 evidence-bearing rows have their quote as a verbatim source substring (93.49% excluding one compliance meta-trait); a quote-supports-value audit on n=100 stratified non-red-zone rows yielded 100/100 (lower bound 96.30%); face-validity on n=50 red-zone rows yielded 50/50 Accept (lower bound 92.86%). Per-record correctness is not claimed; 100% pending human curation. The contribution is the four-mechanism framework.",
+      "authors": [
+        "Jeff Wang"
+      ],
+      "primary_category": "cs.CL",
+      "categories": [
+        "cs.CL"
+      ],
+      "published": "2026-05-31T04:17:47+00:00",
+      "link": "https://arxiv.org/pdf/2606.00994v1",
+      "tags": [
+        "keyword:ag-bg-div",
+        "query:ag-bg-div"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "LLM pipeline for trait extraction from species, applicable to functional trait databases",
+      "llm_evidence_cn": "从物种中提取性状的LLM流水线，可用于功能性状数据库",
+      "llm_evidence": "从物种中提取性状的LLM流水线，可用于功能性状数据库",
+      "canonical_evidence": "从物种中提取性状的LLM流水线，可用于功能性状数据库",
+      "llm_tldr_en": "A registry-bound LLM pipeline extracts evidence-grounded trait records at scale across plants and animals, enabling construction of trait databases for functional diversity studies.",
+      "llm_tldr_cn": "该论文描述了一个基于大语言模型的特征提取流水线，通过版本化的注册表约束、证据引用和置信度标签，从热带植物、水生和宠物物种的大规模文本中提取结构化性状记录。应用于409,880个物种，提取了超过500万条性状记录，为构建功能性状数据库提供了可审计、可复现的方法，从而支持地上和地下功能多样性的量化分析。",
+      "llm_tldr": "该论文描述了一个基于大语言模型的特征提取流水线，通过版本化的注册表约束、证据引用和置信度标签，从热带植物、水生和宠物物种的大规模文本中提取结构化性状记录。应用于409,880个物种，提取了超过500万条性状记录，为构建功能性状数据库提供了可审计、可复现的方法，从而支持地上和地下功能多样性的量化分析。",
+      "llm_tags": [
+        "query:ag-bg-div:composite"
+      ],
+      "matched_query_tag": "query:ag-bg-div:composite",
+      "matched_query_text": "Papers central to 请帮我查找有关地上和地下功能多样性及其关系对生态系统功能影响的论文, especially work that connects or combines: n; Tibetan Plateau; e; aboveground functional diversity effects on ecosystem function; belowground functional diversity effects on ecosystem function; interactions between aboveground and belowground functional diversity; What is the relative contribution of aboveground plant functional diversity, belowground soil biota functional diversity, and their cross trophic coupling (or asymmetry) to ecosystem multifunctionality, and how do these contributions shift along environmental gradients?; Are plant functional traits coordinated with soil microbial life history strategies and nematode functional traits across environmental gradients, and does the strength of this cross trophic trait coordination predict ecosystem multifunctionality?; How do climate gradients modulate the coupling between aboveground and belowground functional diversity and their joint effects on ecosystem function across large spatial scales?; How does the relationship between aboveground plant functional diversity and belowground soil microbial and nematode functional diversity drive ecosystem multifunctionality in grassland ecosystems?.",
+      "matched_requirement_id": "req-composite-ag-bg-div",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "biorxiv-10-64898-2026-05-28-728502-v1",
+      "source": "biorxiv",
+      "title": "Drought Dominates Engineered Lipid Sink Effects on Sorghum Physiology and Carbon Allocation",
+      "abstract": "Determining the environmental limits that govern how engineered metabolic traits control whole-plant carbon (C) allocation is essential for developing climate-resilient bioenergy systems. Oil-enhanced sorghum offers a promising strategy to boost aboveground energy density, yet its system-wide effects on root C investment and soil C delivery, particularly under drought, are largely uncharacterized. Here, we provide the first comprehensive assessment of these interactions using whole-plant 13CO2 continuous labeling, depth-specific sampling of roots and rhizosphere soil, and coordinated measurements of photosynthesis, stomatal anatomy, tissue nitrogen, and root non-structural carbohydrates (NSCs). Under well-watered conditions, oil enhancement produced distinct aboveground physiological changes, including slightly longer stomata, lower stomatal density, significantly higher leaf nitrogen concentration and biomass, and greater leaf 13C enrichment. Importantly, these aboveground changes did not translate into detectable shifts in the allocation of recent photosynthate to belowground pools. In contrast, drought acted as a dominant regulatory factor, reorganizing C flow across both genotypes by suppressing photosynthesis and leaf water status, increasing root nitrogen and NSC reserves, and significantly promoting the retention of recent assimilates in shallow root systems. Depth-specific 13C patterns showed that drought reduced new C incorporation into deep roots while increasing 13C enrichment in deep rhizosphere soil, suggesting that drought altered the balance between C investment in root growth and rhizodeposit C inputs at depth. Ultimately, soil moisture availability was an overriding determinant of belowground C partitioning and vertical C delivery, superseding the influence of the engineered lipid sink. These findings provide new mechanistic insight into the environmental constraints on C flow in an engineered bioenergy crop and identify moisture-driven limitations as the primary bottleneck for translating synthetic metabolic innovations into robust, ecosystem-level C outcomes.",
+      "authors": [
+        "Liu, Y.",
+        "Estera-Molina, K.",
+        "Kan, M.",
+        "Masterson, J.",
+        "Ramon, C. E.",
+        "Curtright, A.",
+        "Patra, R.",
+        "Pereira, L. d. O.",
+        "Park, K. Y.",
+        "Cahoon, E.",
+        "Yang, W. H.",
+        "Pett-Ridge, J."
+      ],
+      "primary_category": "ecology",
+      "categories": [
+        "ecology"
+      ],
+      "published": "2026-05-30T00:00:00+00:00",
+      "link": "https://www.biorxiv.org/content/10.64898/2026.05.28.728502v1.full.pdf",
+      "tags": [
+        "keyword:ag-bg-div",
+        "query:ag-bg-div"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "aboveground lipid sink and belowground carbon allocation under drought",
+      "llm_evidence_cn": "干旱条件下地上脂质库与地下碳分配",
+      "llm_evidence": "干旱条件下地上脂质库与地下碳分配",
+      "canonical_evidence": "干旱条件下地上脂质库与地下碳分配",
+      "llm_tldr_en": "Engineered oil-enriched sorghum alters aboveground energy density but root carbon investment is suppressed under drought, revealing trade-offs in carbon allocation.",
+      "llm_tldr_cn": "该研究采用全株13CO2连续标记和分层根系、根际土壤采样，系统评估了油增强高粱在干旱条件下的地上-地下碳分配。发现正常灌溉下地上能量密度增加，但干旱主导了生理响应，抑制了根系碳投资和土壤碳传递。结果揭示了工程代谢性状与环境胁迫之间的权衡，对气候适应性生物能源系统设计有重要指导。",
+      "llm_tldr": "该研究采用全株13CO2连续标记和分层根系、根际土壤采样，系统评估了油增强高粱在干旱条件下的地上-地下碳分配。发现正常灌溉下地上能量密度增加，但干旱主导了生理响应，抑制了根系碳投资和土壤碳传递。结果揭示了工程代谢性状与环境胁迫之间的权衡，对气候适应性生物能源系统设计有重要指导。",
+      "llm_tags": [
+        "query:ag-bg-div"
+      ],
+      "matched_query_tag": "query:ag-bg-div",
+      "matched_query_text": "aboveground functional diversity effects on ecosystem function",
+      "matched_requirement_id": "req-4",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    }
+  ]
+}
