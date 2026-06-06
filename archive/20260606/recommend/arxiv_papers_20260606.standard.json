@@ -1,0 +1,283 @@
+{
+  "mode": "standard",
+  "generated_at": "2026-06-06T21:04:37.390827+00:00",
+  "stats": {
+    "mode": "standard",
+    "tag_count": 1,
+    "deep_divecandidates": 0,
+    "deep_cap": 6,
+    "deep_selected": 0,
+    "quick_candidates": 6,
+    "quick_skim_target": 11,
+    "quick_selected": 6
+  },
+  "deep_dive": [],
+  "quick_skim": [
+    {
+      "id": "biorxiv-10-64898-2026-06-04-730198-v1",
+      "source": "biorxiv",
+      "title": "Quantitative stable isotope probing to measure in situ growth of protist populations",
+      "abstract": "Soil protists shape microbial food webs and nutrient cycling, yet methods for measuring their population growth in soil have lagged behind the taxonomic resolution available from 18S rRNA gene sequencing. Microscopy-based approaches can estimate abundance and growth, but with limited taxonomic resolution. Here, we tested whether quantitative stable isotope probing (qSIP) can provide reproducible, sequencing-resolved growth measurements for soil protists. We incubated soil with natural-abundance or 18O-labeled water and measured taxon-specific 18O enrichment in DNA using three common 18S rRNA gene primer sets. 18O enrichment values were positively correlated across datasets, with relationships closest to 1:1 after poorly resolved taxonomic assignments were excluded, indicating that qSIP provides reproducible population-level growth signals across marker choices. We then compared 18S amplicon profiles from unfractionated DNA with qSIP-derived growth measurements across a soil moisture gradient. Amplicon profiles showed small shifts in relative abundances of major protist groups, whereas qSIP revealed a large moisture response in the growing community: 7 ASVs were growing at 20% field capacity compared with 143 at 80% field capacity, representing 1.6% and 63.3% of total protist relative abundance, respectively. Average growth was <1% per day in the two driest treatments, increasing to 2.1% per day at 60% and 5.6% per day at 80% field capacity; among growing taxa, rates averaged 8.7% and 8.3% per day in the two wetter treatments. By pairing taxonomic resolution with isotope-based growth estimates, qSIP with 18O-H2O moves soil protist ecology toward quantitative population dynamics: identifying which taxa grow, how fast, and how growth responds to the environment.",
+      "authors": [
+        "Mau, R. L.",
+        "Hayer, M.",
+        "Dijkstra, P.",
+        "Geisen, S.",
+        "Hungate, B. A.",
+        "Schwartz, E."
+      ],
+      "primary_category": "microbiology",
+      "categories": [
+        "microbiology"
+      ],
+      "published": "2026-06-05T00:00:00+00:00",
+      "link": "https://www.biorxiv.org/content/10.64898/2026.06.04.730198v1.full.pdf",
+      "tags": [
+        "keyword:ag-bg-div",
+        "query:ag-bg-div"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "quantitative stable isotope probing for soil protist growth",
+      "llm_evidence_cn": "定量稳定同位素探测测量土壤原生动物生长",
+      "llm_evidence": "定量稳定同位素探测测量土壤原生动物生长",
+      "canonical_evidence": "定量稳定同位素探测测量土壤原生动物生长",
+      "llm_tldr_en": "Tests qSIP to measure in situ growth of soil protists with 18O labeling, providing sequencing-resolved growth rates.",
+      "llm_tldr_cn": "土壤原生动物对微生物食物网和养分循环至关重要，但缺乏高分辨率的生长测量方法。该论文验证了定量稳定同位素探测（qSIP）结合18O标记水，可提供分类学分辨率的原生动物生长速率。通过三种18S rRNA引物集测定18O富集，数据一致性好。该方法为研究土壤微生物功能多样性及其对生态系统过程的影响提供了新工具。",
+      "llm_tldr": "土壤原生动物对微生物食物网和养分循环至关重要，但缺乏高分辨率的生长测量方法。该论文验证了定量稳定同位素探测（qSIP）结合18O标记水，可提供分类学分辨率的原生动物生长速率。通过三种18S rRNA引物集测定18O富集，数据一致性好。该方法为研究土壤微生物功能多样性及其对生态系统过程的影响提供了新工具。",
+      "llm_tags": [
+        "query:ag-bg-div"
+      ],
+      "matched_query_tag": "query:ag-bg-div",
+      "matched_query_text": "belowground functional diversity effects on ecosystem function",
+      "matched_requirement_id": "req-5",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    },
+    {
+      "id": "biorxiv-10-1101-2025-02-25-640022-v3",
+      "source": "biorxiv",
+      "title": "Urbanisation and habitat loss favour thermophilic and monogynous ant species",
+      "abstract": "Environmental changes such as urbanisation and habitat fragmentation profoundly impact ecological communities by altering habitats, resources, and microclimates. While habitat fragmentation and habitat loss are known drivers to shape biodiversity, their impacts on metacommunity dynamics, ranging from species sorting to mass effects, remain a subject of debate. Ants, with diverse life histories and strong ecological effects, are ideal model species to study these pressures. We investigated the response of ant communities, including taxonomic and functional diversity, to urbanisation and habitat fragmentation in the Paris region, comparing wooded areas in 25 urban parks vs 24 rural forests outside the city. We found a clear difference in species composition between urban and rural environments, with a higher prevalence of thermophilic species and a tendency for monogyny in the city. Forest communities are homogeneous across the size levels we studied, while park communities differ noticeably depending on park size, with larger parks harbouring more species. Our findings suggest that urbanisation selects specific ant traits and favours more thermophilic species, thereby increasing the mean thermal preference of urban communities. These selective effects influence which species can colonise and survive in different patches, shaping metacommunity structure and potentially affecting the resilience of ant communities under climate change.",
+      "authors": [
+        "Finand, B.",
+        "Monnin, T.",
+        "Bocquet, C.",
+        "Bultelle, A.",
+        "Federici, P.",
+        "Darmedru, L.",
+        "Gouffault, S.",
+        "Ledamoisel, J.",
+        "Loeuille, N."
+      ],
+      "primary_category": "ecology",
+      "categories": [
+        "ecology"
+      ],
+      "published": "2026-06-02T00:00:00+00:00",
+      "link": "https://www.biorxiv.org/content/10.1101/2025.02.25.640022v3.full.pdf",
+      "tags": [
+        "keyword:ag-bg-div",
+        "query:ag-bg-div"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "ant community functional diversity response to environmental change",
+      "llm_evidence_cn": "蚂蚁群落功能多样性对环境变化的响应",
+      "llm_evidence": "蚂蚁群落功能多样性对环境变化的响应",
+      "canonical_evidence": "蚂蚁群落功能多样性对环境变化的响应",
+      "llm_tldr_en": "This study investigates ant taxonomic and functional diversity responses to urbanization and habitat fragmentation in Paris, showing clear functional shifts, relevant to aboveground functional diversity.",
+      "llm_tldr_cn": "针对城市化和栖息地破碎化对生物群落的影响，该研究比较了巴黎地区25个城市公园和24个乡村森林的蚂蚁群落，分析了分类和功能多样性的响应。结果发现城市和乡村蚂蚁群落物种组成和功能多样性存在明显差异，城市环境有利于嗜热和单后制物种。该研究展示了地上昆虫功能多样性对人为环境变化的响应，但与植物功能性状或地下生物群落无关。",
+      "llm_tldr": "针对城市化和栖息地破碎化对生物群落的影响，该研究比较了巴黎地区25个城市公园和24个乡村森林的蚂蚁群落，分析了分类和功能多样性的响应。结果发现城市和乡村蚂蚁群落物种组成和功能多样性存在明显差异，城市环境有利于嗜热和单后制物种。该研究展示了地上昆虫功能多样性对人为环境变化的响应，但与植物功能性状或地下生物群落无关。",
+      "llm_tags": [
+        "query:ag-bg-div"
+      ],
+      "matched_query_tag": "query:ag-bg-div",
+      "matched_query_text": "aboveground functional diversity effects on ecosystem function",
+      "matched_requirement_id": "req-4",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "biorxiv-10-64898-2026-02-05-704013-v2",
+      "source": "biorxiv",
+      "title": "A global database of insect traits and anthropogenic associations.",
+      "abstract": "Insect research remains hindered by limited data availability and fragmented knowledge compared to other, better-documented taxonomic groups. Yet, both the macroecological and the insect research communities highlight the need to integrate large scale ecological trait datasets for insects. Insects and humans are interconnected through diverse relationships, ranging from beneficial interactions, such as the use of insects as nutritional resources, to adverse impacts, including their role in to the emergence and spread of biological invasions. Understanding the traits of insects associated with human use, movement and impact is therefore important for linking insects to ecosystem function and global change. We present AnthropInsect, one of the largest database on insect traits to date, which uniquely includes variables describing human-insect associations. AnthropInsect describes species through 35 variables grouped into five categories: (i) taxonomic descriptors; (ii) ecological descriptors (native bioregions and habitat); (iii) human-insect associations (edibility and invasive status); (iv) functional traits (behavior, morphology, life history and feeding); (v) and macroecological descriptors of native-range geography and climate. AnthropInsect currently includes 5867 species across six major orders: Coleoptera, Lepidoptera, Hemiptera, Hymenoptera, Orthoptera and Blattodea. Data extracted from peer-reviewed, grey literature and from existing databases were standardized and validated with expert knowledge to ensure accuracy. By providing traits data with information on insect human interactions, this rigorously curated resource supports global research in entomology, ecology, conservation, and global change.",
+      "authors": [
+        "Manfrini, E.",
+        "Sauvion, N.",
+        "Maquart, P.-O.",
+        "Legal, L.",
+        "Blight, O.",
+        "Duquesne, E.",
+        "Hanot, C.",
+        "Bang, A.",
+        "Geslin, B.",
+        "Goebel, F.-R.",
+        "Fournier, D.",
+        "Berggren, A.",
+        "Javal, M.",
+        "Angulo, E.",
+        "Pincebourde, S.",
+        "Zakardjian, M.",
+        "Renault, D.",
+        "Le Lann, C.",
+        "Derocles, S.",
+        "Vayssieres, J.-F.",
+        "Leroy, B.",
+        "Courchamp, F."
+      ],
+      "primary_category": "ecology",
+      "categories": [
+        "ecology"
+      ],
+      "published": "2026-06-03T00:00:00+00:00",
+      "link": "https://www.biorxiv.org/content/10.64898/2026.02.05.704013v2.full.pdf",
+      "tags": [
+        "keyword:ag-bg-div",
+        "query:ag-bg-div"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "insect trait database for aboveground functional diversity",
+      "llm_evidence_cn": "昆虫性状数据库用于地上功能多样性研究",
+      "llm_evidence": "昆虫性状数据库用于地上功能多样性研究",
+      "canonical_evidence": "昆虫性状数据库用于地上功能多样性研究",
+      "llm_tldr_en": "AnthropInsect provides a large database of insect traits and anthropogenic associations, enabling studies linking insects to ecosystem function and global change, directly supporting aboveground functional diversity analysis.",
+      "llm_tldr_cn": "针对昆虫数据有限和知识碎片化的问题，该研究构建了AnthropInsect数据库，整合了昆虫性状和人类关联信息，成为最大的昆虫性状数据库之一。该数据库可用于将昆虫与生态系统功能和全球变化联系起来，为地上功能多样性研究提供了重要数据资源。然而，它不涉及地下功能多样性或地上-地下耦合。",
+      "llm_tldr": "针对昆虫数据有限和知识碎片化的问题，该研究构建了AnthropInsect数据库，整合了昆虫性状和人类关联信息，成为最大的昆虫性状数据库之一。该数据库可用于将昆虫与生态系统功能和全球变化联系起来，为地上功能多样性研究提供了重要数据资源。然而，它不涉及地下功能多样性或地上-地下耦合。",
+      "llm_tags": [
+        "query:ag-bg-div"
+      ],
+      "matched_query_tag": "query:ag-bg-div",
+      "matched_query_text": "aboveground functional diversity effects on ecosystem function",
+      "matched_requirement_id": "req-4",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "biorxiv-10-64898-2026-05-21-726994-v2",
+      "source": "biorxiv",
+      "title": "Microbial autotrophy is widespread across soils and most prevalent in deep and saturated environments",
+      "abstract": "Genes for CO2 fixation occur in soil microorganisms, but little is known about the pathways that are most common across ecosystem types, the organisms with these genes, where different CO2 fixation pathways are most prevalent, and the energy sources that support autotrophy across ecosystems. Here, we investigated microbial capacity for autotrophy in soils using 853 metagenomes and 201 metatranscriptomes from a wide range of terrestrial ecosystems (agricultural soils, wetlands, weathering rock). Autotrophy-associated RuBisCO (Form I and II) is widely encoded across all soils and occurs in bacteria from numerous lineages (38 phyla). RuBisCO Form IE is consistently more phylogenetically diverse in soils than in marine ecosystems, suggesting that it may have evolved to function in soil-like environments. A newly discovered deeply branching Form I RuBisCO, Form I, supports the hypothesis that Form I RuBisCO originated in anaerobic environments. Further, saturated soils harbor more, and more distinct, autotrophic microbes, many of which may use the Calvin-Benson-Bassham cycle or Wood-Ljungdahl pathway for CO2 fixation. Overall, the results indicate that autotrophy is a particularly important metabolism in deep, saturated soils and weathering rock.",
+      "authors": [
+        "Kuhn, A. N.",
+        "Jaffe, A. L.",
+        "Penev, P.",
+        "Creamer, K. E.",
+        "Kolody, B. C.",
+        "Tasoff, P. M.",
+        "Voutsinos, M.",
+        "Pett-Ridge, J.",
+        "Banfield, J. F."
+      ],
+      "primary_category": "microbiology",
+      "categories": [
+        "microbiology"
+      ],
+      "published": "2026-06-01T00:00:00+00:00",
+      "link": "https://www.biorxiv.org/content/10.64898/2026.05.21.726994v2.full.pdf",
+      "tags": [
+        "keyword:ag-bg-div",
+        "query:ag-bg-div"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "widespread microbial autotrophy in soils across ecosystems, relevant to belowground functional diversity",
+      "llm_evidence_cn": "土壤中广泛分布的微生物自养能力，与地下功能多样性相关",
+      "llm_evidence": "土壤中广泛分布的微生物自养能力，与地下功能多样性相关",
+      "canonical_evidence": "土壤中广泛分布的微生物自养能力，与地下功能多样性相关",
+      "llm_tldr_en": "This study uses metagenomes and metatranscriptomes to show that microbial CO2 fixation capacity is widespread in soils, with RuBisCO genes found across diverse lineages, and is most prevalent in deep and saturated environments, revealing energy sources for autotrophy.",
+      "llm_tldr_cn": "土壤微生物的碳固定能力尚不明确。本研究利用853个宏基因组和201个宏转录组，分析了多种陆地生态系统的土壤，发现自养相关的RuBisCO基因广泛存在于38个细菌门中，其中Form IE在土壤中的系统发育多样性高于海洋。研究揭示了土壤微生物自养途径的分布和能量来源，为理解地下功能多样性对生态系统碳循环的贡献提供了基础。",
+      "llm_tldr": "土壤微生物的碳固定能力尚不明确。本研究利用853个宏基因组和201个宏转录组，分析了多种陆地生态系统的土壤，发现自养相关的RuBisCO基因广泛存在于38个细菌门中，其中Form IE在土壤中的系统发育多样性高于海洋。研究揭示了土壤微生物自养途径的分布和能量来源，为理解地下功能多样性对生态系统碳循环的贡献提供了基础。",
+      "llm_tags": [
+        "query:ag-bg-div"
+      ],
+      "matched_query_tag": "query:ag-bg-div",
+      "matched_query_text": "belowground functional diversity effects on ecosystem function",
+      "matched_requirement_id": "req-5",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "biorxiv-10-64898-2026-05-29-728852-v1",
+      "source": "biorxiv",
+      "title": "Predicting global biodiversity via Hubbell regression",
+      "abstract": "Understanding global biodiversity patterns and their drivers is a prerequisite for countering the biodiversity crisis. In this paper, we introduce a novel generalized linear model, Hubbell regression, to estimate a key biodiversity descriptor, the fundamental biodiversity number. This can be converted into a set of biodiversity descriptors, including Shannon and Simpson indices, and more. Hence, quantifying the impact of environmental conditions on the fundamental biodiversity number allows us to predict the general properties of local biodiversity in any setting. In addition to having a strong mathematical foundation, Hubbell regression consistently outperformed current state-of-the-art models in predicting global biodiversity. We apply the method to arthropods, which account for the majority of terrestrial biodiversity. By parameterizing the models using samples of 1.78 million arthropods from 2415 samples collected at 135 sites spanning all continents, we pinpoint the drivers of arthropod biodiversity and its features at the global scale. We find that actual evapotranspiration is the single largest predictor of arthropod diversity and explains nearly 30% of the variation in richness. Moreover, we infer that high human activity has led to a 21.3 % and 29.2% decrease in potential insect richness in tropical and dry zones, respectively, but increased insect richness in polar regions. These insights bring a new foundation for biodiversity research and action.",
+      "authors": [
+        "Zito, A.",
+        "Rigon, T.",
+        "Roslin, T.",
+        "Niittynen, P.",
+        "Hebert, P. D. N.",
+        "Zakharov, E.",
+        "Ratnasingham, S.",
+        "iBOL Consortium,",
+        "Ovaskainen, O.",
+        "Dunson, D. B."
+      ],
+      "primary_category": "ecology",
+      "categories": [
+        "ecology"
+      ],
+      "published": "2026-06-02T00:00:00+00:00",
+      "link": "https://www.biorxiv.org/content/10.64898/2026.05.29.728852v1.full.pdf",
+      "tags": [
+        "keyword:ag-bg-div",
+        "query:ag-bg-div"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "generalized linear model for biodiversity prediction applicable to functional diversity studies",
+      "llm_evidence_cn": "适用于功能多样性研究的广义线性模型",
+      "llm_evidence": "适用于功能多样性研究的广义线性模型",
+      "canonical_evidence": "适用于功能多样性研究的广义线性模型",
+      "llm_tldr_en": "Introduces Hubbell regression, a GLM that estimates the fundamental biodiversity number, outperforming state-of-the-art models in predicting global biodiversity patterns, with potential to be applied to above and belowground functional diversity.",
+      "llm_tldr_cn": "本文提出了一种新颖的广义线性模型——Hubbell回归，用于估计基本生物多样性数，并可转化为香农指数、辛普森指数等多样性指标。该方法在预测全球节肢动物多样性方面优于现有模型。由于功能多样性也可通过类似指标量化，该模型有望应用于地上和地下功能多样性的研究，为理解功能多样性与环境关系提供通用工具。",
+      "llm_tldr": "本文提出了一种新颖的广义线性模型——Hubbell回归，用于估计基本生物多样性数，并可转化为香农指数、辛普森指数等多样性指标。该方法在预测全球节肢动物多样性方面优于现有模型。由于功能多样性也可通过类似指标量化，该模型有望应用于地上和地下功能多样性的研究，为理解功能多样性与环境关系提供通用工具。",
+      "llm_tags": [
+        "query:ag-bg-div:composite"
+      ],
+      "matched_query_tag": "query:ag-bg-div:composite",
+      "matched_query_text": "Papers central to 请帮我查找有关地上和地下功能多样性及其关系对生态系统功能影响的论文, especially work that connects or combines: n; Tibetan Plateau; e; aboveground functional diversity effects on ecosystem function; belowground functional diversity effects on ecosystem function; interactions between aboveground and belowground functional diversity; What is the relative contribution of aboveground plant functional diversity, belowground soil biota functional diversity, and their cross trophic coupling (or asymmetry) to ecosystem multifunctionality, and how do these contributions shift along environmental gradients?; Are plant functional traits coordinated with soil microbial life history strategies and nematode functional traits across environmental gradients, and does the strength of this cross trophic trait coordination predict ecosystem multifunctionality?; How do climate gradients modulate the coupling between aboveground and belowground functional diversity and their joint effects on ecosystem function across large spatial scales?; How does the relationship between aboveground plant functional diversity and belowground soil microbial and nematode functional diversity drive ecosystem multifunctionality in grassland ecosystems?.",
+      "matched_requirement_id": "req-composite-ag-bg-div",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "biorxiv-10-64898-2026-06-02-729701-v1",
+      "source": "biorxiv",
+      "title": "eCOMET: An R package for evaluating metabolic diversity and enrichment from LC-MS/MS data to test ecological hypotheses from individuals to ecosystems",
+      "abstract": "{middle dot} Methods in metabolomics have grown exponentially in recent years, providing new insight into the ecological function and evolutionary impact of diverse plant metabolites. Metabolomics requires a command of numerous tools, the outputs of which are typically integrated through in-house, custom code that presents a workflow bottleneck and a barrier to entry for researchers in ecology, evolution, and behavior who may benefit from adding a metabolomics perspective to their research. {middle dot} We introduce eCOMET, an R package for integrating and harmonizing the outputs of common metabolomics bioinformatics tools and conducting statistical analyses and data visualization methods useful for ecological metabolomics. {middle dot} Our package combines metabolome feature metadata with quantification tables (e.g., mzmine), feature dissimilarity matrices (e.g., modified cosine and DreaMS), and feature annotations (e.g., SIRIUS) into a cohesive R data object to facilitate downstream analyses, including the calculation of diversity and disparity metrics and differential accumulation analysis.",
+      "authors": [
+        "Choi, M.-S.",
+        "Forrister, D. L.",
+        "Dury, G. J.",
+        "Kang, K. B.",
+        "Sedio, B. E.",
+        "Joo, Y."
+      ],
+      "primary_category": "ecology",
+      "categories": [
+        "ecology"
+      ],
+      "published": "2026-06-05T00:00:00+00:00",
+      "link": "https://www.biorxiv.org/content/10.64898/2026.06.02.729701v1.full.pdf",
+      "tags": [
+        "keyword:ag-bg-div",
+        "query:ag-bg-div"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "R package for evaluating metabolic diversity applicable to functional diversity measurement",
+      "llm_evidence_cn": "用于评估代谢多样性的R包，可应用于功能多样性测量",
+      "llm_evidence": "用于评估代谢多样性的R包，可应用于功能多样性测量",
+      "canonical_evidence": "用于评估代谢多样性的R包，可应用于功能多样性测量",
+      "llm_tldr_en": "Introduces eCOMET, an R package that integrates metabolomics bioinformatics outputs and conducts statistical analyses to test ecological hypotheses, enabling quantification of metabolic diversity as a proxy for functional diversity across trophic levels.",
+      "llm_tldr_cn": "代谢组学在生态学中的应用日益增多，但工具整合困难。本文开发了eCOMET R包，能够整合常见代谢组学生物信息学工具的输出并进行统计分析。该包可用于评估代谢多样性，进而作为功能多样性的代理，在从个体到生态系统的尺度上检验生态假说，为地上和地下功能多样性研究提供工具支持。",
+      "llm_tldr": "代谢组学在生态学中的应用日益增多，但工具整合困难。本文开发了eCOMET R包，能够整合常见代谢组学生物信息学工具的输出并进行统计分析。该包可用于评估代谢多样性，进而作为功能多样性的代理，在从个体到生态系统的尺度上检验生态假说，为地上和地下功能多样性研究提供工具支持。",
+      "llm_tags": [
+        "query:ag-bg-div:composite"
+      ],
+      "matched_query_tag": "query:ag-bg-div:composite",
+      "matched_query_text": "Papers central to 请帮我查找有关地上和地下功能多样性及其关系对生态系统功能影响的论文, especially work that connects or combines: n; Tibetan Plateau; e; aboveground functional diversity effects on ecosystem function; belowground functional diversity effects on ecosystem function; interactions between aboveground and belowground functional diversity; What is the relative contribution of aboveground plant functional diversity, belowground soil biota functional diversity, and their cross trophic coupling (or asymmetry) to ecosystem multifunctionality, and how do these contributions shift along environmental gradients?; Are plant functional traits coordinated with soil microbial life history strategies and nematode functional traits across environmental gradients, and does the strength of this cross trophic trait coordination predict ecosystem multifunctionality?; How do climate gradients modulate the coupling between aboveground and belowground functional diversity and their joint effects on ecosystem function across large spatial scales?; How does the relationship between aboveground plant functional diversity and belowground soil microbial and nematode functional diversity drive ecosystem multifunctionality in grassland ecosystems?.",
+      "matched_requirement_id": "req-composite-ag-bg-div",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    }
+  ]
+}
