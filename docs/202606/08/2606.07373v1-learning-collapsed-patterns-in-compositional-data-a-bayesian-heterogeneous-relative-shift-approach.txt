@@ -1,0 +1,757 @@
+Title: Learning Collapsed Patterns in Compositional Data: A Bayesian Heterogeneous Relative-Shift Approach
+
+URL Source: https://arxiv.org/pdf/2606.07373v1
+
+Published Time: Mon, 08 Jun 2026 01:13:31 GMT
+
+Number of Pages: 37
+
+Markdown Content:
+# Learning Collapsed Patterns in Compositional Data: A Bayesian Heterogeneous Relative-Shift Approach 
+
+# Maoran Xu 1, Guanyu Hu 2
+
+> 1
+
+Department of Statistics, Indiana University Bloomington.  
+
+> 2
+
+Department of Statistics and Probability, Michigan State University. 
+
+# June 8, 2026 
+
+Abstract 
+
+Relative-shift regression provides a principled framework for modeling composi-tional covariates by quantifying how the response changes when mass is reallocated from one component to another. Yet many emerging compositional data problems extend beyond this classical setting, involving high-dimensional predictors and re-gression effects that vary across latent subpopulations. This complexity poses a dual challenge unmet by existing methods: recovering latent cluster structure while simul-taneously achieving dimension reduction within each cluster. We propose a Bayesian heterogeneous relative-shift regression model that jointly learns latent clusters and parsimonious effect structures. Methodologically, we combine a projection-based shrinkage prior on identifiable contrasts, which induces exact coefficient ties within mixture components, with a mixture of finite mixtures prior that infers the number of clusters. Computationally, we develop a scalable hybrid MCMC algorithm that 
+
+1
+
+> arXiv:2606.07373v1 [stat.ME] 5 Jun 2026
+
+embeds a deterministic surrogate collapse operator within NUTS. Theoretically, we establish posterior consistency for both the latent partition and cluster-specific effect structures. Simulations confirm accurate recovery and strong predictive performance, and applications to cross-country macroeconomic data and spatial transcriptomics demonstrate the method’s interpretability and practical utility. 
+
+Keywords: Bayesian Nonparametric, High-dimensional Clustering, Generalized Shrinkage Prior, Mixtures of Experts. 21 Introduction 
+
+Compositional predictor regression is central to empirical studies in which covariates rep-resent parts of a whole, such as proportions or shares that sum to one. Such data arise naturally across economics (Fry et al. 2000, Franke & Westerhoff 2019, Meng et al. 2026), public health (Leite 2016, Lubomski et al. 2022), and genomics and microbiome research (Li 2015, Shi et al. 2016, Zhang et al. 2021, Jones et al. 2015, Xia et al. 2013, Peterson et al. 2024). In economics, questions about sectoral contributions to GDP, trade shares, or household budget allocations are inherently compositional, and policy conclusions often depend on how mass shifts among parts (Meng et al. 2026). In public health, dietary intake proportions, distributions of health expenditures, and compositional disease burdens are routinely analyzed to identify risk factors and guide interventions (Leite 2016, Lubomski et al. 2022). In genomics, compositional structure appears in cell-type proportions and relative abundance profiles, especially in single-cell and microbiome studies (Jones et al. 2015, Pflughoeft & Versalovic 2012, Cao et al. 2019). Across these domains, the defin-ing challenge is that inference must respect simplex geometry: increasing one component necessarily decreases at least one other component, and naive regression formulations can violate scale invariance or subcompositional coherence (Gloor et al. 2017). A major line of work addresses these constraints through log-ratio and log-contrast regression (Aitchison & Bacon-Shone 1984, Sun et al. 2020, Liu et al. 2022, Han et al. 2023, Zhao & Wang 2024). Log-contrast models are attractive because they target sub-compositional coherence and provide a principled regression framework for compositions. However, two limitations are especially consequential in modern applications. First, zeros and near-zeros are pervasive in high-throughput biological data, including microbiome and single-cell studies (Pflughoeft & Versalovic 2012, Peterson et al. 2024). Log-ratio trans-forms require pseudo-counts, filtering, or other preprocessing choices that can introduce sensitivity and bias, and may complicate uncertainty quantification (Gloor et al. 2017). Second, the log-ratio transformation maps compositions into an unconstrained space, but 3the resulting coefficients no longer correspond to interpretable single-component effects, and standard variable-selection or sparsity techniques developed for unconstrained regres-sion are difficult to interpret on the simplex. These issues motivate models that bypass log-ratio transformations entirely and operate directly on proportions. The relative-shift regression framework of Li et al. (2023) provides a robust approach to modeling compositional data by reparameterizing effects through pairwise coefficient contrasts, thereby ensuring full identifiability under the simplex constraint and avoiding the pseudo-count issues typical of log-ratio methods. While this framework successfully re-covers approximately equi-sparse aggregation patterns via tree-guided regularization with post-hoc thresholding, its application has been limited to single, homogeneous populations. This homogeneity assumption is often too restrictive in practice; for instance, economic out-comes may reflect latent regional groupings with distinct sectoral drivers, and microbiome-disease dynamics may vary across unobserved clinical strata (Chang et al. 2023, K¨ on¨ onen et al. 2022, Zhang et al. 2024). Extending this framework to a mixture-of-regressions archi-tecture can capture such heterogeneity, yet high-dimensional regimes where the predictor dimension matches or exceeds the sample size ( p ≥ n) introduce severe posterior insta-bility. We formalize this challenge as high-dimensional posterior degeneracy , noting that structurally constraining the component-specific coefficient space is essential for stability, whereas frequentist post-hoc thresholding remains incapable of delivering exact coefficient ties alongside calibrated uncertainty over the resulting aggregated structures. Compositional effects frequently exhibit collapsed patterns, where multiple components share identical impacts on the response. For instance, distinct economic sectors may con-tribute similarly to aggregate output, or clusters of microbial taxa may share identical associations with a clinical outcome. While frequentist methods encourage such aggrega-tion through fusion penalties (Tibshirani 1996, Xin et al. 2016), clustered regularization (Yuan & Lin 2006, She 2010), supervised clustering of predictors (Bondell & Reich 2008, Shen & Huang 2010, Mehrotra & Maity 2022), or tree-aggregated modeling (Bien et al. 2021, Yan & Bien 2021), these approaches remain limited. They are generally designed 4for unconstrained predictors or single-population regressions, meaning they fail to address identifiability under simplex constraints, uncertainty quantification for aggregation deci-sions, or the joint learning of latent clusters alongside cluster-specific collapsed structures. To address these limitations, a growing body of literature develops Bayesian methods for compositional regression, typically building on log-contrast models with shrinkage or selec-tion priors (Zhang et al. 2021, 2024, Peterson et al. 2024). However, these approaches focus strictly on a single homogeneous population and ignore heterogeneous composition-response relationships across latent subgroups. While Bayesian mixture modeling offers a natural framework to capture such heterogeneity and quantify uncertainty over both partitions and cluster-specific parameters (Escobar & West 1995, Neal 2000, Miller & Harrison 2018), it faces a fundamental pathology in high dimensions. As established by Chandra et al. (2023), high-dimensional mixture posteriors over partitions tend to collapse onto either complete pooling or complete separation, irrespective of the clustering prior. This degeneracy is particularly severe in mixture-of-regressions settings with high-dimensional, unconstrained component coefficients that fail to stabilize the partition. Furthermore, traditional con-tinuous shrinkage priors, such as the horseshoe (Carvalho et al. 2009) or Dirichlet-Laplace (Bhattacharya et al. 2015), shrink individual coefficients toward zero rather than enforc-ing the exact equality of contrasts that defines a collapsed compositional pattern. Even classical discrete spike-and-slab formulations (George & McCulloch 1993, Ishwaran & Rao 2005), which can induce exact sparsity for isolated predictors, become computationally pro-hibitive in high dimensions and lack a natural mechanism to enforce structural ties among subsets of active coefficients. While Bayesian adaptations of the fused lasso (Casella et al. 2010) attempt to penalize pairwise differences, they generally produce continuous poste-riors without exact coefficient fusion and struggle with identifiability under the simplex constraint. Applying these unconstrained priors within a mixture-of-regressions framework exacerbates these limitations, as they fail to provide the rigid structural regularization necessary to prevent the partition space from degenerating. Bridging Bayesian hetero-geneity, high-dimensional posterior stability, and contrast-level aggregation under simplex 5constraints thus remains an unresolved methodological challenge. Motivated by these gaps, we propose a Bayesian heterogeneous relative-shift regression framework for high-dimensional compositional predictors. Extending the relative-shift pa-rameterization of Li et al. (2023), our approach captures latent population heterogeneity through a finite mixture model while inducing exact coefficient ties within each compo-nent. Our contributions are threefold. Methodologically, we formalize a finite mixture-of-regressions framework for compositional data under general GLM likelihoods, where each mixture component employs a projection-based generalized ℓ1-ball prior on identifi-able contrasts to induce equi-sparsity through exact coefficient ties, providing full posterior uncertainty over the latent partitions and cluster-specific aggregation structures. Theoret-ically, we adapt the high-dimensional posterior degeneracy framework of Chandra et al. (2023) to the compositional mixture setting, demonstrating that structural regularization within the contrast space mitigates posterior instability, and establish posterior consistency for the joint recovery of the number of clusters, the mixing measure, and the induced col-lapsed structures. Computationally, we develop a scalable MCMC algorithm that embeds a deterministic surrogate collapse operator within the No-U-Turn Sampler, sidestepping expensive iterative optimization during the projection step, and couple this sampler with search-based Bayesian clustering tools (Dahl et al. 2022) to generate permutation-invariant partition summaries. The remainder of this article is organized as follows. Section 2 develops the proposed Bayesian heterogeneous relative-shift regression framework, detailing the theoretical neces-sity of structural regularization, the generalized ℓ1-ball prior formulation, and the overarch-ing mixture-of-finite-mixtures architecture. Section 3 provides a rigorous theoretical treat-ment of the model, establishing posterior consistency for both the mixing measure and the number of components; here, we verify that the compositional specification satisfies first-and second-order (strong) identifiability, ensuring optimal convergence rates within the MFM framework. Section 4 outlines the scalable MCMC sampling strategy—including the deterministic surrogate collapse embedding for continuous trajectory simulation—alongside 6principled procedures for summarizing the posterior over partitions. Section 5 evaluates the operating characteristics and recovery performance of the proposed method through extensive synthetic experiments. Section 6 presents our two motivating empirical applica-tions, analyzing state-level sectoral economic drivers and spatial transcriptomic cell-type relationships, to demonstrate the model’s capacity to discover interpretable, aggregated compositional structures in practice. Finally, Section 7 concludes with a brief summary and a discussion of potential future extensions. 
+
+# 2 Bayesian Heterogeneous Relative-Shift Regression 
+
+# 2.1 Relative-shift regression for compositional predictors 
+
+Let y = ( y1, . . . , y n)⊤ denote a response vector for n subjects. For subject i, let xi =(xi1, . . . , x ip )⊤ ∈ S p−1 be a p-part composition residing on the simplex Sp−1 = {x ∈ Rp 
+
+> +
+
+:
+
+Ppj=1 xj = 1 }, and let ci ∈ Rq denote a vector of auxiliary (non-compositional) covariates. We consider the generalized linear model 
+
+yi | xi, c i ∼ p(· | ηi), ηi = c⊤ 
+
+> i
+
+βc + x⊤ 
+
+> i
+
+θ, (1) where p(· | ηi) denotes an exponential-family density with canonical link, βc ∈ Rq collects the auxiliary-covariate effects, and θ = ( θ1, . . . , θ p)⊤ ∈ Rp collects the compositional effects. The simplex constraint Ppj=1 xij = 1 implies that the design columns of the composi-tional block are linearly dependent: for any constant a ∈ R, x⊤ 
+
+> i
+
+θ = x⊤ 
+
+> i
+
+(θ + a1p), so θ is identifiable only up to addition of a multiple of 1p. Consequently, individual coefficients θj
+
+carry no absolute meaning, and shrinking a single coefficient toward zero does not corre-spond to a well-defined notion of “no effect” for component j. What is identifiable is the contrast space spanned by pairwise differences θℓ − θj for j̸ = ℓ. Following Li et al. (2023), we adopt the relative-shift parameterization, in which inference is conducted through these identifiable contrasts. For any pair of features j̸ = ℓ, the joint contribution to the linear 7predictor admits the reallocation decomposition 
+
+θj xij + θℓxiℓ = θj (xij + xiℓ ) + ( θℓ − θj ) xiℓ , (2) so the contrast θℓ − θj measures the expected change in the linear predictor under a unit reallocation of mass from component j to component ℓ, holding the remaining components fixed. The relative-shift parameterization thus replaces the non-identifiable question “what is the effect of component j?” with the identifiable question “what is the effect of shifting mass from j to ℓ?”. Two implications of (2) guide the rest of our development. First, when θℓ = θj , features 
+
+j and ℓ exert indistinguishable effects on the response, and aggregating them leaves the conditional likelihood invariant. Structural parsimony on the compositional block therefore corresponds to equi-sparsity : exact equality of subsets of coefficients, rather than exact zeros at individual coefficients. Second, the relative-shift formulation makes no use of log-ratio transformations and operates directly on the raw proportions xij , sidestepping the pseudo-count and zero-handling issues that complicate inference under log-contrast models. 
+
+# 2.2 Heterogeneous compositional effects and high-dimensional degeneracy 
+
+The single-population model (1) assumes a single set of compositional effects θ shared across all subjects. In many applications this is too restrictive: economic outcomes may reflect latent groupings of countries with distinct sectoral drivers, and microbiome–disease associations may vary across unobserved subtypes or clinical strata. To accommodate such heterogeneity, we extend (1) to a mixture of relative-shift regressions. Let zi ∈ { 1, . . . , K }
+
+denote a latent cluster assignment for subject i, and let θk = ( θk1, . . . , θ kp )⊤ be the com-positional coefficient vector for cluster k. We assume the auxiliary-covariate effects βc are 8shared across clusters, while the compositional effects vary: 
+
+yi | xi, c i, z i = k ∼ p(· | ηi,k ), ηi,k = c⊤ 
+
+> i
+
+βc + x⊤ 
+
+> i
+
+θk. (3) This specification preserves the relative-shift interpretation within each cluster: the con-trast θkℓ −θkj quantifies the expected change in the linear predictor under a unit reallocation of mass from feature j to feature ℓ for subjects in cluster k.A naive Bayesian implementation of (3) places independent diffuse priors on each θk. In modern compositional applications, however, p is often comparable to or larger than n, and the per-cluster sample size n/K can be small relative to p. In this regime, unconstrained cluster-specific coefficients lead to a well-documented pathology: the posterior over the latent partition becomes unstable and tends to concentrate on extreme configurations. The following result, adapted from Chandra et al. (2023), makes this phenomenon precise in the mixture-of-regressions setting. 
+
+Corollary 1 (High-dimensional partition degeneracy) . Consider model (3) with inde-pendent priors on the cluster-specific parameters (θk, ϕ k), and let Ψ be a partition of 
+
+{(y1 | x1, c 1), . . . , (yn | xn, c n)} with Ψ′ a coarsening of Ψ. If 
+
+lim sup 
+
+> p→∞
+
+Q
+
+> k≥1
+
+R Q  
+
+> i:zi=k
+
+p(yi | ηi,k ) dΠ0(θk, ϕ k)
+
+Q
+
+> k≥1
+
+R Q  
+
+> i:z′
+> i=k
+
+p(yi | ηi,k ) dΠ0(θk, ϕ k) = 0 , (4) 
+
+then the posterior concentrates on complete pooling, Π( z1 = · · · = zn | Y ) → 1. Conversely, if the limsup in (4) equals ∞, the posterior concentrates on complete separation, Π( z1̸ =
+
+· · ·̸ = zn | Y ) → 1.
+
+A proof of Corollary 1 is provided in Section S1.1 of the Supplementary Materials. Corollary 1 reveals that, absent structural constraints on the cluster-specific coefficient space, the posterior over partitions in high dimensions is essentially forced toward one of two pathological extremes, with no stable intermediate regime in which heterogeneous structures can be recovered. Crucially, the result does not depend on the specific clustering 9prior (Dirichlet process, finite mixture, mixture-of-finite-mixtures) or on the true data-generating mechanism: the degeneracy is driven by the geometry of the likelihood ratio in (4), which in turn is governed by the dimension and flexibility of θk. Standard shrinkage priors that shrink individual coefficients toward zero (horseshoe, Dirichlet–Laplace, con-tinuous spike-and-slab) reduce the effective dimension of each θk but do not target the relevant identifiable object: the contrast space spanned by {θkℓ − θkj }j̸ =ℓ. What is re-quired instead is a prior that regularizes the contrasts directly, encouraging exact equality of subsets of coefficients within each cluster and thereby reducing the effective dimension of the compositional block in an identifiability-aware manner. We develop such a prior in Section 2.3. 
+
+# 2.3 The generalized ℓ1-ball prior 
+
+To regularize the contrasts of a coefficient vector directly, we adopt the generalized ℓ1-ball prior (GLBP) of Xu et al. (2023). Conceptually, the GLBP departs from standard con-tinuous shrinkage priors, including the Bayesian lasso (Park & Casella 2008), horseshoe (Carvalho et al. 2009), Dirichlet-Laplace (Bhattacharya et al. 2015), and continuous spike-and-slab (Roˇ ckov´ a & George 2018), which shrink individual coefficients toward zero but cannot enforce exact equality among subsets of coefficients. The GLBP is constructed by combining a smooth precursor distribution with a deterministic projection onto a polyhe-dral constraint set, yielding a prior that places positive probability on faces of the constraint set and therefore on configurations in which many contrasts are exactly zero. Let θ∗ ∈ Rp denote an unconstrained precursor with prior 
+
+θ∗ ∼ Π0 = N (0 , τ 20 Ip). (5) Given a contrast matrix A ∈ Rm×p and a radius r > 0, the GLBP-distributed parameter 
+
+θ ∈ Rp is defined as the Euclidean projection of θ∗ onto the polyhedral ball BA,r = {z ∈
+
+10 Rp : ∥Az ∥1 ≤ r},
+
+θ = PBA,r (θ∗) := arg min   
+
+> z:∥Az ∥1≤r
+
+∥θ∗ − z∥2. (6) We write θ | (A, r, τ 20 ) ∼ GLBP(Π 0, A, r ) for the induced prior on θ. The matrix A encodes the structural relationships among coefficients along which equi-sparsity is desired. For the relative-shift setting, A is the  p
+
+> 2
+
+ × p matrix whose rows are the pairwise-difference contrasts e⊤ 
+
+> ℓ
+
+− e⊤ 
+
+> j
+
+for 1 ≤ j < ℓ ≤ p, where ej denotes the jth standard basis vector of 
+
+Rp, so that Az is the vector of all pairwise contrasts of z. The radius r controls the overall complexity of the admissible θ: smaller r forces more contrasts to be exactly zero, while larger r allows a richer set of distinct coefficient values. Two properties of the projection (6) drive the behavior of the prior. First, the constraint set BA,r is a polytope in Rp whose faces correspond to subsets of the contrasts {Az }m
+
+being exactly zero; projecting a continuous random variable onto a polytope places positive probability on each face, so that Pr( θℓ = θj ) > 0 for every pair ( j, ℓ ) with A-row e⊤ 
+
+> ℓ
+
+− e⊤ 
+
+> j
+
+.Consequently, posterior draws of θ exhibit exact coefficient ties with positive probability, in contrast to continuous shrinkage priors which produce ties only in a measure-zero limit. Second, the projection is a deterministic, almost-everywhere differentiable function of θ∗,so posterior inference on θ can be carried out by sampling the smooth precursor θ∗ and applying (6) pointwise — a computational advantage we exploit in Section 4. Mechanically, the GLBP can be viewed as a Bayesian counterpart to fused-lasso-type regularization (She 2010), in which the penalty ∥Aθ ∥1 on pairwise differences is replaced by the hard constraint ∥Aθ ∥1 ≤ r. Unlike penalized estimators, however, the GLBP yields a valid full posterior distribution over θ, propagating uncertainty about which coefficients are tied. The radius r is treated as a model parameter: we place an exponential hyperprior 
+
+r ∼ Exp( ar), allowing the data to inform the overall degree of aggregation. 11 2.4 Bayesian heterogeneous relative-shift regression 
+
+We now assemble the full model by placing a GLBP prior on the cluster-specific com-positional coefficients in the mixture-of-regressions specification (3), and equipping the latent partition with a mixture-of-finite-mixtures (MFM) prior. For i = 1 , . . . , n and 
+
+k ∈ { 1, . . . , K }, the conditional response model is 
+
+yi | xi, c i, z i = k ∼ p(· | ηi,k ), ηi,k = c⊤ 
+
+> i
+
+βc + x⊤ 
+
+> i
+
+θk, (7) where βc ∈ Rq is shared across clusters and θk ∈ Rp is the cluster-specific compositional effect vector. 
+
+Prior on compositional effects. Each cluster-specific coefficient vector θk is assigned an independent GLBP prior with a shared contrast matrix A encoding all pairwise differences (Section 2.3) and a cluster-specific radius rk:
+
+θk | rk, A, τ 20 ∼ GLBP(Π 0, A, r k), rk ∼ Exp( ar), k = 1 , . . . , K, (8) with precursor variance τ 20 . Allowing the radius to vary across clusters lets the data deter-mine the aggregation complexity of each component independently, so that clusters with simple sectoral or taxonomic structure can collapse to a small number of distinct coeffi-cient levels, while clusters with richer heterogeneity retain finer resolution. The auxiliary-covariate coefficients receive a diffuse Gaussian prior, βc ∼ N (0 , σ 2 
+
+> c
+
+Iq) with σ2 
+
+> c
+
+∼ IG( αc, β c). 
+
+Prior on the latent partition. The number of mixture components and the cluster assignments z = ( z1, . . . , z n) are governed by a mixture-of-finite-mixtures (MFM) prior (Miller & Harrison 2018), which places positive prior mass on each number of occupied components and yields a consistent estimator of the true number of components under mild regularity conditions. We adopt the exponential stick-breaking realization of MFM: 12 with rate λ > 0, 
+
+εk | λ iid 
+
+∼ Exp( λ), k = 1 , 2, . . . , 
+
+˜K = min 
+
+n
+
+k ≥ 1 : Pkj=1 εj ≥ 1
+
+o
+
+,πk = εk (k < ˜K), π ˜K = 1 − P  
+
+> j< ˜K
+
+εj , πk = 0 ( k > ˜K),zi | π iid 
+
+∼ Categorical( π1, π 2, . . . ), i = 1 , . . . , n. 
+
+(9) The stopping rule renders the number of active components ˜K an almost surely finite random variable, with the rate λ governing its prior distribution. The MFM specification is preferred over the more familiar Dirichlet process mixture, which is known to overestimate the number of components asymptotically (Miller & Harrison 2013). Together, equations (7)–(9) define the Bayesian heterogeneous relative-shift regression model. The specification addresses the three challenges discussed in the introduction in a unified manner: (i) the relative-shift parameterization ensures that cluster-specific ef-fects are interpreted through identifiable mass reallocations, inheriting the compositional identifiability of Li et al. (2023); (ii) the GLBP prior (8) regularizes the contrasts of θk
+
+directly, producing exact coefficient ties within each cluster and stabilizing posterior infer-ence against the high-dimensional partition degeneracy of Corollary 1; and (iii) the MFM prior (9) infers the number of latent subpopulations K from the data while propagating uncertainty over the partition. 
+
+# 3 Theory 
+
+Posterior consistency for mixture-of-regressions models has been studied extensively by Ho et al. (2022) and Do et al. (2025). In this section, we establish posterior consistency for the proposed Bayesian heterogeneous relative-shift regression model under the Gaussian identity link μi = x⊤ 
+
+> i
+
+θzi with cluster-specific variance σ2 
+
+> zi
+
+. We establish these results for the truncated representation used for posterior computation (Section 4), which caps the number of active components at Kmax ≥ K0; since the true number of clusters K0 is finite, 13 this over-fitted truncation captures the behavior of the infinite mixture prior of Section 2.4 in the regime of interest. We begin by introducing the notion of strong identifiability for mixture-of-regressions models and verifying that our compositional regression specification satisfies this condition. Identifiability of the kernel density ensures nonsingularity of the Fisher information matrix for the mixture distribution, which in turn guarantees that the mixing measure is learnable from the data. 
+
+Definition 1. Consider a general form of MoR model with 
+
+f (y | x) = 
+
+> k
+
+X
+
+> j=1
+
+pj f (y | h1(x, θ1j ), h 2(x, θ2j )) ,
+
+where f is a dispersion exponential family distribution with parameter μ = h1(x, θ1) and 
+
+ϕ = h2(x, θ2), and θ1 ∈ Rd1 , θ2 ∈ Rd2 . We say the family of conditional densities f (y |
+
+h1(x, θ1), h 2(x, θ2)) is 
+
+• first-order identifiable , if for any k ∈ N and any given k distinct elements 
+
+(θ11 , θ21 ), . . . , (θ1k, θ2k),
+
+> k
+
+X
+
+> j=1
+
+αj fj (y | x) + β⊤
+
+> j
+
+∂∂θ1
+
+fj (y | x) + γ⊤
+
+> j
+
+∂∂θ2
+
+fj (y | x) = 0 
+
+holds for almost all x, y only if αj = 0 , βj = 0d1 , and γj = 0d2 .
+
+• second-order identifiable (or strongly identifiable ), if for any given k distinct elements (θ11 , θ21 ) , . . . , (θ1k, θ2k) ∈ Θ1 × Θ2 and any s1, . . . , s k ≥ 1, whenever the coefficients αj ∈ R, β j ∈ Rd1 , γ j ∈ Rd2 , and ρjt ∈ Rd1 , ν jt ∈ Rd2 for j = 1 , . . . , k ,
+
+t = 1 , . . . , s j satisfy, for almost all x, y (w.r.t. PX × ν), 
+
+> k
+
+X
+
+> j=1
+
+αj fj (y | x) + β⊤
+
+> j
+
+∂∂θ1
+
+fj (y | x) + γ⊤
+
+> j
+
+∂∂θ2
+
+fj (y | x) + 
+
+> sj
+
+X
+
+> t=1
+
+
+
+ρ⊤
+
+> jt
+
+∂2
+
+∂θ21
+
+fj (y | x)ρjt 
+
+
+
++
+
+> sj
+
+X
+
+> t=1
+
+
+
+ν⊤
+
+> jt
+
+∂2
+
+∂θ22
+
+fj (y | x)νjt 
+
+
+
++
+
+> sj
+
+X
+
+> t=1
+
+
+
+ρ⊤
+
+> jt
+
+∂2
+
+∂θ1∂θ2
+
+fj (y | x)νjt 
+
+
+
+= 0 ,
+
+14 it follows that αj = 0 , βj = 0d1 , γj = 0d2 , ρjt = 0d1 , and νjt = 0d2 for all j, t .
+
+Remark 1. The strong identifiability condition may or may not hold depending on the choice of link functions h1, h2 and distribution family f .
+
+• The main model in our framework takes f to be the normal distribution with h1(x, θj ) = 
+
+x⊤θj and h2 = σ2 
+
+> j
+
+. Because the mean is a non-trivial function of x, the kernel density satisfies strong identifiability. 
+
+• If instead both the mean and variance in each cluster are constants, i.e., h1 = θj ,
+
+h2 = σ2 
+
+> j
+
+, then the conditional densities satisfy only first-order identifiability and vio-late second-order identifiability, due to the heat equation ∂f ∂σ 2 = 12 
+
+> ∂2f∂μ 2
+
+for the normal density. 
+
+• An intercept term in the regression model would introduce non-identifiability. In-cluding a global intercept alongside compositional predictors that sum to one ren-ders the model non-identifiable, as the intercept and compositional effects cannot be separately recovered. Compositional regression absorbs the intercept by nature: if 
+
+E(yi | zi) = β0 + x⊤β, then because P 
+
+> j
+
+xij = 1 we can equivalently write E(yi |
+
+zi) = x⊤(β + β01), so the intercept is not separately identifiable and need not be in-cluded. Relying strictly on relative shifts avoids this pathology and ensures that cluster assignments and component-specific effects are uniquely determined. 
+
+Together, Definition 1 and Remark 1 establish that the Gaussian relative-shift specifica-tion is strongly identifiable, the structural property that underpins the consistency results developed below. 
+
+Assumption 1. The following regularity conditions hold. 1. (Compact parameter space.) The parameter space Θ = Θ θ × Θσ is compact. 2. (Bounded-below mixing weights.) There exists a constant δπ > 0 such that the true mixing weights satisfy π0k ≥ δπ for all k = 1 , . . . , K 0.
+
+15 3. (Sub-Gaussian errors.) The error distribution satisfies E[exp( tε i)] ≤ exp( ν2t2/2) 
+
+for all t ∈ R and some ν > 0.4. (True complexity bounded by truncation.) The true number of clusters satisfies 
+
+K0 ≤ Kmax , and the true mixing measure G0 has all K0 atoms distinct. 5. (Prior positivity near truth.) The GLBP prior assigns positive probability to every ℓ2-neighborhood of θ0k.
+
+Theorem 1. Suppose the true distribution of the data (yi, xi) follows a regression model as specified and the data-generating process satisfies Assumption 1. Then, given any G0 with the true number of clusters K0, we have the following posterior consistency: 
+
+• Induced density convergence (in Hellinger distance h): 
+
+Π(n)
+
+h
+
+h(fG, f 0) > C 1
+
+plog n/n y(n), x(n)
+
+i
+
+→ 0 a.s. under Qni=1 PG0 .
+
+• Number-of-clusters consistency: 
+
+Π(n)K = K0 | y(n), x(n) → 1
+
+a.s. under Qni=1 PG0 .
+
+• Parameter recovery in the Wasserstein-1 distance W1:
+
+Π(n)
+
+h
+
+W1(G, G 0) > C 2
+
+plog n/n y(n), x(n)
+
+i
+
+→ 0
+
+in Qni=1 PG0 -probability. 
+
+A complete proof, together with the supporting lemmas it relies on, is provided in Section S1.3 of the Supplementary Materials. Theorem 1 establishes that the proposed model is protected against a well-known pathol-ogy of Bayesian mixture models: the tendency to create spurious clusters that absorb noise 16 as sample size grows. Under the structural regularization induced by the GLBP prior, the posterior probability of recovering the true number of clusters K0 and the true coefficient structure converges to one as n → ∞ . This guarantee implies that identified clusters re-flect genuine structural differences in the composition–response relationship rather than noise-induced fragmentation. 
+
+# 4 Bayesian Inference 
+
+# 4.1 Bayesian computation 
+
+Posterior sampling is implemented using the No-U-Turn Sampler (NUTS) via NumPyro (Hoffman & Gelman 2014, Phan et al. 2019). While traditional implementations of the Mix-ture of Finite Mixtures (MFM) rely on custom Gibbs and surrogate Hamiltonian Monte Carlo (sHMC) schemes (Xu et al. 2023), utilizing NUTS provides automatic step-size adap-tation and trajectory-length tuning. To maintain computational efficiency and differentiability within NUTS, inference uti-lizes a truncated representation with at most Kmax active components, where Kmax is a computational cap on the number of components rather than a modeling constraint— the prior in (9) admits arbitrarily many components—and may, for example, be taken as the sample size or its logarithm. Because standard NUTS requires continuous parameter spaces, the discrete cluster assignments zi are analytically marginalized out during the log-density evaluation. The deterministic surrogate collapse operator (detailed in Section 4.2) is embedded directly within this evaluation step, allowing the HMC leapfrog integrator to traverse the structured posterior seamlessly (Algorithm 1). 
+
+# 4.2 Efficient structural shrinkage 
+
+The generalized ℓ1-ball prior (GLBP) projects coefficients onto an ℓ1-ball, functioning sim-ilarly to fused-lasso regularization for pairwise differences. As detailed in Algorithm 1, 17 Algorithm 1 Log-Posterior Evaluation for NUTS with GLBP Surrogate Collapse 
+
+Require: Continuous state parameters: {βk}Kmax  
+
+> k=1
+
+, {σ2
+
+> k
+
+}Kmax  
+
+> k=1
+
+, and simplex weights π.
+
+Ensure: Log-posterior density log p(Θ | y) and its gradients. 
+
+Step 1: Structural Shrinkage (Deterministic Collapse)  
+
+> 1:
+
+for k = 1 to Kmax do  
+
+> 2:
+
+Sort βk to obtain order statistics βk, (1) ≤ · · · ≤ βk, (p). 
+
+> 3:
+
+Compute adjacent differences: di = βk, (i+1) − βk, (i) for i = 1 , . . . , p − 1.  
+
+> 4:
+
+Apply soft-thresholding: ui = max( di − τ, 0).  
+
+> 5:
+
+Reconstruct sorted sequence from the base ˜βk, (1) = 0: ˜βk, (i) = ˜βk, (i−1) + ui−1 for 
+
+i = 2 , . . . , p . 
+
+> 6:
+
+Apply inverse permutation to yield the structured coefficients ˜θk. 
+
+> 7:
+
+Re-center to the precursor level: ˜θk ← ˜θk − ˜θk + βk. 
+
+> 8:
+
+end for Step 2: Marginalized Log-Likelihood Evaluation  
+
+> 9:
+
+Initialize total log-likelihood L = 0.  
+
+> 10:
+
+for i = 1 to n do  
+
+> 11:
+
+ℓi = log PKmax  
+
+> k=1
+
+πk f (yi | xi, ˜θk, σ 2
+
+> k
+
+) 
+
+> 12:
+
+L = L + ℓi 
+
+> 13:
+
+end for Step 3: Gradient Computation  
+
+> 14:
+
+Compute unnormalized log-posterior: log p(Θ | y) ∝ L + log p(π) + P
+
+> k
+
+[log p(βk) + log p(σ2
+
+> k
+
+)].  
+
+> 15:
+
+Compute ∇ log p(Θ | y) via automatic differentiation.  
+
+> 16:
+
+return log p(Θ | y) and ∇ log p(Θ | y)we bypass expensive iterative optimization (e.g., ADMM) by applying one-sided soft-thresholding directly to the sorted adjacent differences of the coefficients: 
+
+ui = max( di − τ, 0) . (10) The threshold τ = τ (rk) is determined deterministically from the cluster-specific fusion radius rk as the smallest non-negative value such that the reconstructed sequence satisfies 
+
+∥A ˜θk∥1 ≤ rk. Reconstructing the sequence and applying the inverse permutation yields a blockwise-constant ˜θk. This deterministic transformation allows NUTS to correctly tar-get the structural shrinkage induced by the GLBP prior while scaling efficiently to high dimensions. 18 4.3 Posterior inference for compositional effects 
+
+Because the compositional predictors xi ∈ Sp−1 sum to 1 ( Ppj=1 xij = 1), coefficients are interpretable only through relative contrasts. Using posterior draws ˜θ(s), we summarize effects as relative shifts (Li et al. 2023): 
+
+• Pairwise relative shifts: ∆jℓ = ˜θj − ˜θℓ represents the shift effect of reallocating one unit of mass from feature ℓ to j.
+
+• Group-level relative shifts: For a collapsed group Ω of size h with mean ¯˜θΩ, the contrast ˜θj − ¯˜θΩ denotes shifting one unit of mass to component j, drawn evenly from all features in Ω. Directional non-negligibility is established when (1 −α)100% credible intervals exclude zero. 
+
+# 4.4 Label-switching and partition summaries 
+
+Because finite mixture models are invariant to component label permutations, we resolve label-switching across the S MCMC iterations using a three-step alignment procedure: 1. Posterior responsibilities: Compute soft cluster assignments γ(s) 
+
+> ik
+
+∝ π(s) 
+
+> k
+
+f (yi |
+
+xi, ˜θ(s) 
+
+> k
+
+, σ 2( s) 
+
+> k
+
+) for each iterate. 2. Dahl point estimate: Identify a permutation-invariant partition by finding the iteration s∗ whose pairwise co-clustering matrix minimizes the squared distance to the posterior mean co-clustering matrix (Dahl 2006). 3. Pivot-based relabeling: Align all iterations to the pivot s∗ by minimizing PKmax 
+
+> k=1
+
+Pni=1 (γ(s)
+
+> i,σ (k)
+
+−
+
+γ(s∗) 
+
+> ik
+
+)2 via the Hungarian algorithm (Kuhn 1955). Once aligned, valid posterior averages and credible intervals can be computed for all component-specific parameters. Finally, partition stability is validated using the Adjusted Rand Index (ARI; Hubert & Arabie 1985) and per-observation assignment entropy. 19 5 Simulations 
+
+# 5.1 Simulation Setup 
+
+We evaluate the proposed heterogeneous relative-shift regression model under the Gaus-sian identity link, testing its ability to recover latent clusters, estimate collapsed coefficient structures, and maintain stable posterior inference under varying signal strengths and sam-ple sizes. To extend the realism of these simulations, the blockwise constant patterns are designed to mirror the correlated, low-dimensional groupings often found in real composi-tional data (e.g., co-expressed biological pathways or interlinked economic sectors). 
+
+Covariates. For each observation i, the compositional covariate xi is generated from a symmetric Dirichlet distribution: xi ∼ Dirichlet( 1p). The dimension p varies by experiment (see Section 5.2 and Section 5.3). The same marginal distribution is shared across all clusters, ensuring the latent partition is driven entirely by coefficient heterogeneity rather than covariate clustering. Latent Clusters & Likelihood. We simulate K0 = 3 equal-sized latent clusters ( nk = n/ 3) with deterministic block assignments zi ∈ { 1, 2, 3}. The response is generated via yi = x⊤ 
+
+> i
+
+θzi + εi, where εi ∼ N (0 , σ 2). Collapsed Coefficient Structure. Each cluster-specific coefficient vector θk is a piecewise-constant profile, so that distinct components of the composition share identical effects within blocks. The exact per-block values and number of plateaus are specified in the experiment-specific subsections below; they are designed so that (i) the Dirichlet-averaged cluster means E[x⊤ 
+
+> i
+
+θk] are well separated and (ii) the equi-sparse plateau structure matches the regime targeted by the GLBP prior. Implementation. Models are fit using the No-U-Turn Sampler (NUTS; Hoffman & Gelman 2014) in NumPyro (Phan et al. 2019) (2000 warmup, 3000 posterior samples). The MFM prior uses an exponential stick-breaking construction; the GLBP prior uses an rk ∼ Exp( ar) hyperprior on the collapse radius. Post-processing. To address label-switching, we use the Dahl least-squares summary (Dahl 2006) on posterior responsibilities to find a permutation-invariant point estimate. All MCMC samples are then aligned to a common reference using the Hungarian algorithm for valid parameter 20 averaging. The following evaluation metrics are averaged over R replicates: 
+
+• ARI : Adjusted Rand Index between the Dahl point estimate and the true partition (1 = perfect, 0 = chance). 
+
+• CoeffMSE : Mean squared error of the relabeled posterior mean coefficients, CoeffMSE = 
+
+K−10
+
+PK0 
+
+> k=1
+
+∥ ˆθk − θ0k∥22.
+
+• K recovery : Fraction of replicates estimating exactly the true number of clusters. 
+
+# 5.2 Signal Recovery Under Exact Cluster Recovery 
+
+First, we isolate coefficient recovery by using a “clean” regime where both models recover the latent partition near-perfectly. We set K0 = 3 clusters, n = 600, and p = 20. The coefficients at scale a > 0 are piecewise-constant profiles with distinct Dirichlet-averaged means: 
+
+θ1 = ( a 1p/ 2, 3a 1p/ 2), E[x⊤ 
+
+> i
+
+θ1] = 2 a. 
+
+θ2 = ( −a 1p/ 2, −3a 1p/ 2), E[x⊤ 
+
+> i
+
+θ2] = −2a. 
+
+θ3 = ( a 1p/ 4, −a 1p/ 2, a 1p/ 4), E[x⊤ 
+
+> i
+
+θ3] = 0 .
+
+We evaluate two signal strengths (a scale factor of 2 .0 with noise 0 .3, and a scale factor of 2 .5 with noise 0 .5). Tuning parameters are fixed at λ = 4 .0, Kmax = 4, and ar = 0 .5across R = 50 replicates. Table 1: Clean-regime simulation ( K0 = 3, n = 600, p = 20, R = 50). 
+
+Setting Model Exact Recovery Mean ARI CoeffMSE Mean [95%CI] PredMSE 
+
+a = 2 .0, σ = 0 .3 GLBP 50 /50 1.0000 0.147 [0 .038 , 0.374] 0.095 
+
+a = 2 .5, σ = 0 .5 GLBP 47 /50 0.9997 0.428 [0 .109 , 0.974] 0.255 
+
+a = 2 .5, σ = 0 .5 Baseline 46 /50 0.9996 1.648 [1 .133 , 2.193] 0.273 
+
+As shown in Table 1, both methods easily resolve the overarching cluster structure. However, at the higher noise level, the GLBP model reduces the mean coefficient MSE by 21 a factor of 3 .85 compared to the unconstrained Baseline, yielding strictly non-overlapping 95% confidence intervals. By pooling information across covariates within the same fused block, GLBP effectively immunizes the parameter estimates against observation noise that causes the Baseline model to overfit. To verify this statistical efficiency scales advantageously into higher dimensions, we repeated the a = 2 .5, σ = 0 .5 configuration at p ∈ { 30 , 50 }.Table 2: Clean-regime scaling ( a = 2 .5, σ = 0 .5, n = 600 , R = 50).                   
+
+> pGLBP CoeffMSE [95%CI] Baseline CoeffMSE [95%CI] Ratio 20 0.428 [0 .109 ,0.974] 1.648 [1 .133 ,2.193] 3.85 ×
+> 30 2.221 [0 .964 ,3.712] 3.955 [2 .817 ,5.349] 1.78 ×
+> 50 6.102 [5 .477 ,6.985] 10 .901 [8 .899 ,13 .812] 1.79 ×
+
+Table 2 confirms that while both models consistently recover the exact clusters, GLBP structurally limits degrees of freedom. In paired replicate comparisons, GLBP achieved strictly lower MSE in nearly every instance, confirming that structural regularization con-sistently limits estimation error as dimensionality grows. 
+
+# 5.3 Cluster Recovery Under Sample Scarcity 
+
+This regime mimics settings common in biological assays and macroeconomic analyses, where the per-cluster sample size n/K 0 approaches the ambient dimension p.Table 3: Cluster-scarcity regime ( p = 30 , n = 120 , a = 1 .5, σ = 0 .5, R = 50).                         
+
+> Model K=K0Mean ARI ARI 95% CI Mean CoeffMSE CoeffMSE 95% CI Mean PredMSE GLBP 42 /50 0.980 [0 .925 ,1.000] 2.46 [2 .20 ,3.06] 0.327 Baseline 1/50 0.572 [0 .409 ,0.744] 54 .25 [34 .84 ,75 .61] 0.342
+
+Table 3 demonstrates that GLBP dramatically improves both clustering accuracy and signal recovery in highly sparse regimes. The unregularized Baseline model fails to recover the true partition, typically assigning data to four or more clusters because high-variance coefficient estimates cause random noise to be misidentified as structural separation be-tween cluster means. 22 By shrinking the effective parameter dimension down to just the true number of piece-wise levels, the GLBP prior prevents this noise-induced fragmentation. It concentrates posterior mass on the correct K0 = 3 clusters in 84% of replicates and achieves a 22-fold reduction in coefficient MSE relative to the Baseline. 
+
+# 6 Real Examples 
+
+# 6.1 World GDP per Capita and Sectoral Composition 
+
+We illustrate the proposed model using 2019 data on 105 countries to examine how sectoral composition is associated with log PPP-adjusted GDP per capita. The main objective is to assess whether national output composition provides additional explanatory information beyond broad macroeconomic and demographic differences. To separate these two sources of variation, we include two groups of covariates. The first group contains seven standardized non-compositional variables: life expectancy, population growth, primary school enrollment, trade openness, urban population share, in-ternet use, and unemployment rate. These variables capture general differences in develop-ment, population dynamics, openness, and labor-market conditions. They enter the model through a shared global coefficient vector βc, so their effects are assumed to be common across all countries. The second group consists of 18 ISIC sectoral output shares, such as Manufacturing, Construction, Education, and other production sectors. Since these shares sum to one, they are compositional predictors. They enter through cluster-specific coefficient vectors θk, al-lowing the relationship between sectoral structure and GDP per capita to vary across latent groups of countries. This is important because the same sectoral share may have different implications for income depending on the broader economic structure of the country. We fit the Gaussian identity-link instance of the model in Section 2.4, taking the re-23 sponse yi to be the log PPP-adjusted GDP per capita of country i:
+
+yi | zi = k ∼ N  c⊤ 
+
+> i
+
+βc + x⊤ 
+
+> i
+
+θk, σ 2
+
+> k
+
+ ,
+
+where ci collects the seven non-compositional covariates with shared effect βc, xi the 18 sectoral shares with cluster-specific effect θk, and σ2 
+
+> k
+
+is a cluster-specific error variance. To evaluate the additional contribution of the compositional predictors, we compute 
+
+R2comp,increment = R2full − R2noncomp .
+
+This measures the extra variation in log GDP per capita explained by sectoral composition after the non-compositional variables have already been included. Table 4: Posterior-averaged R2 decomposition and clustering summaries. Mean VI is the average Variation of Information distance from posterior draws to the Dahl partition.              
+
+> Model R2full R2comp,increment K(active clusters) Mean VI Baseline (plain mixture) 0.920 0.135 42.04 Proposed (GLBP prior) 0.914 0.064 41.61
+
+Table 4 shows that the proposed GLBP model achieves almost the same overall fit as the baseline mixture model. The full R2 decreases only slightly from 0 .920 to 0 .914, indicating that the additional regularization imposed by the GLBP prior does not meaningfully reduce predictive performance. The main difference appears in the incremental R2 attributed to the compositional covariates. The baseline model assigns an additional 0 .135 of explana-tory power to the sectoral shares, while the proposed model assigns 0 .064. This smaller value does not imply that sectoral composition is irrelevant. Instead, it suggests that the GLBP prior removes redundant variation among the 18 sectoral shares and retains only the more stable low-dimensional sectoral signal. In this sense, the proposed model gives a more conservative and interpretable estimate of the contribution of economic structure. Both models identify four active clusters, but the proposed model produces more stable clustering. The mean VI decreases from 2 .04 under the baseline to 1 .61 under the GLBP 24 prior. Since lower VI indicates stronger agreement between posterior partitions and the representative Dahl partition, this result suggests that the proposed prior reduces posterior uncertainty in the clustering structure. Figure 1 displays the estimated country-level par-tition. The clusters are spread across different continents rather than being concentrated within single geographic regions. This indicates that the model is not simply grouping countries by location. Instead, it identifies countries with similar relationships between sectoral composition and GDP per capita, even when those countries are geographically distant. The GLBP prior also provides a more interpretable representation of the sectoral effects. Rather than estimating 18 unrelated sector-specific coefficients within each cluster, the prior encourages coefficients with similar effects to fuse together. As a result, the esti-mated ˆθk values form horizontal plateaus, where several sectors share the same or nearly the same association with GDP per capita. Figure 2 illustrates this shrinkage pattern. The left panel shows posterior co-fusion frequencies for sector pairs, indicating which sectors are most frequently merged across posterior draws. The right panel shows the cluster-specific posterior mean coefficient values. Together, these plots reveal not only that fusion occurs, but also which sectors are grouped together and how the fused sectoral effects differ across clusters. Table 5: Within-cluster summaries for the proposed model. Effective dimension is the number of distinct fused coefficient levels in the posterior mean ˆθk.                         
+
+> Cluster NMean GDP (PPP) RMSE MAE Eff. Dim 141 20,232 0.333 0.261 9223 20,562 0.463 0.276 5322 18,465 0.521 0.395 7419 12,129 0.363 0.297 5
+
+Table 5 gives additional detail on the four clusters. Cluster sizes range from 19 to 41 countries, suggesting that the partition is reasonably balanced. The clusters differ in average GDP, but they are not simply ordered by income. For example, Clusters 1 and 2 have similar mean GDP values, yet they differ in prediction error and effective dimension. This suggests that the latent groups capture differences in the sectoral-income 25 relationship, not only differences in income level. The prediction errors also vary across clusters. Cluster 1 has the smallest RMSE and MAE, indicating that the model fits this group particularly well. Cluster 3 has the largest errors, suggesting greater unexplained heterogeneity among its countries. This may reflect factors not included in the model, such as institutional quality, natural resource dependence, or differences in human capital beyond primary school enrollment. The effective dimension column highlights the parsimony gained from the GLBP prior. Although each cluster contains 18 original sectoral coefficients, the fitted model reduces them to only 5 to 9 distinct coefficient levels. Clusters 2 and 4 are especially compact, with only 5 fused levels each, while Cluster 1 retains a richer structure with 9 levels. Thus, the model adapts the amount of sectoral complexity to each cluster rather than imposing the same level of shrinkage everywhere. Overall, the proposed GLBP model provides a strong balance between fit, stability, and interpretability. It maintains nearly the same predictive accuracy as the baseline model, improves posterior clustering stability, and substantially reduces the dimension of the sectoral coefficient structure. The results suggest that sectoral composition does contain meaningful information about GDP per capita, but this information can be summarized through a smaller number of fused sectoral effect levels rather than 18 fully distinct effects in every cluster. 
+
+# 6.2 Spatial Omics Data: Cell Type Composition and Gene Ex-pression 
+
+We next apply the model to a spatial transcriptomics dataset from a human lung adeno-carcinoma tissue section generated using the 10x Genomics Visium platform. The dataset contains expression measurements for 18,066 genes across n = 3 ,813 spatial spots. Using CARD deconvolution (Ma & Zhou 2022), each spot is represented by a 24-dimensional cell type proportion vector, covering immune, tumor, stromal, and epithelial lineages. This setting is well suited to the proposed model because the predictors are compositional and because the relationship between cell type composition and gene expression may vary across 26 Figure 1: Estimated cluster assignments for the 105 countries under the proposed model, based on the Dahl partition. 
+
+Figure 2: Left: posterior co-fusion frequencies for sector pairs across clusters. Right: cluster-specific posterior mean coefficient values. 27 different regions of the tumor microenvironment. We focus on the gene SPP1 , also known as osteopontin, which is widely associated with tumor microenvironment remodeling, immune regulation, and tumor progression. Let yi
+
+denote the observed UMI count for SPP1 at spot i, and let xi denote the 24-dimensional cell type proportion vector. To account for differences in sequencing depth across spots, we include an offset ti equal to the total UMI count at spot i:
+
+yi | zi = k ∼ Poisson( λik ), log λik = log ti + αk + x⊤ 
+
+> i
+
+θk.
+
+Here, αk is a cluster-specific intercept, while θk captures how cell type composition is as-sociated with normalized SPP1 expression within cluster k. The GLBP prior is placed on pairwise-difference contrasts of θk, encouraging cell types with similar expression effects to share the same coefficient value. Thus, the model simultaneously identifies latent spatial-expression regimes and simplifies the cell type effect structure within each regime. The model achieves a high posterior-averaged pseudo-R2 of 0 .904, indicating that the combina-tion of cell type composition, sequencing-depth adjustment, and latent clustering explains a large proportion of the variation in SPP1 counts. The posterior concentrates on K = 6 active clusters. Two large clusters, with sizes 1,679 and 1,482, cover most of the tissue section, suggesting that much of the sample follows two dominant composition–expression regimes. In contrast, the four smaller clusters, with sizes ranging from 48 to 229 spots, capture more localized patterns that would likely be missed by a single global regression model. When the estimated cluster assignments are mapped back to the physical tissue coor-dinates in Figure 3, the smaller clusters appear as dense and spatially contiguous patches rather than isolated scattered spots. This spatial organization supports the interpretation that the inferred clusters reflect biologically meaningful regional heterogeneity in the tumor microenvironment. In particular, the model identifies local regions where the association between cell type mixture and SPP1 expression differs from the dominant tissue-wide pat-28 terns. Figure 4 shows the fused cell type coefficients ˆθk across the six clusters. Tumor cells and macrophages exhibit consistently large positive associations with SPP1 expres-sion across clusters. This agrees with the biological role of SPP1 as a marker connected to tumor-associated signaling and macrophage-rich microenvironmental remodeling. The consistency of these positive coefficients suggests that the main SPP1 signal is driven by tumor and innate immune components across multiple tissue regions. At the same time, the remaining cell type effects vary substantially across clusters, revealing localized differences in the composition–expression relationship. For example, Cluster 4 shows a uniquely strong positive coefficient for ciliated epithelial cells, suggesting a region-specific association between epithelial composition and SPP1 expression. Cluster 6 displays a distinct pattern involving alveolar type 1 cells, indicating that some spa-tial regions may follow specialized epithelial or alveolar-related expression regimes. These cluster-specific deviations demonstrate the value of allowing θk to vary across latent groups rather than imposing a single cell type effect profile across the whole tissue section. The GLBP prior also produces substantial dimensionality reduction. Although the model begins with 24 cell type coefficients in each cluster, many related or weakly distin-guishable cell types are fused to common coefficient values. For example, dendritic cell and T-cell populations are merged within the larger clusters, indicating that the data do not support estimating separate effects for each highly granular immune subtype in those regions. This fusion is especially useful in spatial transcriptomics, where deconvolved cell type proportions are often correlated and difficult to interpret one at a time. Overall, the spatial transcriptomics analysis demonstrates that the proposed model can recover both dominant and localized composition–expression regimes. It explains SPP1 ex-pression well, identifies spatially coherent clusters, and preserves biologically interpretable signals from tumor cells and macrophages while shrinking redundant cell type effects to-gether. The result is a more stable and interpretable representation of how cell type com-position relates to SPP1 expression across heterogeneous tumor tissue. 29 Figure 3: Estimated cluster assignments mapped onto the spatial coordinates of the lung adenocarcinoma tissue section. Each spot is colored by its Dahl-partition cluster; spatially contiguous patches of the smaller clusters indicate biologically and geographically struc-tured heterogeneity in the composition– SPP1 relationship. 
+
+Figure 4: Fused cell type coefficients ˆθk across the six SPP1 clusters. Cell types are grouped by lineage (tumor, immune–innate, immune–adaptive, immune–other, stromal, epithelial); black rectangles enclose contiguous runs of cell types fused to identical coefficient values within a cluster. 30 7 Discussion 
+
+We proposed a Bayesian framework for regression with compositional predictors that jointly addresses two recurring features of modern applications: latent heterogeneity in the composition– response relationship and the presence of collapsed effect patterns among compositional parts. The model is built on the relative-shift parameterization of Li et al. (2023), so that compositional effects are interpreted through identifiable reallocations of mass between components, rather than through non-identifiable coefficient levels under the simplex con-straint. Within each latent mixture component, we place a projection-induced generalized 
+
+ℓ1-ball prior (GLBP) (Xu et al. 2023) on the compositional effects to encourage equi-sparsity in the contrast space. This prior yields exact coefficient ties and therefore data-adaptive aggregation of parts with indistinguishable effects, while propagating uncertainty in both the latent partition and the induced collapsed structure. The empirical studies highlight the practical role of collapsed structures. In the GDP analysis, the incremental R2 attributable to the compositional sector shares is modest rel-ative to the explanatory power of the non-compositional macroeconomic covariates, which capture much of the global mean variation. Nevertheless, introducing contrast-level aggre-gation substantially improves posterior stability of the latent partition, as measured by the mean Variation of Information between posterior draws and the Dahl point estimate (1.61 versus 2.04 for the baseline). This reduction in VI indicates that the GLBP prior on sectoral contrasts yields a more tightly concentrated posterior over partitions at the same level of resolution ( K = 4 active clusters under both models). The pattern is consistent with the interpretation that sectoral compositions are most informative for distinguishing structural regimes rather than for improving global mean prediction: by encouraging equi-sparsity within components, the prior suppresses redundant cluster-level variation and concentrates posterior mass on the informative contrast directions. In the spatial transcriptomics study, the model similarly supports stable inference in a regime characterized by high-dimensional compositions, potential subtype heterogeneity, and the practical need to summarize effects 31 at an aggregated cell-type group level. Several limitations suggest directions for refinement and extension. First, while the GLBP construction provides a generic mechanism for inducing equi-sparsity in the identifi-able contrast space, the resulting aggregation can depend on the choice of contrast operator 
+
+A. Beyond pairwise-difference contrasts, it would be useful to incorporate application-specific structure (e.g., sector hierarchies or biological lineage/taxonomy) through struc-tured choices of A that favor scientifically meaningful collapses. Second, the current spec-ification focuses on main effects of compositional predictors; extending the relative-shift formulation to allow interactions —either among compositional parts (e.g., synergistic re-allocations) or between compositional and non-compositional covariates—could broaden the scope of interpretable effect statements. Third, for spatial transcriptomics and related settings, it is natural to couple mixture membership with spatial clustering processes (e.g., Markov random field or Gaussian-process-based dependence) to encourage locally coher-ent partitions and improve robustness when subtype boundaries are spatially structured. Finally, further study of model misspecification is warranted, including robustness to im-perfect mixture assumptions, deviations from linearity in the link, and errors in estimated compositions; developing diagnostic tools and robustified likelihood or prior formulations would strengthen practical reliability. Future work along these lines would expand both the modeling flexibility and the inferential robustness of heterogeneous relative-shift regression, while preserving the reallocation-based interpretability that motivates the approach. 
+
+# References 
+
+Aitchison, J. & Bacon-Shone, J. (1984), ‘Log contrast models for experiments with mix-tures’, Biometrika 71 (2), 323–330. Bhattacharya, A., Pati, D., Pillai, N. S. & Dunson, D. B. (2015), ‘Dirichlet–laplace priors for optimal shrinkage’, Journal of the American Statistical Association 110 (512), 1479– 1490. 32 Bien, J., Yan, X., Simpson, L. & M¨ uller, C. L. (2021), ‘Tree-aggregated predictive modeling of microbiome data’, Scientific Reports 11 (1), 14505. Bondell, H. D. & Reich, B. J. (2008), ‘Simultaneous regression shrinkage, variable selection, and supervised clustering of predictors with oscar’, Biometrics 64 (1), 115–123. Cao, Y., Lin, Y., Ormerod, J. T., Yang, P., Yang, J. Y. & Lo, K. K. (2019), ‘scdc: single cell differential composition analysis’, BMC bioinformatics 20 , 1–12. Carvalho, C. M., Polson, N. G. & Scott, J. G. (2009), Handling sparsity via the horseshoe, 
+
+in ‘Artificial intelligence and statistics’, PMLR, pp. 73–80. Casella, G., Ghosh, M., Gill, J. & Kyung, M. (2010), ‘Penalized regression, standard errors, and bayesian lassos’, Bayesian Analysis 5(2), 369–411. Chandra, N. K., Canale, A. & Dunson, D. B. (2023), ‘Escaping the curse of dimensionality in bayesian model-based clustering’, Journal of machine learning research 24 (144), 1–42. Chang, Y.-R., Cheng, W.-C., Hsiao, Y.-C., Su, G.-W., Lin, S.-J., Wei, Y.-S., Chou, H.-C., Lin, H.-P., Lin, G.-Y. & Chan, H.-L. (2023), ‘Links between oral microbiome and insulin resistance: Involvement of map kinase signaling pathway’, Biochimie 214 , 134–144. Dahl, D. B. (2006), ‘Model-based clustering for expression data via a Dirichlet process mixture model’, Bayesian Inference for Gene Expression and Proteomics pp. 201–218. Dahl, D. B., Johnson, D. J. & M¨ uller, P. (2022), ‘Search algorithms and loss functions for bayesian clustering’, Journal of Computational and Graphical Statistics 31 (4), 1189– 1201. Do, D., Do, L. & Nguyen, X. (2025), ‘Strong identifiability and parameter learning in regression with heterogeneous response’, Electronic Journal of Statistics 19 (1), 131–203. Escobar, M. D. & West, M. (1995), ‘Bayesian density estimation and inference using mix-tures’, Journal of the American Statistical Association 90 (430), 577–588. 33 Franke, R. & Westerhoff, F. (2019), ‘Different compositions of aggregate sentiment and their impact on macroeconomic stability’, Economic Modelling 76 , 117–127. Fry, J. M., Fry, T. R. & McLaren, K. R. (2000), ‘Compositional data analysis and zeros in micro data’, Applied economics 32 (8), 953–959. George, E. I. & McCulloch, R. E. (1993), ‘Variable selection via gibbs sampling’, Journal of the American Statistical Association 88 (423), 881–889. Gloor, G. B., Macklaim, J. M., Pawlowsky-Glahn, V. & Egozcue, J. J. (2017), ‘Microbiome datasets are compositional: and this is not optional’, Frontiers in Microbiology 8, 2224. Han, D., Huang, J., Lin, Y., Liu, L., Qu, L. & Sun, L. (2023), ‘Robust signal recovery for high-dimensional linear log-contrast models with compositional covariates’, Journal of business & economic statistics 41 (3), 957–967. Ho, N., Yang, C.-Y. & Jordan, M. I. (2022), ‘Convergence rates for gaussian mixtures of experts’, Journal of Machine Learning Research 23 (323), 1–81. Hoffman, M. D. & Gelman, A. (2014), The No-U-Turn sampler: adaptively setting path lengths in Hamiltonian Monte Carlo, in ‘Journal of Machine Learning Research’, Vol. 15, pp. 1593–1623. Hubert, L. & Arabie, P. (1985), ‘Comparing partitions’, Journal of Classification 2(1), 193– 218. Ishwaran, H. & Rao, J. S. (2005), ‘Spike and slab variable selection: frequentist and bayesian strategies’, The Annals of Statistics 33 (2), 730–773. Jones, M. J., Islam, S. A., Edgar, R. D. & Kobor, M. S. (2015), Adjusting for cell type composition in dna methylation data using a regression-based approach, in ‘Population epigenetics: methods and protocols’, Springer, pp. 99–106. 34 K¨ on¨ onen, E., Fteita, D., Gursoy, U. K. & Gursoy, M. (2022), ‘Prevotella species as oral residents and infectious agents with potential impact on systemic conditions’, Journal of Oral Microbiology 14 (1), 2079814. Kuhn, H. W. (1955), ‘The Hungarian method for the assignment problem’, Naval Research Logistics Quarterly 2(1–2), 83–97. Leite, M. L. C. (2016), ‘Applying compositional data methodology to nutritional epidemi-ology’, Statistical methods in medical research 25 (6), 3057–3065. Li, G., Li, Y. & Chen, K. (2023), ‘It’s all relative: Regression analysis with compositional predictors’, Biometrics 79 (2), 1318–1329. Li, H. (2015), ‘Analysis of compositional microbiome data’, Annual Review of Statistics and Its Application .Liu, X., Cong, X., Li, G., Maas, K. & Chen, K. (2022), ‘Multivariate log-contrast regression with sub-compositional predictors: Testing the association between preterm infants’ gut microbiome and neurobehavioral outcomes’, Statistics in medicine 41 (3), 580–594. Lubomski, M., Xu, X., Holmes, A. J., Muller, S., Yang, J. Y., Davis, R. L. & Sue, C. M. (2022), ‘Nutritional intake and gut microbiome composition predict parkinson’s disease’, 
+
+Frontiers in Aging Neuroscience 14 , 881872. Ma, Y. & Zhou, X. (2022), ‘Spatially informed cell-type deconvolution for spatial tran-scriptomics’, Nature Biotechnology 40 (9), 1349–1359. Mehrotra, S. & Maity, A. (2022), ‘Simultaneous variable selection, clustering, and smooth-ing in function-on-scalar regression’, Canadian Journal of Statistics 50 (1), 180–199. Meng, J., Ren, Y., Zhu, X. & Hu, G. (2026), ‘Spatially clustered compositional regression: A nonparametric bayesian approach’, Journal of Computational and Graphical Statistics 
+
+35 (1), 51–62. 35 Miller, J. W. & Harrison, M. T. (2013), ‘A simple example of dirichlet process mixture inconsistency for the number of components’, Advances in neural information processing systems 26 .Miller, J. W. & Harrison, M. T. (2018), ‘Mixture models with a prior on the number of components’, Journal of the American Statistical Association 113 (521), 340–356. Neal, R. M. (2000), ‘Markov chain sampling methods for dirichlet process mixture models’, 
+
+Journal of Computational and Graphical Statistics 9(2), 249–265. Park, T. & Casella, G. (2008), ‘The bayesian lasso’, Journal of the american statistical association 103 (482), 681–686. Peterson, C. B., Saha, S. & Do, K.-A. (2024), ‘Analysis of microbiome data’, Annual Review of Statistics and Its Application 11 , 483–504. Pflughoeft, K. J. & Versalovic, J. (2012), ‘Human microbiome in health and disease’, Annual Review of Pathology: Mechanisms of Disease 7(1), 99–122. Phan, D., Pradhan, N. & Jankowiak, M. (2019), Composable effects for flexible and ac-celerated probabilistic programming in NumPyro, in ‘NeurIPS Workshop on Bayesian Deep Learning’. Roˇ ckov´ a, V. & George, E. I. (2018), ‘The spike-and-slab lasso’, Journal of the American Statistical Association 113 (521), 431–444. She, Y. (2010), ‘Sparse regression with exact clustering’, Electronic Journal of Statistics .Shen, X. & Huang, H.-C. (2010), ‘Grouping pursuit through a regularization solution sur-face’, Journal of the American Statistical Association 105 (490), 727–739. Shi, P., Zhang, A. & Li, H. (2016), ‘Regression analysis for microbiome compositional data’. 36 Sun, Z., Xu, W., Cong, X., Li, G. & Chen, K. (2020), ‘Log-contrast regression with func-tional compositional predictors: linking preterm infant’s gut microbiome trajectories to neurobehavioral outcome’, The annals of applied statistics 14 (3), 1535. Tibshirani, R. (1996), ‘Regression shrinkage and selection via the lasso’, Journal of the Royal Statistical Society Series B 58 (1), 267–288. Xia, F., Chen, J., Fung, W. K. & Li, H. (2013), ‘A logistic normal multinomial regression model for microbiome compositional data analysis’, Biometrics 69 (4), 1053–1063. Xin, B., Kawahara, Y., Wang, Y., Hu, L. & Gao, W. (2016), ‘Efficient generalized fused lasso and its applications’, ACM Transactions on Intelligent Systems and Technology (TIST) 7(4), 1–22. Xu, M., Zhou, H., Hu, Y. & Duan, L. L. (2023), ‘Bayesian inference using the proxi-mal mapping: Uncertainty quantification under varying dimensionality’, Journal of the American Statistical Association pp. 1–12. Yan, X. & Bien, J. (2021), ‘Rare feature selection in high dimensions’, Journal of the American Statistical Association 116 (534), 887–900. Yuan, M. & Lin, Y. (2006), ‘Model selection and estimation in regression with grouped variables’, Journal of the Royal Statistical Society Series B: Statistical Methodology 
+
+68 (1), 49–67. Zhang, L., Shi, Y., Jenq, R. R., Do, K.-A. & Peterson, C. B. (2021), ‘Bayesian compo-sitional regression with structured priors for microbiome feature selection’, Biometrics 
+
+77 (3), 824–838. Zhang, L., Zhang, X. & Yi, N. (2024), ‘Bayesian compositional generalized linear models for analyzing microbiome data’, Statistics in Medicine 43 , 141–155. Zhao, H. & Wang, T. (2024), ‘Debiased high-dimensional regression calibration for errors-in-variables log-contrast models’, Biometrics 80 (4), ujae153. 37

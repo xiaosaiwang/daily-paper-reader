@@ -1,0 +1,182 @@
+{
+  "mode": "standard",
+  "generated_at": "2026-06-08T21:30:52.488918+00:00",
+  "stats": {
+    "mode": "standard",
+    "tag_count": 1,
+    "deep_divecandidates": 1,
+    "deep_cap": 6,
+    "deep_selected": 1,
+    "quick_candidates": 3,
+    "quick_skim_target": 11,
+    "quick_selected": 3
+  },
+  "deep_dive": [
+    {
+      "id": "biorxiv-10-64898-2026-06-04-730184-v1",
+      "source": "biorxiv",
+      "title": "High nitrogen deposition is associated with phosphorus-efficient ectomycorrhizas in Europe's Scots pine forests",
+      "abstract": "Atmospheric inorganic nitrogen (N) deposition has been linked to increased tree phosphorus (P) deficiency and shifts in ectomycorrhizal (ECM) fungal community composition across Europe, but the underlying mechanisms remain poorly understood due to the scarcity of species-level studies of fungal physiology at large spatial scales. Here, we characterized ECM communities in nine Scots pine (Pinus sylvestris L.) stands across a European N deposition gradient to gain mechanistic insight into N-driven ECM community shifts, by assessing morpho-physiological traits (i.e. soil exploration types and ECM root-tip level exoenzyme activities involved in organic N and P acquisition) on individual ectomycorrhizas. Our data revealed high functional variation in foraging strategies across species and sites, including within dominant ECM genera (Cortinarius, Elaphomyces, Lactarius, Piloderma, Russula). Shifts in community-level exoenzyme activities along the N deposition gradient were consistent with increasing P limitation, with a buffering effect of phosphomonoesterase activity on host nutritional status (i.e. reduced foliar N:P). These trends were mainly driven by interspecific differences in enzymatic profiles and species turnover along the gradient, rather than intraspecific variation within widespread species. Dominant low-biomass species in high N sites (e.g. E. citrinopapillatus, L. subdulcis, R. ochroleuca) were efficient P-foragers, with some displaying high oxidative activity, potentially hampering soil carbon storage under elevated N loads. These findings highlight the role of ECM species-specific traits in mediating ecosystem processes and can help understand the future of pine forests under chronic N pollution, with potential implications for applied forestry.",
+      "authors": [
+        "Herinckx, P.",
+        "Delhaye, G.",
+        "Bidartondo, M. I.",
+        "Gargiulo, R.",
+        "Ghaffar, E.",
+        "Ruhmann, C.",
+        "Ticehurst, M.",
+        "Andrews, C.",
+        "Apuhtin, V.",
+        "Lewis, C.",
+        "Merilä, P.",
+        "Vanguelova, E.",
+        "Verstraeten, A.",
+        "Wambsganss, J.",
+        "Drouet, T.",
+        "Suz, L. M."
+      ],
+      "primary_category": "ecology",
+      "categories": [
+        "ecology"
+      ],
+      "published": "2026-06-07T00:00:00+00:00",
+      "link": "https://www.biorxiv.org/content/10.64898/2026.06.04.730184v1.full.pdf",
+      "tags": [
+        "keyword:ag-bg-div",
+        "query:ag-bg-div"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "soil exploration types and ECM root-tip exoenzyme activities across a European N deposition gradient",
+      "llm_evidence_cn": "土壤探索类型和菌根尖端胞外酶活性沿欧洲氮沉积梯度",
+      "llm_evidence": "土壤探索类型和菌根尖端胞外酶活性沿欧洲氮沉积梯度",
+      "canonical_evidence": "土壤探索类型和菌根尖端胞外酶活性沿欧洲氮沉积梯度",
+      "llm_tldr_en": "This study investigates ectomycorrhizal fungal community shifts across a European nitrogen deposition gradient, using morpho-physiological traits to reveal mechanisms linking high N deposition to phosphorus-efficient mycorrhizas, providing insights into belowground functional diversity responses to environmental gradients.",
+      "llm_tldr_cn": "该研究针对大气氮沉降对树木磷缺乏和外生菌根真菌群落影响机制不清的问题，沿欧洲氮沉积梯度调查了九个苏格兰松林的外生菌根群落。通过评估单个菌根尖的形态生理性状（土壤探索类型和胞外酶活性），揭示了氮沉降驱动群落变化的机制。结果表明高氮沉积与磷高效菌根类型相关，为理解氮沉降对森林营养循环的影响提供了机制性见解。该工作强调了地下真菌功能性状沿环境梯度的响应，对地上-地下功能耦合研究具有参考价值。",
+      "llm_tldr": "该研究针对大气氮沉降对树木磷缺乏和外生菌根真菌群落影响机制不清的问题，沿欧洲氮沉积梯度调查了九个苏格兰松林的外生菌根群落。通过评估单个菌根尖的形态生理性状（土壤探索类型和胞外酶活性），揭示了氮沉降驱动群落变化的机制。结果表明高氮沉积与磷高效菌根类型相关，为理解氮沉降对森林营养循环的影响提供了机制性见解。该工作强调了地下真菌功能性状沿环境梯度的响应，对地上-地下功能耦合研究具有参考价值。",
+      "llm_tags": [
+        "query:ag-bg-div"
+      ],
+      "matched_query_tag": "query:ag-bg-div",
+      "matched_query_text": "belowground functional diversity effects on ecosystem function",
+      "matched_requirement_id": "req-5",
+      "selection_source": "fresh_fetch"
+    }
+  ],
+  "quick_skim": [
+    {
+      "id": "2606.07373v1",
+      "source": "arxiv",
+      "title": "Learning Collapsed Patterns in Compositional Data: A Bayesian Heterogeneous Relative-Shift Approach",
+      "abstract": "Relative-shift regression provides a principled framework for modeling compositional covariates by quantifying how the response changes when mass is reallocated from one component to another. Yet many emerging compositional data problems extend beyond this classical setting, involving high-dimensional predictors and regression effects that vary across latent subpopulations. This complexity poses a dual challenge unmet by existing methods: recovering latent cluster structure while simultaneously achieving dimension reduction within each cluster. We propose a Bayesian heterogeneous relative-shift regression model that jointly learns latent clusters and parsimonious effect structures. Methodologically, we combine a projection-based shrinkage prior on identifiable contrasts, which induces exact coefficient ties within mixture components, with a mixture of finite mixtures prior that infers the number of clusters. Computationally, we develop a scalable hybrid MCMC algorithm that embeds a deterministic surrogate collapse operator within NUTS. Theoretically, we establish posterior consistency for both the latent partition and cluster-specific effect structures. Simulations confirm accurate recovery and strong predictive performance, and applications to cross-country macroeconomic data and spatial transcriptomics demonstrate the method's interpretability and practical utility.",
+      "authors": [
+        "Maoran Xu",
+        "Guanyu Hu"
+      ],
+      "primary_category": "stat.ME",
+      "categories": [
+        "stat.ME"
+      ],
+      "published": "2026-06-05T15:17:57+00:00",
+      "link": "https://arxiv.org/pdf/2606.07373v1",
+      "tags": [
+        "keyword:ag-bg-div",
+        "query:ag-bg-div"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "Bayesian heterogeneous relative-shift regression for compositional data",
+      "llm_evidence_cn": "用于成分数据的贝叶斯异质性相对偏移回归",
+      "llm_evidence": "用于成分数据的贝叶斯异质性相对偏移回归",
+      "canonical_evidence": "用于成分数据的贝叶斯异质性相对偏移回归",
+      "llm_tldr_en": "A Bayesian heterogeneous relative-shift regression model for compositional data that jointly learns latent clusters and parsimonious effect structures, potentially applicable to analyzing microbial community composition in aboveground-belowground functional diversity studies.",
+      "llm_tldr_cn": "成分数据回归分析面临高维和异质性子群的挑战，现有方法无法同时恢复潜在聚类和降维。本文提出贝叶斯异质性相对偏移回归模型，结合投影方法和稀疏先验，同时学习聚类结构和简约效应。该方法在模拟和实际数据中展示了良好性能，为分析微生物组等成分数据提供了新工具。对于地上-地下功能多样性研究中涉及的组成数据（如物种相对丰度）的分析具有潜在应用价值。",
+      "llm_tldr": "成分数据回归分析面临高维和异质性子群的挑战，现有方法无法同时恢复潜在聚类和降维。本文提出贝叶斯异质性相对偏移回归模型，结合投影方法和稀疏先验，同时学习聚类结构和简约效应。该方法在模拟和实际数据中展示了良好性能，为分析微生物组等成分数据提供了新工具。对于地上-地下功能多样性研究中涉及的组成数据（如物种相对丰度）的分析具有潜在应用价值。",
+      "llm_tags": [
+        "query:ag-bg-div"
+      ],
+      "matched_query_tag": "query:ag-bg-div",
+      "matched_query_text": "belowground functional diversity effects on ecosystem function",
+      "matched_requirement_id": "req-5",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "biorxiv-10-64898-2026-06-01-729298-v1",
+      "source": "biorxiv",
+      "title": "PhytoScan3D: an open-source Python pipeline for batch extraction of phenotypic traits from 3D point cloud files generated by multispectral plant phenotyping sensors",
+      "abstract": "High-throughput 3D multispectral plant phenotyping platforms generate large volumes of point cloud files, but trait extraction is typically performed by sensor-bundled software whose internal algorithms are not publicly documented, which limits reproducibility and integration into custom research pipelines. Here we present PhytoScan3D, an open-source Python pipeline that extracts morphological and spectral phenotypic traits, spanning plant height, 3D leaf area, digital biomass, convex hull volume, leaf inclination, canopy geometry, NDVI, hue, and vegetation indices, from both PLY and PCD point cloud files generated by Phenospex PlantEye F500 and F600 sensors, and is portable to point clouds from any acquisition platform. PhytoScan3D was validated against HortControl (PhenoSpex) ground-truth measurements on 936 barley (Hordeum vulgare) pot-date observations from the growth chamber trial (20 Norwegian cultivars, 12 scan dates, Septemenr 2025 to January 2026), achieving Pearson r = 0.913 to 0.999 and ratio approximately 1.000 for Plant Height Max, 3D Leaf Area, and NDVI Average. A vectorised mesh face filtering implementation achieved a 120x speed improvement, increasing valid 3D Leaf Area coverage from 0.6% to 100% of files. Cross-format validation on 223 PlantEye F600 PCD files from the ICRISAT LeasyScan platform (four legume species: mungbean, cowpea, lima bean, and common bean; 1,523 plant observations) yielded r = 0.884 against independent cuboid annotation heights. The systematic positive bias (mean +27.2 mm, ratio = 1.44) is attributable to PhytoScan3D computing height from raw point cloud Z-range while cuboid annotations are fitted to segmented plant points only, with the offset consistent across all four species (per-species r = 0.880 to 0.888). Cross-dataset processing of 1,180 PLY files from the Crops3D benchmark (8 species, 3 acquisition methods) confirmed zero extraction errors. PhytoScan3D is available at \"github.com/kovimallik/phytoscan3d\" under the MIT licence and processes 1,651 files across three independent datasets in under 12 minutes on GPU hardware.\n\nHighlightsO_LIPhytoScan3D is the first open-source Python pipeline for batch extraction of phenotypic traits, including plant height, 3D leaf area, digital biomass, convex hull volume, leaf inclination, NDVI, and excess green index, from both PLY and PCD point cloud files generated by Phenospex PlantEye sensors.\nC_LIO_LIPrimary validation against HortControl ground-truth measurements on 936 barley pot-date observations achieved Pearson r = 0.913-0.999 for Plant Height Max, 3D Leaf Area, and NDVI Average.\nC_LIO_LIA 120x computational speedup in mesh face filtering (vectorised NumPy vs. set-based loop) increased the coverage of valid 3D Leaf Area extraction from 0.6% to 100% of files.\nC_LIO_LICross-format validation on 223 PlantEye F600 PCD files from ICRISAT LeasyScan (four legume species, 1,523 plants) achieved r = 0.884 against independent cuboid annotation heights. The systematic +27.2 mm bias reflects a methodological difference (raw Z-range vs. soil-segmented annotations), is consistent and predictable across all four species (per-species r = 0.880-0.888), and is correctable by a single linear factor.\nC_LIO_LICross-dataset processing of 1,180 PLY files from the Crops3D benchmark (8 species, 3 acquisition methods) confirmed zero extraction errors.\nC_LIO_LISignificant scan-unit variation was detected for Plant Height Max (F = 5.71, p < 0.001, 2 = 0.138) and Canopy Width X (F = 6.32, p < 0.001, 2 = 0.150), demonstrating the biological utility of extracted traits.\nC_LI",
+      "authors": [
+        "Kovi, M. R.",
+        "Leite, A. C.",
+        "Lillemo, M."
+      ],
+      "primary_category": "plant biology",
+      "categories": [
+        "plant biology"
+      ],
+      "published": "2026-06-04T00:00:00+00:00",
+      "link": "https://www.biorxiv.org/content/10.64898/2026.06.01.729298v1.full.pdf",
+      "tags": [
+        "keyword:ag-bg-div",
+        "query:ag-bg-div"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "provides pipeline for plant phenotypic trait extraction aiding aboveground functional diversity studies",
+      "llm_evidence_cn": "提供植物表型性状提取流程，有助于地上功能多样性研究",
+      "llm_evidence": "提供植物表型性状提取流程，有助于地上功能多样性研究",
+      "canonical_evidence": "提供植物表型性状提取流程，有助于地上功能多样性研究",
+      "llm_tldr_en": "PhytoScan3D is an open-source Python pipeline that extracts morphological and spectral phenotypic traits from 3D point cloud files, enabling reproducible and customizable plant phenotyping for functional diversity research.",
+      "llm_tldr_cn": "该论文针对高通量3D多光谱植物表型平台生成的点云文件缺乏公开可复现的性状提取算法的问题，提出了PhytoScan3D，一个开源的Python流水线。该流水线能从Phenospex PlantEye传感器生成的PLY和PCD文件中自动提取株高、3D叶面积、数字生物量、凸包体积、叶片倾角、冠层几何结构以及NDVI、色调、植被指数等形态和光谱表型性状。该方法可整合到自定义研究流程中，为定量研究地上植物功能多样性及其与生态系统功能的关系提供了可复现的技术基础。",
+      "llm_tldr": "该论文针对高通量3D多光谱植物表型平台生成的点云文件缺乏公开可复现的性状提取算法的问题，提出了PhytoScan3D，一个开源的Python流水线。该流水线能从Phenospex PlantEye传感器生成的PLY和PCD文件中自动提取株高、3D叶面积、数字生物量、凸包体积、叶片倾角、冠层几何结构以及NDVI、色调、植被指数等形态和光谱表型性状。该方法可整合到自定义研究流程中，为定量研究地上植物功能多样性及其与生态系统功能的关系提供了可复现的技术基础。",
+      "llm_tags": [
+        "query:ag-bg-div"
+      ],
+      "matched_query_tag": "query:ag-bg-div",
+      "matched_query_text": "aboveground functional diversity effects on ecosystem function",
+      "matched_requirement_id": "req-4",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "biorxiv-10-64898-2026-06-02-729615-v1",
+      "source": "biorxiv",
+      "title": "Phylogeny, thermal seasonality, and life history shape trait variation in annual and perennial barley relatives",
+      "abstract": "Summary {middle dot} There is growing interest in developing perennial cereal crops for sustainable production, yet key differences in trait syndromes between annual and perennial grasses and their influence on environmental adaptation remain poorly understood. {middle dot} We measured 25 traits in 16 annual and perennial Hordeum species (45 accessions), including barley, grown over three seasons in a common garden. Using a phylogenetic framework and repeated transitions between annual and perennial forms, we (i) identified traits distinguishing these life strategies and (ii) tested how they relate to climate at the accessions' origins. {middle dot} Wild and cultivated barley are distinguished within the Hordeum clade by high growth rates and large organs, which may have predisposed wild barley to domestication. Annual and perennial accessions differed in resource allocation: annuals had higher harvest index and leaf and grain nitrogen, while perennials produced carbon-rich tissues and sustained vegetative growth. Seasonal temperature variation shaped trait syndromes: annual traits aligned with temperature in the driest quarter, reflecting selection under terminal stress, while perennial traits correlated with temperature in the wettest quarter, the main growth phase shaping long-term performance and survival. {middle dot} We provide important information on traits and climate adaptations underlying perennial persistence and annual resource strategies, relevant for developing perennial cereal crops.",
+      "authors": [
+        "Anokye, M.",
+        "Hellwig, T.",
+        "Haraldsson, E. B.",
+        "Schüller, R.",
+        "Döring, N.",
+        "Westhoff, P.",
+        "Bucharova, A.",
+        "von Korff, M."
+      ],
+      "primary_category": "ecology",
+      "categories": [
+        "ecology"
+      ],
+      "published": "2026-06-05T00:00:00+00:00",
+      "link": "https://www.biorxiv.org/content/10.64898/2026.06.02.729615v1.full.pdf",
+      "tags": [
+        "keyword:ag-bg-div",
+        "query:ag-bg-div"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "Trait variation in Hordeum species across environmental gradients, relevant to aboveground plant functional diversity",
+      "llm_evidence_cn": "大麦属物种沿环境梯度的性状变异，与地上植物功能多样性相关",
+      "llm_evidence": "大麦属物种沿环境梯度的性状变异，与地上植物功能多样性相关",
+      "canonical_evidence": "大麦属物种沿环境梯度的性状变异，与地上植物功能多样性相关",
+      "llm_tldr_en": "Measured 25 traits in 16 annual and perennial Hordeum species across seasons, identifying traits distinguishing life strategies and their climate associations, revealing aboveground functional diversity patterns.",
+      "llm_tldr_cn": "该研究通过测量16种一年生和多年生大麦属物种在三个生长季的25个性状，比较了不同生活史策略的性状综合征及其与气候的关系。研究发现野生和栽培大麦在性状上存在区分，且性状变异受系统发育、热量季节性和生活史共同影响。这项工作为理解地上植物功能多样性的环境驱动因素提供了实证数据，但未涉及地下部分。",
+      "llm_tldr": "该研究通过测量16种一年生和多年生大麦属物种在三个生长季的25个性状，比较了不同生活史策略的性状综合征及其与气候的关系。研究发现野生和栽培大麦在性状上存在区分，且性状变异受系统发育、热量季节性和生活史共同影响。这项工作为理解地上植物功能多样性的环境驱动因素提供了实证数据，但未涉及地下部分。",
+      "llm_tags": [
+        "query:ag-bg-div"
+      ],
+      "matched_query_tag": "query:ag-bg-div",
+      "matched_query_text": "aboveground functional diversity effects on ecosystem function",
+      "matched_requirement_id": "req-4",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    }
+  ]
+}

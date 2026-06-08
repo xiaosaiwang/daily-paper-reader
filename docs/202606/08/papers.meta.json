@@ -1,0 +1,69 @@
+{
+  "label": "2026-06-08",
+  "date": "2026-06-08",
+  "generated_at": "2026-06-08T21:33:08",
+  "count": 4,
+  "papers": [
+    {
+      "paper_id": "202606/08/biorxiv-10-64898-2026-06-04-730184-v1-high-nitrogen-deposition-is-associated-with-phosphorus-efficient-ectomycorrhizas-in-europes-scots-pine-forests",
+      "section": "deep",
+      "title_en": "High nitrogen deposition is associated with phosphorus-efficient ectomycorrhizas in Europe's Scots pine forests",
+      "authors": "Herinckx, P., Delhaye, G., Bidartondo, M. I., Gargiulo, R., Ghaffar, E., Ruhmann, C., Ticehurst, M., Andrews, C., Apuhtin, V., Lewis, C., Merilä, P., Vanguelova, E., Verstraeten, A., Wambsganss, J., Drouet, T., Suz, L. M.",
+      "date": "2026-06-07",
+      "pdf": "https://www.biorxiv.org/content/10.64898/2026.06.04.730184v1.full.pdf",
+      "score": "8.0",
+      "evidence": "土壤探索类型和菌根尖端胞外酶活性沿欧洲氮沉积梯度",
+      "tldr": "大气氮沉降加剧了欧洲赤松林的磷限制，并引起外生菌根真菌群落组成和功能变化。本研究沿欧洲氮沉降梯度，分析9个赤松林外生菌根真菌的探索类型和胞外酶活性，发现群落水平酶活性变化与磷限制一致，磷酸单酯酶活性缓冲了宿主营养状况。高氮位点优势物种如E. citrinopapillatus、L. subdulcis和R. ochroleuca为高效磷获取者，部分具高氧化活性可能阻碍碳储存。结果揭示了物种特异性性状在生态系统过程中的关键作用。",
+      "tags": "query:ag-bg-div",
+      "abstract_en": "Atmospheric inorganic nitrogen (N) deposition has been linked to increased tree phosphorus (P) deficiency and shifts in ectomycorrhizal (ECM) fungal community composition across Europe, but the underlying mechanisms remain poorly understood due to the scarcity of species-level studies of fungal physiology at large spatial scales. Here, we characterized ECM communities in nine Scots pine (Pinus sylvestris L.) stands across a European N deposition gradient to gain mechanistic insight into N-driven ECM community shifts, by assessing morpho-physiological traits (i.e. soil exploration types and ECM root-tip level exoenzyme activities involved in organic N and P acquisition) on individual ectomycorrhizas. Our data revealed high functional variation in foraging strategies across species and sites, including within dominant ECM genera (Cortinarius, Elaphomyces, Lactarius, Piloderma, Russula). Shifts in community-level exoenzyme activities along the N deposition gradient were consistent with increasing P limitation, with a buffering effect of phosphomonoesterase activity on host nutritional status (i.e. reduced foliar N:P). These trends were mainly driven by interspecific differences in enzymatic profiles and species turnover along the gradient, rather than intraspecific variation within widespread species. Dominant low-biomass species in high N sites (e.g. E. citrinopapillatus, L. subdulcis, R. ochroleuca) were efficient P-foragers, with some displaying high oxidative activity, potentially hampering soil carbon storage under elevated N loads. These findings highlight the role of ECM species-specific traits in mediating ecosystem processes and can help understand the future of pine forests under chronic N pollution, with potential implications for applied forestry.",
+      "source": "biorxiv",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "paper_id": "202606/08/2606.07373v1-learning-collapsed-patterns-in-compositional-data-a-bayesian-heterogeneous-relative-shift-approach",
+      "section": "quick",
+      "title_en": "Learning Collapsed Patterns in Compositional Data: A Bayesian Heterogeneous Relative-Shift Approach",
+      "authors": "Maoran Xu, Guanyu Hu",
+      "date": "2026-06-05",
+      "pdf": "https://arxiv.org/pdf/2606.07373v1",
+      "score": "6.0",
+      "evidence": "用于成分数据的贝叶斯异质性相对偏移回归",
+      "tldr": "成分数据回归建模中，现有方法难以同时应对潜在子群体异质性和高维稀疏效应。本文提出贝叶斯异质性相对位移回归模型，通过投影收缩先验实现簇内系数合并，并利用有限混合先验自动推断聚类数。结合混合MCMC算法（嵌入确定性塌缩算子的NUTS）进行高效推断。理论上证明了后验一致性，模拟和真实数据（宏观经济、空间转录组）验证了准确聚类恢复和强预测能力。该方法兼具可解释性和实用价值。",
+      "tags": "query:ag-bg-div",
+      "abstract_en": "Relative-shift regression provides a principled framework for modeling compositional covariates by quantifying how the response changes when mass is reallocated from one component to another. Yet many emerging compositional data problems extend beyond this classical setting, involving high-dimensional predictors and regression effects that vary across latent subpopulations. This complexity poses a dual challenge unmet by existing methods: recovering latent cluster structure while simultaneously achieving dimension reduction within each cluster. We propose a Bayesian heterogeneous relative-shift regression model that jointly learns latent clusters and parsimonious effect structures. Methodologically, we combine a projection-based shrinkage prior on identifiable contrasts, which induces exact coefficient ties within mixture components, with a mixture of finite mixtures prior that infers the number of clusters. Computationally, we develop a scalable hybrid MCMC algorithm that embeds a deterministic surrogate collapse operator within NUTS. Theoretically, we establish posterior consistency for both the latent partition and cluster-specific effect structures. Simulations confirm accurate recovery and strong predictive performance, and applications to cross-country macroeconomic data and spatial transcriptomics demonstrate the method's interpretability and practical utility.",
+      "source": "arxiv",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "paper_id": "202606/08/biorxiv-10-64898-2026-06-01-729298-v1-phytoscan3d-an-open-source-python-pipeline-for-batch-extraction-of-phenotypic-traits-from-3d-point-cloud-files-generated-by-multispectral-plant-phenotyping-sensors",
+      "section": "quick",
+      "title_en": "PhytoScan3D: an open-source Python pipeline for batch extraction of phenotypic traits from 3D point cloud files generated by multispectral plant phenotyping sensors",
+      "authors": "Kovi, M. R., Leite, A. C., Lillemo, M.",
+      "date": "2026-06-04",
+      "pdf": "https://www.biorxiv.org/content/10.64898/2026.06.01.729298v1.full.pdf",
+      "score": "6.0",
+      "evidence": "提供植物表型性状提取流程，有助于地上功能多样性研究",
+      "tldr": "高通量3D多光谱植物表型平台产生大量点云文件，但商业软件不公开算法限制可重复性。PhytoScan3D是一个开源Python管道，从PLY和PCD文件批量提取形态和光谱性状，包括株高、3D叶面积、NDVI等。在大麦验证中与地面真值高度相关（r=0.913-0.999），120倍加速实现全文件覆盖。跨数据集验证无提取错误，为表型研究提供了可复现的工具。",
+      "tags": "query:ag-bg-div",
+      "abstract_en": "High-throughput 3D multispectral plant phenotyping platforms generate large volumes of point cloud files, but trait extraction is typically performed by sensor-bundled software whose internal algorithms are not publicly documented, which limits reproducibility and integration into custom research pipelines. Here we present PhytoScan3D, an open-source Python pipeline that extracts morphological and spectral phenotypic traits, spanning plant height, 3D leaf area, digital biomass, convex hull volume, leaf inclination, canopy geometry, NDVI, hue, and vegetation indices, from both PLY and PCD point cloud files generated by Phenospex PlantEye F500 and F600 sensors, and is portable to point clouds from any acquisition platform. PhytoScan3D was validated against HortControl (PhenoSpex) ground-truth measurements on 936 barley (Hordeum vulgare) pot-date observations from the growth chamber trial (20 Norwegian cultivars, 12 scan dates, Septemenr 2025 to January 2026), achieving Pearson r = 0.913 to 0.999 and ratio approximately 1.000 for Plant Height Max, 3D Leaf Area, and NDVI Average. A vectorised mesh face filtering implementation achieved a 120x speed improvement, increasing valid 3D Leaf Area coverage from 0.6% to 100% of files. Cross-format validation on 223 PlantEye F600 PCD files from the ICRISAT LeasyScan platform (four legume species: mungbean, cowpea, lima bean, and common bean; 1,523 plant observations) yielded r = 0.884 against independent cuboid annotation heights. The systematic positive bias (mean +27.2 mm, ratio = 1.44) is attributable to PhytoScan3D computing height from raw point cloud Z-range while cuboid annotations are fitted to segmented plant points only, with the offset consistent across all four species (per-species r = 0.880 to 0.888). Cross-dataset processing of 1,180 PLY files from the Crops3D benchmark (8 species, 3 acquisition methods) confirmed zero extraction errors. PhytoScan3D is available at \"github.com/kovimallik/phytoscan3d\" under the MIT licence and processes 1,651 files across three independent datasets in under 12 minutes on GPU hardware.\n\nHighlightsO_LIPhytoScan3D is the first open-source Python pipeline for batch extraction of phenotypic traits, including plant height, 3D leaf area, digital biomass, convex hull volume, leaf inclination, NDVI, and excess green index, from both PLY and PCD point cloud files generated by Phenospex PlantEye sensors.\nC_LIO_LIPrimary validation against HortControl ground-truth measurements on 936 barley pot-date observations achieved Pearson r = 0.913-0.999 for Plant Height Max, 3D Leaf Area, and NDVI Average.\nC_LIO_LIA 120x computational speedup in mesh face filtering (vectorised NumPy vs. set-based loop) increased the coverage of valid 3D Leaf Area extraction from 0.6% to 100% of files.\nC_LIO_LICross-format validation on 223 PlantEye F600 PCD files from ICRISAT LeasyScan (four legume species, 1,523 plants) achieved r = 0.884 against independent cuboid annotation heights. The systematic +27.2 mm bias reflects a methodological difference (raw Z-range vs. soil-segmented annotations), is consistent and predictable across all four species (per-species r = 0.880-0.888), and is correctable by a single linear factor.\nC_LIO_LICross-dataset processing of 1,180 PLY files from the Crops3D benchmark (8 species, 3 acquisition methods) confirmed zero extraction errors.\nC_LIO_LISignificant scan-unit variation was detected for Plant Height Max (F = 5.71, p < 0.001, 2 = 0.138) and Canopy Width X (F = 6.32, p < 0.001, 2 = 0.150), demonstrating the biological utility of extracted traits.\nC_LI",
+      "source": "biorxiv",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "paper_id": "202606/08/biorxiv-10-64898-2026-06-02-729615-v1-phylogeny-thermal-seasonality-and-life-history-shape-trait-variation-in-annual-and-perennial-barley-relatives",
+      "section": "quick",
+      "title_en": "Phylogeny, thermal seasonality, and life history shape trait variation in annual and perennial barley relatives",
+      "authors": "Anokye, M., Hellwig, T., Haraldsson, E. B., Schüller, R., Döring, N., Westhoff, P., Bucharova, A., von Korff, M.",
+      "date": "2026-06-05",
+      "pdf": "https://www.biorxiv.org/content/10.64898/2026.06.02.729615v1.full.pdf",
+      "score": "6.0",
+      "evidence": "大麦属物种沿环境梯度的性状变异，与地上植物功能多样性相关",
+      "tldr": "多年生谷物对可持续农业有重要意义，但一年生和多年生禾草性状综合征的差异及其环境适应性尚不明确。本研究测量了16个野大麦属物种（45个种质）的25个性状，利用系统发育框架和多次生活史转换，区分了两种生活策略的性状差异，并检验了其与原产地气候的关系。结果发现，野生和栽培大麦以高生长速率和大器官为特征；一年生资源分配偏向繁殖和氮积累，多年生偏向碳积累和持续生长；季节温度变化塑造了不同的性状综合征：一年生与最干季温度相关（终端胁迫），多年生与最湿季温度相关（主要生长季）。该研究为多年生谷物发育提供了关键性状和气候适应信息。",
+      "tags": "query:ag-bg-div",
+      "abstract_en": "Summary {middle dot} There is growing interest in developing perennial cereal crops for sustainable production, yet key differences in trait syndromes between annual and perennial grasses and their influence on environmental adaptation remain poorly understood. {middle dot} We measured 25 traits in 16 annual and perennial Hordeum species (45 accessions), including barley, grown over three seasons in a common garden. Using a phylogenetic framework and repeated transitions between annual and perennial forms, we (i) identified traits distinguishing these life strategies and (ii) tested how they relate to climate at the accessions' origins. {middle dot} Wild and cultivated barley are distinguished within the Hordeum clade by high growth rates and large organs, which may have predisposed wild barley to domestication. Annual and perennial accessions differed in resource allocation: annuals had higher harvest index and leaf and grain nitrogen, while perennials produced carbon-rich tissues and sustained vegetative growth. Seasonal temperature variation shaped trait syndromes: annual traits aligned with temperature in the driest quarter, reflecting selection under terminal stress, while perennial traits correlated with temperature in the wettest quarter, the main growth phase shaping long-term performance and survival. {middle dot} We provide important information on traits and climate adaptations underlying perennial persistence and annual resource strategies, relevant for developing perennial cereal crops.",
+      "source": "biorxiv",
+      "selection_source": "fresh_fetch"
+    }
+  ],
+  "errors": []
+}
