@@ -1,0 +1,102 @@
+{
+  "mode": "standard",
+  "generated_at": "2026-06-09T21:16:17.834957+00:00",
+  "stats": {
+    "mode": "standard",
+    "tag_count": 1,
+    "deep_divecandidates": 1,
+    "deep_cap": 6,
+    "deep_selected": 1,
+    "quick_candidates": 1,
+    "quick_skim_target": 11,
+    "quick_selected": 1
+  },
+  "deep_dive": [
+    {
+      "id": "biorxiv-10-64898-2026-06-03-725163-v1",
+      "source": "biorxiv",
+      "title": "Digging for meaningful connections: associations between root phenotypes and rhizosphere microbial diversity in maize",
+      "abstract": "Drought threatens food security globally. Adaptive root phenotypes and microbiomes can improve maize (Zea mays L.) water uptake and tolerance to drought. However, synergisms between root phenotypes and microbiomes remain underexplored. We aimed to investigate the association between varying root phenotypes and rhizosphere microbiomes under field-scale drought. We grew 22 maize inbred lines in the field under optimal water availability and drought imposed by excluding rain with rainout shelters. We quantified grain yield and measured root architectural and anatomical phenotypes on root crown and cross-section images obtained by laser ablation tomography, respectively. We characterized rhizosphere prokaryotic and fungal communities with DNA metabarcoding of ribosomal markers. Rhizosphere microbial diversity predominantly associated with root anatomy rather than root architecture. Cortical parenchyma wall width explained 13.1% of the variance of the prokaryotic {beta}-diversity and correlated with grain yield under control conditions. Under the same conditions, number of cortical cell files and metaxylem vessels explained 1.4-2.1% of the variance of prokaryotic and fungal {beta}-diversities. No effect of the root phenotypes was observed under drought. We found 248 significant correlations between microbial taxa abundances and root anatomical phenotypes, especially cortex-related phenotypes such as number of cell files and living cortical area. Overall, a greater number of correlations was found under control conditions. We identified root phenotypes explaining a small but significant percentage of the variance of the microbial {beta}-diversity, mostly under optimal water availability. We showed that especially root anatomy is associated with rhizosphere microbial diversity in field-grown maize.",
+      "authors": [
+        "Giuliano, E.",
+        "Sidhu, J. S.",
+        "Lopez-Valdivia, I.",
+        "Feola Conz, R.",
+        "DePew, C. L.",
+        "Lynch, J. P.",
+        "Six, J.",
+        "Hartmann, M.",
+        "Galindo-Castaneda, T."
+      ],
+      "primary_category": "systems biology",
+      "categories": [
+        "systems biology"
+      ],
+      "published": "2026-06-07T00:00:00+00:00",
+      "link": "https://www.biorxiv.org/content/10.64898/2026.06.03.725163v1.full.pdf",
+      "tags": [
+        "keyword:ag-bg-div",
+        "query:ag-bg-div"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "root phenotypes and rhizosphere microbial diversity associations under drought",
+      "llm_evidence_cn": "根系表型与根际微生物多样性关联研究",
+      "llm_evidence": "根系表型与根际微生物多样性关联研究",
+      "canonical_evidence": "根系表型与根际微生物多样性关联研究",
+      "llm_tldr_en": "This study investigates associations between root phenotypes and rhizosphere microbial diversity in maize under drought, measuring root traits and prokaryotic communities to determine impacts on grain yield. It reveals synergisms between root architecture and microbiome.",
+      "llm_tldr_cn": "该研究针对玉米在干旱胁迫下根系表型与根际微生物多样性的关联展开实验，通过田间种植22个自交系并采用激光层析成像测量根系结构，结合原核生物群落分析，发现不同根系表型与微生物组成存在协同作用并影响产量。研究揭示了根系-微生物互作对作物抗旱性的潜在贡献。",
+      "llm_tldr": "该研究针对玉米在干旱胁迫下根系表型与根际微生物多样性的关联展开实验，通过田间种植22个自交系并采用激光层析成像测量根系结构，结合原核生物群落分析，发现不同根系表型与微生物组成存在协同作用并影响产量。研究揭示了根系-微生物互作对作物抗旱性的潜在贡献。",
+      "llm_tags": [
+        "query:ag-bg-div"
+      ],
+      "matched_query_tag": "query:ag-bg-div",
+      "matched_query_text": "belowground functional diversity effects on ecosystem function",
+      "matched_requirement_id": "req-5",
+      "selection_source": "fresh_fetch"
+    }
+  ],
+  "quick_skim": [
+    {
+      "id": "biorxiv-10-64898-2026-04-28-721370-v2",
+      "source": "biorxiv",
+      "title": "MorphOTU: image-derived morphological operational units for open-set biodiversity assessment",
+      "abstract": "The absence of a scalable system for organizing the vast majority of unidentified species is a central obstacle in biodiversity science. Molecular methods can generate OTUs without species names but require sequencing infrastructure and often remain difficult to link to observable morphology, whereas most computer-vision methods still rely on closed-set species labels. These limitations hamper biodiversity quantification under the open, incomplete conditions that characterize real ecosystems. Here, we introduce morphOTUs, a general image-based framework that constructs operational units of biodiversity directly from phenotypes. Using morphOTU, we derive image-based OTUs across five standardized benchmark datasets spanning flowers, wood anatomy, and beetle dorsal habitus. These units closely approximate reference species-level groupings, including closely related species, retain coherent structure when most species are \"unseen during training, and accurately approximate -diversity metrics under sparse labeling or limited sampling. Furthermore, morphOTUs remain effective on a heterogeneous, long-tailed real-world insect survey dataset, demonstrating robustness beyond standardized imaging conditions. Visual explanations reveal that morphOTU consistently focuses on biologically meaningful traits and captures continuous phenotypic variation. By providing a scalable and open-set framework for quantifying phenotypic diversity, morphOTUs enable biodiversity assessment that includes unnamed species and unlock the ecological value of rapidly expanding digital image repositories.",
+      "authors": [
+        "Zhan, Z.",
+        "Ye, M.",
+        "Orr, M. C.",
+        "Chen, W.",
+        "Liu, X.",
+        "Yue, L.",
+        "Sun, X.",
+        "Zhang, F."
+      ],
+      "primary_category": "bioinformatics",
+      "categories": [
+        "bioinformatics"
+      ],
+      "published": "2026-06-02T00:00:00+00:00",
+      "link": "https://www.biorxiv.org/content/10.64898/2026.04.28.721370v2.full.pdf",
+      "tags": [
+        "keyword:ag-bg-div",
+        "query:ag-bg-div"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "Provides a method to derive morphological OTUs from images, enabling functional diversity quantification.",
+      "llm_evidence_cn": "提供从图像推导形态操作单元的方法，可用于功能多样性量化。",
+      "llm_evidence": "提供从图像推导形态操作单元的方法，可用于功能多样性量化。",
+      "canonical_evidence": "提供从图像推导形态操作单元的方法，可用于功能多样性量化。",
+      "llm_tldr_en": "MorphOTU constructs image-based operational taxonomic units from phenotypes, enabling scalable biodiversity assessment without species labels, applicable to aboveground and belowground functional diversity studies.",
+      "llm_tldr_cn": "该研究针对传统生物多样性评估依赖物种标签且难以扩展到未知物种的问题，提出MorphOTU框架，直接利用图像表型构建形态操作单元。在五个标准数据集上验证了其有效性，能够无需测序即可量化开放环境中的生物多样性。该方法为地上和地下功能多样性的高通量评估提供了新工具，有助于理解功能多样性与生态系统功能的关系。",
+      "llm_tldr": "该研究针对传统生物多样性评估依赖物种标签且难以扩展到未知物种的问题，提出MorphOTU框架，直接利用图像表型构建形态操作单元。在五个标准数据集上验证了其有效性，能够无需测序即可量化开放环境中的生物多样性。该方法为地上和地下功能多样性的高通量评估提供了新工具，有助于理解功能多样性与生态系统功能的关系。",
+      "llm_tags": [
+        "query:ag-bg-div:composite"
+      ],
+      "matched_query_tag": "query:ag-bg-div:composite",
+      "matched_query_text": "Papers central to 请帮我查找有关地上和地下功能多样性及其关系对生态系统功能影响的论文, especially work that connects or combines: n; Tibetan Plateau; e; aboveground functional diversity effects on ecosystem function; belowground functional diversity effects on ecosystem function; interactions between aboveground and belowground functional diversity; What is the relative contribution of aboveground plant functional diversity, belowground soil biota functional diversity, and their cross trophic coupling (or asymmetry) to ecosystem multifunctionality, and how do these contributions shift along environmental gradients?; Are plant functional traits coordinated with soil microbial life history strategies and nematode functional traits across environmental gradients, and does the strength of this cross trophic trait coordination predict ecosystem multifunctionality?; How do climate gradients modulate the coupling between aboveground and belowground functional diversity and their joint effects on ecosystem function across large spatial scales?; How does the relationship between aboveground plant functional diversity and belowground soil microbial and nematode functional diversity drive ecosystem multifunctionality in grassland ecosystems?.",
+      "matched_requirement_id": "req-composite-ag-bg-div",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    }
+  ]
+}

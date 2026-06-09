@@ -1,0 +1,39 @@
+{
+  "label": "2026-06-09",
+  "date": "2026-06-09",
+  "generated_at": "2026-06-09T21:17:15",
+  "count": 2,
+  "papers": [
+    {
+      "paper_id": "202606/09/biorxiv-10-64898-2026-06-03-725163-v1-digging-for-meaningful-connections-associations-between-root-phenotypes-and-rhizosphere-microbial-diversity-in-maize",
+      "section": "deep",
+      "title_en": "Digging for meaningful connections: associations between root phenotypes and rhizosphere microbial diversity in maize",
+      "authors": "Giuliano, E., Sidhu, J. S., Lopez-Valdivia, I., Feola Conz, R., DePew, C. L., Lynch, J. P., Six, J., Hartmann, M., Galindo-Castaneda, T.",
+      "date": "2026-06-07",
+      "pdf": "https://www.biorxiv.org/content/10.64898/2026.06.03.725163v1.full.pdf",
+      "score": "8.0",
+      "evidence": "根系表型与根际微生物多样性关联研究",
+      "tldr": "干旱威胁粮食安全，根系表型与微生物可增强玉米耐旱性，但两者协同作用未知。本研究在田间干旱与正常条件下种植22个玉米自交系，测量根系构型与解剖表型，并通过DNA宏条形码分析根际微生物。结果发现根解剖特征（尤其是皮层相关性状）与微生物多样性关联强于构型，皮层细胞壁宽度解释13.1%细菌β多样性变异，且与正常条件产量相关。该研究揭示了根系结构与微生物选择的内在联系，为培育抗旱玉米提供了新靶点。",
+      "tags": "query:ag-bg-div",
+      "abstract_en": "Drought threatens food security globally. Adaptive root phenotypes and microbiomes can improve maize (Zea mays L.) water uptake and tolerance to drought. However, synergisms between root phenotypes and microbiomes remain underexplored. We aimed to investigate the association between varying root phenotypes and rhizosphere microbiomes under field-scale drought. We grew 22 maize inbred lines in the field under optimal water availability and drought imposed by excluding rain with rainout shelters. We quantified grain yield and measured root architectural and anatomical phenotypes on root crown and cross-section images obtained by laser ablation tomography, respectively. We characterized rhizosphere prokaryotic and fungal communities with DNA metabarcoding of ribosomal markers. Rhizosphere microbial diversity predominantly associated with root anatomy rather than root architecture. Cortical parenchyma wall width explained 13.1% of the variance of the prokaryotic {beta}-diversity and correlated with grain yield under control conditions. Under the same conditions, number of cortical cell files and metaxylem vessels explained 1.4-2.1% of the variance of prokaryotic and fungal {beta}-diversities. No effect of the root phenotypes was observed under drought. We found 248 significant correlations between microbial taxa abundances and root anatomical phenotypes, especially cortex-related phenotypes such as number of cell files and living cortical area. Overall, a greater number of correlations was found under control conditions. We identified root phenotypes explaining a small but significant percentage of the variance of the microbial {beta}-diversity, mostly under optimal water availability. We showed that especially root anatomy is associated with rhizosphere microbial diversity in field-grown maize.",
+      "source": "biorxiv",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "paper_id": "202606/09/biorxiv-10-64898-2026-04-28-721370-v2-morphotu-image-derived-morphological-operational-units-for-open-set-biodiversity-assessment",
+      "section": "quick",
+      "title_en": "MorphOTU: image-derived morphological operational units for open-set biodiversity assessment",
+      "authors": "Zhan, Z., Ye, M., Orr, M. C., Chen, W., Liu, X., Yue, L., Sun, X., Zhang, F.",
+      "date": "2026-06-02",
+      "pdf": "https://www.biorxiv.org/content/10.64898/2026.04.28.721370v2.full.pdf",
+      "score": "7.0",
+      "evidence": "提供从图像推导形态操作单元的方法，可用于功能多样性量化。",
+      "tldr": "生物多样性评估面临大量未命名物种难以系统组织的困境。现有分子方法虽能生成OTU但需测序且难关联形态，计算机视觉方法依赖封闭集标签。本文提出MorphOTU，一种基于图像直接构建形态操作单元的开放集框架。在五个标准数据集上，MorphOTU生成的单元接近真实物种分组，即使多数物种未参与训练，仍能准确近似α-多样性。在真实昆虫调查数据上表现鲁棒，且视觉解释聚焦生物性状。该框架为包含未命名物种的生物多样性量化提供了可扩展方案。",
+      "tags": "query:ag-bg-div",
+      "abstract_en": "The absence of a scalable system for organizing the vast majority of unidentified species is a central obstacle in biodiversity science. Molecular methods can generate OTUs without species names but require sequencing infrastructure and often remain difficult to link to observable morphology, whereas most computer-vision methods still rely on closed-set species labels. These limitations hamper biodiversity quantification under the open, incomplete conditions that characterize real ecosystems. Here, we introduce morphOTUs, a general image-based framework that constructs operational units of biodiversity directly from phenotypes. Using morphOTU, we derive image-based OTUs across five standardized benchmark datasets spanning flowers, wood anatomy, and beetle dorsal habitus. These units closely approximate reference species-level groupings, including closely related species, retain coherent structure when most species are \"unseen during training, and accurately approximate -diversity metrics under sparse labeling or limited sampling. Furthermore, morphOTUs remain effective on a heterogeneous, long-tailed real-world insect survey dataset, demonstrating robustness beyond standardized imaging conditions. Visual explanations reveal that morphOTU consistently focuses on biologically meaningful traits and captures continuous phenotypic variation. By providing a scalable and open-set framework for quantifying phenotypic diversity, morphOTUs enable biodiversity assessment that includes unnamed species and unlock the ecological value of rapidly expanding digital image repositories.",
+      "source": "biorxiv",
+      "selection_source": "fresh_fetch"
+    }
+  ],
+  "errors": []
+}
