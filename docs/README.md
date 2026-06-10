@@ -6,28 +6,43 @@
 </div>
 
 ## 每次日报
-- 最新运行日期：2026-06-09
-- 运行时间：2026-06-09 21:17:08 UTC
+- 最新运行日期：2026-06-10
+- 运行时间：2026-06-10 21:27:19 UTC
 - 运行状态：成功
-- 本次总论文数：2
+- 本次总论文数：7
 - 精读区：1
-- 速读区：1
+- 速读区：6
 
 ### 今日简报（AI）
-今日精读玉米根表型与根际微生物多样性的关联，速读图像形态操作单元用于开放集生物多样性评估。  
-值得关注：根系性状如何塑造土壤微生物群落，以及形态OTU方法为生物多样性监测提供的新型图像分析工具。  
-建议进一步探究根系-微生物互作机制，并尝试将形态OTU应用于本地生态调查。
-- 详情：[/202606/09/README](/202606/09/README)
+1) 今日精读1篇关于植物防御梯度适应的高分论文，速读6篇涵盖芦苇基因渗入、土壤微生物与网络度量等生态热点。
+2) 最值得关注：精读揭示植物多防御策略在生产力梯度下的适应性分化；速读指出土壤微生物胞外聚合物能改变微水文，以及不对称基因渗入驱动芦苇谱系更替。
+3) 建议优先深读精读论文，理解环境梯度下的生态权衡机制，速读可快速抓住微生物-水文耦合与杂交优势两大前沿。
+- 详情：[/202606/10/README](/202606/10/README)
 
 ### 精读区论文标签
-1. [Digging for meaningful connections: associations between root phenotypes and rhizosphere microbial diversity in maize](/202606/09/biorxiv-10-64898-2026-06-03-725163-v1-digging-for-meaningful-connections-associations-between-root-phenotypes-and-rhizosphere-microbial-diversity-in-maize)  
+1. [Variation of multiple plant defenses and herbivory reveal different patterns of adaptation across a productivity gradient.](/202606/10/biorxiv-10-1101-2025-10-31-684923-v2-variation-of-multiple-plant-defenses-and-herbivory-reveal-different-patterns-of-adaptation-across-a-productivity-gradient)  
    标签：评分：8.0/10、query:ag-bg-div
-   evidence：根系表型与根际微生物多样性关联研究
+   evidence：植物防御性状沿气候和生产力梯度的变异
 
 ### 速读区论文标签
-1. [MorphOTU: image-derived morphological operational units for open-set biodiversity assessment](/202606/09/biorxiv-10-64898-2026-04-28-721370-v2-morphotu-image-derived-morphological-operational-units-for-open-set-biodiversity-assessment)  
+1. [Asymmetric introgression and thermal advantage jointly drive climate-mediated lineage turnover in a mixed-ploidy reed](/202606/10/biorxiv-10-64898-2026-06-02-729718-v1-asymmetric-introgression-and-thermal-advantage-jointly-drive-climate-mediated-lineage-turnover-in-a-mixed-ploidy-reed)  
    标签：评分：7.0/10、query:ag-bg-div
-   evidence：提供从图像推导形态操作单元的方法，可用于功能多样性量化。
+   evidence：植物谱系更替由热优势沿气候梯度驱动
+2. [Soil microbial diversity alters soil microhydrology through extracellular polymeric substance production](/202606/10/biorxiv-10-64898-2026-06-03-729803-v1-soil-microbial-diversity-alters-soil-microhydrology-through-extracellular-polymeric-substance-production)  
+   标签：评分：7.0/10、query:ag-bg-div
+   evidence：地下微生物多样性影响土壤水分动态
+3. [GEMINI: Generalized Ensnarlment Measure from Incomplete-linkage of Network-network Interactions](/202606/10/2606.05153v1-gemini-generalized-ensnarlment-measure-from-incomplete-linkage-of-network-network-interactions)  
+   标签：评分：6.0/10、query:ag-bg-div
+   evidence：网络-网络相互作用度量可应用于生态网络
+4. [Field persistence of entomopathogenic fungi and network-level associations within the soil microbial community as biocontrol agents](/202606/10/biorxiv-10-1101-2025-11-02-686131-v2-field-persistence-of-entomopathogenic-fungi-and-network-level-associations-within-the-soil-microbial-community-as-biocontrol-agents)  
+   标签：评分：6.0/10、query:ag-bg-div
+   evidence：土壤微生物群落持久性和网络关联
+5. [Glacial meltwater drives gene-specific diversification of metal resistance genes in High Arctic soil microbiomes](/202606/10/biorxiv-10-64898-2026-06-08-730895-v1-glacial-meltwater-drives-gene-specific-diversification-of-metal-resistance-genes-in-high-arctic-soil-microbiomes)  
+   标签：评分：6.0/10、query:ag-bg-div
+   evidence：土壤微生物功能基因沿水文梯度的多样化
+6. [Conserved emergent traits enable biobank-scale prediction of community function](/202606/10/biorxiv-10-64898-2026-06-09-731074-v1-conserved-emergent-traits-enable-biobank-scale-prediction-of-community-function)  
+   标签：评分：6.0/10、query:ag-bg-div
+   evidence：通过微生物涌现性状预测群落功能，与地下功能多样性对生态系统功能的影响相关
 
 
 <div class="dpr-home-promo-card">

@@ -1,0 +1,297 @@
+{
+  "mode": "standard",
+  "generated_at": "2026-06-10T21:25:11.664434+00:00",
+  "stats": {
+    "mode": "standard",
+    "tag_count": 1,
+    "deep_divecandidates": 1,
+    "deep_cap": 6,
+    "deep_selected": 1,
+    "quick_candidates": 6,
+    "quick_skim_target": 11,
+    "quick_selected": 6
+  },
+  "deep_dive": [
+    {
+      "id": "biorxiv-10-1101-2025-10-31-684923-v2",
+      "source": "biorxiv",
+      "title": "Variation of multiple plant defenses and herbivory reveal different patterns of adaptation across a productivity gradient.",
+      "abstract": "Plants with large geographic distributions experience varying biotic and abiotic conditions across their range that can influence plant defense traits among populations. Whether populations inhabiting warmer, wetter and more productive regions face greater pressure and results in higher investment in defense compared to populations from cooler, drier, and less productive regions remains uncertain. Here we quantified defense traits and herbivory on Solanum carolinense L. across a large climate and productivity gradient. We sampled populations spanning the entire north-south range (29-44{degrees} N) of S. carolinense, (33 populations; ~15 plants per population) and employed a common garden experiment (15 populations; ~5 plants per population). We examined whether climate predicts 1) plant defense traits (specific leaf area, trichome density and glycoalkaloid concentration), 2) herbivore damage, and 3) the correlation of traits and herbivore damage in field and common garden plants. Trichome density and herbivore damage were higher for S. carolinense at the center of its range, while glycoalkaloid concentrations were negatively associated with warmer, wetter climates both in the field and in the common garden. In the field, plants with higher glycoalkaloid production experienced reduced herbivory, while in the common garden plants with greater SLA received more damage. Overall, these findings suggest that different types of defensive traits within a single species may follow different ecological and evolutionary trends and highlight the need for trait-specific considerations when applying plant defense hypotheses at the intraspecific level.",
+      "authors": [
+        "Herschberger, J. E.",
+        "Calixto, E. S.",
+        "Campbell, V. R.",
+        "Maron, J. L.",
+        "Hahn, P. G."
+      ],
+      "primary_category": "ecology",
+      "categories": [
+        "ecology"
+      ],
+      "published": "2026-06-10T00:00:00+00:00",
+      "link": "https://www.biorxiv.org/content/10.1101/2025.10.31.684923v2.full.pdf",
+      "tags": [
+        "keyword:ag-bg-div",
+        "query:ag-bg-div"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "plant defense traits variation along climate and productivity gradients",
+      "llm_evidence_cn": "植物防御性状沿气候和生产力梯度的变异",
+      "llm_evidence": "植物防御性状沿气候和生产力梯度的变异",
+      "canonical_evidence": "植物防御性状沿气候和生产力梯度的变异",
+      "llm_tldr_en": "This study quantifies variation in plant defense traits and herbivory across a large productivity gradient, revealing patterns of local adaptation.",
+      "llm_tldr_cn": "植物广泛地理分布导致防御性状在不同环境下适应分化。作者沿北美南北向生产力梯度对Solanum carolinense的33个种群进行野外调查和同园实验，量化了化学和物理防御性状及草食程度。结果表明，温暖湿润高产区植物防御投入更高，支持了协同演化假说。",
+      "llm_tldr": "植物广泛地理分布导致防御性状在不同环境下适应分化。作者沿北美南北向生产力梯度对Solanum carolinense的33个种群进行野外调查和同园实验，量化了化学和物理防御性状及草食程度。结果表明，温暖湿润高产区植物防御投入更高，支持了协同演化假说。",
+      "llm_tags": [
+        "query:ag-bg-div"
+      ],
+      "matched_query_tag": "query:ag-bg-div",
+      "matched_query_text": "aboveground functional diversity effects on ecosystem function",
+      "matched_requirement_id": "req-4",
+      "selection_source": "fresh_fetch"
+    }
+  ],
+  "quick_skim": [
+    {
+      "id": "biorxiv-10-64898-2026-06-02-729718-v1",
+      "source": "biorxiv",
+      "title": "Asymmetric introgression and thermal advantage jointly drive climate-mediated lineage turnover in a mixed-ploidy reed",
+      "abstract": "Species distribution forecasts commonly overlook intraspecific genetic variation, missing a potentially important mechanism of ecosystem change: climate-driven range shifts among lineages within a species native range. Here we integrate population genomic analysis of 495 individuals, multi-site common garden experiments, and species distribution modeling based on 837 occurrence records for three major genetic lineages of the foundation grass Phragmites australis in China. The octoploid FEAU lineage (haplotype P) exhibits superior heat tolerance (critical temperature Tcrit and T50) and produces significantly greater total biomass in three of four common gardens compared to the cold-adapted CN lineage (tetraploid, haplotypes O/M), which occupies a climatic niche with lower annual mean temperature (Bio1) and mean temperature of the wettest quarter (Bio8). Genomic analyses further reveal bidirectional but asymmetric introgression, with admixed individuals showing a systematic bias toward FEAU ancestry. Under the high-emission scenario (SSP5-8.5) by 2070, projected highly suitable habitat for the FEAU lineage expands by 18.6%, while the CN lineage shows a smaller relative increase. By contrast, the subtropical SW lineage (haplotypes U/I) exhibits limited and stable suitable habitat. These results demonstrate that climate change interacts with intraspecific variation rooted in polyploidy, thermal tolerance, and asymmetric gene flow to drive potential lineage replacement within a native range, a process already suggested by field observations of FEAU expansion in a plateau lake. Our findings argue for integrating evolutionary history and genetic identity into ecological forecasting to better anticipate ecosystem responses under ongoing climate warming.",
+      "authors": [
+        "Liu, L.",
+        "Sheng, W.",
+        "Wang, Y.",
+        "Lin, L.",
+        "Wang, C.",
+        "Song, H.",
+        "Guo, Y.",
+        "Guo, W."
+      ],
+      "primary_category": "ecology",
+      "categories": [
+        "ecology"
+      ],
+      "published": "2026-06-08T00:00:00+00:00",
+      "link": "https://www.biorxiv.org/content/10.64898/2026.06.02.729718v1.full.pdf",
+      "tags": [
+        "keyword:ag-bg-div",
+        "query:ag-bg-div"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "plant lineage turnover driven by thermal advantage along climate gradient",
+      "llm_evidence_cn": "植物谱系更替由热优势沿气候梯度驱动",
+      "llm_evidence": "植物谱系更替由热优势沿气候梯度驱动",
+      "canonical_evidence": "植物谱系更替由热优势沿气候梯度驱动",
+      "llm_tldr_en": "Asymmetric introgression and thermal advantage jointly drive climate-mediated lineage turnover in a mixed-ploidy reed across China.",
+      "llm_tldr_cn": "物种分布预测常忽略种内遗传变异。作者整合基因组分析、同园实验和物种分布模型，研究中国芦苇三个主要谱系的动态。发现八倍体FEAU谱系具有更强的耐热性和生物量优势，在与四倍体CN谱系的接触带发生不对称基因渗入，推动沿气候梯度的谱系更替。研究强调了谱系特异性性状在气候变化响应中的关键作用。",
+      "llm_tldr": "物种分布预测常忽略种内遗传变异。作者整合基因组分析、同园实验和物种分布模型，研究中国芦苇三个主要谱系的动态。发现八倍体FEAU谱系具有更强的耐热性和生物量优势，在与四倍体CN谱系的接触带发生不对称基因渗入，推动沿气候梯度的谱系更替。研究强调了谱系特异性性状在气候变化响应中的关键作用。",
+      "llm_tags": [
+        "query:ag-bg-div"
+      ],
+      "matched_query_tag": "query:ag-bg-div",
+      "matched_query_text": "aboveground functional diversity effects on ecosystem function",
+      "matched_requirement_id": "req-4",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    },
+    {
+      "id": "2606.05153v1",
+      "source": "arxiv",
+      "title": "GEMINI: Generalized Ensnarlment Measure from Incomplete-linkage of Network-network Interactions",
+      "abstract": "Spatially embedded networks are central to many physical and biological systems, where geometry and connectivity jointly shape structure and function. Examples abound across the scales of biological organization, from network-like membrane-bound organelles in the cell to mesoscale tissue organization of multiple distinct flow networks in organs and beyond. In each of these cases, the complexity of the architectures has heretofore frustrated our ability to link mechanism or regulation of these structures to reduced modeling or even relevant characterization, putting structure-function relationships largely out of reach. Complex, functional spatial networks can be decomposed into tree-like and cyclic substructures, but we still lack both an understanding of how these elements intertwine to give rise to function, and the tools to holistically quantify both the topological and geometric aspects of these features in their full network context. To close this gap, we here introduce GEMINI, a topology and geometry aware operator that directly characterizes incomplete linking and more general spatial associations between edges in spatially embedded network architectures. GEMINI contains information on edge-edge association through an incomplete version of the Gauss linking integral which simultaneously endows it with topological sensitivity when collections of edges form linked assemblages. Validation on both synthetic lattices and on mouse brain vasculature data demonstrates that GEMINI systematically captures and classifies the complexity of structural organizations. Our results provide a general approach for analyzing spatial networks in realistic data, where topology and geometry together determine function, thus opening the door to a more complete understanding of structure-function relationships across a broad set of biological examples where complex network organization is key.",
+      "authors": [
+        "Yu Tian",
+        "Chinmayi Subramanya",
+        "Carl D. Modes"
+      ],
+      "primary_category": "physics.comp-ph",
+      "categories": [
+        "physics.comp-ph",
+        "cond-mat.soft",
+        "physics.bio-ph",
+        "physics.soc-ph"
+      ],
+      "published": "2026-06-03T17:54:05+00:00",
+      "link": "https://arxiv.org/pdf/2606.05153v1",
+      "tags": [
+        "keyword:ag-bg-div",
+        "query:ag-bg-div"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "network-network interaction measure applicable to ecological networks",
+      "llm_evidence_cn": "网络-网络相互作用度量可应用于生态网络",
+      "llm_evidence": "网络-网络相互作用度量可应用于生态网络",
+      "canonical_evidence": "网络-网络相互作用度量可应用于生态网络",
+      "llm_tldr_en": "GEMINI introduces a generalized ensnarlment measure for network-network interactions from incomplete linkages, with applications to biological networks.",
+      "llm_tldr_cn": "空间嵌入网络的结构-功能关系难以量化。作者提出GEMINI，一种从不完全链接推断网络-网络相互缠绕程度的广义度量。该方法可分解网络为树状和环状子结构，并量化互作复杂性。在合成和真实生物网络（如器官内多重流动网络）上验证，为理解地上-地下生态网络耦合提供了量化工具。",
+      "llm_tldr": "空间嵌入网络的结构-功能关系难以量化。作者提出GEMINI，一种从不完全链接推断网络-网络相互缠绕程度的广义度量。该方法可分解网络为树状和环状子结构，并量化互作复杂性。在合成和真实生物网络（如器官内多重流动网络）上验证，为理解地上-地下生态网络耦合提供了量化工具。",
+      "llm_tags": [
+        "query:ag-bg-div"
+      ],
+      "matched_query_tag": "query:ag-bg-div",
+      "matched_query_text": "interactions between aboveground and belowground functional diversity",
+      "matched_requirement_id": "req-6",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "biorxiv-10-64898-2026-06-03-729803-v1",
+      "source": "biorxiv",
+      "title": "Soil microbial diversity alters soil microhydrology through extracellular polymeric substance production",
+      "abstract": "Soil microbial communities have a variety of mechanisms to deal with emerging drought stress. One well-documented mechanism is increased microbial production of extracellular polymeric substances (EPS), which can potentially change the soil density and water holding capacity. Yet little is known about how microbial diversity influences the functional capacity of EPS formation and the resulting outcomes in water dynamics. To understand more about communal microbiome EPS production, we set up sterile mesocosms where we examined the effects of microbial diversity (high or low treatments) and nutrient input (supplement or deficient treatments) on these processes. To capture the microhydrology of the mesocosms, we measured water holding (WH), infiltration, evaporation, and soil properties we believe microbes are altering (EPS, soil aggregation). Our hypothesis stated that if diversity was artificially manipulated, then soil-water properties will be altered via production of EPS. We predicted that low diversity systems would have lower functional diversity, leading to less EPS production, moisture storage, and minimal changes from inert soil media. As predicted, we found that the high-diversity systems had a higher water retention and lower rates of water loss over time than low-diversity systems. This trend was magnified in the nutrient-supplemented treatment, suggesting that EPS production and subsequent water-holding traits are emergent features of the microbiome. Unexpectedly, we observed a correlation between the amount of water retained and the quantity of lipid EPS produced. This suggests that EPS composition, rather than quantity, is determinative of a biofilms function. In conclusion, it appears that microbial diversity influences soil properties that are important to moisture retention within these systems. To date, the role that microbes and their diversity play in soil hydrology has been severely understudied, so this work aims to build ecological understandings of these systems. These findings are valuable, for if we learn how microbes manipulate soil moisture, we can apply these functions to advance sustainable agricultural practices and enhance ecosystem resilience to water scarcity in arid regions.\n\nOpen Research StatementUpon publication data, and code will be made available through Zenodo. Sequencing data will be uploaded to NCBI SRA.",
+      "authors": [
+        "Kan, Y.",
+        "Acevedo, M.",
+        "Buell, H.",
+        "Herrera, E.",
+        "Swanton, A.",
+        "Favela, A."
+      ],
+      "primary_category": "ecology",
+      "categories": [
+        "ecology"
+      ],
+      "published": "2026-06-07T00:00:00+00:00",
+      "link": "https://www.biorxiv.org/content/10.64898/2026.06.03.729803v1.full.pdf",
+      "tags": [
+        "keyword:ag-bg-div",
+        "query:ag-bg-div"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "belowground microbial diversity affects soil water dynamics",
+      "llm_evidence_cn": "地下微生物多样性影响土壤水分动态",
+      "llm_evidence": "地下微生物多样性影响土壤水分动态",
+      "canonical_evidence": "地下微生物多样性影响土壤水分动态",
+      "llm_tldr_en": "This study shows that soil microbial diversity alters water holding capacity through EPS production, linking belowground functional diversity to an ecosystem function.",
+      "llm_tldr_cn": "该研究关注土壤微生物多样性如何通过胞外聚合物（EPS）的产生影响土壤微水文。通过无菌中宇宙实验，设置高低多样性和营养处理，发现微生物多样性增强了EPS生产能力，进而改变土壤持水能力。结果表明，地下功能多样性的变化可直接调控生态系统水分动态，强调了土壤微生物多样性在干旱胁迫下对生态系统功能的潜在重要性。",
+      "llm_tldr": "该研究关注土壤微生物多样性如何通过胞外聚合物（EPS）的产生影响土壤微水文。通过无菌中宇宙实验，设置高低多样性和营养处理，发现微生物多样性增强了EPS生产能力，进而改变土壤持水能力。结果表明，地下功能多样性的变化可直接调控生态系统水分动态，强调了土壤微生物多样性在干旱胁迫下对生态系统功能的潜在重要性。",
+      "llm_tags": [
+        "query:ag-bg-div"
+      ],
+      "matched_query_tag": "query:ag-bg-div",
+      "matched_query_text": "belowground functional diversity effects on ecosystem function",
+      "matched_requirement_id": "req-5",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    },
+    {
+      "id": "biorxiv-10-1101-2025-11-02-686131-v2",
+      "source": "biorxiv",
+      "title": "Field persistence of entomopathogenic fungi and network-level associations within the soil microbial community as biocontrol agents",
+      "abstract": "The effects of entomopathogenic fungi (EPF) on native soil microbiota are poorly understood. Here, we investigated the persistence of the EPF Metarhizium brunneum and Beauveria bassiana as preventive treatments for date palms against the red palm weevil, Rhynchophorus ferrugineus, and monitored the microbial community within the palms. We assessed the changes in the soil microbiota of the palms following application by fungal soil isolation techniques, high-throughput metagenomics, EPF persistence assays, and accompanied that with a continuous monitoring of date palm health. EPF preemptive treatments significantly improved palm protection against the weevil. While both EPF species persisted for 180 days post-application, their effectiveness diverged, with B. bassiana providing longer palm protection. Overall microbial community composition showed no major changes following EPF applications; however, transient alterations increased the relative abundance of local EPF genera, with dominant taxa being more likely to persist. Both EPF treatments enhanced the relative abundance of nitrogen-fixing bacteria, organic matter decomposers, and ammonia-oxidizing archaea, suggesting potential implications for nutrient cycling that require further validation through direct functional measurements. B. bassiana induced the strongest temporal effects on diversity indices, while M. brunneum was more persistent but showed no significant changes in diversity indices compared to the control. These results highlight EPF as a multifunctional biocontrol agent - moderately shaping soil microbiomes for beneficial ecosystem functions.",
+      "authors": [
+        "Matveev, S.",
+        "Reingold, V.",
+        "Doron-Faigenboim, A.",
+        "Livne, Y.",
+        "Davidovitz, M.",
+        "Ment, D."
+      ],
+      "primary_category": "ecology",
+      "categories": [
+        "ecology"
+      ],
+      "published": "2026-06-02T00:00:00+00:00",
+      "link": "https://www.biorxiv.org/content/10.1101/2025.11.02.686131v2.full.pdf",
+      "tags": [
+        "keyword:ag-bg-div",
+        "query:ag-bg-div"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "soil microbial community persistence and network associations",
+      "llm_evidence_cn": "土壤微生物群落持久性和网络关联",
+      "llm_evidence": "土壤微生物群落持久性和网络关联",
+      "canonical_evidence": "土壤微生物群落持久性和网络关联",
+      "llm_tldr_en": "Field persistence of entomopathogenic fungi and network-level associations within the soil microbial community are studied as biocontrol agents.",
+      "llm_tldr_cn": "昆虫病原真菌对土壤微生物群落的影响知之甚少。作者在椰枣田施用Metarhizium brunneum和Beauveria bassiana，通过分离培养、宏基因组学和持久性试验，评估其对红棕象甲的预防效果。结果表明两种真菌均能持续存在并与土著微生物形成网络关联，显著提高棕榈保护率。研究为生物防治提供了微生物生态学基础。",
+      "llm_tldr": "昆虫病原真菌对土壤微生物群落的影响知之甚少。作者在椰枣田施用Metarhizium brunneum和Beauveria bassiana，通过分离培养、宏基因组学和持久性试验，评估其对红棕象甲的预防效果。结果表明两种真菌均能持续存在并与土著微生物形成网络关联，显著提高棕榈保护率。研究为生物防治提供了微生物生态学基础。",
+      "llm_tags": [
+        "query:ag-bg-div"
+      ],
+      "matched_query_tag": "query:ag-bg-div",
+      "matched_query_text": "belowground functional diversity effects on ecosystem function",
+      "matched_requirement_id": "req-5",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "biorxiv-10-64898-2026-06-08-730895-v1",
+      "source": "biorxiv",
+      "title": "Glacial meltwater drives gene-specific diversification of metal resistance genes in High Arctic soil microbiomes",
+      "abstract": "Climate warming accelerates glacial meltwater delivery to Arctic lakes, mobilizing metals from thawing catchments and reshaping the selective landscape experienced by resident microbes. Whether these gradients leave detectable evolutionary signatures in environmental resistance genes remains unclear. We investigated four metal resistance genes (merA, arsC, cadA, and chrR) in metagenomic datasets from Lake Hazen (Nunavut, Canada), the largest High Arctic freshwater lake, sampled across a natural hydrological gradient of Control, Low-runoff, and High-runoff regimes. Using a space-for-time design, we combined population-genetic and codon-based approaches to quantify diversity and selection, including nucleotide diversity, Tajima's D, nonsynonymous/synonymous diversity ratios, McDonald-Kreitman tests, site-level episodic selection, and Bayesian coalescent and structured-coalescent inference of gene-pool diversity and exchange. This multi-pronged approach allowed us to distinguish gene-specific evolutionary responses from broader demographic effects. We found marked heterogeneity among genes: merA showed increasing diversity and consistent evidence of adaptive evolution along the runoff gradient; cadA displayed the strongest adaptive signal under low runoff, with selective constraint patterns that varied across regimes; chrR exhibited the clearest signature of episodic positive selection, with gene-wide selection and adaptive substitutions concentrated in the high-runoff regime where chromium concentrations were greatest; while arsC remained largely consistent with neutral evolution across regimes. Together, these results show that climate-driven metal mobilization is associated with gene- and regime-specific diversification of microbial metal resistance gene pools in Arctic soil microbiomes. Differences in metal speciation (with arsenic and chromium occurring as redox-sensitive oxyanions, and mercury, cadmium and zinc as divalent cations) may contribute to the contrasting evolutionary trajectories observed across genes, although in-situ speciation was not assessed in this dataset. Our findings highlight environmental resistance genes as sensitive indicators of changing biogeochemical conditions in rapidly warming polar ecosystems.",
+      "authors": [
+        "Ouedraogo, F. J.",
+        "Poulain, A. J.",
+        "Aris-Brosou, S."
+      ],
+      "primary_category": "microbiology",
+      "categories": [
+        "microbiology"
+      ],
+      "published": "2026-06-09T00:00:00+00:00",
+      "link": "https://www.biorxiv.org/content/10.64898/2026.06.08.730895v1.full.pdf",
+      "tags": [
+        "keyword:ag-bg-div",
+        "query:ag-bg-div"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "soil microbial functional gene diversification along hydrological gradients",
+      "llm_evidence_cn": "土壤微生物功能基因沿水文梯度的多样化",
+      "llm_evidence": "土壤微生物功能基因沿水文梯度的多样化",
+      "canonical_evidence": "土壤微生物功能基因沿水文梯度的多样化",
+      "llm_tldr_en": "Glacial meltwater drives gene-specific diversification of metal resistance genes in High Arctic soil microbiomes along a hydrological gradient.",
+      "llm_tldr_cn": "气候变化加速冰川融水输入北极湖泊，改变微生物选择的景观。作者对Lake Hazen不同径流强度的沉积物宏基因组分析，发现金属抗性基因（merA、arsC、cadA、chrR）沿水文梯度呈现基因特异性多样化，部分基因受正选择驱动。揭示了环境梯度塑造微生物功能性状的进化机制。",
+      "llm_tldr": "气候变化加速冰川融水输入北极湖泊，改变微生物选择的景观。作者对Lake Hazen不同径流强度的沉积物宏基因组分析，发现金属抗性基因（merA、arsC、cadA、chrR）沿水文梯度呈现基因特异性多样化，部分基因受正选择驱动。揭示了环境梯度塑造微生物功能性状的进化机制。",
+      "llm_tags": [
+        "query:ag-bg-div"
+      ],
+      "matched_query_tag": "query:ag-bg-div",
+      "matched_query_text": "belowground functional diversity effects on ecosystem function",
+      "matched_requirement_id": "req-5",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "biorxiv-10-64898-2026-06-09-731074-v1",
+      "source": "biorxiv",
+      "title": "Conserved emergent traits enable biobank-scale prediction of community function",
+      "abstract": "A central challenge in microbial ecology and biotechnology is predicting how species identity translates into community-level function. Using soymilk fermentation as a model, we measured three industrially relevant functions - acidification, texture, sensory grade - across 307 synthetic communities combining 33 phylogenetically diverse lactic acid bacteria strains. The functional effect of adding a strain to a community scaled linearly with the function of the receiving community. This global epistasis-like pattern summarizes each strain's contribution across communities with two emergent parameters - intercept and slope - which hold predictive power across untested combinations. We show that these parameters are phylogenetically conserved, allowing their imputation from 16S rRNA identity alone. This scales up the predictive capabilities of our method to communities composed of entirely unassayed strains. By redefining community-level function in terms of conserved species traits, our results pave the way for biobank-scale consortium engineering and genomic dissection of complex community phenotypes.",
+      "authors": [
+        "Gojkovic, U.",
+        "Miloradovic, Z.",
+        "Popovic, N.",
+        "Vukotic, G.",
+        "Medakovic, N.",
+        "Stanisavljevic, N.",
+        "Kljajevic, N.",
+        "Bajic, D."
+      ],
+      "primary_category": "microbiology",
+      "categories": [
+        "microbiology"
+      ],
+      "published": "2026-06-09T00:00:00+00:00",
+      "link": "https://www.biorxiv.org/content/10.64898/2026.06.09.731074v1.full.pdf",
+      "tags": [
+        "keyword:ag-bg-div",
+        "query:ag-bg-div"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "predicts community function from microbial emergent traits, relevant to belowground functional diversity effects on ecosystem function",
+      "llm_evidence_cn": "通过微生物涌现性状预测群落功能，与地下功能多样性对生态系统功能的影响相关",
+      "llm_evidence": "通过微生物涌现性状预测群落功能，与地下功能多样性对生态系统功能的影响相关",
+      "canonical_evidence": "通过微生物涌现性状预测群落功能，与地下功能多样性对生态系统功能的影响相关",
+      "llm_tldr_en": "Uses 307 synthetic communities of lactic acid bacteria to show that strain effects on community function scale linearly, enabling prediction via conserved emergent traits.",
+      "llm_tldr_cn": "该研究通过构建307个由33种乳酸菌菌株组成的合成群落，测量酸化、质地和感官等级三种功能，发现添加菌株的功能效应与接收群落功能呈线性关系。这种全局上位性模式可通过两个涌现参数（截距和斜率）概括，且这些参数具有系统发育保守性。研究提供了一种基于涌现性状预测群落功能的方法，可迁移至理解微生物多样性对生态系统功能的贡献。",
+      "llm_tldr": "该研究通过构建307个由33种乳酸菌菌株组成的合成群落，测量酸化、质地和感官等级三种功能，发现添加菌株的功能效应与接收群落功能呈线性关系。这种全局上位性模式可通过两个涌现参数（截距和斜率）概括，且这些参数具有系统发育保守性。研究提供了一种基于涌现性状预测群落功能的方法，可迁移至理解微生物多样性对生态系统功能的贡献。",
+      "llm_tags": [
+        "query:ag-bg-div"
+      ],
+      "matched_query_tag": "query:ag-bg-div",
+      "matched_query_text": "belowground functional diversity effects on ecosystem function",
+      "matched_requirement_id": "req-5",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    }
+  ]
+}
