@@ -6,43 +6,35 @@
 </div>
 
 ## 每次日报
-- 最新运行日期：2026-06-10
-- 运行时间：2026-06-10 21:27:19 UTC
+- 最新运行日期：2026-06-11
+- 运行时间：2026-06-11 21:32:16 UTC
 - 运行状态：成功
-- 本次总论文数：7
-- 精读区：1
-- 速读区：6
+- 本次总论文数：4
+- 精读区：0
+- 速读区：4
 
 ### 今日简报（AI）
-1) 今日精读1篇关于植物防御梯度适应的高分论文，速读6篇涵盖芦苇基因渗入、土壤微生物与网络度量等生态热点。
-2) 最值得关注：精读揭示植物多防御策略在生产力梯度下的适应性分化；速读指出土壤微生物胞外聚合物能改变微水文，以及不对称基因渗入驱动芦苇谱系更替。
-3) 建议优先深读精读论文，理解环境梯度下的生态权衡机制，速读可快速抓住微生物-水文耦合与杂交优势两大前沿。
-- 详情：[/202606/10/README](/202606/10/README)
+今日阅读4篇生态学与空间数据分析论文，聚焦于多物种空间特征、河流生态系统通量及代谢多样性评估。  
+推荐关注多物种空间数据的基于量级特征方法，以及eCOMET R包用于从LC-MS/MS数据测试生态假说。  
+建议尝试应用eCOMET R包分析个人样本数据，以评估代谢多样性与生态系统功能关系。
+- 详情：[/202606/11/README](/202606/11/README)
 
 ### 精读区论文标签
-1. [Variation of multiple plant defenses and herbivory reveal different patterns of adaptation across a productivity gradient.](/202606/10/biorxiv-10-1101-2025-10-31-684923-v2-variation-of-multiple-plant-defenses-and-herbivory-reveal-different-patterns-of-adaptation-across-a-productivity-gradient)  
-   标签：评分：8.0/10、query:ag-bg-div
-   evidence：植物防御性状沿气候和生产力梯度的变异
+- 本次无精读推荐。
 
 ### 速读区论文标签
-1. [Asymmetric introgression and thermal advantage jointly drive climate-mediated lineage turnover in a mixed-ploidy reed](/202606/10/biorxiv-10-64898-2026-06-02-729718-v1-asymmetric-introgression-and-thermal-advantage-jointly-drive-climate-mediated-lineage-turnover-in-a-mixed-ploidy-reed)  
-   标签：评分：7.0/10、query:ag-bg-div
-   evidence：植物谱系更替由热优势沿气候梯度驱动
-2. [Soil microbial diversity alters soil microhydrology through extracellular polymeric substance production](/202606/10/biorxiv-10-64898-2026-06-03-729803-v1-soil-microbial-diversity-alters-soil-microhydrology-through-extracellular-polymeric-substance-production)  
-   标签：评分：7.0/10、query:ag-bg-div
-   evidence：地下微生物多样性影响土壤水分动态
-3. [GEMINI: Generalized Ensnarlment Measure from Incomplete-linkage of Network-network Interactions](/202606/10/2606.05153v1-gemini-generalized-ensnarlment-measure-from-incomplete-linkage-of-network-network-interactions)  
+1. [Magnitude-Based Features for Multispecies Spatial Data](/202606/11/2606.11775v1-magnitude-based-features-for-multispecies-spatial-data)  
    标签：评分：6.0/10、query:ag-bg-div
-   evidence：网络-网络相互作用度量可应用于生态网络
-4. [Field persistence of entomopathogenic fungi and network-level associations within the soil microbial community as biocontrol agents](/202606/10/biorxiv-10-1101-2025-11-02-686131-v2-field-persistence-of-entomopathogenic-fungi-and-network-level-associations-within-the-soil-microbial-community-as-biocontrol-agents)  
+   evidence：基于magnitude的多物种空间数据特征
+2. [Modelling biological and resource fluxes in fluvial meta-ecosystems](/202606/11/biorxiv-10-1101-2024-01-12-575367-v3-modelling-biological-and-resource-fluxes-in-fluvial-meta-ecosystems)  
    标签：评分：6.0/10、query:ag-bg-div
-   evidence：土壤微生物群落持久性和网络关联
-5. [Glacial meltwater drives gene-specific diversification of metal resistance genes in High Arctic soil microbiomes](/202606/10/biorxiv-10-64898-2026-06-08-730895-v1-glacial-meltwater-drives-gene-specific-diversification-of-metal-resistance-genes-in-high-arctic-soil-microbiomes)  
+   evidence：跨生态系统资源与生物通量建模
+3. [eCOMET: An R package for evaluating metabolic diversity and enrichment from LC-MS/MS data to test ecological hypotheses from individuals to ecosystems](/202606/11/biorxiv-10-64898-2026-06-02-729701-v1-ecomet-an-r-package-for-evaluating-metabolic-diversity-and-enrichment-from-lc-msms-data-to-test-ecological-hypotheses-from-individuals-to-ecosystems)  
    标签：评分：6.0/10、query:ag-bg-div
-   evidence：土壤微生物功能基因沿水文梯度的多样化
-6. [Conserved emergent traits enable biobank-scale prediction of community function](/202606/10/biorxiv-10-64898-2026-06-09-731074-v1-conserved-emergent-traits-enable-biobank-scale-prediction-of-community-function)  
+   evidence：代谢多样性分析R包，与植物功能多样性评估相关
+4. [Phylogenetic coherence in microbiome composition across environmental gradients](/202606/11/biorxiv-10-64898-2026-06-07-730742-v1-phylogenetic-coherence-in-microbiome-composition-across-environmental-gradients)  
    标签：评分：6.0/10、query:ag-bg-div
-   evidence：通过微生物涌现性状预测群落功能，与地下功能多样性对生态系统功能的影响相关
+   evidence：微生物组跨环境梯度的系统发育一致性，使用CCA
 
 
 <div class="dpr-home-promo-card">

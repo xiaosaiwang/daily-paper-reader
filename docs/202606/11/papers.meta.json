@@ -1,0 +1,69 @@
+{
+  "label": "2026-06-11",
+  "date": "2026-06-11",
+  "generated_at": "2026-06-11T21:32:25",
+  "count": 4,
+  "papers": [
+    {
+      "paper_id": "202606/11/2606.11775v1-magnitude-based-features-for-multispecies-spatial-data",
+      "section": "quick",
+      "title_en": "Magnitude-Based Features for Multispecies Spatial Data",
+      "authors": "Julia Sollberger, Joshua Bull, Sara Kališnik, Bernadette Stolz",
+      "date": "2026-06-10",
+      "pdf": "https://arxiv.org/pdf/2606.11775v1",
+      "score": "6.0",
+      "evidence": "基于magnitude的多物种空间数据特征",
+      "tldr": "多物种空间数据在生物医学成像、地理分析等领域至关重要，但缺乏定量分析工具。本文提出基于Magnitude的特征，Magnitude是有限度量空间的实值不变式，可解释为有效点数。在合成肿瘤微环境和人类结直肠癌数据上，局部特征识别不同邻域类型和空间异质性，全局特征恢复已知分类并区分患者预后。该方法为多物种空间数据分析提供了强大灵活的新工具。",
+      "tags": "query:ag-bg-div",
+      "abstract_en": "Multispecies spatial data arise in many applications where interactions between different entities are central to system behaviour, including biomedical imaging, geospatial analysis, and species ecology. Despite their importance, relatively few quantitative tools exist to capture such interactions. In this work, we propose magnitude-based features for the analysis of multispecies spatial data. Magnitude is a real-valued invariant of finite metric spaces that can be interpreted as an effective number of points, incorporating both spatial configuration and scale. We develop global and local magnitude feature vectors and demonstrate their utility on synthetic tumour microenvironment data, and in tissue microarray data from human colorectal cancer samples. Locally, the method identifies distinct neighbourhood types and reveals spatial heterogeneity; in the model, this includes radial patterns associated with different qualitative outcomes of the simulations, while in the real-world data it reflects the importance of tertiary lymphoid structure-like interactions between B and T cell populations. Globally, the approach recovers known classifications of long-term simulation outcomes across parameter regimes in synthetic data, and suggests important roles for CD4+ T cells and CD163+ macrophages in distinguishing patients with favourable Crohn's like reactions from unfavourable diffuse immune infiltration. Together, these results suggest that magnitude-based features provide a powerful and flexible tool for the analysis of multispecies spatial data.",
+      "source": "arxiv",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "paper_id": "202606/11/biorxiv-10-1101-2024-01-12-575367-v3-modelling-biological-and-resource-fluxes-in-fluvial-meta-ecosystems",
+      "section": "quick",
+      "title_en": "Modelling biological and resource fluxes in fluvial meta-ecosystems",
+      "authors": "Talluto, L., del Campo, R., Estevez, E., Fuss, T., Thuile Bistarelli, L., Martini, J., Singer, G. A.",
+      "date": "2026-06-04",
+      "pdf": "https://www.biorxiv.org/content/10.1101/2024.01.12.575367v3.full.pdf",
+      "score": "6.0",
+      "evidence": "跨生态系统资源与生物通量建模",
+      "tldr": "河流生态系统中，跨生态系统的能量、养分和生物流动对群落组装和功能至关重要，但现有模型未能同时考虑资源和生物流及其反馈。本文提出一个耦合资源和生物流的数学模型，并开发R包，用于模拟河流网络中的分布动态和反馈作用。计算机实验验证了模型能预测分布并揭示反馈机制。该研究为meta-ecosystem理论在河流中的应用提供了实用工具，促进理解生物多样性与生态系统功能的关联。",
+      "tags": "query:ag-bg-div",
+      "abstract_en": "Meta-ecosystem theory predicts that cross-ecosystem flows of energy, nutrients, and organisms have important implications for local community assembly and ecosystem functioning. Developments in the theory also have the potential to enhance our understanding of biodiversity-ecosystem functioning relationships. Meta-ecosystem theory is particularly well-suited to the study of rivers, because water flow forces strong spatial interrelationships among connected ecosystems. However, models that address flows of both resources and organisms and explicitly link both are lacking. We present a model and associated R-package for cross-ecosystem flows of both resources and organisms that can be used to predict their distribution in river networks, as well as meta-ecosystem functioning. The model incorporates feedbacks between these two crucial components--resource concentrations represent niche dimensions for organisms, modifying the colonisation and extinction dynamics and different locations in the network, and organisms also consume resources, thereby modifying the concentrations that are transported downstream. To illustrate the capabilities of the model, we present an in silico experiment and analysis, as well as providing sample code.",
+      "source": "biorxiv",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "paper_id": "202606/11/biorxiv-10-64898-2026-06-02-729701-v1-ecomet-an-r-package-for-evaluating-metabolic-diversity-and-enrichment-from-lc-msms-data-to-test-ecological-hypotheses-from-individuals-to-ecosystems",
+      "section": "quick",
+      "title_en": "eCOMET: An R package for evaluating metabolic diversity and enrichment from LC-MS/MS data to test ecological hypotheses from individuals to ecosystems",
+      "authors": "Choi, M.-S., Forrister, D. L., Dury, G. J., Kang, K. B., Sedio, B. E., Joo, Y.",
+      "date": "2026-06-05",
+      "pdf": "https://www.biorxiv.org/content/10.64898/2026.06.02.729701v1.full.pdf",
+      "score": "6.0",
+      "evidence": "代谢多样性分析R包，与植物功能多样性评估相关",
+      "tldr": "生态代谢组学研究中，整合多种生物信息学工具的输出存在工作流瓶颈，阻碍了研究者应用。eCOMET R包将特征元数据、量化表、相异矩阵和注释统一为数据对象，支持多样性度量和差异积累分析。该工具降低了代谢组学在生态学、进化和行为学领域的使用门槛，为揭示植物代谢物的生态功能和进化影响提供新途径。",
+      "tags": "query:ag-bg-div",
+      "abstract_en": "O_LIMethods in metabolomics have grown exponentially in recent years, providing new insight into the ecological function and evolutionary impact of diverse plant metabolites. Metabolomics requires a command of numerous tools, the outputs of which are typically integrated through in-house, custom code that presents a workflow bottleneck and a barrier to entry for researchers in ecology, evolution, and behavior who may benefit from adding a metabolomics perspective to their research.\nC_LIO_LIWe introduce eCOMET, an R package for integrating and harmonizing the outputs of common metabolomics bioinformatics tools and conducting statistical analyses and data visualization methods useful for ecological metabolomics.\nC_LIO_LIOur package combines metabolome feature metadata with quantification tables (e.g., mzmine), feature dissimilarity matrices (e.g., modified cosine and DreaMS), and feature annotations (e.g., SIRIUS) into a cohesive R data object to facilitate downstream analyses, including the calculation of diversity and disparity metrics and differential accumulation analysis.\nC_LIO_LIOur goal is to make metabolomics accessible to a wider range of researchers in ecology, evolution, and behavior to unlock the potential of ecological metabolomics to generate novel insight in these fields.\nC_LI",
+      "source": "biorxiv",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "paper_id": "202606/11/biorxiv-10-64898-2026-06-07-730742-v1-phylogenetic-coherence-in-microbiome-composition-across-environmental-gradients",
+      "section": "quick",
+      "title_en": "Phylogenetic coherence in microbiome composition across environmental gradients",
+      "authors": "Chakraverti-Wuerthwein, M. S., Domenig, A., Kuehn, S.",
+      "date": "2026-06-11",
+      "pdf": "https://www.biorxiv.org/content/10.64898/2026.06.07.730742v1.full.pdf",
+      "score": "6.0",
+      "evidence": "微生物组跨环境梯度的系统发育一致性，使用CCA",
+      "tldr": "全球微生物组调查表明环境变量如深度和pH决定群落组成，但缺乏对性状进化保守性的理解。本研究利用CCA分析土壤和海洋微生物组，发现主要环境梯度方向呈现强系统发育信号，物种响应相似于共享进化史的分类群。而次要方向信号弱或无。这揭示了微生物群落组装的两尺度视图：深度保守的性状主导主要环境驱动，进化易变的性状驱动额外变化。",
+      "tags": "query:ag-bg-div",
+      "abstract_en": "Global surveys of microbial communities across biomes have shown that environmental variables such as depth and pH are strong determinants of community composition. However, we do not understand how the traits of individual taxa, and their evolutionary conservation, conspire to give rise to these patterns. Exploiting large-scale surveys of top soil and marine microbiomes, we use canonical correlation analysis (CCA) to concurrently infer directions of environmental variation and the associated compositional changes. We find that the primary canonical direction, capturing the dominant environmental gradient, exhibits a strong phylogenetic signal: individual species' responses to environmental shifts along this direction are similar among taxa with shared evolutionary history. In contrast, secondary canonical directions show weak or no phylogenetic structure. Together, these results suggest a two-scale view of microbial community assembly. Deeply evolutionarily conserved traits govern community reorganization along the main environmental driver of community composition. Additional environmentally driven changes in community composition then reflect traits that are more evolutionarily labile.",
+      "source": "biorxiv",
+      "selection_source": "fresh_fetch"
+    }
+  ],
+  "errors": []
+}

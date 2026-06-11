@@ -1,0 +1,175 @@
+{
+  "mode": "standard",
+  "generated_at": "2026-06-11T21:27:00.412456+00:00",
+  "stats": {
+    "mode": "standard",
+    "tag_count": 1,
+    "deep_divecandidates": 0,
+    "deep_cap": 6,
+    "deep_selected": 0,
+    "quick_candidates": 4,
+    "quick_skim_target": 11,
+    "quick_selected": 4
+  },
+  "deep_dive": [],
+  "quick_skim": [
+    {
+      "id": "2606.11775v1",
+      "source": "arxiv",
+      "title": "Magnitude-Based Features for Multispecies Spatial Data",
+      "abstract": "Multispecies spatial data arise in many applications where interactions between different entities are central to system behaviour, including biomedical imaging, geospatial analysis, and species ecology. Despite their importance, relatively few quantitative tools exist to capture such interactions. In this work, we propose magnitude-based features for the analysis of multispecies spatial data. Magnitude is a real-valued invariant of finite metric spaces that can be interpreted as an effective number of points, incorporating both spatial configuration and scale. We develop global and local magnitude feature vectors and demonstrate their utility on synthetic tumour microenvironment data, and in tissue microarray data from human colorectal cancer samples. Locally, the method identifies distinct neighbourhood types and reveals spatial heterogeneity; in the model, this includes radial patterns associated with different qualitative outcomes of the simulations, while in the real-world data it reflects the importance of tertiary lymphoid structure-like interactions between B and T cell populations. Globally, the approach recovers known classifications of long-term simulation outcomes across parameter regimes in synthetic data, and suggests important roles for CD4+ T cells and CD163+ macrophages in distinguishing patients with favourable Crohn's like reactions from unfavourable diffuse immune infiltration. Together, these results suggest that magnitude-based features provide a powerful and flexible tool for the analysis of multispecies spatial data.",
+      "authors": [
+        "Julia Sollberger",
+        "Joshua Bull",
+        "Sara Kališnik",
+        "Bernadette Stolz"
+      ],
+      "primary_category": "math.MG",
+      "categories": [
+        "math.MG",
+        "q-bio.QM",
+        "stat.ML"
+      ],
+      "published": "2026-06-10T08:02:58+00:00",
+      "link": "https://arxiv.org/pdf/2606.11775v1",
+      "tags": [
+        "keyword:ag-bg-div",
+        "query:ag-bg-div"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "magnitude-based features for multispecies spatial data",
+      "llm_evidence_cn": "基于magnitude的多物种空间数据特征",
+      "llm_evidence": "基于magnitude的多物种空间数据特征",
+      "canonical_evidence": "基于magnitude的多物种空间数据特征",
+      "llm_tldr_en": "Proposes magnitude-based feature vectors for analyzing multispecies spatial interactions, applicable to ecological communities and aboveground-belowground functional diversity.",
+      "llm_tldr_cn": "定量分析多物种空间交互的工具较少。本文提出基于magnitude的全局部和局部特征向量，用于捕获多物种空间配置和尺度信息。该方法在合成数据和结直肠癌样本中验证了有效性，可推广到生态群落中地上与地下功能多样性的空间分析。",
+      "llm_tldr": "定量分析多物种空间交互的工具较少。本文提出基于magnitude的全局部和局部特征向量，用于捕获多物种空间配置和尺度信息。该方法在合成数据和结直肠癌样本中验证了有效性，可推广到生态群落中地上与地下功能多样性的空间分析。",
+      "llm_tags": [
+        "query:ag-bg-div:composite"
+      ],
+      "matched_query_tag": "query:ag-bg-div:composite",
+      "matched_query_text": "Papers central to 请帮我查找有关地上和地下功能多样性及其关系对生态系统功能影响的论文, especially work that connects or combines: n; Tibetan Plateau; e; aboveground functional diversity effects on ecosystem function; belowground functional diversity effects on ecosystem function; interactions between aboveground and belowground functional diversity; What is the relative contribution of aboveground plant functional diversity, belowground soil biota functional diversity, and their cross trophic coupling (or asymmetry) to ecosystem multifunctionality, and how do these contributions shift along environmental gradients?; Are plant functional traits coordinated with soil microbial life history strategies and nematode functional traits across environmental gradients, and does the strength of this cross trophic trait coordination predict ecosystem multifunctionality?; How do climate gradients modulate the coupling between aboveground and belowground functional diversity and their joint effects on ecosystem function across large spatial scales?; How does the relationship between aboveground plant functional diversity and belowground soil microbial and nematode functional diversity drive ecosystem multifunctionality in grassland ecosystems?.",
+      "matched_requirement_id": "req-composite-ag-bg-div",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "biorxiv-10-1101-2024-01-12-575367-v3",
+      "source": "biorxiv",
+      "title": "Modelling biological and resource fluxes in fluvial meta-ecosystems",
+      "abstract": "Meta-ecosystem theory predicts that cross-ecosystem flows of energy, nutrients, and organisms have important implications for local community assembly and ecosystem functioning. Developments in the theory also have the potential to enhance our understanding of biodiversity-ecosystem functioning relationships. Meta-ecosystem theory is particularly well-suited to the study of rivers, because water flow forces strong spatial interrelationships among connected ecosystems. However, models that address flows of both resources and organisms and explicitly link both are lacking. We present a model and associated R-package for cross-ecosystem flows of both resources and organisms that can be used to predict their distribution in river networks, as well as meta-ecosystem functioning. The model incorporates feedbacks between these two crucial components--resource concentrations represent niche dimensions for organisms, modifying the colonisation and extinction dynamics and different locations in the network, and organisms also consume resources, thereby modifying the concentrations that are transported downstream. To illustrate the capabilities of the model, we present an in silico experiment and analysis, as well as providing sample code.",
+      "authors": [
+        "Talluto, L.",
+        "del Campo, R.",
+        "Estevez, E.",
+        "Fuss, T.",
+        "Thuile Bistarelli, L.",
+        "Martini, J.",
+        "Singer, G. A."
+      ],
+      "primary_category": "ecology",
+      "categories": [
+        "ecology"
+      ],
+      "published": "2026-06-04T00:00:00+00:00",
+      "link": "https://www.biorxiv.org/content/10.1101/2024.01.12.575367v3.full.pdf",
+      "tags": [
+        "keyword:ag-bg-div",
+        "query:ag-bg-div"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "meta-ecosystem modeling of resource and organism fluxes",
+      "llm_evidence_cn": "跨生态系统资源与生物通量建模",
+      "llm_evidence": "跨生态系统资源与生物通量建模",
+      "canonical_evidence": "跨生态系统资源与生物通量建模",
+      "llm_tldr_en": "This paper presents a model and R package for cross-ecosystem flows of resources and organisms in river networks, providing a framework relevant to aboveground-belowground coupling.",
+      "llm_tldr_cn": "现有模型难以同时处理资源和生物的跨生态系统流动。本文提出一种河流元生态系统模型及R包，能够量化能量、养分和生物的空间通量。该工具可用于模拟地上与地下功能多样性之间的跨营养级耦合，为理解生态系统多功能性提供方法论支持。",
+      "llm_tldr": "现有模型难以同时处理资源和生物的跨生态系统流动。本文提出一种河流元生态系统模型及R包，能够量化能量、养分和生物的空间通量。该工具可用于模拟地上与地下功能多样性之间的跨营养级耦合，为理解生态系统多功能性提供方法论支持。",
+      "llm_tags": [
+        "query:ag-bg-div:composite"
+      ],
+      "matched_query_tag": "query:ag-bg-div:composite",
+      "matched_query_text": "Papers central to 请帮我查找有关地上和地下功能多样性及其关系对生态系统功能影响的论文, especially work that connects or combines: n; Tibetan Plateau; e; aboveground functional diversity effects on ecosystem function; belowground functional diversity effects on ecosystem function; interactions between aboveground and belowground functional diversity; What is the relative contribution of aboveground plant functional diversity, belowground soil biota functional diversity, and their cross trophic coupling (or asymmetry) to ecosystem multifunctionality, and how do these contributions shift along environmental gradients?; Are plant functional traits coordinated with soil microbial life history strategies and nematode functional traits across environmental gradients, and does the strength of this cross trophic trait coordination predict ecosystem multifunctionality?; How do climate gradients modulate the coupling between aboveground and belowground functional diversity and their joint effects on ecosystem function across large spatial scales?; How does the relationship between aboveground plant functional diversity and belowground soil microbial and nematode functional diversity drive ecosystem multifunctionality in grassland ecosystems?.",
+      "matched_requirement_id": "req-composite-ag-bg-div",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "biorxiv-10-64898-2026-06-02-729701-v1",
+      "source": "biorxiv",
+      "title": "eCOMET: An R package for evaluating metabolic diversity and enrichment from LC-MS/MS data to test ecological hypotheses from individuals to ecosystems",
+      "abstract": "O_LIMethods in metabolomics have grown exponentially in recent years, providing new insight into the ecological function and evolutionary impact of diverse plant metabolites. Metabolomics requires a command of numerous tools, the outputs of which are typically integrated through in-house, custom code that presents a workflow bottleneck and a barrier to entry for researchers in ecology, evolution, and behavior who may benefit from adding a metabolomics perspective to their research.\nC_LIO_LIWe introduce eCOMET, an R package for integrating and harmonizing the outputs of common metabolomics bioinformatics tools and conducting statistical analyses and data visualization methods useful for ecological metabolomics.\nC_LIO_LIOur package combines metabolome feature metadata with quantification tables (e.g., mzmine), feature dissimilarity matrices (e.g., modified cosine and DreaMS), and feature annotations (e.g., SIRIUS) into a cohesive R data object to facilitate downstream analyses, including the calculation of diversity and disparity metrics and differential accumulation analysis.\nC_LIO_LIOur goal is to make metabolomics accessible to a wider range of researchers in ecology, evolution, and behavior to unlock the potential of ecological metabolomics to generate novel insight in these fields.\nC_LI",
+      "authors": [
+        "Choi, M.-S.",
+        "Forrister, D. L.",
+        "Dury, G. J.",
+        "Kang, K. B.",
+        "Sedio, B. E.",
+        "Joo, Y."
+      ],
+      "primary_category": "ecology",
+      "categories": [
+        "ecology"
+      ],
+      "published": "2026-06-05T00:00:00+00:00",
+      "link": "https://www.biorxiv.org/content/10.64898/2026.06.02.729701v1.full.pdf",
+      "tags": [
+        "keyword:ag-bg-div",
+        "query:ag-bg-div"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "R package for metabolic diversity analysis, relevant to plant functional diversity assessment",
+      "llm_evidence_cn": "代谢多样性分析R包，与植物功能多样性评估相关",
+      "llm_evidence": "代谢多样性分析R包，与植物功能多样性评估相关",
+      "canonical_evidence": "代谢多样性分析R包，与植物功能多样性评估相关",
+      "llm_tldr_en": "eCOMET is an R package that integrates metabolomics tools to enable ecological hypothesis testing through metabolic diversity and enrichment analysis from individuals to ecosystems.",
+      "llm_tldr_cn": "当前代谢组学分析方法多样，但缺乏统一的工作流程。eCOMET R包整合了常见的代谢组学生物信息学工具输出，提供统计分析和可视化方法，使得研究人员能够从个体到生态系统尺度评估代谢多样性和富集度，从而检验生态假说。该工具降低了代谢组学在生态学研究中的应用门槛。",
+      "llm_tldr": "当前代谢组学分析方法多样，但缺乏统一的工作流程。eCOMET R包整合了常见的代谢组学生物信息学工具输出，提供统计分析和可视化方法，使得研究人员能够从个体到生态系统尺度评估代谢多样性和富集度，从而检验生态假说。该工具降低了代谢组学在生态学研究中的应用门槛。",
+      "llm_tags": [
+        "query:ag-bg-div"
+      ],
+      "matched_query_tag": "query:ag-bg-div",
+      "matched_query_text": "aboveground functional diversity effects on ecosystem function",
+      "matched_requirement_id": "req-4",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "biorxiv-10-64898-2026-06-07-730742-v1",
+      "source": "biorxiv",
+      "title": "Phylogenetic coherence in microbiome composition across environmental gradients",
+      "abstract": "Global surveys of microbial communities across biomes have shown that environmental variables such as depth and pH are strong determinants of community composition. However, we do not understand how the traits of individual taxa, and their evolutionary conservation, conspire to give rise to these patterns. Exploiting large-scale surveys of top soil and marine microbiomes, we use canonical correlation analysis (CCA) to concurrently infer directions of environmental variation and the associated compositional changes. We find that the primary canonical direction, capturing the dominant environmental gradient, exhibits a strong phylogenetic signal: individual species' responses to environmental shifts along this direction are similar among taxa with shared evolutionary history. In contrast, secondary canonical directions show weak or no phylogenetic structure. Together, these results suggest a two-scale view of microbial community assembly. Deeply evolutionarily conserved traits govern community reorganization along the main environmental driver of community composition. Additional environmentally driven changes in community composition then reflect traits that are more evolutionarily labile.",
+      "authors": [
+        "Chakraverti-Wuerthwein, M. S.",
+        "Domenig, A.",
+        "Kuehn, S."
+      ],
+      "primary_category": "ecology",
+      "categories": [
+        "ecology"
+      ],
+      "published": "2026-06-11T00:00:00+00:00",
+      "link": "https://www.biorxiv.org/content/10.64898/2026.06.07.730742v1.full.pdf",
+      "tags": [
+        "keyword:ag-bg-div",
+        "query:ag-bg-div"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "microbiome phylogenetic coherence across environmental gradients using CCA",
+      "llm_evidence_cn": "微生物组跨环境梯度的系统发育一致性，使用CCA",
+      "llm_evidence": "微生物组跨环境梯度的系统发育一致性，使用CCA",
+      "canonical_evidence": "微生物组跨环境梯度的系统发育一致性，使用CCA",
+      "llm_tldr_en": "This paper uses canonical correlation analysis on large-scale soil and marine microbiome surveys to show that microbial community responses to environmental gradients are phylogenetically coherent, providing a method for linking traits to environment.",
+      "llm_tldr_cn": "该论文利用典型相关分析（CCA）对全球土壤和海洋微生物组大规模调查数据进行分析，发现主典型方向（代表主导环境梯度）上微生物物种响应具有强烈的系统发育信号。这表明微生物性状的进化保守性驱动了群落对环境梯度的响应模式。该研究方法可用于探索地下微生物功能多样性与环境梯度的关系，但对地上功能多样性和生态系统多功能性关注有限。",
+      "llm_tldr": "该论文利用典型相关分析（CCA）对全球土壤和海洋微生物组大规模调查数据进行分析，发现主典型方向（代表主导环境梯度）上微生物物种响应具有强烈的系统发育信号。这表明微生物性状的进化保守性驱动了群落对环境梯度的响应模式。该研究方法可用于探索地下微生物功能多样性与环境梯度的关系，但对地上功能多样性和生态系统多功能性关注有限。",
+      "llm_tags": [
+        "query:ag-bg-div"
+      ],
+      "matched_query_tag": "query:ag-bg-div",
+      "matched_query_text": "belowground functional diversity effects on ecosystem function",
+      "matched_requirement_id": "req-5",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    }
+  ]
+}
